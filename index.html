@@ -55,7 +55,18 @@
         <p>Made by Swaraj &#128512;</p>
     </footer>
 
-    <script src="/script.js"></script>
+    <script>
+var menuList = document.getElementById("menuList");
+menuList.style.maxHeight = "0px";
+
+function toggleMenu() {
+    if (menuList.style.maxHeight == "0px") {
+        menuList.style.maxHeight = "130px";
+    } else {
+        menuList.style.maxHeight = "0px";
+    }
+}
+</script>
 
 </body>
 </html>
