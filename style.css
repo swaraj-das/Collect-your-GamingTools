@@ -292,6 +292,11 @@ footer {
         color: #fff;
     }
 
+    nav ul li a:hover {
+        color: #ffee00;
+        transform: scale(1.18); 
+    }
+
     .menu-icon{
         display: block;
     }
