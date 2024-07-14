@@ -315,6 +315,10 @@ button:hover{
     cursor: pointer;
 }
 
+.footer-section .follow {
+    margin-left: 20px;
+}
+
 .footer-section .contact:hover {
     color: #ffee05;
 }
