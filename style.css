@@ -48,6 +48,7 @@
     animation: rainbow 5s linear infinite;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .menu-icon{
@@ -82,7 +83,6 @@ nav ul li a:hover {
     transform: scale(1.18); 
 }
 
-
 .row{
     display: flex;
     justify-content: space-between;
@@ -98,6 +98,8 @@ nav ul li a:hover {
 
 .col-1 h2{
     font-size: 54px;
+    color: #000;
+    cursor: pointer;
 }
 
 .col-1 h3{
@@ -105,12 +107,14 @@ nav ul li a:hover {
     color: #707070;
     font-weight: 100;
     margin: 20px 0 10px;
+    cursor: pointer;
 }
 
 .col-1 p{
     font-size: 16px;
     color: #a1a1a1;
     font-weight: 500;
+    cursor: pointer;
 }
 
 button{
@@ -228,6 +232,41 @@ button:hover{
 
 .add-btn:hover{
     transform: scale(1.1);
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.rating span {
+    font-size: 26px;
+    margin-right: 10px;
+    background: linear-gradient(to right, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff); /* Example gradient colors */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rating p {
+    font-size: 14px;
+    color: #707070;
+    margin: 0;
+}
+
+.overall-rating {
+    margin: 14px 0;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.overall-rating .star {
+    margin-left: 5px; 
+    color: #ff3c6d;
+    font-weight: 600;
 }
 
 .social-links img {
