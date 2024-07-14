@@ -349,7 +349,7 @@ button:hover{
 
 .social-links img {
     height: 30px;
-    margin: 20px;
+    margin: 14px;
     cursor: pointer;
     transition: transform 0.3s;
 }
