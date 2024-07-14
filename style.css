@@ -269,29 +269,89 @@ button:hover{
     font-weight: 600;
 }
 
-.social-links img {
-    height: 20px;
-    margin: 15px;
-    cursor: pointer;
-    transition: transform 0.3s; 
+.footer-container {
+    background-color: #444444;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
 }
 
-.social-links{
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px 20px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-section .logo-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-section .logo-name img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.footer-section .logo-name h4 {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.footer-section .contact {
+    font-size: 14px;
+    line-height: 28px;
+    color: #d3d3d3;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footer-section .contact:hover {
+    color: #ffee05;
+}
+
+.footer-section h4 {
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.footer-bottom {
+    border-top: 0.7px dashed #e4e4e4;
+    padding-top: 20px;
+    max-width: 30%; 
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 10px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.social-links img {
+    height: 30px;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .social-links img:hover {
-    transform: scale(1.2); 
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #272727;
-    color: #fff;
-    font-size: 12px;
-    line-height: 16px;
+    transform: scale(1.2);
 }
 
 
@@ -373,6 +433,24 @@ footer {
 
     .col-1 h3{
         font-size: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .footer-section .logo-name {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        max-width: fit-content;
     }
 
 }
