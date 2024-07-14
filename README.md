@@ -17,7 +17,9 @@ A responsive and dynamic website showcasing various gaming accessories.
 
 ## Demo
 
-You can view the live demo of the website [here]=>(https://collect-your-gaming-tools.vercel.app/).
+You can view the live demo of the website 
+<br>
+https://collect-your-gaming-tools.vercel.app/
 
 ## Installation
 
