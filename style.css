@@ -438,8 +438,8 @@ button:hover {
         color: #fff;
     }
     
-    nav ul li.login:hover {
-        color: #fff;
+    nav ul li.login a:hover {
+        color: #ffee00;
     }
 
     .menu-icon {
