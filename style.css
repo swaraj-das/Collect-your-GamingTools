@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
     padding-left: 5%;
@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.navbar{
+.navbar {
     width: 100%;
     display: flex;
     align-items: center;
@@ -23,26 +23,34 @@
     z-index: 1000;
 }
 
-.logo{
+.logo {
     width: 50px;
     cursor: pointer;
     margin: 18px 0;
 }
 
 @keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .website-name {
     margin-left: 16px;
     font-size: 20px;
     font-weight: bold;
-    color: transparent; 
-    background: linear-gradient(90deg, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff, #8a2be2, #ff459f); /* Gradient background */
-    background-size: 400% 400%; 
-    -webkit-background-clip: text; 
+    color: transparent;
+    background: linear-gradient(90deg, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff, #8a2be2, #ff459f);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
     background-clip: text;
     display: inline-block;
     animation: rainbow 5s linear infinite;
@@ -51,19 +59,19 @@
     cursor: pointer;
 }
 
-.menu-icon{
+.menu-icon {
     width: 25px;
     cursor: pointer;
     display: none;
 }
 
-nav{
+nav {
     flex: 1;
     text-align: right;
     margin-right: 100px;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
     display: inline-block;
     margin-right: 30px;
@@ -80,29 +88,45 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #e00999;
-    transform: scale(1.18); 
+    transform: scale(1.18);
 }
 
-.row{
+nav ul li.login {
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    height: 24px;
+    border-radius: 20px;
+    padding: 4px 18px;
+    cursor: pointer;
+}
+
+nav ul li.login a {
+    color: #fff;
+}
+
+nav ul li.login:hover {
+    color: #fff;
+}
+
+.row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 120px 0;
 }
 
-.col-1{
+.col-1 {
     flex-basis: 40%;
     position: relative;
     margin-left: 50px;
 }
 
-.col-1 h2{
+.col-1 h2 {
     font-size: 54px;
     color: #000;
     cursor: pointer;
 }
 
-.col-1 h3{
+.col-1 h3 {
     font-size: 30px;
     color: #707070;
     font-weight: 100;
@@ -110,14 +134,14 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.col-1 p{
+.col-1 p {
     font-size: 16px;
     color: #a1a1a1;
     font-weight: 500;
     cursor: pointer;
 }
 
-button{
+button {
     width: 140px;
     border: 0;
     padding: 14px 12px;
@@ -131,24 +155,24 @@ button{
     transition: width 0.5s;
 }
 
-button img{
+button img {
     width: 30px;
     display: none;
 }
 
-button:hover img{
+button:hover img {
     display: block;
 }
 
-button:hover{
+button:hover {
     width: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.col-1::after{
-    content:'';
+.col-1::after {
+    content: '';
     width: 10px;
     height: 63%;
     background: linear-gradient(#ff459f, #ff6062);
@@ -157,18 +181,18 @@ button:hover{
     top: 8px;
 }
 
-.col-2{
+.col-2 {
     position: relative;
     flex-basis: 60%;
     display: flex;
     align-items: center;
 }
 
-.col-2 .controller{
+.col-2 .controller {
     width: 90%;
 }
 
-.color-box{
+.color-box {
     position: absolute;
     right: 0;
     top: 0;
@@ -208,12 +232,12 @@ button:hover{
     margin-left: 15px;
 }
 
-.add-btn img{
+.add-btn img {
     width: 40px;
     margin-bottom: 5px;
 }
 
-.add-btn{
+.add-btn {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
@@ -226,11 +250,11 @@ button:hover{
     transition: transform 0.5s;
 }
 
-.add-btn p{
+.add-btn p {
     font-size: 16px;
 }
 
-.add-btn:hover{
+.add-btn:hover {
     transform: scale(1.1);
 }
 
@@ -243,7 +267,8 @@ button:hover{
 .rating span {
     font-size: 26px;
     margin-right: 10px;
-    background: linear-gradient(to right, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff); /* Example gradient colors */
+    background: linear-gradient(to right, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff);
+    /* Example gradient colors */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -264,7 +289,7 @@ button:hover{
 }
 
 .overall-rating .star {
-    margin-left: 5px; 
+    margin-left: 5px;
     color: #ff3c6d;
     font-weight: 600;
 }
@@ -338,7 +363,7 @@ button:hover{
 .footer-bottom {
     border-top: 0.7px dashed #e4e4e4;
     padding-top: 20px;
-    max-width: 30%; 
+    max-width: 30%;
     margin: 0 auto;
     text-align: center;
 }
@@ -368,23 +393,23 @@ button:hover{
 
 
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
 
-    .menu-icon{
+    .menu-icon {
         margin-right: 50px;
-    }    
+    }
 
-    nav ul{
+    nav ul {
         width: 100%;
         background: linear-gradient(to right, #fb5283, #ff3527);
         position: absolute;
-        top: 75px;
+        top: 73px;
         right: 0;
         z-index: 2;
         margin-right: 20px;
     }
 
-    nav ul li{
+    nav ul li {
         display: block;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -392,51 +417,67 @@ button:hover{
         margin-left: 50px;
     }
 
-    nav ul li a{
+    nav ul li a {
         color: #fff;
     }
 
     nav ul li a:hover {
         color: #ffee00;
-        transform: scale(1.18); 
+        transform: scale(1.18);
     }
 
-    .menu-icon{
+    nav ul li.login {
+        background: linear-gradient(to right, #fcfcfc, #8b8b8b);
+        color: #fb5283;
+        height: 20px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    
+    nav ul li.login a {
+        color: #fff;
+    }
+    
+    nav ul li.login:hover {
+        color: #fff;
+    }
+
+    .menu-icon {
         display: block;
     }
 
-    #menuList{
+    #menuList {
         overflow: hidden;
         transition: 0.5s;
     }
 
-    .row{
+    .row {
         flex-direction: column-reverse;
         margin: 100px 0;
     }
 
-    .col-2{
+    .col-2 {
         flex-basis: 100%;
         margin-bottom: 50px;
     }
 
-    .col-2 .controller{
+    .col-2 .controller {
         width: 77%;
     }
 
-    .color-box{
+    .color-box {
         transform: translateX(75px);
     }
 
-    .col-1{
+    .col-1 {
         flex-basis: 100%;
     }
 
-    .col-1 h2{
+    .col-1 h2 {
         font-size: 35px;
     }
 
-    .col-1 h3{
+    .col-1 h3 {
         font-size: 20px;
     }
 
@@ -444,12 +485,12 @@ button:hover{
         flex-direction: column;
         align-items: center;
     }
-    
+
     .footer-section {
         max-width: 100%;
         text-align: center;
     }
-    
+
     .footer-section .logo-name {
         justify-content: center;
     }
@@ -459,3 +500,16 @@ button:hover{
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
