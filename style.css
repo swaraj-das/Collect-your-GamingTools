@@ -391,12 +391,12 @@ button:hover {
 /* -----------------------------------------------Responsiveness----------------------------------------------------- */
 
 
-
+/* ----------------------------for mobiles--------------------------------------- */
 
 @media only screen and (max-width: 700px) {
 
     .menu-icon {
-        margin-right: 50px;
+        margin-right: 40px;
     }
 
     nav ul {
@@ -426,20 +426,17 @@ button:hover {
         transform: scale(1.18);
     }
 
-    nav ul li.login {
-        background: linear-gradient(to right, #fcfcfc, #8b8b8b);
-        color: #fb5283;
-        height: 20px;
-        border-radius: 20px;
-        cursor: pointer;
+    .login a {
+        background-color: (#ff459f, #ff9532);
+        color: white;
+        padding: 4px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
     }
-    
-    nav ul li.login a {
-        color: #fff;
-    }
-    
-    nav ul li.login a:hover {
-        color: #ffee00;
+
+    .login a:hover {
+        background-color: #e05599;
     }
 
     .menu-icon {
@@ -502,14 +499,60 @@ button:hover {
 }
 
 
+/* --------------------------for tabs------------------------------------ */
 
 
+@media only screen and (max-width: 1180px) {
 
+    .menu-icon {
+        margin-right: 60px;
+    }
 
+    nav ul {
+        width: 100%;
+        background: linear-gradient(to right, #fb5283, #ff3527);
+        position: absolute;
+        top: 73px;
+        right: 0;
+        z-index: 2;
+        margin-right: 21px;
+    }
 
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: 50px;
+    }
 
+    nav ul li a {
+        color: #fff;
+    }
 
+    nav ul li a:hover {
+        color: #ffee00;
+        transform: scale(1.18);
+    }
 
+    .login a {
+        background-color: #752280;
+        color: white;
+        padding: 4px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+    }
 
+    .login a:hover {
+        background-color: (#f267ff, #ff9532);
+    }
 
+    .menu-icon {
+        display: block;
+    }
 
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
