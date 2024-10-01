@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('https://www.example.com/path/to/your/gaming-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.signup-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #fb5283;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #6a1b9a;
+    border-radius: 5px;
+    background-color: #3a3f44;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.875rem;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #ba68c8;
+    background-color: #2a2e32;
+}
+
+.signup-button {
+    background-color: #ba68c8;
+    color: #282c34;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.signup-button:hover {
+    background-color: #ab47bc;
+    transform: scale(1.05);
+}
+
+.links {
+    margin-top: 18px;
+}
+
+.links a {
+    color: #fb5283;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 18px;
+}
+
+.links a:hover {
+    color: #ff80ab;
+    text-decoration: underline;
+}
