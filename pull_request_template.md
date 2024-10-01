@@ -1,11 +1,10 @@
 # Pull Request Format
-
-## PR Naming
+## PR Title
 ### Issue #0 : **ISSUE NAME** solved
 
 ## Type of PR
 - **Add X in the box to specify the improvement type.**
-- [ ] Bug fix
+- [X] Bug fix
 - [ ] Feature enhancement
 - [ ] Documentation update
 - [ ] Other (specify): ___________  
@@ -23,7 +22,7 @@ This pull request aims to [briefly describe what the pull request does, e.g., "a
 
 ## Checklist
 - **Add X in the box to specify.**
-- [ ] I have performed a self-review of my code.
+- [X] I have performed a self-review of my code.
 - [ ] I have tested the changes thoroughly before submitting this pull request.
 - [ ] I have provided relevant issue numbers, screenshots, and videos after making the changes.
 - [ ] I have commented my code, particularly in hard-to-understand areas.
