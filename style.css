@@ -4,26 +4,6 @@
     font-family: sans-serif;
 }
 
-html {
-    overflow-y: scroll;
-}
-
-html::-webkit-scrollbar {
-    width: 9px;
-    transition: width 0.3s ease;
-    margin: 10px;
-}
-
-html::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: linear-gradient(90deg, #ff459f, #ff9532, #ff459f);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-}
-
-html::-webkit-scrollbar-thumb:window-inactive {
-    background: rgb(156, 156, 156);
-}
-
 .container {
     width: 100%;
     min-height: 100vh;
