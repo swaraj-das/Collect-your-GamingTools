@@ -10,7 +10,7 @@
 <body>
     <div class="login-container">
         <h1>Login to Your Account</h1>
-        <form action="#" method="post">
+        <form id="loginForm" method="post" onsubmit="return validateForm()">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -23,8 +23,28 @@
         </form>
         <div class="links">
             <a href="#">Forgot Password?</a>
-            <a href="../SignUp/signup.html">Sign Up</a>
+            <a href="../signup/signup.html">Sign Up</a>
         </div>
     </div>
+
+    <script>
+        // JavaScript Form Validation
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("Please fill out all fields.");
+                return false;
+            }
+
+
+            // Redirect to the specific URL on successful login
+            alert("Login successful!");
+            window.location.href = "../index.html"; // Absolute URL redirection
+            return false; // Prevent actual form submission
+        }
+    </script>
 </body>
 </html>
+
