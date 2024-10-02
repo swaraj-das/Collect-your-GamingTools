@@ -17,11 +17,16 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
-    background-color: #fff;
+    background-color: #38073d;
+    padding: 10px 30px; /* Reduced padding for a slimmer navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
 }
+
 
 .logo {
     width: 50px;
@@ -79,7 +84,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #ecc1c1;
     font-size: 14px;
     font-weight: bold;
     display: inline-block;
@@ -87,9 +92,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e00999;
-    transform: scale(1.18);
+    color: #e00999; /* Change color on hover */
+    transform: scale(1.08); /* Scale effect on hover */
+    box-shadow: 0 0 15px rgba(255, 82, 131, 0.8); /* Glow effect on hover */
 }
+
 
 nav ul li.login {
     background: linear-gradient(to right, #fb5283, #ff3527);
@@ -106,6 +113,8 @@ nav ul li.login a {
 nav ul li.login:hover {
     color: #fff;
 }
+
+
 
 .row {
     display: flex;
