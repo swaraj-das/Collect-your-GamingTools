@@ -12,24 +12,31 @@
 <body>
         <div class="container">
             <div class="navbar">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox">
+                        <div class="slider"></div>
+                    </label>
+                    <span id="mode-label">Light Mode</span>
+                </div>    
                 <img src="images/logo.png" class="logo" alt="Logo">
                 <span class="website-name">Collect your GamingTools</span>
                 <nav>
                     <ul id="menuList">
                         <li><a href="#">Game Controllers</a></li>
-                        <li><a href="#">VR Accessories</a></li>
-                        <li><a href="#">Media Remotes</a></li>
-                        <li><a href="#">Others</a></li>
+                        <li><a href="#">VR Accessories</a></li>                
+                        <li><a href="#">Media Remotes</a></li>                    
+                        <li><a href="#">Others</a></li>                           
                         <li class="login"><a href="login/login.html">Login</a></li>
-                    </ul>
-                </nav>
+                    </ul>                                                          
+                </nav>                                                             
                 <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
             </div>
 
         <!-- PS4 Controller Section -->
         <div class="row">
             <div class="col-1">
-                <h2>PS4 V2 Dualshock 4</h2>
+                <span><h2>PS4 V2 Dualshock 4</h2></span>
                 <h3>Wireless Controllers for PlayStation 4</h3>
                 <p>(Compatible/Generic)</p>
                 <div class="price">
@@ -284,6 +291,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="darkMode.js"></script>
 </body>
 
 </html>
