@@ -556,3 +556,83 @@ button:hover {
         overflow: hidden;
         transition: 0.5s;
     }
+}
+
+
+/*updation for text animation
+=====================================*/
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+/* Animation keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.text-animated {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s; /* Smooth transition */
+    font-size: 2rem; /* Adjust font size */
+    margin: 20px; /* Spacing between elements */
+    padding: 10px; /* Padding for better appearance */
+    background: #fff; /* Background color for text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s forwards; /* Trigger fadeIn animation */
+}
+
+.scaleIn {
+    animation: scaleIn 0.5s forwards; /* Trigger scaleIn animation */
+}
