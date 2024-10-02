@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url("https://getwallpapers.com/wallpaper/full/8/6/9/973392-full-size-pink-and-orange-backgrounds-1920x1080.jpg") no-repeat center center fixed;
+    background: url("https://images.pexels.com/photos/7135057/pexels-photo-7135057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center fixed;
     background-size: cover;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -17,7 +17,7 @@ body {
 }
 .login-container {
     backdrop-filter: blur(10px);
-    opacity: 0.75;
+    opacity: 0.85;
     background-color: rgba(0, 0, 0, 0);
     padding: 2rem;
     border-radius: 20px;
@@ -80,7 +80,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 
 body {
-    background: url('https://getwallpapers.com/wallpaper/full/8/6/9/973392-full-size-pink-and-orange-backgrounds-1920x1080.jpg') no-repeat center center fixed;
+    background: url('https://images.pexels.com/photos/7135057/pexels-photo-7135057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -94,7 +94,7 @@ body {
 .login-container {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 5rem;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     text-align: center;
     max-width: 500px;
@@ -162,13 +162,13 @@ body{
   color:white;
   font-family:Helvetica, sans-serif;
   font-weight:bold;
-  font-size:25px;
+  font-size:20px;
   text-align: center;
   text-decoration:none;
   background-color:#FFA12B;
   display:block;
   position:relative;
-  padding:20px 40px;
+  padding:15px 50px;
   
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-shadow: 0px 1px 0px #000;
