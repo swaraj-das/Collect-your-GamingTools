@@ -26,7 +26,7 @@ https://collect-your-gaming-tools.vercel.app/
 ### To get started, simply clone the repository and open it in your browser:
 
 #### 1. git clone https://github.com/swaraj-das/Collect-your-GamingTools.git
-#### 2. Then, open the index.html file in your browser, and you’re good to go!
+#### 2. Then, open the `index.html` file in your browser, and you’re good to go!
 
 
 # 🤝 Contributing
