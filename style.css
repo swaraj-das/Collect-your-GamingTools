@@ -141,8 +141,13 @@ nav ul li.login:hover {
     cursor: pointer;
 }
 
+.conbox{
+    display: flex;
+    flex-direction: row;
+}
+
 button {
-    width: 140px;
+    width: 150px;
     border: 0;
     padding: 14px 12px;
     outline: none;
@@ -152,23 +157,27 @@ button {
     background: linear-gradient(to right, #fb5283, #ff3527);
     border-radius: 6px;
     cursor: pointer;
-    transition: width 0.5s;
+    transition: background 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button img {
     width: 30px;
-    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 button:hover img {
-    display: block;
+    opacity: 1;
 }
 
 button:hover {
-    width: 160px;
+    background: linear-gradient(to right, #ff3527, #fb5283);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .col-1::after {
@@ -207,6 +216,7 @@ button:hover {
 .price {
     margin: 20px 0;
     display: flex;
+    align-items: center
 }
 
 .original-price {
@@ -232,31 +242,6 @@ button:hover {
     margin-left: 15px;
 }
 
-.add-btn img {
-    width: 40px;
-    margin-bottom: 5px;
-}
-
-.add-btn {
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    border: 1.5px solid #fff;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-
-.add-btn p {
-    font-size: 16px;
-}
-
-.add-btn:hover {
-    transform: scale(1.1);
-}
 
 .rating {
     display: flex;
@@ -456,26 +441,59 @@ button:hover {
     .col-2 {
         flex-basis: 100%;
         margin-bottom: 50px;
+        position: absolute;
+        padding-left: 195px;
+        padding-bottom: 115px
     }
 
     .col-2 .controller {
-        width: 77%;
+        width: 100%;
     }
 
     .color-box {
-        transform: translateX(75px);
+        transform: translate(161px, -16px);
     }
 
+    .overall-rating{
+        font-size: 8px;
+    }
+    .rating p{
+        font-size: 8px;
+    }
+    .star{
+        font-size: 10px;
+    }
     .col-1 {
         flex-basis: 100%;
+        margin-left: 30px;
     }
 
     .col-1 h2 {
-        font-size: 35px;
+        font-size: 12px;
     }
 
     .col-1 h3 {
-        font-size: 20px;
+        font-size: 8px;
+    }
+
+    .col-1 > p {
+        font-size: 8px;
+    }
+
+    .original-price,.discounted-price{
+        font-size: 11px;
+        margin: 2px;
+    }
+
+    .discount{
+        margin-left: 5px;
+        padding: 2px 6px;
+        font-size: 9px;
+    }
+
+    .rating {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     .footer-content {
