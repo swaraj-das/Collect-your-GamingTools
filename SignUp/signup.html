@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collect your GamingTools</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Sign Up for GamingTools</title>
+    <link rel="stylesheet" href="signup.css">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login to Your Account</h1>
+    <div class="signup-container">
+        <h1>Create Your Account</h1>
         <form action="#" method="post">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
             </div>
             <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <div ontouchstart="">
-  <div class="button">
-    <a href="#">Login</a>
-  </div>
-</div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="signup-button">Sign Up</button>
         </form>
         <div class="links">
-            <a href="#">Forgot Password?</a>
-            <a href="../SignUp/signup.html">Sign Up</a>
+            <a href="../login/login.html">Already have an account? Login</a>
         </div>
     </div>
 </body>
