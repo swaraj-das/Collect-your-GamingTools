@@ -7,8 +7,11 @@
 .container {
     width: 100%;
     min-height: 100vh;
+    
     /* padding-left: 5%;
     padding-right: 5%; */
+    /*for navbarmenu list  */
+
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -117,7 +120,8 @@ nav ul li.login:hover {
 .col-1 {
     flex-basis: 40%;
     position: relative;
-    margin-left: 5%;
+    margin-left: 5%; 
+    /* change px to percent */
 }
 
 .col-1 h2 {
@@ -190,6 +194,7 @@ button:hover {
 
 .col-2 .controller {
     width: 85%;
+    /* fixing the alignment */
 }
 
 .color-box {
@@ -515,7 +520,8 @@ button:hover {
         top: 73px;
         right: 0;
         z-index: 2;
-        /* margin-right: 21px; */
+        /* margin-right: 21px;*/ 
+        /*for navbarmenu list  */
     }
 
     nav ul li {
