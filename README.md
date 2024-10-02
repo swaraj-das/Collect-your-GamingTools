@@ -2,7 +2,7 @@
 A <b> responsive and dynamic website </b> to showcase the best gaming accessories for every gamer!
 
 
-# ✨ Features
+## ✨ Features
 🗂️ <b>Dynamic Navigation Menu</b>: Toggle visibility, designed for seamless use across all screen sizes.  
 
 🛒 <b>Product Display</b>: View gaming products with prices, discounts, and a "Buy Now" option.
@@ -13,7 +13,7 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 
 
 
-# 💻 Technologies Used
+## 💻 Technologies Used
 <p>
   <a href="https://skillicons.dev">
     <img margin="8px" src="https://skillicons.dev/icons?i=html,css,js" />
@@ -21,12 +21,12 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 </p>
 
 
-# 🚀 Demo
+## 🚀 Demo
 #### Check out the live demo here ⬇️ : 
 https://collect-your-gaming-tools.vercel.app/
 
 
-# 🛠️ Installation
+## 🛠️ Installation
 #### To get started, simply clone the repository and open it in your browser:
 
 1. git clone `https://github.com/swaraj-das/Collect-your-GamingTools.git`
@@ -34,7 +34,7 @@ https://collect-your-gaming-tools.vercel.app/
 2. Then, open the `index.html` file in your browser, and you’re good to go!
 
 
-# 🤝 Contributing
+## 🤝 Contributing
 Contributions are what make the **open-source** community such an amazing place to learn, inspire, and create. Here’s how you can contribute:
 
 🍴 <b>Fork the repo</b> by clicking the "Fork" button at the top right of this page. 
@@ -49,5 +49,5 @@ Contributions are what make the **open-source** community such an amazing place 
 
 
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 ### Created with ❤️ by Swaraj Das
