@@ -19,8 +19,23 @@
     align-items: center;
     position: fixed;
     top: 0;
-    background-color: #fff;
+    background: linear-gradient(to right, #7A288A, #8E24AA, #f27fd3); /* changed background to gradient purple */
     z-index: 1000;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* changed text color to white */
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.5s, transform 0.5s;
+}
+
+nav ul li a:hover {
+    color: #fff; /* kept text color white on hover */
+    transform: scale(1.18);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* added glow effect on hover */
 }
 
 .logo {
@@ -79,7 +94,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #fdfdfd;
     font-size: 14px;
     font-weight: bold;
     display: inline-block;
@@ -87,7 +102,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e00999;
+    color: #706ee9;
     transform: scale(1.18);
 }
 
