@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url('https://th.bing.com/th/id/R.7adf56433c8e8570cf8a01df67284da1?rik=rUrsM86PxntJgA&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f8%2f6%2f9%2f973392-full-size-pink-and-orange-backgrounds-1920x1080.jpg&ehk=10g%2bYnPiHlznH4jEB9aKpy8wB9DG%2fZdcuYWt3E7PIzM%3d&risl=&pid=ImgRaw&r=0') no-repeat center center fixed;
+    background: url("https://getwallpapers.com/wallpaper/full/8/6/9/973392-full-size-pink-and-orange-backgrounds-1920x1080.jpg") no-repeat center center fixed;
     background-size: cover;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -15,12 +15,12 @@ body {
     color: white;
     text-shadow: 1px 1px 2px #000;
 }
-
 .login-container {
     backdrop-filter: blur(10px);
+    opacity: 0.75;
     background-color: rgba(0, 0, 0, 0);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
     text-align: center;
     max-width: 40px;
@@ -34,8 +34,8 @@ body {
         transform: scale(0.9);
     }
     to {
-        opacity: 1;
-        transform: scale(1);
+        opacity: 0.75;
+        transform: scale(10);
     }
 }
 
@@ -80,7 +80,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 
 body {
-    background: url('https://wallpapercave.com/wp/wp5274514.jpg') no-repeat center center fixed;
+    background: url('https://getwallpapers.com/wallpaper/full/8/6/9/973392-full-size-pink-and-orange-backgrounds-1920x1080.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
@@ -93,11 +93,11 @@ body {
 
 .login-container {
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 2rem;
-    border-radius: 15px;
+    padding: 5rem;
+    border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     text-align: center;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -108,7 +108,7 @@ body {
         transform: scale(0.9);
     }
     to {
-        opacity: 1;
+        opacity: 0.75;
         transform: scale(1);
     }
 }
@@ -155,14 +155,14 @@ body{
 .button{
   position:relative;
   display:inline-block;
-  margin:20px;
+  margin:15px;
 }
 
 .button a{
   color:white;
   font-family:Helvetica, sans-serif;
   font-weight:bold;
-  font-size:36px;
+  font-size:25px;
   text-align: center;
   text-decoration:none;
   background-color:#FFA12B;
