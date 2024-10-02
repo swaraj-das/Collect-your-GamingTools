@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-
+/*to change bg image use here*/
 body {
     background: url("https://images.pexels.com/photos/7135057/pexels-photo-7135057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center fixed;
     background-size: cover;
@@ -78,7 +78,7 @@ input[type="text"]:focus, input[type="password"]:focus {
     margin: 0;
     padding: 0;
 }
-
+/* and here for bg image*/
 body {
     background: url('https://images.pexels.com/photos/7135057/pexels-photo-7135057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed;
     background-size: cover;
@@ -157,7 +157,7 @@ body{
   display:inline-block;
   margin:15px;
 }
-
+/*login button*/
 .button a{
   color:white;
   font-family:Helvetica, sans-serif;
