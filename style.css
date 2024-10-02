@@ -147,37 +147,71 @@ nav ul li.login:hover {
 }
 
 button {
-    width: 150px;
-    border: 0;
-    padding: 14px 12px;
+    width: 200px;
+    height: 60px;
+    padding: 16px 24px;
+    border: none;
     outline: none;
     color: #fff;
-    font-size: 16px;
-    font-weight: bolder;
-    background: linear-gradient(to right, #fb5283, #ff3527);
-    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); 
+    border-radius: 12px;
     cursor: pointer;
-    transition: background 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 15px rgba(255, 65, 108, 0.4);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.5;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    pointer-events: none;
+}
+
+button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c); 
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(255, 75, 43, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(255, 65, 108, 0.4); 
+}
+
+button:focus-visible {
+    outline: 3px solid rgba(255, 75, 43, 0.8);
+    outline-offset: 3px;
 }
 
 button img {
-    width: 30px;
+    width: 24px;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    margin-left: 12px;
+    transition: opacity 0.4s ease, transform 0.3s ease;
 }
 
 button:hover img {
     opacity: 1;
-}
-
-button:hover {
-    background: linear-gradient(to right, #ff3527, #fb5283);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    transform: translateX(6px);
 }
 
 .col-1::after {
@@ -216,6 +250,7 @@ button:hover {
 .price {
     margin: 20px 0;
     display: flex;
+    align-items: center
 }
 
 .original-price {
@@ -440,26 +475,59 @@ button:hover {
     .col-2 {
         flex-basis: 100%;
         margin-bottom: 50px;
+        position: absolute;
+        padding-left: 195px;
+        padding-bottom: 115px
     }
 
     .col-2 .controller {
-        width: 77%;
+        width: 100%;
     }
 
     .color-box {
-        transform: translateX(75px);
+        transform: translate(161px, -16px);
     }
 
+    .overall-rating{
+        font-size: 8px;
+    }
+    .rating p{
+        font-size: 8px;
+    }
+    .star{
+        font-size: 10px;
+    }
     .col-1 {
         flex-basis: 100%;
+        margin-left: 30px;
     }
 
     .col-1 h2 {
-        font-size: 35px;
+        font-size: 12px;
     }
 
     .col-1 h3 {
-        font-size: 20px;
+        font-size: 8px;
+    }
+
+    .col-1 > p {
+        font-size: 8px;
+    }
+
+    .original-price,.discounted-price{
+        font-size: 11px;
+        margin: 2px;
+    }
+
+    .discount{
+        margin-left: 5px;
+        padding: 2px 6px;
+        font-size: 9px;
+    }
+
+    .rating {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     .footer-content {
