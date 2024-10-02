@@ -373,14 +373,40 @@ button:hover {
     font-size: 12px;
 }
 
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links a:first-child {
+    color: #3b5998;
+}
+
+.social-links a:nth-child(2) {
+    color: #1DA1F2;
+}
+
+.social-links a:last-child {
+    color: #0077b5;
+}
+
 .social-links img {
+    width: 30px;
     height: 30px;
+    transition: transform 0.3s;
+    margin: 14px;
+}
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+.social-links ion-icon {
+    font-size: 30px;
     margin: 14px;
     cursor: pointer;
     transition: transform 0.3s;
 }
 
-.social-links img:hover {
+.social-links ion-icon:hover {
     transform: scale(1.2);
 }
 
@@ -556,3 +582,4 @@ button:hover {
         overflow: hidden;
         transition: 0.5s;
     }
+}
