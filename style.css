@@ -1,8 +1,15 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: sans-serif;
 }
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 
 .container {
     width: 100%;
@@ -45,7 +52,7 @@
 
 .website-name {
     margin-left: 16px;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     color: transparent;
     background: linear-gradient(90deg, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff, #8a2be2, #ff459f);
