@@ -390,15 +390,16 @@ button:hover {
     color: #0077b5;
 }
 
-.social-links img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-    margin: 14px;
+.instagram-link {
+    display: inline-block;
 }
 
-.social-links img:hover {
-    transform: scale(1.2);
+.instagram-icon {
+    font-size: 64px;
+    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    mask-image: url('https://unpkg.com/ionicons@5.5.2/dist/svg/logo-instagram.svg');
+    mask-size: cover;
+    color: transparent;
 }
 
 .social-links ion-icon {
