@@ -24,12 +24,13 @@
     top: 0;
     background-color: #fff;
     z-index: 1000;
+    padding: 10px;
 }
 
 .logo {
     width: 50px;
     cursor: pointer;
-    margin: 18px 0;
+    margin: 18px 10px;
 }
 
 @keyframes rainbow {
