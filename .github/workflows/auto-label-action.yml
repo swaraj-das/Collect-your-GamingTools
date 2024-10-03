@@ -20,7 +20,7 @@ jobs:
 
     - name: Add Labels to Issues & PRs
       if: github.event_name == 'issues' || github.event_name == 'pull_request'
-      uses: actions-ecosystem/action-add-labels@v1.1.0
+      uses: actions-ecosystem/action-add-labels@v1.1.1
       with:
         labels: |
           hacktoberfest
