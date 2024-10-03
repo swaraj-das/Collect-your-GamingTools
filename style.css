@@ -294,25 +294,35 @@ button:hover {
     font-weight: 600;
 }
 
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
 .footer-container {
     background-color: #444444;
     color: #fff;
     padding: 40px 20px;
     text-align: center;
-    position: relative;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    
 }
 
 .footer-section {
-    flex: 1 1 200px;
-    margin: 10px 20px;
-    max-width: 300px;
+    flex: 1 ;
+    margin: 20px;
+    max-width: 280px;
     text-align: left;
 }
 
@@ -328,8 +338,11 @@ button:hover {
 }
 
 .footer-section .logo-name h4 {
-    font-size: 18px;
+    font-size: 22px;
+    color: #ffee05;
     margin: 20px 0;
+    font-weight: 600;
+
 }
 
 .footer-section .contact {
@@ -338,26 +351,52 @@ button:hover {
     color: #d3d3d3;
     font-weight: 600;
     cursor: pointer;
+    transition: color 0.3s ease;
+
 }
 
 .footer-section .follow {
-    margin-left: 20px;
+    margin-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid transparent;
+    background: linear-gradient(to right, #ff459f, #ff9532);
+    border-radius: 25px;
+    width: 150px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px; 
 }
 
-.footer-section .contact:hover {
-    color: #ffee05;
+.footer-section .follow:hover {
+    background: linear-gradient(to right, #ff9532, #ff459f);
+    border: 2px solid #ffee05;
+    transform: scale(1.1); /* Slight zoom-in effect */
+    color: #000;
 }
 
 .footer-section h4 {
     margin-bottom: 20px;
     margin-top: 16px;
+    font-size: 18px;
+    color: #ffee05;
+    font-weight: bold;
 }
 
 .footer-section p {
-    line-height: 22px;
-    font-size: 14px;
+    line-height: 24px;
+    font-size: 15px;
     font-weight: 400;
     text-align: justify;
+    color: #ecf0f1;
 }
 
 .footer-bottom {
@@ -374,14 +413,16 @@ button:hover {
 }
 
 .social-links img {
-    height: 30px;
+    height: 35px;
     margin: 14px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(100%);
 }
 
 .social-links img:hover {
     transform: scale(1.2);
+    filter: grayscale(0);
 }
 
 
