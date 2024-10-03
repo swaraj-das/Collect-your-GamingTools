@@ -31,6 +31,7 @@
     width: 50px;
     cursor: pointer;
     margin: 18px 10px;
+    /* added some margin */
 }
 
 @keyframes rainbow {
