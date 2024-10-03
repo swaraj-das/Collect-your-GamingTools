@@ -22,6 +22,7 @@ jobs:
       if: github.event_name == 'issues' || github.event_name == 'pull_request'
       uses: actions-ecosystem/action-add-labels@v1.1.1
       with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         labels: |
           hacktoberfest
           hacktoberfest-accepted
