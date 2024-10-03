@@ -7,8 +7,11 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    padding-left: 5%;
-    padding-right: 5%;
+    
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    /*for navbarmenu list  */
+
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -21,12 +24,14 @@
     top: 0;
     background-color: #fff;
     z-index: 1000;
+    padding: 10px;
 }
 
 .logo {
     width: 50px;
     cursor: pointer;
-    margin: 18px 0;
+    margin: 18px 10px;
+    /* added some margin */
 }
 
 @keyframes rainbow {
@@ -117,7 +122,8 @@ nav ul li.login:hover {
 .col-1 {
     flex-basis: 40%;
     position: relative;
-    margin-left: 50px;
+    margin-left: 5%; 
+    /* change px to percent */
 }
 
 .col-1 h2 {
@@ -189,7 +195,8 @@ button:hover {
 }
 
 .col-2 .controller {
-    width: 90%;
+    width: 85%;
+    /* fixing the alignment */
 }
 
 .color-box {
@@ -406,7 +413,8 @@ button:hover {
         top: 73px;
         right: 0;
         z-index: 2;
-        margin-right: 20px;
+        /* margin-right: 20px; */
+        /*for navbarmenu list  */
     }
 
     nav ul li {
@@ -515,7 +523,8 @@ button:hover {
         top: 73px;
         right: 0;
         z-index: 2;
-        margin-right: 21px;
+        /* margin-right: 21px;*/ 
+        /*for navbarmenu list  */
     }
 
     nav ul li {
@@ -555,4 +564,4 @@ button:hover {
     #menuList {
         overflow: hidden;
         transition: 0.5s;
-    }
+    }}
