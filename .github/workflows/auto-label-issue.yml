@@ -3,6 +3,8 @@ name: Auto Label New Issues
 on:
   issues:
     types: [opened]
+  pull_request:
+    types: [opened]    
 
 permissions:
   issues: write
@@ -15,8 +17,8 @@ jobs:
     - name: Check out the repository
       uses: actions/checkout@v3
 
-    - name: Add Labels to Issues
-      if: github.event_name == 'issues'
+    - name: Add Labels to Issues & PRs
+      if: github.event_name == 'issues' || github.event_name == 'pull_request'
       uses: actions-ecosystem/action-add-labels@v1.1.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
