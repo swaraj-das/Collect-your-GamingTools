@@ -1,4 +1,4 @@
-name: Auto Label New Issues & PRs
+name: Auto Label Issues & PRs
 
 on:
   issues:
