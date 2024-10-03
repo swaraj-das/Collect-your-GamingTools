@@ -109,6 +109,7 @@ nav ul li.login:hover {
 
 .row {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     margin: 120px 0;
@@ -117,7 +118,6 @@ nav ul li.login:hover {
 .col-1 {
     flex-basis: 40%;
     position: relative;
-    margin-left: 50px;
 }
 
 .col-1 h2 {
@@ -141,11 +141,43 @@ nav ul li.login:hover {
     cursor: pointer;
 }
 
-button {
-    width: 140px;
+.cart-btn{
+    color:#fb5283;
+    border: 1.5px solid #ff3527;
+    background-color: #fff;
+    width: 150px;
+    padding: 14px 12px;
+    outline: none;
+    margin: 0 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+
+.cart-btn img {
+    width: 30px;
+    display: none;
+}
+
+.cart-btn :hover img {
+    display: block;
+}
+
+.cart-btn :hover {
+    width: 170px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buy-btn {
+    width: 150px;
     border: 0;
     padding: 14px 12px;
     outline: none;
+    margin: 0 5px;
     color: #fff;
     font-size: 16px;
     font-weight: bolder;
@@ -155,18 +187,19 @@ button {
     transition: width 0.5s;
 }
 
-button img {
+
+.buy-btn img {
     width: 30px;
     display: none;
 }
 
-button:hover img {
+.buy-btn :hover img {
     display: block;
 }
 
-button:hover {
-    width: 160px;
-    display: flex;
+.buy-btn :hover {
+    width: 170px;
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -197,11 +230,11 @@ button:hover {
     right: 0;
     top: 0;
     background: linear-gradient(#ff459f, #ff9532);
-    border-radius: 20px 0 0 20px;
+    border-radius: 0 20px 20px 0;
     height: 100%;
     width: 80%;
     z-index: -1;
-    transform: translateX(150px);
+    transform: translateX(-300px);
 }
 
 .price {
@@ -230,32 +263,6 @@ button:hover {
     font-size: 14px;
     font-weight: bold;
     margin-left: 15px;
-}
-
-.add-btn img {
-    width: 40px;
-    margin-bottom: 5px;
-}
-
-.add-btn {
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    border: 1.5px solid #fff;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-
-.add-btn p {
-    font-size: 16px;
-}
-
-.add-btn:hover {
-    transform: scale(1.1);
 }
 
 .rating {
@@ -551,8 +558,8 @@ button:hover {
     .menu-icon {
         display: block;
     }
-
     #menuList {
         overflow: hidden;
         transition: 0.5s;
     }
+}
