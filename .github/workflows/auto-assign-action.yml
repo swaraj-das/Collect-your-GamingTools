@@ -1,4 +1,4 @@
-name: Assign Issue to Author
+name: Assign to Author
 
 on:
   issues:
