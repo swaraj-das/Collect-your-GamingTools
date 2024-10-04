@@ -19,6 +19,7 @@
     align-items: center;
     position: fixed;
     top: 0;
+    overflow: hidden;
     background-color: #fff;
     z-index: 1000;
 }
@@ -358,14 +359,42 @@ button:hover {
     font-size: 12px;
 }
 
-.social-links img {
-    height: 30px;
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links a:first-child {
+    color: #3b5998;
+}
+
+.social-links a:nth-child(2) {
+    color: #1DA1F2;
+}
+
+.social-links a:last-child {
+    color: #0077b5;
+}
+
+.instagram-link {
+    display: inline-block;
+}
+
+.instagram-icon {
+    font-size: 64px;
+    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    mask-image: url('https://unpkg.com/ionicons@5.5.2/dist/svg/logo-instagram.svg');
+    mask-size: cover;
+    color: transparent;
+}
+
+.social-links ion-icon {
+    font-size: 30px;
     margin: 14px;
     cursor: pointer;
     transition: transform 0.3s;
 }
 
-.social-links img:hover {
+.social-links ion-icon:hover {
     transform: scale(1.2);
 }
 
