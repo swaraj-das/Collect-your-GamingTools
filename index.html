@@ -7,24 +7,42 @@
     <title>Collect your GamingTools</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .scroll-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px; /* Adjust for positioning */
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .scroll-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
-        <div class="container">
-            <div class="navbar">
-                <img src="images/logo.png" class="logo" alt="Logo">
-                <span class="website-name">Collect your GamingTools</span>
-                <nav>
-                    <ul id="menuList">
-                        <li><a href="#">Game Controllers</a></li>
-                        <li><a href="#">VR Accessories</a></li>
-                        <li><a href="#">Media Remotes</a></li>
-                        <li><a href="#">Others</a></li>
-                        <li class="login"><a href="login/login.html">Login</a></li>
-                    </ul>
-                </nav>
-                <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
-            </div>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo" alt="Logo">
+            <span class="website-name">Collect your GamingTools</span>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="#">Game Controllers</a></li>
+                    <li><a href="#">VR Accessories</a></li>
+                    <li><a href="#">Media Remotes</a></li>
+                    <li><a href="#">Others</a></li>
+                    <li class="login"><a href="login/login.html">Login</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+        </div>
 
         <!-- PS4 Controller Section -->
         <div class="row">
@@ -291,9 +309,19 @@
         </div>
     </footer>
 
+    <button id="scrollToTop" class="scroll-button">Scroll to Top</button>
+
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.getElementById('scrollToTop').onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    </script>
 </body>
 
 </html>
