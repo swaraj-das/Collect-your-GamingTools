@@ -586,3 +586,39 @@ button:hover {
         transition: 0.5s;
     }
 }
+
+/*dark mode toggle*/
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.navbar.dark-mode {
+    background-color: #333333;
+}
+
+.navbar.dark-mode a {
+    color: #e0e0e0;
+}
+
+.dark-mode .website-name {
+    background: linear-gradient(90deg, #32cd32, #1e90ff, #8a2be2, #ff459f, #ff9532);
+}
+
+.dark-mode button {
+    background: #444444;
+    color: #ffffff;
+}
+
+.dark-mode .login {
+    background: linear-gradient(to right, #444444, #333333);
+    color: white;
+}
+
+.col-1 h2.dark-mode {
+    font-size: 54px;
+    color: white;
+    cursor: pointer;
+}
