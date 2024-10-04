@@ -295,124 +295,159 @@ button:hover {
     font-weight: 600;
 }
 
-.footer-container {
-    background-color: #444444;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
+.footer {
+    background: #303036;
+    color: #d3d3d3;
+    padding: 50px 0 0;
+    font-family: 'Arial', sans-serif;
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-section {
-    flex: 1 1 200px;
-    margin: 10px 20px;
-    max-width: 300px;
-    text-align: left;
+    flex: 1;
+    margin-bottom: 40px;
+    min-width: 300px;
+    padding: 0 20px;
 }
 
-.footer-section .logo-name {
+.footer h2 {
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.logo-container {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-}
-
-.footer-section .logo-name img {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.footer-section .logo-name h4 {
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.footer-section .contact {
-    font-size: 14px;
-    line-height: 28px;
-    color: #d3d3d3;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.footer-section .follow {
-    margin-left: 20px;
-}
-
-.footer-section .contact:hover {
-    color: #ffee05;
-}
-
-.footer-section h4 {
     margin-bottom: 20px;
-    margin-top: 16px;
 }
 
-.footer-section p {
-    line-height: 22px;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: justify;
+.footer-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.about-text {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.socials {
+    margin-top: 20px;
+}
+
+.socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #d3d3d3;
+    transition: all .3s;
+}
+
+.socials a:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #d3d3d3;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.links ul a:hover {
+    color: white;
+    padding-left: 10px;
+}
+
+.contact-form .text-input {
+    background: #272727;
+    color: #bebdbd;
+    margin-bottom: 20px;
+    line-height: 1.5rem;
+    padding: 10px 15px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contact-form textarea.text-input {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form .contact-btn {
+    float: right;
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.contact-form .contact-btn:hover {
+    background: #45a049;
 }
 
 .footer-bottom {
-    border-top: 0.7px dashed #e4e4e4;
-    padding-top: 20px;
-    max-width: 30%;
-    margin: 0 auto;
+    background: #343a40;
+    color: #686868;
     text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
 }
 
-.footer-bottom p {
-    margin: 5px 0;
-    font-size: 12px;
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    
+    .contact-form .contact-btn {
+        width: 100%;
+        float: none;
+    }
 }
-
-.social-links a {
-    text-decoration: none;
-}
-
-.social-links a:first-child {
-    color: #3b5998;
-}
-
-.social-links a:nth-child(2) {
-    color: #1DA1F2;
-}
-
-.social-links a:last-child {
-    color: #0077b5;
-}
-
-.instagram-link {
-    display: inline-block;
-}
-
-.instagram-icon {
-    font-size: 64px;
-    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    mask-image: url('https://unpkg.com/ionicons@5.5.2/dist/svg/logo-instagram.svg');
-    mask-size: cover;
-    color: transparent;
-}
-
-.social-links ion-icon {
-    font-size: 30px;
-    margin: 14px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.social-links ion-icon:hover {
-    transform: scale(1.2);
-}
-
 
 
 
