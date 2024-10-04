@@ -423,15 +423,18 @@ button:hover {
     mask-size: cover;
     color: transparent;
 }
-
+/* Changed the below CSS style to apply only size and margin to the other logos[Except X(Twitter)] */
 .social-links ion-icon {
     font-size: 30px;
     margin: 14px;
+}
+/* Grouped the animation for all the icons together for better usability. */
+.social-links ion-icon, .twitterlogo {
     cursor: pointer;
     transition: transform 0.3s;
 }
 
-.social-links ion-icon:hover {
+.social-links ion-icon:hover, .twitterlogo:hover {
     transform: scale(1.2);
 }
 
