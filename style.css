@@ -254,6 +254,11 @@ button:hover {
     font-size: 16px;
 }
 
+.add-btn a {
+    text-decoration: none;
+    color: white;
+}
+
 .add-btn:hover {
     transform: scale(1.1);
 }
@@ -556,3 +561,4 @@ button:hover {
         overflow: hidden;
         transition: 0.5s;
     }
+}
