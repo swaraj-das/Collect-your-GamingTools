@@ -30,6 +30,104 @@
     margin: 18px 0;
 }
 
+/* Dark mode */
+
+/* Default light mode colors */
+:root {
+    --background-color: white;
+    --text-color: black;
+    --header-bg: lightgray;
+}
+
+h2{
+    color: var(--text-color);
+}
+/* Dark mode colors */
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #f1f1f1;
+    --header-bg: #1c1c1c;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#mode-label {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+/* Toggle Switch */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.4s;
+    top: 3px;
+    left: 4px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/*---------------------*/
+
 @keyframes rainbow {
     0% {
         background-position: 0% 50%;
@@ -123,13 +221,13 @@ nav ul li.login:hover {
 
 .col-1 h2 {
     font-size: 54px;
-    color: #000;
+    color: var(--text-color);
     cursor: pointer;
 }
 
 .col-1 h3 {
     font-size: 30px;
-    color: #707070;
+    color: var(--text-color);
     font-weight: 100;
     margin: 20px 0 10px;
     cursor: pointer;
@@ -137,7 +235,7 @@ nav ul li.login:hover {
 
 .col-1 p {
     font-size: 16px;
-    color: #a1a1a1;
+    color: var(--text-color);
     font-weight: 500;
     cursor: pointer;
 }
@@ -147,7 +245,7 @@ button {
     border: 0;
     padding: 14px 12px;
     outline: none;
-    color: #fff;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: bolder;
     background: linear-gradient(to right, #fb5283, #ff3527);
@@ -212,20 +310,20 @@ button:hover {
 
 .original-price {
     font-size: 20px;
-    color: #a1a1a1;
+    color: var(--text-color);
     text-decoration: line-through;
     margin-right: 15px;
 }
 
 .discounted-price {
     font-size: 24px;
-    color: #000;
+    color: var(--text-color);
     font-weight: bold;
 }
 
 .discount {
     background-color: #ff3c6d;
-    color: #fff;
+    color: var(--text-color);
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -242,7 +340,7 @@ button:hover {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
+    color: var(--text-color);
     cursor: pointer;
     border: 1.5px solid #fff;
     padding: 10px;

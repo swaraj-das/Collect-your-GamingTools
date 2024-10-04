@@ -11,6 +11,7 @@
 
 <body>
         <div class="container">
+            
             <div class="navbar">
                 <img src="images/logo.png" class="logo" alt="Logo">
                 <span class="website-name">Collect your GamingTools</span>
@@ -22,8 +23,16 @@
                         <li><a href="#">Others</a></li>
                         <li class="login"><a href="login/login.html">Login</a></li>
                     </ul>
+                    
                 </nav>
-                <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+            
+                <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()"><div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox">
+                        <div class="slider"></div>
+                    </label>
+                    <span id="mode-label">Light Mode</span>
+                </div> 
             </div>
 
         <!-- PS4 Controller Section -->
@@ -292,6 +301,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="darkMode.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
