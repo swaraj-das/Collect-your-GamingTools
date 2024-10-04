@@ -108,28 +108,66 @@ nav ul li.login:hover {
     color: #fff;
 }
 
+/* Global row styling with mouse tracking */
 .row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin: 120px 0;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to right, #f0f9ff, #c9eaff);
+    padding: 30px;
+    border-radius: 10px;
+    transition: background 0.5s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
+.row:hover {
+    background: linear-gradient(to right, #edf7fa, #d2f1fc);
+}
+
+/* Track mouse movements and add gradient */
+.row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(224, 207, 112, 0.4), transparent);
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+}
+
+.row:hover::before {
+    transition: transform 0.05s ease-out;
+}
+
+/* Content area */
 .col-1 {
-    flex-basis: 40%;
+    flex-basis: 100%; /* Initially take full width */
+    transition: flex-basis 1s ease-in-out;
     position: relative;
-    margin-left: 50px;
 }
 
 .col-1 h2 {
     font-size: 54px;
-    color: #000;
+    color: #343a40;
     cursor: pointer;
+    margin-bottom: 15px;
+    transition: color 0.5s;
+}
+
+.col-1 h2:hover {
+    color: #5a9bd4;
 }
 
 .col-1 h3 {
     font-size: 30px;
-    color: #707070;
+    color: #6c757d;
     font-weight: 100;
     margin: 20px 0 10px;
     cursor: pointer;
@@ -137,11 +175,12 @@ nav ul li.login:hover {
 
 .col-1 p {
     font-size: 16px;
-    color: #a1a1a1;
+    color: #8f8f8f;
     font-weight: 500;
     cursor: pointer;
 }
 
+/* Button with a softer gradient */
 button {
     width: 140px;
     border: 0;
@@ -150,10 +189,18 @@ button {
     color: #fff;
     font-size: 16px;
     font-weight: bolder;
-    background: linear-gradient(to right, #fb5283, #ff3527);
+    background: linear-gradient(to right, #78c8e8, #94d7f2);
     border-radius: 6px;
     cursor: pointer;
-    transition: width 0.5s;
+    transition: width 0.5s, background 0.5s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #56b2da, #78c8e8);
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 button img {
@@ -165,74 +212,50 @@ button:hover img {
     display: block;
 }
 
-button:hover {
-    width: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
+/* Color gradient bar */
 .col-1::after {
     content: '';
     width: 10px;
     height: 63%;
-    background: linear-gradient(#ff459f, #ff6062);
+    background: linear-gradient(#78c8e8, #bde7f9);
     position: absolute;
     left: -40px;
     top: 8px;
 }
 
+/* Image container */
 .col-2 {
+    flex-basis: 0%; /* Initially hidden */
+    transition: flex-basis 1s ease-in-out;
+    overflow: hidden;
     position: relative;
-    flex-basis: 60%;
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 
 .col-2 .controller {
-    width: 90%;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+    transform: scale(0.8); /* Scale down initially */
 }
 
+/* Color box with softer colors */
 .color-box {
     position: absolute;
     right: 0;
     top: 0;
-    background: linear-gradient(#ff459f, #ff9532);
+    background: linear-gradient(#78c8e8, #94d7f2);
     border-radius: 20px 0 0 20px;
     height: 100%;
-    width: 80%;
+    width: 100%;
     z-index: -1;
     transform: translateX(150px);
+    opacity: 0; /* Hidden initially */
+    transition: opacity 1s, transform 1s ease-in-out;
 }
 
-.price {
-    margin: 20px 0;
-    display: flex;
-}
-
-.original-price {
-    font-size: 20px;
-    color: #a1a1a1;
-    text-decoration: line-through;
-    margin-right: 15px;
-}
-
-.discounted-price {
-    font-size: 24px;
-    color: #000;
-    font-weight: bold;
-}
-
-.discount {
-    background-color: #ff3c6d;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: 15px;
-}
-
+/* Add to cart button styling */
 .add-btn img {
     width: 40px;
     margin-bottom: 5px;
@@ -251,12 +274,26 @@ button:hover {
     transition: transform 0.5s;
 }
 
-.add-btn p {
-    font-size: 16px;
-}
-
 .add-btn:hover {
     transform: scale(1.1);
+}
+
+/* Hovering effect for row */
+.row:hover .col-1 {
+    flex-basis: 40%; /* Shift content to the left */
+}
+
+.row:hover .col-2 {
+    flex-basis: 60%; /* Show the image on the right */
+}
+
+.row:hover .controller {
+    transform: scale(1); /* Scale image up on hover */
+}
+
+.row:hover .color-box {
+    transform: translateX(0); /* Slide the color box */
+    opacity: 1;
 }
 
 .rating {
@@ -268,8 +305,7 @@ button:hover {
 .rating span {
     font-size: 26px;
     margin-right: 10px;
-    background: linear-gradient(to right, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff);
-    /* Example gradient colors */
+    background: linear-gradient(to right, #56b2da, #78c8e8, #94d7f2, #bde7f9);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -277,7 +313,7 @@ button:hover {
 
 .rating p {
     font-size: 14px;
-    color: #707070;
+    color: #6c757d;
     margin: 0;
 }
 
@@ -291,9 +327,27 @@ button:hover {
 
 .overall-rating .star {
     margin-left: 5px;
-    color: #ff3c6d;
+    color: #56b2da;
     font-weight: 600;
 }
+
+/* Mouse movement gradient effect */
+.row:hover::before {
+    transform: translate(calc(var(--x) * 1px - 50px), calc(var(--y) * 1px - 50px));
+    transition: transform 0.05s ease-out;
+}
+
+/* Track mouse movements inside row */
+.row {
+    --x: 0;
+    --y: 0;
+}
+
+.row:hover {
+    background: radial-gradient(circle, rgba(173, 216, 230, 0.4), transparent);
+}
+
+
 
 .footer-container {
     background-color: #444444;
