@@ -44,7 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollToTopBtn.classList.remove('show');
         }
 
-        setProgress(scrolled * 100);
+        // Ensure smooth progress updates
+        requestAnimationFrame(() => {
+            setProgress(scrolled * 100);
+        });
     }
 
     function scrollToTop() {
