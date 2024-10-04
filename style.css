@@ -450,6 +450,41 @@ button:hover {
     
 }
 
+.review-section{
+    
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+.review {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.review h4 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.review p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.review .rating {
+    color: #ffcc00;
+    margin-top: 5px;
+}
+
 
 
 
