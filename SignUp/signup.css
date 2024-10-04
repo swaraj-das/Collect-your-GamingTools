@@ -17,17 +17,20 @@ body {
 }
 
 .signup-container {
+    
     opacity: 0.75;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
     text-align: center;
-    max-width: 450px;
+    max-width: 500px;
     width: 100%;
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
+    background-color: black;
+    margin: auto;
 }
+
 
 @keyframes fadeIn {
     from {
@@ -80,12 +83,15 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   font-weight:bold;
   font-size:20px;
   text-align: center;
-  text-decoration:none;
   background-color:#FFA12B;
   display:block;
   position:relative;
-  padding:15px 50px;
-  margin-left: 100px;
+  padding:15px 60px;
+  margin: auto;
+  
+ 
+ 
+  
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
   
@@ -145,3 +151,4 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     color: #ff80ab;
     text-decoration: underline;
 }
+
