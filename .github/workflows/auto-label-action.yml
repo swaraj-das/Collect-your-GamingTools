@@ -26,3 +26,4 @@ jobs:
         labels: |
           hacktoberfest
           hacktoberfest-accepted
+          gssoc-ext
