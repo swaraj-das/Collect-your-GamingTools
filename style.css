@@ -67,6 +67,10 @@ nav {
     margin-right: 100px;
 }
 
+nav ul {
+    display: flex;
+}
+
 nav ul li {
     list-style: none;
     display: inline-block;
@@ -121,11 +125,6 @@ nav ul li.login:hover {
     font-size: 54px;
     color: #000;
     cursor: pointer;
-    transition: color 0.3s;
-}
-
-.col-1 h2:hover {
-    color: #e00999;
 }
 
 .col-1 h3 {
@@ -144,9 +143,9 @@ nav ul li.login:hover {
 }
 
 button {
-    width: 160px; /* Keep the width consistent */
-    border: none; /* Removed border */
-    padding: 14px 12px; /* Slightly increased padding */
+    width: 140px;
+    border: 0;
+    padding: 14px 12px;
     outline: none;
     color: #fff;
     font-size: 16px;
@@ -154,26 +153,23 @@ button {
     background: linear-gradient(to right, #fb5283, #ff3527);
     border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s; /* Unified transition */
-    display: flex; /* Added flex to center content */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    box-shadow: 0 4px 15px rgba(255, 72, 128, 0.6); /* Glowing effect */
+    transition: width 0.5s;
 }
 
 button img {
     width: 30px;
-    margin-left: 8px; /* Spacing between text and image */
-    display: none; /* Hide image initially */
+    display: none;
 }
 
 button:hover img {
-    display: block; /* Show image on hover */
+    display: block;
 }
 
 button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 72, 128, 0.8); /* Glowing effect on hover */
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .col-1::after {
@@ -188,7 +184,7 @@ button:hover {
 
 .col-2 {
     position: relative;
-    flex-basis: 50%; /* Adjusted for a smaller container */
+    flex-basis: 60%;
     display: flex;
     align-items: center;
 }
@@ -237,6 +233,11 @@ button:hover {
     margin-left: 15px;
 }
 
+.add-btn img {
+    width: 40px;
+    margin-bottom: 5px;
+}
+
 .add-btn {
     text-align: center;
     font-size: 14px;
@@ -247,7 +248,7 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
     display: inline-block;
-    transition: transform 0.3s, background 0.3s; /* Unified transition */
+    transition: transform 0.5s;
 }
 
 .add-btn p {
@@ -256,7 +257,6 @@ button:hover {
 
 .add-btn:hover {
     transform: scale(1.1);
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .rating {
@@ -336,37 +336,110 @@ button:hover {
     font-size: 14px;
     line-height: 28px;
     color: #d3d3d3;
-    font-weight: 500;
-}
-
-.footer-section .contact a {
-    color: #ffffff;
-    text-decoration: underline;
-    transition: color 0.3s;
-}
-
-.footer-section .contact a:hover {
-    color: #ff3c6d;
-}
-
-.footer-section .socials {
-    display: flex;
-    margin-top: 15px;
-}
-
-.footer-section .socials i {
-    font-size: 20px;
-    margin-right: 15px;
+    font-weight: 600;
     cursor: pointer;
-    transition: color 0.3s;
 }
 
-.footer-section .socials i:hover {
-    color: #ff3c6d;
+.footer-section .follow {
+    margin-left: 20px;
 }
 
-.footer-section .copy {
+.footer-section .contact:hover {
+    color: #ffee05;
+}
+
+.footer-section h4 {
+    margin-bottom: 20px;
+    margin-top: 16px;
+}
+
+.footer-section p {
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.footer-bottom {
+    border-top: 0.7px dashed #e4e4e4;
+    padding-top: 20px;
+    max-width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
     font-size: 12px;
-    color: #d3d3d3;
-    margin-top: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links a:first-child {
+    color: #3b5998;
+}
+
+.social-links a:nth-child(2) {
+    color: #1DA1F2;
+}
+
+.social-links a:last-child {
+    color: #0077b5;
+}
+
+.instagram-link {
+    display: inline-block;
+}
+
+.instagram-link img {
+    height: 20px;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        margin: 60px 0;
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .col-2 .controller {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
 }
