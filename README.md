@@ -62,5 +62,8 @@ The GitHub token used in the workflow file must have the following permissions:
 These permissions ensure that the workflow can read the repository contents and write labels to issues and pull requests.
 
 
-## 👨‍💻 Author
-### Created with ❤️ by Swaraj Das
+## 👥 Team
+
+- ### Project Admin : **[Swaraj Das](https://github.com/member1username)**
+- ### Maintainer : **[Anit Sarkar](https://github.com/member2username)**
+
