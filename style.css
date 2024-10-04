@@ -259,7 +259,9 @@ button:hover {
     width: 40px;
     margin-bottom: 5px;
 }
-
+.buy-button {
+    text-decoration: none;
+}
 .add-btn {
     text-align: center;
     font-size: 14px;
@@ -625,3 +627,46 @@ button:hover {
     background: #ff6062;
   }
   
+
+/* checkout */
+
+  .checkout-container, .payment-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.payment-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-container input, .payment-container select, .payment-container button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+.add-btn {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+}
+

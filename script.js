@@ -25,3 +25,22 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
+
+function addToCart(button) {
+    // Show the tooltip
+    const tooltip = button.querySelector('.tooltip');
+    tooltip.style.display = 'block';
+
+    // Change the button text
+    const cartText = button.querySelector('small');
+    cartText.textContent = 'Proceed to Checkout';
+    button.onclick = function() {
+        window.location.href = 'payment/checkout.html'; 
+    };
+
+    // Hide the tooltip after a few seconds
+    setTimeout(() => {
+        tooltip.style.display = 'none';
+    }, 2000); // Tooltip will disappear after 2 seconds
+}

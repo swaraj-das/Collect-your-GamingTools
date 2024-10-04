@@ -10,21 +10,21 @@
 </head>
 
 <body>
-        <div class="container">
-            <div class="navbar">
-                <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
-                <a href="/"><span class="website-name">Collect your GamingTools</span></a>
-                <nav>
-                    <ul id="menuList">
-                        <li><a href="#">Game Controllers</a></li>
-                        <li><a href="#">VR Accessories</a></li>
-                        <li><a href="#">Media Remotes</a></li>
-                        <li><a href="#">Others</a></li>
-                        <li class="login"><a href="login/login.html">Login</a></li>
-                    </ul>
-                </nav>
-                <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
-            </div>
+    <div class="container">
+        <div class="navbar">
+            <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
+            <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="#">Game Controllers</a></li>
+                    <li><a href="#">VR Accessories</a></li>
+                    <li><a href="#">Media Remotes</a></li>
+                    <li><a href="#">Others</a></li>
+                    <li class="login"><a href="login/login.html">Login</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+        </div>
 
         <!-- PS4 Controller Section -->
         <div class="row">
@@ -45,14 +45,15 @@
                     <span>Overall Rating:</span>
                     <p class="star">4.1★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <a href="payment/checkout.html" class="buy-button"><button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button></a>
             </div>
             <div class="col-2">
                 <img src="images/controller1.png" class="controller" alt="Controller">
                 <div class="color-box"></div>
-                <div class="add-btn">
+                <div class="add-btn" onclick="addToCart(this)">
                     <img src="images/add.png" alt="Add">
                     <p><small>Add to cart</small></p>
+                    <span class="tooltip" style="display: none;">Added to cart!</span>
                 </div>
             </div>
         </div>
@@ -76,14 +77,15 @@
                     <span>Overall Rating:</span>
                     <p class="star">4.8★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <a href="payment/checkout.html" class="buy-button"><button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button></a>
             </div>
             <div class="col-2">
                 <img src="images/controller2.png" class="controller" alt="Controller">
                 <div class="color-box"></div>
-                <div class="add-btn">
+                <div class="add-btn" onclick="addToCart(this)">
                     <img src="images/add.png" alt="Add">
                     <p><small>Add to cart</small></p>
+                    <span class="tooltip" style="display: none;">Added to cart!</span>
                 </div>
             </div>
         </div>
@@ -107,14 +109,15 @@
                     <span>Overall Rating:</span>
                     <p class="star">4.2★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <a href="payment/checkout.html" class="buy-button"><button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button></a>
             </div>
             <div class="col-2">
                 <img src="images/controller3.png" class="controller" alt="Controller">
                 <div class="color-box"></div>
-                <div class="add-btn">
+                <div class="add-btn" onclick="addToCart(this)">
                     <img src="images/add.png" alt="Add">
                     <p><small>Add to cart</small></p>
+                    <span class="tooltip" style="display: none;">Added to cart!</span>
                 </div>
             </div>
         </div>
@@ -138,14 +141,15 @@
                     <span>Overall Rating:</span>
                     <p class="star">5.0★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <a href="payment/checkout.html" class="buy-button"><button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button></a>
             </div>
             <div class="col-2">
                 <img src="images/mouse.png" class="controller" alt="Gaming Mouse">
                 <div class="color-box"></div>
-                <div class="add-btn">
+                <div class="add-btn" onclick="addToCart(this)">
                     <img src="images/add.png" alt="Add">
                     <p><small>Add to cart</small></p>
+                    <span class="tooltip" style="display: none;">Added to cart!</span>
                 </div>
             </div>
         </div>
@@ -169,14 +173,15 @@
                     <span>Overall Rating:</span>
                     <p class="star">4.5★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <a href="payment/checkout.html" class="buy-button"><button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button></a>
             </div>
             <div class="col-2">
                 <img src="images/keyboard.png" class="controller" alt="Gaming Keyboard">
                 <div class="color-box"></div>
-                <div class="add-btn">
+                <div class="add-btn" onclick="addToCart(this)">
                     <img src="images/add.png" alt="Add">
                     <p><small>Add to cart</small></p>
+                    <span class="tooltip" style="display: none;">Added to cart!</span>
                 </div>
             </div>
         </div>
@@ -189,119 +194,36 @@
                 <p>(Surround Sound)</p>
                 <div class="price">
                     <span class="original-price">&#8377;12000</span>
-                    <span class="discounted-price">&#8377;8999</span>
-                    <span class="discount">25% off</span>
+                    <span class="discounted-price">&#8377;9999</span>
+                    <span class="discount">17% off</span>
                 </div>
                 <div class="rating">
-                    <span>★★★★★</span>
-                    <p>(8452 reviews)</p>
+                    <span>★★★★☆</span>
+                    <p>(2342 reviews)</p>
                 </div>
                 <div class="overall-rating">
                     <span>Overall Rating:</span>
-                    <p class="star">4.7★</p>
+                    <p class="star">4.4★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <a href="payment/checkout.html" class="buy-button"><button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button></a>
             </div>
             <div class="col-2">
                 <img src="images/headset.png" class="controller" alt="Gaming Headset">
                 <div class="color-box"></div>
-                <div class="add-btn">
+                <div class="add-btn" onclick="addToCart(this)">
                     <img src="images/add.png" alt="Add">
                     <p><small>Add to cart</small></p>
+                    <span class="tooltip" style="display: none;">Added to cart!</span>
                 </div>
             </div>
         </div>
 
-        <!-- Gaming Chair Section -->
-        <div class="row">
-            <div class="col-1">
-                <h2>Secretlab Omega</h2>
-                <h3>Ergonomic Gaming Chair</h3>
-                <p>(Adjustable)</p>
-                <div class="price">
-                    <span class="original-price">&#8377;30000</span>
-                    <span class="discounted-price">&#8377;24999</span>
-                    <span class="discount">17% off</span>
-                </div>
-                <div class="rating">
-                    <span>★★★★★</span>
-                    <p>(3564 reviews)</p>
-                </div>
-                <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">4.8★</p>
-                </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-            </div>
-            <div class="col-2">
-                <img src="images/chair.png" class="controller" alt="Gaming Chair">
-                <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small>Add to cart</small></p>
-                </div>
-            </div>
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>&copy; 2024 Collect your GamingTools. All Rights Reserved.</p>
         </div>
     </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="logo-name">
-                        <img src="images/logo.png" alt="Logo" />
-                        <h4>Collect your GamingTools</h4>
-                    </div>
-                    <p>
-                        Collect your GamingTools is your one-stop shop for the best gaming
-                        accessories. We provide a wide range of controllers, VR
-                        accessories, media remotes, and more.
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Us</h4>
-                    <p class="contact">Email: support@gamingtools.com</p>
-                    <p class="contact">Phone: +123 456 7890</p>
-                    <h4>Our Address</h4>
-                    <p>Park Street, Kolkata - 700001</p>
-                    <p>West Bengal, India</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="follow">Follow Us on</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                        <a href="https://www.twitter.com/" target="_blank">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="instagram-link">
-                            <ion-icon name="logo-instagram" class="instagram-icon"></ion-icon>
-                        </a>
-                        <a href="https://pk.linkedin.com/" target="_blank">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Collect your GamingTools - All rights reserved.</p>
-                <p>Made by Swaraj &#128512;</p>
-            </div>
-        </div>
-        
-    </footer>
-
-    <!-- Scroll to Top Button -->
-    <div class="scroll-top" onclick="scrollToTop()">
-        <ion-icon name="arrow-up-outline"></ion-icon>
-    </div>
-
-    <!-- Scripts -->
     <script src="script.js"></script>
-    <!-- Ionicons Scripts -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
