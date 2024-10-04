@@ -1,0 +1,48 @@
+name: ​Task Request
+description: This is Only For Project Admins and Mentors.
+title: " <write a small description here>"
+labels: ["priority: high"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: A brief description of the issue or bug you are facing, also include what you tried and what didn't work.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if required
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Any additional Details?
+      description: Please Provide Key Details, if required (Goals and objectives,Deliverables,Dependencies)
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Deadline
+      description: Specify the task deadline
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "Stay you can start working on it by taking latest pull from main branch
+
+
+      
+   Please follow the code of conduct [Code Of Conduct](https://github.com/Curious-Ecosystem/Curious-Connect/blob/main/CODE_OF_CONDUCT.md)
+
+
+   
+   The changes don't break the code
+
+        
+   Please attach the screenshots and video of the development work once it is done 
+
+     
+      
+ 
