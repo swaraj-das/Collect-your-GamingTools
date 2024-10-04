@@ -611,17 +611,90 @@ button:hover {
 
 .scroll-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ff459f;
-    padding: 10px;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(145deg, #ff459f, #ff6062);
+    color: white;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    border: none;
     cursor: pointer;
-    display: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .scroll-top:hover {
-    background: #ff6062;
-  }
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+    overflow: hidden;
+}
+
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
+}
+
+.scroll-top:active {
+    transform: translateY(-2px);
+}
+
+.scroll-top-icon {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.scroll-top:hover .scroll-top-icon {
+    transform: translateY(-3px);
+}
+
+.progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 69, 159, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(255, 69, 159, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 69, 159, 0);
+    }
+}
+
+.scroll-top:hover {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.scroll-top.show:not(:hover) {
+    animation: bounce 2s infinite;
+}
