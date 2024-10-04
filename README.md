@@ -23,7 +23,7 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 
 ## 🚀 Demo
 #### Check out the live demo here ⬇️ : 
-https://swaraj-das.github.io/Collect-your-GamingTools/
+https://collect-your-gaming-tools-7r1z88vx4-swaraj-das-projects.vercel.app/
 
 
 ## 🛠️ Installation
@@ -47,6 +47,19 @@ Contributions are what make the **open-source** community such an amazing place 
 
 🔃 Open a <b>pull request</b>.
 
+
+## 📄 Workflow Configuration
+
+The `.github/workflows/auto-label-action.yml` file is used to automatically add labels to new issues and pull requests. This helps in organizing and managing the repository more efficiently.
+
+### Permissions Required
+
+The GitHub token used in the workflow file must have the following permissions:
+- `issues: write`
+- `pull-requests: write`
+- `contents: read`
+
+These permissions ensure that the workflow can read the repository contents and write labels to issues and pull requests.
 
 
 ## 👨‍💻 Author
