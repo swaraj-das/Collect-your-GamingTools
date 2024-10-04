@@ -64,6 +64,6 @@ These permissions ensure that the workflow can read the repository contents and 
 
 ## 👥 Team
 
-- ### Project Admin : **[Swaraj Das](https://github.com/member1username)**
-- ### Maintainer : **[Anit Sarkar](https://github.com/member2username)**
+- ### Project Admin : **[Swaraj Das](https://github.com/swaraj-das)**
+- ### Maintainer : **[Anit Sarkar](https://github.com/AnitSarkar123)**
 
