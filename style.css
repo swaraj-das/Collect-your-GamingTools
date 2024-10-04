@@ -200,6 +200,7 @@ button:hover {
     top: 8px;
 }
 
+
 .col-2 {
     position: relative;
     flex-basis: 60%;
@@ -270,7 +271,7 @@ button:hover {
 }
 
 .add-btn p {
-    font-size: 16px;
+    font-size: 10px;
 }
 
 .add-btn:hover {
@@ -431,6 +432,43 @@ button:hover {
     transform: scale(1.2);
 }
 
+
+
+
+/* Add a transition for smooth hover effect */
+.col-2 .controller {
+    transition: transform 0.3s ease, opacity 0.9s ease;
+    opacity: 1;
+
+}
+
+.col-2 .add-btn {
+    /* transition: opacity 0.3s ease;
+    opacity: 0; Initially hidden */
+    box-shadow: 0 10px 20px rgba(19, 101, 41, 0.216)
+    
+}
+.col-2 .add-btn:hover {
+        background-color:#65a80d;
+}
+
+.col-2:hover .controller {
+    transform: scale(1.1); /* Enlarge the image slightly */
+    opacity: 0.8; /* Reduce opacity slightly */
+}
+
+.col-2:hover .add-btn {
+    opacity: 1; /* Show add-to-cart button on hover */
+}
+
+/* Optional: Add some styling to the color box on hover as well */
+.col-2 .color-box {
+    transition: background-color red 0.3s ease;
+}
+
+.col-2:hover .color-box {
+    background-color: rgb(92,17,41); /* Change background color on hover */
+}
 
 
 
