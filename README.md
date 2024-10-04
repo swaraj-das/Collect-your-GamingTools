@@ -23,7 +23,7 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 
 ## 🚀 Demo
 #### Check out the live demo here ⬇️ : 
-https://swaraj-das.github.io/Collect-your-GamingTools/
+https://collect-your-gaming-tools-7r1z88vx4-swaraj-das-projects.vercel.app/
 
 
 ## 🛠️ Installation
