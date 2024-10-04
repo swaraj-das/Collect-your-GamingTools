@@ -40,6 +40,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
     overflow: hidden;
     background-color: #fff;
     z-index: 1000;
+ 
 }
 
 .logo {
@@ -143,6 +144,7 @@ nav ul li.login:hover {
     font-size: 54px;
     color: #000;
     cursor: pointer;
+    letter-spacing: 1px;
 }
 
 .col-1 h3 {
@@ -172,6 +174,8 @@ button {
     border-radius: 6px;
     cursor: pointer;
     transition: width 0.5s;
+    background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
+    transition: background 0.3s ease-in-out;
 }
 
 button img {
@@ -604,3 +608,20 @@ button:hover {
         transition: 0.5s;
     }
 }
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff459f;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scroll-top:hover {
+    background: #ff6062;
+  }
+  
