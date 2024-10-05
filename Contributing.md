@@ -1,6 +1,6 @@
 
 
-# 🎨 Contributing to Collect Your GamingTools Repository
+# 🎮 Contributing to Collect Your GamingTools Repository
 
 Thank you for your interest in contributing to **Collect Your GamingTools**! We’re excited to see what creative ideas you bring. Follow these simple guidelines below to get started.
 
