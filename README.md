@@ -23,7 +23,7 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 
 ## 🚀 Demo
 #### Check out the live demo here ⬇️ : 
-https://swaraj-das.github.io/Collect-your-GamingTools/
+https://collect-your-gaming-tools-7r1z88vx4-swaraj-das-projects.vercel.app/
 
 
 ## 🛠️ Installation
@@ -48,6 +48,27 @@ Contributions are what make the **open-source** community such an amazing place 
 🔃 Open a <b>pull request</b>.
 
 
+## 📄 Workflow Configuration
 
-## 👨‍💻 Author
-### Created with ❤️ by Swaraj Das
+The `.github/workflows/auto-label-action.yml` file is used to automatically add labels to new issues and pull requests. This helps in organizing and managing the repository more efficiently.
+
+### Permissions Required
+
+The GitHub token used in the workflow file must have the following permissions:
+- `issues: write`
+- `pull-requests: write`
+- `contents: read`
+
+These permissions ensure that the workflow can read the repository contents and write labels to issues and pull requests.
+
+## 👥 Team
+
+| ![Swaraj Das](https://avatars.githubusercontent.com/u/151845349?v=4&s=80) | ![Anit Sarkar](https://avatars.githubusercontent.com/u/135215478?v=4&s=80) |
+|:--:|:--:|
+| **Swaraj Das** <br> <sub>Project Admin</sub> | **Anit Sarkar** <br> <sub>Maintainer</sub> |
+| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/swarajdas01/) | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/anit-sarkar-11906a283/) |
+
+
+
+
+
