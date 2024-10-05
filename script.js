@@ -25,3 +25,37 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
+// Function to animate the review count
+function animateReviewCount(elementId, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const currentCount = Math.floor(progress * (end - start) + start);
+        document.getElementById(elementId).textContent = `(${currentCount} reviews)`;
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+// Function to animate the overall rating
+function animateRating(elementId, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const currentRating = (progress * (end - start) + start).toFixed(1);
+        document.getElementById(elementId).textContent = `${currentRating}★`;
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+// Trigger animations
+animateReviewCount("review-count", 0, 2252, 2000); // Animates from 0 to 2252 in 2 seconds
+animateRating("overall-rating", 0.0, 4.1, 2000); // Animates from 0.0 to 4.1 in 2 seconds
