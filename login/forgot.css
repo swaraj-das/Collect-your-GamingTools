@@ -130,7 +130,7 @@ label {
     font-size: 16px;
 }
 
-input[type="text"], input[type="password"] {
+input[type="email"]{
     width: 100%;
     padding: 0.75rem;
     border: 2px solid #6a1b9a;
@@ -141,7 +141,7 @@ input[type="text"], input[type="password"] {
     font-size: 0.875rem;
 }
 
-input[type="text"]:focus, input[type="password"]:focus {
+input[type="email"]:focus{
     outline: none;
     border-color: #ba68c8;
     background-color: #2a2e32;
@@ -157,7 +157,8 @@ body{
   display:inline-block;
   margin:15px;
 }
-/*login button*/
+
+/*reset button*/
 .button a{
   color:white;
   font-family:Helvetica, sans-serif;
@@ -236,7 +237,7 @@ body{
 .links a: hover {
     color: #ff80ab;
 }
-}
+
 
 .links {
     margin-top: 18px;
