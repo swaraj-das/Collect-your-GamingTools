@@ -14,7 +14,7 @@ const emailValidator = require("email-validator");
 
 const signUp = async (req, res, next) => {
   const { name, email, password, confirmPassword } = req.body;
-
+console.log(name , email,password,confirmPassword)
   /// every field is required
   if (!name || !email || !password || !confirmPassword) {
     return res.status(400).json({
