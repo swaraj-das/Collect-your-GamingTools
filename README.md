@@ -47,6 +47,7 @@ Contributions are what make the **open-source** community such an amazing place 
 
 🔃 Open a <b>pull request</b>.
 
+We welcome all contributions to improve **Collect Your GamingTools**! If you'd like to contribute, please follow the [Contributing.md](./Contributing.md) to get details on how to get started.
 
 ## 👥 Team
 
