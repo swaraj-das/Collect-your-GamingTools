@@ -155,6 +155,37 @@ nav ul li.login:hover {
     cursor: pointer;
 }
 
+.row .col-2 img{
+    border: 2px solid #ddd; /* Default border */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.row .col-2 img:hover{
+    border-color: #ff5e5e; /* Border changes to red on hover */
+    box-shadow: 0 8px 20px rgba(255, 94, 94, 0.6); /* Red shadow */
+    transform: scale(1.1);
+}
+
+.col-2 .add-btn img{
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Make sure it's aligned properly on the right */
+    right: 0;
+}
+
+.col-2 .add-btn img:hover{
+    background-color: #ff9e80; /* Change button color on hover */
+    transform: scale(1.1); /* Slightly enlarge button */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 .col-1 p {
     font-size: 16px;
     color: #a1a1a1;
