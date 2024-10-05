@@ -33,7 +33,7 @@ Thank you for your interest in contributing to **Collect Your GamingTools**! Weâ
 2. **Commit Your Changes**  
    Write meaningful commit messages:
    ```bash
-   git commit -m "Add: New drawing tool feature"
+   git commit -m "Add: New navigation bar feature"
    ```
 
 3. **Push Your Changes**  
