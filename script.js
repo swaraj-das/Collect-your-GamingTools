@@ -20,7 +20,7 @@ window.addEventListener('scroll', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    const progressRing = document.querySelector('.progress-ring__circle');
+    const progressRing = scrollToTopBtn.querySelector('circle');
     const rootElement = document.documentElement;
     
     const radius = progressRing.r.baseVal.value;
@@ -39,12 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrolled = rootElement.scrollTop / scrollTotal;
 
         if (scrolled > 0.1) {
-            scrollToTopBtn.classList.add('show');
+            scrollToTopBtn.classList.add('opacity-100', 'visible');
+            scrollToTopBtn.classList.remove('opacity-0', 'invisible');
         } else {
-            scrollToTopBtn.classList.remove('show');
+            scrollToTopBtn.classList.remove('opacity-100', 'visible');
+            scrollToTopBtn.classList.add('opacity-0', 'invisible');
         }
 
-        // Ensure smooth progress updates
         requestAnimationFrame(() => {
             setProgress(scrolled * 100);
         });
@@ -60,28 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollToTopBtn.addEventListener('click', scrollToTop);
     window.addEventListener('scroll', handleScroll);
 
-    // Easter egg: Konami Code
-    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-    let konamiIndex = 0;
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === konamiCode[konamiIndex]) {
-            konamiIndex++;
-            if (konamiIndex === konamiCode.length) {
-                activateEasterEgg();
-                konamiIndex = 0;
-            }
-        } else {
-            konamiIndex = 0;
-        }
-    });
-
-    function activateEasterEgg() {
-        scrollToTopBtn.style.background = 'linear-gradient(145deg, #ff00ff, #00ffff)';
-        scrollToTopBtn.style.transform = 'rotate(360deg) scale(1.2)';
-        setTimeout(() => {
-            scrollToTopBtn.style.background = '';
-            scrollToTopBtn.style.transform = '';
-        }, 3000);
-    }
+    // Initial check in case the page is already scrolled on load
+    handleScroll();
 });

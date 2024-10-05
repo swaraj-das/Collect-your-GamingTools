@@ -6,299 +6,332 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collect your GamingTools</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Tailwind_Css/output.css">
+    <link rel="stylesheet" href="./Tailwind_Css/custom.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
-        <div class="container">
-            <div class="navbar">
-                <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
-                <a href="/"><span class="website-name">Collect your GamingTools</span></a>
-                <nav>
-                    <ul id="menuList">
-                        <li><a href="#">Game Controllers</a></li>
-                        <li><a href="#">VR Accessories</a></li>
-                        <li><a href="#">Media Remotes</a></li>
-                        <li><a href="#">Others</a></li>
-                        <li class="login"><a href="login/login.html">Login</a></li>
-                    </ul>
-                </nav>
-                <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
-            </div>
-
-        <!-- PS4 Controller Section -->
-        <div class="row">
-            <div class="col-1">
-                <h2>PS4 V2 Dualshock 4</h2>
-                <h3>Wireless Controllers for PlayStation 4</h3>
-                <p>(Compatible/Generic)</p>
-                <div class="price">
-                    <span class="original-price">&#8377;5500</span>
-                    <span class="discounted-price">&#8377;3999</span>
-                    <span class="discount">30% off</span>
-                </div>
-                <div class="rating">
-                    <span>★★★★☆</span>
-                    <p>(2252 reviews)</p>
-                </div>
-                <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">4.1★</p>
-                </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-            </div>
-            <div class="col-2">
-                <img src="images/controller1.png" class="controller" alt="Controller">
-                <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small>Add to cart</small></p>
-                </div>
-            </div>
+    <div class="my-container w-full min-h-screen px-[5%] box-border overflow-hidden">
+        <div class="navbar w-full flex items-center fixed top-0 overflow-hidden bg-white z-[1000]">
+            <a href="/"> <img src="images/logo.png" class="logo w-[50px] cursor-pointer my-[18px]" alt="Logo"></a>
+            <a href="/"><span
+                class="website-name ml-4 text-[20px] text-transparent bg-gradient-rainbow bg-clip-text bg-[400%] animate-rainbow font-trebunchet inline-block font-extrabold cursor-pointer">Collect
+                your GamingTools</span></a>
+            <nav class="flex-1 text-right mr-[100px]">
+                <ul id="menuList" class="list-none">
+                    <li class="inline-block mr-[30px]">
+                        <a class="no-underline text-black text-[14px] font-bold inline-block transition-all duration-500 hover:text-[#e00999] hover:scale-[1.18]" href="#">Game Controllers</a>
+                    </li>
+                    <li class="inline-block mr-[30px]">
+                        <a class="no-underline text-black text-[14px] font-bold inline-block transition-all duration-500 hover:text-[#e00999] hover:scale-[1.18]" href="#">VR Accessories</a>
+                    </li>
+                    <li class="inline-block mr-[30px]">
+                        <a class="no-underline text-black text-[14px] font-bold inline-block transition-all duration-500 hover:text-[#e00999] hover:scale-[1.18]" href="#">Media Remotes</a>
+                    </li>
+                    <li class="inline-block mr-[30px]">
+                        <a class="no-underline text-black text-[14px] font-bold inline-block transition-all duration-500 hover:text-[#e00999] hover:scale-[1.18]" href="#">Others</a>
+                    </li>
+                    <li class="login inline-block mr-[30px] bg-login-gradient h-6 rounded-[20px] py-1 px-[18px] cursor-pointer">
+                        <a class="no-underline text-white hover:text-white text-[14px] font-bold inline-block transition-all duration-500 hover:scale-[1.18]" href="login/login.html">Login</a>
+                    </li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon w-[25px] cursor-pointer hidden" onclick="toggleMenu()" alt="Menu">
         </div>
 
-        <!-- Xbox Controller Section -->
-        <div class="row">
-            <div class="col-1">
-                <h2>Xbox Wireless Controller</h2>
-                <h3>Controllers for Xbox One and Series X</h3>
-                <p>(Official)</p>
-                <div class="price">
-                    <span class="original-price">&#8377;4500</span>
-                    <span class="discounted-price">&#8377;3499</span>
-                    <span class="discount">22% off</span>
+        <!-- PS4 Controller Section -->
+        <div class="row flex justify-between items-center my-[120px]">
+            <div class="col-1 basis-[40%] relative ml-[50px] after:content-[''] after:w-[10px] after:h-[63%] after:bg-scroll-gradient after:absolute after:left-[-40px] after:top-[8px]">
+                <h2 class="text-h2 text-black cursor-pointer tracking-[1px]">PS4 V2 Dualshock 4</h2>
+                <h3 class="text-h3 text-darkGrayText font-[100] mt-5 mb-2.5 mx-0 cursor-pointer">Wireless Controllers for PlayStation 4</h3>
+                <p class="text-p text-lightGray font-[500] cursor-pointer">(Compatible/Generic)</p>
+                <div class="price my-[20px] flex">
+                    <span class="original-price text-[20px] text-lightGray line-through mr-[15px]">&#8377;5500</span>
+                    <span class="discounted-price text-[24px] text-black font-bold">&#8377;3999</span>
+                    <span class="discount bg-discount text-white py-[5px] px-[10px] text-[14px] font-bold ml-[15px] rounded-[5px]">30% off</span>
                 </div>
-                <div class="rating">
-                    <span>★★★★★</span>
-                    <p>(1189 reviews)</p>
+                <div class="rating flex items-center my-[10px]">
+                    <span class="text-[26px] mr-[10px] bg-gradient-rainbow bg-clip-text text-transparent">★★★★☆</span>
+                    <p class="text-[14px] text-ratingGray m-0">(2252 reviews)</p>
                 </div>
-                <div class="overall-rating">
+                <div class="overall-rating my-[14px] text-p font-bold flex items-center">
                     <span>Overall Rating:</span>
-                    <p class="star">4.8★</p>
+                    <p class="star ml-[5px] text-discount font-semibold">4.1★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <button class="buyNow w-[140px] border-0 py-[14px] px-[12px] outline-none text-p font-extralight rounded-[6px] cursor-pointer transition-colors duration-300 ease-in-out bg-buyNow-gradient hover:w-[160px] hover:flex hover:items-center hover:justify-between group" type="button">
+                    Buy Now
+                    <img class="w-[30px] hidden group-hover:block" src="images/arrow.png" alt="Arrow">
+                </button>
             </div>
-            <div class="col-2">
-                <img src="images/controller2.png" class="controller" alt="Controller">
-                <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small>Add to cart</small></p>
+            <div class="col-2 relative basis-[60%] flex items-center">
+                <img src="images/controller1.png" class="controller w-[90%]" alt="Controller">
+                <div class="color-box absolute right-0 top-0 bg-color-box-gradient rounded-tl-[20px] rounded-tr-none rounded-br-none rounded-bl-[20px] h-full w-[80%] z-[-1] transform translate-x-[150px]"></div>
+                <div class="add-btn text-center text-[14px] font-bold text-white cursor-pointer border-[1.5px] border-white p-[10px] rounded-[5px] inline-block transition-transform duration-300 hover:scale-110">
+                    <img class="w-[40px] mb-[5px]" src="images/add.png" alt="Add">
+                    <p class="text-p"><small>Add to cart</small></p>
+                </div>
+            </div>
+        </div>  
+        
+        <!-- Xbox Wireless Controller Section -->
+        <div class="row flex justify-between items-center my-[120px]">
+            <div class="col-1 basis-[40%] relative ml-[50px] after:content-[''] after:w-[10px] after:h-[63%] after:bg-scroll-gradient after:absolute after:left-[-40px] after:top-[8px]">
+                <h2 class="text-h2 text-black cursor-pointer tracking-[1px]">Xbox Wireless Controller</h2>
+                <h3 class="text-h3 text-darkGrayText font-[100] mt-5 mb-2.5 mx-0 cursor-pointer">Wireless Controllers for Xbox Series X/S</h3>
+                <p class="text-p text-lightGray font-[500] cursor-pointer">(Official)</p>
+                <div class="price my-[20px] flex">
+                    <span class="original-price text-[20px] text-lightGray line-through mr-[15px]">&#8377;7000</span>
+                    <span class="discounted-price text-[24px] text-black font-bold">&#8377;5999</span>
+                    <span class="discount bg-discount text-white py-[5px] px-[10px] text-[14px] font-bold ml-[15px] rounded-[5px]">14% off</span>
+                </div>
+                <div class="rating flex items-center my-[10px]">
+                    <span class="text-[26px] mr-[10px] bg-gradient-rainbow bg-clip-text text-transparent">★★★★☆</span>
+                    <p class="text-[14px text-ratingGray m-0">(4152 reviews)</p>
+                </div>
+                <div class="overall-rating my-[14px] text-p font-bold flex items-center">
+                    <span>Overall Rating:</span>
+                    <p class="star ml-[5px] text-discount font-semibold">4.2★</p>
+                </div>
+                <button class="buyNow w-[140px] border-0 py-[14px] px-[12px] outline-none text-p font-extralight rounded-[6px] cursor-pointer transition-colors duration-300 ease-in-out bg-buyNow-gradient hover:w-[160px] hover:flex hover:items-center hover:justify-between group" type="button">
+                    Buy Now
+                    <img class="w-[30px] hidden group-hover:block" src="images/arrow.png" alt="Arrow">
+                </button>
+            </div>
+            <div class="col-2 relative basis-[60%] flex items-center">
+                <img src="images/controller2.png" class="controller
+                w-[90%]" alt="Controller">
+                <div class="color-box absolute right-0 top-0 bg-color-box-gradient rounded-tl-[20px] rounded-tr-none rounded-br-none rounded-bl-[20px] h-full w-[80%] z-[-1] transform translate-x-[150px]"></div>
+                <div class="add-btn text-center text-[14px] font-bold text-white cursor-pointer border-[1.5px] border-white p-[10px] rounded-[5px] inline-block transition-transform duration-300 hover:scale-110">
+                    <img class="w-[40px] mb-[5px]" src="images/add.png" alt="Add">
+                    <p class="text-p"><small>Add to cart</small></p>
                 </div>
             </div>
         </div>
 
         <!-- Nintendo Switch Controller Section -->
-        <div class="row">
-            <div class="col-1">
-                <h2>Nintendo Switch Pro Controller</h2>
-                <h3>Wireless Controllers for Nintendo Switch</h3>
-                <p>(Official)</p>
-                <div class="price">
-                    <span class="original-price">&#8377;6000</span>
-                    <span class="discounted-price">&#8377;4999</span>
-                    <span class="discount">17% off</span>
+        <div class="row flex justify-between items-center my-[120px]">
+            <div class="col-1 basis-[40%] relative ml-[50px] after:content-[''] after:w-[10px] after:h-[63%] after:bg-scroll-gradient after:absolute after:left-[-40px] after:top-[8px]">
+                <h2 class="text-h2 text-black cursor-pointer tracking-[1px]">Nintendo Switch Pro Controller</h2>
+                <h3 class="text-h3 text-darkGrayText font-[100] mt-5 mb-2.5 mx-0 cursor-pointer">Wireless Controllers for Nintendo Switch</h3>
+                <p class="text-p text-lightGray font-[500] cursor-pointer">(Official)</p>
+                <div class="price my-[20px] flex">
+                    <span class="original-price text-[20px] text-lightGray line-through mr-[15px]">&#8377;6000</span>
+                    <span class="discounted-price text-[24px] text-black font-bold">&#8377;4999</span>
+                    <span class="discount bg-discount text-white py-[5px] px-[10px] text-[14px] font-bold ml-[15px] rounded-[5px]">17% off</span>
                 </div>
-                <div class="rating">
-                    <span>★★★★☆</span>
-                    <p>(3145 reviews)</p>
+                <div class="rating flex items-center my-[10px]">
+                    <span class="text-[26px] mr-[10px] bg-gradient-rainbow bg-clip-text text-transparent">★★★★☆</span>
+                    <p class="text-[14px] text-ratingGray m-0">(3145 reviews)</p>
                 </div>
-                <div class="overall-rating">
+                <div class="overall-rating my-[14px] text-p font-bold flex items-center">
                     <span>Overall Rating:</span>
-                    <p class="star">4.2★</p>
+                    <p class="star mr-[5px] text-discount font-semibold">4.2★</p>
                 </div>
-                <button class="buyNow" type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <button class="buyNow w-[140px] border-0 py-[14px] px-[12px] outline-none text-p font-extralight rounded-[6px] cursor-pointer transition-colors duration-300 ease-in-out bg-buyNow-gradient hover:w-[160px] hover:flex hover:items-center hover:justify-between group" type="button">
+                    Buy Now
+                    <img class="w-[30px] hidden group-hover:block" src="images/arrow.png" alt="Arrow">
+                </button>
             </div>
-            <div class="col-2">
-                <img src="images/controller3.png" class="controller" alt="Controller">
-                <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small>Add to cart</small></p>
+            <div class="col-2 relative basis-[60%] flex items-center">
+                <img src="images/controller3.png" class="controller w-[90%]" alt="Controller">
+                <div class="color-box absolute right-0 top-0 bg-color-box-gradient rounded-tl-[20px] rounded-tr-none rounded-br-none rounded-bl-[20px] h-full w-[80%] z-[-1] transform translate-x-[150px]"></div>
+                <div class="add-btn text-center text-[14px] font-bold text-white cursor-pointer border-[1.5px] border-white p-[10px] rounded-[5px] inline-block transition-transform duration-300 hover:scale-110">
+                    <img class="w-[40px] mb-[5px]" src="images/add.png" alt="Add">
+                    <p class="text-p"><small>Add to cart</small></p>
                 </div>
             </div>
-        </div>
+        </div>                    
 
         <!-- Gaming Mouse Section -->
-        <div class="row">
-            <div class="col-1">
-                <h2>Logitech G502 Hero</h2>
-                <h3>High Performance Gaming Mouse</h3>
-                <p>(Wired)</p>
-                <div class="price">
-                    <span class="original-price">&#8377;4000</span>
-                    <span class="discounted-price">&#8377;2999</span>
-                    <span class="discount">25% off</span>
+        <div class="row flex justify-between items-center my-[120px]">
+            <div class="col-1 basis-[40%] relative ml-[50px] after:content-[''] after:w-[10px] after:h-[63%] after:bg-scroll-gradient after:absolute after:left-[-40px] after:top-[8px]">
+                <h2 class="text-h2 text-black cursor-pointer tracking-[1px]">Logitech G502 Hero</h2>
+                <h3 class="text-h3 text-darkGrayText font-[100] mt-5 mb-2.5 mx-0 cursor-pointer">High Performance Gaming Mouse</h3>
+                <p class="text-p text-lightGray font-[500] cursor-pointer">(Wired)</p>
+                <div class="price my-[20px] flex">
+                    <span class="original-price text-[20px] text-lightGray line-through mr-[15px]">&#8377;4000</span>
+                    <span class="discounted-price text-[24px] text-black font-bold">&#8377;2999</span>
+                    <span class="discount bg-discount text-white py-[5px] px-[10px] text-[14px] font-bold ml-[15px] rounded-[5px]">25% off</span>
                 </div>
-                <div class="rating">
-                    <span>★★★★★</span>
-                    <p>(9256 reviews)</p>
+                <div class="rating flex items-center my-[10px]">
+                    <span class="text-[26px] mr-[10px] bg-gradient-rainbow bg-clip-text text-transparent">★★★★★</span>
+                    <p class="text-[14px] text-ratingGray m-0">(9256 reviews)</p>
                 </div>
-                <div class="overall-rating">
+                <div class="overall-rating my-[14px] text-p font-bold flex items-center">
                     <span>Overall Rating:</span>
-                    <p class="star">5.0★</p>
+                    <p class="star ml-[5px] text-discount font-semibold">5.0★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <button class="buyNow w-[140px] border-0 py-[14px] px-[12px] outline-none text-p font-extralight rounded-[6px] cursor-pointer transition-colors duration-300 ease-in-out bg-buyNow-gradient hover:w-[160px] hover:flex hover:items-center hover:justify-between group" type="button">
+                    Buy Now
+                    <img class="w-[30px] hidden group-hover:block" src="images/arrow.png" alt="Arrow">
+                </button>
             </div>
-            <div class="col-2">
-                <img src="images/mouse.png" class="controller" alt="Gaming Mouse">
-                <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small>Add to cart</small></p>
+            <div class="col-2 relative basis-[60%] flex items-center">
+                <img src="images/mouse.png" class="controller w-[90%]" alt="Gaming Mouse">
+                <div class="color-box absolute right-0 top-0 bg-color-box-gradient rounded-tl-[20px] rounded-tr-none rounded-br-none rounded-bl-[20px] h-full w-[80%] z-[-1] transform translate-x-[150px]"></div>
+                <div class="add-btn text-center text-[14px] font-bold text-white cursor-pointer border-[1.5px] border-white p-[10px] rounded-[5px] inline-block transition-transform duration-300 hover:scale-110">
+                    <img class="w-[40px] mb-[5px]" src="images/add.png" alt="Add">
+                    <p class="text-p"><small>Add to cart</small></p>
                 </div>
             </div>
-        </div>
+        </div>            
 
         <!-- Gaming Keyboard Section -->
-        <div class="row">
-            <div class="col-1">
-                <h2>Razer BlackWidow</h2>
-                <h3>Mechanical Gaming Keyboard</h3>
-                <p>(Wired)</p>
-                <div class="price">
-                    <span class="original-price">&#8377;7000</span>
-                    <span class="discounted-price">&#8377;5499</span>
-                    <span class="discount">21% off</span>
+        <div class="row flex justify-between items-center my-[120px]">
+            <div class="col-1 basis-[40%] relative ml-[50px] after:content-[''] after:w-[10px] after:h-[63%] after:bg-scroll-gradient after:absolute after:left-[-40px] after:top-[8px]">
+                <h2 class="text-h2 text-black cursor-pointer tracking-[1px]">Razer BlackWidow</h2>
+                <h3 class="text-h3 text-darkGrayText font-[100] mt-5 mb-2.5 mx-0 cursor-pointer">Mechanical Gaming Keyboard</h3>
+                <p class="text-p text-lightGray font-[500] cursor-pointer">(Wired)</p>
+                <div class="price my-[20px] flex">
+                    <span class="original-price text-[20px] text-lightGray line-through mr-[15px]">&#8377;7000</span>
+                    <span class="discounted-price text-[24px] text-black font-bold">&#8377;5499</span>
+                    <span class="discount bg-discount text-white py-[5px] px-[10px] text-[14px] font-bold ml-[15px] rounded-[5px]">21% off</span>
                 </div>
-                <div class="rating">
-                    <span>★★★★☆</span>
-                    <p>(6184 reviews)</p>
+                <div class="rating flex items-center my-[10px]">
+                    <span class="text-[26px] mr-[10px] bg-gradient-rainbow bg-clip-text text-transparent">★★★★☆</span>
+                    <p class="text-[14px] text-ratingGray m-0">(6184 reviews)</p>
                 </div>
-                <div class="overall-rating">
+                <div class="overall-rating my-[14px] text-p font-bold flex items-center">
                     <span>Overall Rating:</span>
-                    <p class="star">4.5★</p>
+                    <p class="star ml-[5px] text-discount font-semibold">4.5★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <button class="buyNow w-[140px] border-0 py-[14px] px-[12px] outline-none text-p font-extralight rounded-[6px] cursor-pointer transition-colors duration-300 ease-in-out bg-buyNow-gradient hover:w-[160px] hover:flex hover:items-center hover:justify-between group" type="button">
+                    Buy Now
+                    <img class="w-[30px] hidden group-hover:block" src="images/arrow.png" alt="Arrow">
+                </button>
             </div>
-            <div class="col-2">
-                <img src="images/keyboard.png" class="controller" alt="Gaming Keyboard">
-                <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small>Add to cart</small></p>
+            <div class="col-2 relative basis-[60%] flex items-center">
+                <img src="images/keyboard.png" class="controller w-[90%]" alt="Gaming Keyboard">
+                <div class="color-box absolute right-0 top-0 bg-color-box-gradient rounded-tl-[20px] rounded-tr-none rounded-br-none rounded-bl-[20px] h-full w-[80%] z-[-1] transform translate-x-[150px]"></div>
+                <div class="add-btn text-center text-[14px] font-bold text-white cursor-pointer border-[1.5px] border-white p-[10px] rounded-[5px] inline-block transition-transform duration-300 hover:scale-110">
+                    <img class="w-[40px] mb-[5px]" src="images/add.png" alt="Add">
+                    <p class="text-p"><small>Add to cart</small></p>
                 </div>
             </div>
-        </div>
+        </div>       
 
         <!-- Gaming Headset Section -->
-        <div class="row">
-            <div class="col-1">
-                <h2>SteelSeries Arctis 7</h2>
-                <h3>Wireless Gaming Headset</h3>
-                <p>(Surround Sound)</p>
-                <div class="price">
-                    <span class="original-price">&#8377;12000</span>
-                    <span class="discounted-price">&#8377;8999</span>
-                    <span class="discount">25% off</span>
+        <div class="row flex justify-between items-center my-[120px]">
+            <div class="col-1 basis-[40%] relative ml-[50px] after:content-[''] after:w-[10px] after:h-[63%] after:bg-scroll-gradient after:absolute after:left-[-40px] after:top-[8px]">
+                <h2 class="text-h2 text-black cursor-pointer tracking-[1px]">SteelSeries Arctis 7</h2>
+                <h3 class="text-h3 text-darkGrayText font-[100] mt-5 mb-2.5 mx-0 cursor-pointer">Wireless Gaming Headset</h3>
+                <p class="text-p text-lightGray font-[500] cursor-pointer">(Surround Sound)</p>
+                <div class="price my-[20px] flex">
+                    <span class="original-price text-[20px] text-lightGray line-through mr-[15px]">&#8377;12000</span>
+                    <span class="discounted-price text-[24px] text-black font-bold">&#8377;8999</span>
+                    <span class="discount bg-discount text-white py-[5px] px-[10px] text-[14px] font-bold ml-[15px] rounded-[5px]">25% off</span>
                 </div>
-                <div class="rating">
-                    <span>★★★★★</span>
-                    <p>(8452 reviews)</p>
+                <div class="rating flex items-center my-[10px]">
+                    <span class="text-[26px] mr-[10px] bg-gradient-rainbow bg-clip-text text-transparent">★★★★★</span>
+                    <p class="text-[14px] text-ratingGray m-0">(8452 reviews)</p>
                 </div>
-                <div class="overall-rating">
+                <div class="overall-rating my-[14px] text-p font-bold flex items-center">
                     <span>Overall Rating:</span>
-                    <p class="star">4.7★</p>
+                    <p class="star ml-[5px] text-discount font-semibold">4.7★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <button class="buyNow w-[140px] border-0 py-[14px] px-[12px] outline-none text-p font-extralight rounded-[6px] cursor-pointer transition-colors duration-300 ease-in-out bg-buyNow-gradient hover:w-[160px] hover:flex hover:items-center hover:justify-between group" type="button">
+                    Buy Now
+                    <img class="w-[30px] hidden group-hover:block" src="images/arrow.png" alt="Arrow">
+                </button>
             </div>
-            <div class="col-2">
-                <img src="images/headset.png" class="controller" alt="Gaming Headset">
-                <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small>Add to cart</small></p>
+            <div class="col-2 relative basis-[60%] flex items-center">
+                <img src="images/headset.png" class="controller w-[90%]" alt="Gaming Headset">
+                <div class="color-box absolute right-0 top-0 bg-color-box-gradient rounded-tl-[20px] rounded-tr-none rounded-br-none rounded-bl-[20px] h-full w-[80%] z-[-1] transform translate-x-[150px]"></div>
+                <div class="add-btn text-center text-[14px] font-bold text-white cursor-pointer border-[1.5px] border-white p-[10px] rounded-[5px] inline-block transition-transform duration-300 hover:scale-110">
+                    <img class="w-[40px] mb-[5px]" src="images/add.png" alt="Add">
+                    <p class="text-p"><small>Add to cart</small></p>
                 </div>
             </div>
-        </div>
+        </div>           
 
         <!-- Gaming Chair Section -->
-        <div class="row">
-            <div class="col-1">
-                <h2>Secretlab Omega</h2>
-                <h3>Ergonomic Gaming Chair</h3>
-                <p>(Adjustable)</p>
-                <div class="price">
-                    <span class="original-price">&#8377;30000</span>
-                    <span class="discounted-price">&#8377;24999</span>
-                    <span class="discount">17% off</span>
+        <div class="row flex justify-between items-center my-[120px]">
+            <div class="col-1 basis-[40%] relative ml-[50px] after:content-[''] after:w-[10px] after:h-[63%] after:bg-scroll-gradient after:absolute after:left-[-40px] after:top-[8px]">
+                <h2 class="text-h2 text-black cursor-pointer tracking-[1px]">Secretlab Omega</h2>
+                <h3 class="text-h3 text-darkGrayText font-[100] mt-5 mb-2.5 mx-0 cursor-pointer">Ergonomic Gaming Chair</h3>
+                <p class="text-p text-lightGray font-[500] cursor-pointer">(Adjustable)</p>
+                <div class="price my-[20px] flex">
+                    <span class="original-price text-[20px] text-lightGray line-through mr-[15px]">&#8377;30000</span>
+                    <span class="discounted-price text-[24px] text-black font-bold">&#8377;24999</span>
+                    <span class="discount bg-discount text-white py-[5px] px-[10px] text-[14px] font-bold ml-[15px] rounded-[5px]">17% off</span>
                 </div>
-                <div class="rating">
-                    <span>★★★★★</span>
-                    <p>(3564 reviews)</p>
+                <div class="rating flex items-center my-[10px]">
+                    <span class="text-[26px] mr-[10px] bg-gradient-rainbow bg-clip-text text-transparent">★★★★★</span>
+                    <p class="text-[14px] text-ratingGray m-0">(3564 reviews)</p>
                 </div>
-                <div class="overall-rating">
+                <div class="overall-rating my-[14px] text-p font-bold flex items-center">
                     <span>Overall Rating:</span>
-                    <p class="star">4.8★</p>
+                    <p class="star ml-[5px] text-discount font-semibold">4.8★</p>
                 </div>
-                <button type="button">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                <button class="buyNow w-[140px] border-0 py-[14px] px-[12px] outline-none text-p font-bold text-white rounded-[6px] cursor-pointer transition-all duration-500 bg-buyNow-gradient hover:w-[160px] hover:flex hover:items-center hover:justify-between group" type="button">
+                    Buy Now
+                    <img class="w-[30px] hidden group-hover:block" src="images/arrow.png" alt="Arrow">
+                </button>
             </div>
-            <div class="col-2">
-                <img src="images/chair.png" class="controller" alt="Gaming Chair">
-                <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small>Add to cart</small></p>
+            <div class="col-2 relative basis-[60%] flex items-center">
+                <img src="images/chair.png" class="controller w-[90%]" alt="Gaming Chair">
+                <div class="color-box absolute right-0 top-0 bg-color-box-gradient rounded-tl-[20px] rounded-tr-none rounded-br-none rounded-bl-[20px] h-full w-[80%] z-[-1] transform translate-x-[150px]"></div>
+                <div class="add-btn text-center text-[14px] font-bold text-white cursor-pointer border-[1.5px] border-white p-[10px] rounded-[5px] inline-block transition-transform duration-300 hover:scale-110">
+                    <img class="w-[40px] mb-[5px]" src="images/add.png" alt="Add">
+                    <p class="text-[16px]"><small>Add to cart</small></p>
                 </div>
             </div>
-        </div>
+        </div>            
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="logo-name">
-                        <img src="images/logo.png" alt="Logo" />
-                        <h4>Collect your GamingTools</h4>
-                    </div>
-                    <p>
-                        Collect your GamingTools is your one-stop shop for the best gaming
-                        accessories. We provide a wide range of controllers, VR
-                        accessories, media remotes, and more.
-                    </p>
+    <footer class="bg-[#444444] text-white py-10 px-5 text-center relative">
+        <div class="footer-container flex flex-wrap justify-around mb-5">
+            <div class="footer-content flex-1 basis-[200px] max-w-[300px] mx-5 my-2.5 text-left">
+                <div class="footer-section flex items-center mb-[15px]">
+                    <img src="images/logo.png" alt="Logo" class="logo-name h-[50px] mr-2.5" />
+                    <h4 class="text-[18px] my-5">Collect your GamingTools</h4>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact Us</h4>
-                    <p class="contact">Email: support@gamingtools.com</p>
-                    <p class="contact">Phone: +123 456 7890</p>
-                    <h4>Our Address</h4>
-                    <p>Park Street, Kolkata - 700001</p>
-                    <p>West Bengal, India</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="follow">Follow Us on</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                        <a href="https://www.twitter.com/" target="_blank">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="instagram-link">
-                            <ion-icon name="logo-instagram" class="instagram-icon"></ion-icon>
-                        </a>
-                        <a href="https://pk.linkedin.com/" target="_blank">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                    </div>
-                </div>
+                <p class="text-[14px] leading-[22px] font-normal text-justify">
+                    Collect your GamingTools is your one-stop shop for the best gaming
+                    accessories. We provide a wide range of controllers, VR
+                    accessories, media remotes, and more.
+                </p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Collect your GamingTools - All rights reserved.</p>
-                <p>Made by Swaraj &#128512;</p>
+            <div class="footer-section flex-1 basis-[200px] max-w-[300px] mx-5 my-2.5 text-left">
+                <h4 class="mb-5 mt-4">Contact Us</h4>
+                <p class="contact text-[14px] leading-7 text-[#d3d3d3] font-semibold cursor-pointer hover:text-[#ffee05]">Email: support@gamingtools.com</p>
+                <p class="contact text-[14px] leading-7 text-[#d3d3d3] font-semibold cursor-pointer hover:text-[#ffee05]">Phone: +123 456 7890</p>
+                <h4 class="mb-5 mt-4">Our Address</h4>
+                <p class="text-[14px] leading-[22px]">Park Street, Kolkata - 700001</p>
+                <p class="text-[14px] leading-[22px]">West Bengal, India</p>
+            </div>
+            <div class="footer-section flex-1 basis-[200px] max-w-[300px] mx-5 my-2.5 text-left">
+                <h4 class="follow mb-5 mt-4 ml-5">Follow Us on</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank" class="text-[#3b5998]">
+                        <ion-icon name="logo-facebook" class="text-[30px] m-[14px] cursor-pointer transition-transform duration-300 hover:scale-[1.2]"></ion-icon>
+                    </a>
+                    <a href="https://www.twitter.com/" target="_blank" class="text-[#1da1f2]">
+                        <ion-icon name="logo-twitter" class="text-[30px] m-[14px] cursor-pointer transition-transform duration-300 hover:scale-[1.2]"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="inline-block">
+                        <ion-icon name="logo-instagram" class="instagram-icon text-[30px] m-[14px] cursor-pointer transition-transform duration-300 hover:scale-[1.2]"></ion-icon>
+                    </a>
+                    <a href="https://pk.linkedin.com/" target="_blank" class="text-[#0077b5]">
+                        <ion-icon name="logo-linkedin" class="text-[30px] m-[14px] cursor-pointer transition-transform duration-300 hover:scale-[1.2]"></ion-icon>
+                    </a>
+                </div>
             </div>
         </div>
-        
+        <div class="footer-bottom border-t border-dashed border-[#e4e4e4] pt-5 max-w-[30%] mx-auto text-center">
+            <p class="my-[5px] text-[12px]">&copy; 2024 Collect your GamingTools - All rights reserved.</p>
+            <p class="my-[5px] text-[12px]">Made by Swaraj &#128512;</p>
+        </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
-        <div class="scroll-top-icon">
+    <button id="scrollToTopBtn" class="scroll-top fixed bottom-[30px] right-[30px] bg-scroll-gradient text-white w-[60px] h-[60px] rounded-full border-none cursor-pointer flex items-center justify-center text-[24px] opacity-0 invisible transition-all duration-300 ease-in-out shadow-[0_5px_15px_rgba(255,69,159,0.4)] overflow-visible z-10 hover:scale-110 hover:shadow-[0_8px_20px_rgba(255,69,159,0.6)] active:scale-105 group" aria-label="Scroll to top">
+        <div class="relative z-[2] transition-transform duration-300 ease-in-out group-hover:translate-y-[-3px]">
             <ion-icon name="arrow-up-outline"></ion-icon>
         </div>
-        <svg class="progress-ring" width="60" height="60">
-            <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"/>
+        <svg class="absolute top-0 left-0 w-full h-full -rotate-90" width="60" height="60">
+            <circle class="transition-[stroke-dashoffset] duration-[0.35s] origin-center" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
         </svg>
     </button>
 
