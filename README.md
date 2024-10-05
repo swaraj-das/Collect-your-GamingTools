@@ -48,6 +48,14 @@ Contributions are what make the **open-source** community such an amazing place 
 🔃 Open a <b>pull request</b>.
 
 
+## 👥 Team
 
-## 👨‍💻 Author
-### Created with ❤️ by Swaraj Das
+| ![Swaraj Das](https://avatars.githubusercontent.com/u/151845349?v=4&s=80) | ![Anit Sarkar](https://avatars.githubusercontent.com/u/135215478?v=4&s=80) |
+|:--:|:--:|
+| **Swaraj Das** <br> <sub>Project Admin</sub> | **Anit Sarkar** <br> <sub>Maintainer</sub> |
+| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/swarajdas01/) | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/anit-sarkar-11906a283/) |
+
+
+
+
+
