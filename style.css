@@ -3,6 +3,12 @@
     padding: 0;
     font-family: sans-serif;
 }
+
+*.dark-mode{
+    background-color: #493d3d;
+    color:#f1f1f1;
+}
+
 html {
     overflow-y: scroll;
 }
@@ -28,7 +34,6 @@ html::-webkit-scrollbar-thumb:window-inactive {
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 .navbar {
@@ -40,8 +45,60 @@ html::-webkit-scrollbar-thumb:window-inactive {
     overflow: hidden;
     background-color: #fff;
     z-index: 1000;
- 
 }
+
+.dark-mode .navbar{
+    background-color: #493d3d;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px !important;
+    height: 24px !important;
+    margin-right: 20px;
+
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 6px;
+    bottom: 2px;
+    top:1px;
+    background-color: black;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background:linear-gradient(to right, #fb5283, #ff3527) !important;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
 
 .logo {
     width: 50px;
@@ -93,7 +150,7 @@ nav {
 
 nav ul li {
     list-style: none;
-    display: inline-block;
+    display: inline;
     margin-right: 30px;
 }
 
@@ -106,6 +163,9 @@ nav ul li a {
     transition: color 0.5s, transform 0.5s;
 }
 
+.dark-mode nav ul li a{
+    color:#ccc;
+}
 nav ul li a:hover {
     color: #e00999;
     transform: scale(1.18);
@@ -127,6 +187,7 @@ nav ul li.login:hover {
     color: #fff;
 }
 
+
 .row {
     display: flex;
     justify-content: space-between;
@@ -145,6 +206,10 @@ nav ul li.login:hover {
     color: #000;
     cursor: pointer;
     letter-spacing: 1px;
+}
+
+.dark-mode h2{
+    color: #ccc;
 }
 
 .col-1 h3 {
