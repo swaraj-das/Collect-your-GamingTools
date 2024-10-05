@@ -2,167 +2,203 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-}
-html {
+  }
+  html {
     overflow-y: scroll;
-}
-
-html::-webkit-scrollbar {
+  }
+  
+  html::-webkit-scrollbar {
     width: 9px;
     transition: width 0.3s ease;
     margin: 10px;
-}
-
-html::-webkit-scrollbar-thumb {
+  }
+  
+  html::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: linear-gradient(90deg, #ff459f, #ff9532, #ff459f);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-}
-
-html::-webkit-scrollbar-thumb:window-inactive {
+  }
+  
+  html::-webkit-scrollbar-thumb:window-inactive {
     background: rgb(156, 156, 156);
-}
-.container {
+  }
+  .container {
     width: 100%;
     min-height: 100vh;
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
     overflow: hidden;
-}
-
-.navbar {
+  }
+  
+  .navbar {
     width: 100%;
+    height: 80px;
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 0;
-    overflow: hidden;
-    background-color: #fff;
+    justify-content: space-between;
+    position: sticky;
+    top: 20px;
+    /* background-color: #e30000; */
+    background: rgba(0, 76, 150, 0.25);
+    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
     z-index: 1000;
- 
-}
-
-.logo {
+    transition: 0.5s all ease;
+  }
+  
+  .navbar:hover {
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .navbar,
+  .nav,
+  #menuList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #menuList {
+    margin-right: -120px;
+  }
+  .logo {
     width: 50px;
     cursor: pointer;
     margin: 18px 0;
-}
-
-@keyframes rainbow {
+  }
+  
+  @keyframes rainbow {
     0% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
-
+  
     50% {
-        background-position: 100% 50%;
+      background-position: 100% 50%;
     }
-
+  
     100% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
-}
-
-.website-name {
+  }
+  
+  .website-name {
     margin-left: 16px;
     font-size: 20px;
     font-weight: bold;
     color: transparent;
-    background: linear-gradient(90deg, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff, #8a2be2, #ff459f);
+    background: linear-gradient(
+      90deg,
+      #ff459f,
+      #ff9532,
+      #ffd700,
+      #32cd32,
+      #1e90ff,
+      #8a2be2,
+      #ff459f
+    );
     background-size: 400% 400%;
     -webkit-background-clip: text;
     background-clip: text;
     display: inline-block;
     animation: rainbow 5s linear infinite;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
     font-weight: bolder;
     cursor: pointer;
-}
-
-.menu-icon {
+  }
+  
+  .menu-icon {
     width: 25px;
     cursor: pointer;
     display: none;
-}
-
-nav {
+  }
+  
+  nav {
     flex: 1;
     text-align: right;
     margin-right: 100px;
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     list-style: none;
     display: inline-block;
     margin-right: 30px;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: #000;
     font-size: 14px;
     font-weight: bold;
     display: inline-block;
     transition: color 0.5s, transform 0.5s;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: #e00999;
     transform: scale(1.18);
-}
-
-nav ul li.login {
+  }
+  
+  nav ul li.login {
     background: linear-gradient(to right, #fb5283, #ff3527);
     height: 24px;
     border-radius: 20px;
     padding: 4px 18px;
     cursor: pointer;
-}
-
-nav ul li.login a {
+  }
+  
+  nav ul li.login a {
     color: #fff;
-}
-
-nav ul li.login:hover {
+  }
+  
+  nav ul li.login:hover {
     color: #fff;
-}
-
-.row {
+  }
+  
+  .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 120px 0;
-}
-
-.col-1 {
+  }
+  
+  .col-1 {
     flex-basis: 40%;
     position: relative;
     margin-left: 50px;
-}
-
-.col-1 h2 {
+  }
+  
+  .col-1 h2 {
     font-size: 54px;
     color: #000;
     cursor: pointer;
     letter-spacing: 1px;
-}
-
-.col-1 h3 {
+  }
+  
+  .col-1 h3 {
     font-size: 30px;
     color: #707070;
     font-weight: 100;
     margin: 20px 0 10px;
     cursor: pointer;
-}
-
-.col-1 p {
+  }
+  
+  .col-1 p {
     font-size: 16px;
     color: #a1a1a1;
     font-weight: 500;
     cursor: pointer;
-}
-
-button {
+  }
+  
+  button {
     width: 140px;
     border: 0;
     padding: 14px 12px;
@@ -176,46 +212,46 @@ button {
     transition: width 0.5s;
     background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
     transition: background 0.3s ease-in-out;
-}
-
-button img {
+  }
+  
+  button img {
     width: 30px;
     display: none;
-}
-
-button:hover img {
+  }
+  
+  button:hover img {
     display: block;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     width: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.col-1::after {
-    content: '';
+  }
+  
+  .col-1::after {
+    content: "";
     width: 10px;
     height: 63%;
     background: linear-gradient(#ff459f, #ff6062);
     position: absolute;
     left: -40px;
     top: 8px;
-}
-
-.col-2 {
+  }
+  
+  .col-2 {
     position: relative;
     flex-basis: 60%;
     display: flex;
     align-items: center;
-}
-
-.col-2 .controller {
+  }
+  
+  .col-2 .controller {
     width: 90%;
-}
-
-.color-box {
+  }
+  
+  .color-box {
     position: absolute;
     right: 0;
     top: 0;
@@ -225,27 +261,27 @@ button:hover {
     width: 80%;
     z-index: -1;
     transform: translateX(150px);
-}
-
-.price {
+  }
+  
+  .price {
     margin: 20px 0;
     display: flex;
-}
-
-.original-price {
+  }
+  
+  .original-price {
     font-size: 20px;
     color: #a1a1a1;
     text-decoration: line-through;
     margin-right: 15px;
-}
-
-.discounted-price {
+  }
+  
+  .discounted-price {
     font-size: 24px;
     color: #000;
     font-weight: bold;
-}
-
-.discount {
+  }
+  
+  .discount {
     background-color: #ff3c6d;
     color: #fff;
     padding: 5px 10px;
@@ -253,14 +289,14 @@ button:hover {
     font-size: 14px;
     font-weight: bold;
     margin-left: 15px;
-}
-
-.add-btn img {
+  }
+  
+  .add-btn img {
     width: 40px;
     margin-bottom: 5px;
-}
-
-.add-btn {
+  }
+  
+  .add-btn {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
@@ -271,345 +307,349 @@ button:hover {
     border-radius: 5px;
     display: inline-block;
     transition: transform 0.5s;
-}
-
-.add-btn p {
+  }
+  
+  .add-btn p {
     font-size: 16px;
-}
-
-.add-btn:hover {
+  }
+  
+  .add-btn:hover {
     transform: scale(1.1);
-}
-
-.rating {
+  }
+  
+  .rating {
     display: flex;
     align-items: center;
     margin: 10px 0;
-}
-
-.rating span {
+  }
+  
+  .rating span {
     font-size: 26px;
     margin-right: 10px;
-    background: linear-gradient(to right, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff);
+    background: linear-gradient(
+      to right,
+      #ff459f,
+      #ff9532,
+      #ffd700,
+      #32cd32,
+      #1e90ff
+    );
     /* Example gradient colors */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.rating p {
+  }
+  
+  .rating p {
     font-size: 14px;
     color: #707070;
     margin: 0;
-}
-
-.overall-rating {
+  }
+  
+  .overall-rating {
     margin: 14px 0;
     font-size: 16px;
     font-weight: bold;
     display: flex;
     align-items: center;
-}
-
-.overall-rating .star {
+  }
+  
+  .overall-rating .star {
     margin-left: 5px;
     color: #ff3c6d;
     font-weight: 600;
-}
-
-.footer-container {
+  }
+  
+  .footer-container {
     background-color: #444444;
     color: #fff;
     padding: 40px 20px;
     text-align: center;
     position: relative;
-}
-
-.footer-content {
+  }
+  
+  .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 20px;
-}
-
-.footer-section {
+  }
+  
+  .footer-section {
     flex: 1 1 200px;
     margin: 10px 20px;
     max-width: 300px;
     text-align: left;
-}
-
-.footer-section .logo-name {
+  }
+  
+  .footer-section .logo-name {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-}
-
-.footer-section .logo-name img {
+  }
+  
+  .footer-section .logo-name img {
     height: 50px;
     margin-right: 10px;
-}
-
-.footer-section .logo-name h4 {
+  }
+  
+  .footer-section .logo-name h4 {
     font-size: 18px;
     margin: 20px 0;
-}
-
-.footer-section .contact {
+  }
+  
+  .footer-section .contact {
     font-size: 14px;
     line-height: 28px;
     color: #d3d3d3;
     font-weight: 600;
     cursor: pointer;
-}
-
-.footer-section .follow {
+  }
+  
+  .footer-section .follow {
     margin-left: 20px;
-}
-
-.footer-section .contact:hover {
+  }
+  
+  .footer-section .contact:hover {
     color: #ffee05;
-}
-
-.footer-section h4 {
+  }
+  
+  .footer-section h4 {
     margin-bottom: 20px;
     margin-top: 16px;
-}
-
-.footer-section p {
+  }
+  
+  .footer-section p {
     line-height: 22px;
     font-size: 14px;
     font-weight: 400;
     text-align: justify;
-}
-
-.footer-bottom {
+  }
+  
+  .footer-bottom {
     border-top: 0.7px dashed #e4e4e4;
     padding-top: 20px;
     max-width: 30%;
     margin: 0 auto;
     text-align: center;
-}
-
-.footer-bottom p {
+  }
+  
+  .footer-bottom p {
     margin: 5px 0;
     font-size: 12px;
-}
-
-.social-links a {
+  }
+  
+  .social-links a {
     text-decoration: none;
-}
-
-.social-links a:first-child {
+  }
+  
+  .social-links a:first-child {
     color: #3b5998;
-}
-
-.social-links a:nth-child(2) {
-    color: #1DA1F2;
-}
-
-.social-links a:last-child {
+  }
+  
+  .social-links a:nth-child(2) {
+    color: #1da1f2;
+  }
+  
+  .social-links a:last-child {
     color: #0077b5;
-}
-
-.instagram-link {
+  }
+  
+  .instagram-link {
     display: inline-block;
-}
-
-.instagram-icon {
+  }
+  
+  .instagram-icon {
     font-size: 64px;
-    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    mask-image: url('https://unpkg.com/ionicons@5.5.2/dist/svg/logo-instagram.svg');
+    background: radial-gradient(
+      circle at 30% 30%,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888
+    );
+    mask-image: url("https://unpkg.com/ionicons@5.5.2/dist/svg/logo-instagram.svg");
     mask-size: cover;
     color: transparent;
-}
-
-.social-links ion-icon {
+  }
+  
+  .social-links ion-icon {
     font-size: 30px;
     margin: 14px;
     cursor: pointer;
     transition: transform 0.3s;
-}
-
-.social-links ion-icon:hover {
+  }
+  
+  .social-links ion-icon:hover {
     transform: scale(1.2);
-}
-
-
-
-
-
-/* -----------------------------------------------Responsiveness----------------------------------------------------- */
-
-
-/* ----------------------------for mobiles--------------------------------------- */
-
-@media only screen and (max-width: 700px) {
-
+  }
+  
+  /* -----------------------------------------------Responsiveness----------------------------------------------------- */
+  
+  /* ----------------------------for mobiles--------------------------------------- */
+  
+  @media only screen and (max-width: 700px) {
     .menu-icon {
-        margin-right: 40px;
+      margin-right: 40px;
     }
-
+  
     nav ul {
-        width: 100%;
-        background: linear-gradient(to right, #fb5283, #ff3527);
-        position: absolute;
-        top: 73px;
-        right: 0;
-        z-index: 2;
-        margin-right: 20px;
+      width: 100%;
+      background: linear-gradient(to right, #fb5283, #ff3527);
+      position: absolute;
+      top: 73px;
+      right: 0;
+      z-index: 2;
+      margin-right: 20px;
     }
-
+  
     nav ul li {
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        text-align: center;
-        margin-left: 50px;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      margin-left: 50px;
     }
-
+  
     nav ul li a {
-        color: #fff;
+      color: #fff;
     }
-
+  
     nav ul li a:hover {
-        color: #ffee00;
-        transform: scale(1.18);
+      color: #ffee00;
+      transform: scale(1.18);
     }
-
+  
     .login a {
-        background-color: (#ff459f, #ff9532);
-        color: white;
-        padding: 4px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        display: inline-block;
+      background-color: (#ff459f, #ff9532);
+      color: white;
+      padding: 4px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
     }
-
+  
     .login a:hover {
-        background-color: #e05599;
+      background-color: #e05599;
     }
-
+  
     .menu-icon {
-        display: block;
+      display: block;
     }
-
+  
     #menuList {
-        overflow: hidden;
-        transition: 0.5s;
+      overflow: hidden;
+      transition: 0.5s;
     }
-
+  
     .row {
-        flex-direction: column-reverse;
-        margin: 100px 0;
+      flex-direction: column-reverse;
+      margin: 100px 0;
     }
-
+  
     .col-2 {
-        flex-basis: 100%;
-        margin-bottom: 50px;
+      flex-basis: 100%;
+      margin-bottom: 50px;
     }
-
+  
     .col-2 .controller {
-        width: 77%;
+      width: 77%;
     }
-
+  
     .color-box {
-        transform: translateX(75px);
+      transform: translateX(75px);
     }
-
+  
     .col-1 {
-        flex-basis: 100%;
+      flex-basis: 100%;
     }
-
+  
     .col-1 h2 {
-        font-size: 35px;
+      font-size: 35px;
     }
-
+  
     .col-1 h3 {
-        font-size: 20px;
+      font-size: 20px;
     }
-
+  
     .footer-content {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .footer-section {
-        max-width: 100%;
-        text-align: center;
+      max-width: 100%;
+      text-align: center;
     }
-
+  
     .footer-section .logo-name {
-        justify-content: center;
+      justify-content: center;
     }
-
+  
     .footer-bottom {
-        max-width: fit-content;
+      max-width: fit-content;
     }
-
-}
-
-
-/* --------------------------for tabs------------------------------------ */
-
-
-@media only screen and (max-width: 1180px) {
-
+  }
+  
+  /* --------------------------for tabs------------------------------------ */
+  
+  @media only screen and (max-width: 1180px) {
     .menu-icon {
-        margin-right: 60px;
+      margin-right: 60px;
     }
-
+  
     nav ul {
-        width: 100%;
-        background: linear-gradient(to right, #fb5283, #ff3527);
-        position: absolute;
-        top: 73px;
-        right: 0;
-        z-index: 2;
-        margin-right: 21px;
+      width: 100%;
+      background: linear-gradient(to right, #fb5283, #ff3527);
+      position: absolute;
+      top: 73px;
+      right: 0;
+      z-index: 2;
+      margin-right: 21px;
     }
-
+  
     nav ul li {
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        text-align: center;
-        margin-left: 50px;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      margin-left: 50px;
     }
-
+  
     nav ul li a {
-        color: #fff;
+      color: #fff;
     }
-
+  
     nav ul li a:hover {
-        color: #ffee00;
-        transform: scale(1.18);
+      color: #ffee00;
+      transform: scale(1.18);
     }
-
+  
     .login a {
-        background-color: #752280;
-        color: white;
-        padding: 4px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        display: inline-block;
+      background-color: #752280;
+      color: white;
+      padding: 4px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
     }
-
+  
     .login a:hover {
-        background-color: (#f267ff, #ff9532);
+      background-color: (#f267ff, #ff9532);
     }
-
+  
     .menu-icon {
-        display: block;
+      display: block;
     }
-
+  
     #menuList {
-        overflow: hidden;
-        transition: 0.5s;
+      overflow: hidden;
+      transition: 0.5s;
     }
-}
-
-.scroll-top {
+  }
+  
+  .scroll-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -623,5 +663,4 @@ button:hover {
   
   .scroll-top:hover {
     background: #ff6062;
-  }
-  
+  } 
