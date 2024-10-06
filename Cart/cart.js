@@ -69,6 +69,11 @@ const product = [
   cart.push({...categories[a]});
   displaycart();
   }
+  function buyNow(a) {
+    cart.push({ ...categories[a] });
+    alert(`${categories[a].title} has been added to your cart!`); 
+    displaycart();
+}
   function delElement(a){
   cart.splice(a, 1);
   displaycart();

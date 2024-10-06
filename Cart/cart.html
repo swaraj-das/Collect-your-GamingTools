@@ -7,24 +7,31 @@
         <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
     </head>
     
-<body onload="myFunction()">
+<body>
     
-        <div class="header">
-
-            <p class="logo">Collect your gaming GamingTools...</p>
-            <div class="cart" id="carts"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+    <div class="header">
+        <p class="logo">Collect your gaming GamingTools...</p>
+        <div class="cart" id="carts">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p id="count">0</p>
         </div>
-        <div class="container"> 
-            <div id="root" class="root"></div>
-            <div class="sidebar" id="sidebox">
-                <div class="head" id="mine"><p>My Cart<label id="closed">&times;</label> </p></div>
-                <div id="cartItem">Your cart is empty</div>
-                <div class="foot">
-                    <h3>Total</h3>
-                    <h2 id="total">Rs 0.00</h2>
-                </div>
+    </div>
+    
+    <div class="container"> 
+        <div id="root" class="root"></div>
+        <div class="sidebar" id="sidebox">
+            <div class="head" id="mine">
+                <p>My Cart<label id="closed">&times;</label> </p>
             </div>
+            <div id="cartItem">Your cart is empty</div>
+            <div class="foot">
+                <h3>Total</h3>
+                <h2 id="total">Rs 0.00</h2>
+            </div>
+            <button id="checkoutButton" class="checkout-button">Checkout</button>
         </div>
-        <script src="cart.js"></script>
+    </div>
+    
+    <script src="cart.js"></script>
 </body>
 </html>

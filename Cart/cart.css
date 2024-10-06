@@ -190,3 +190,15 @@ p{
   color: white;
   
 }
+
+#checkoutButton {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 20px;
+}
