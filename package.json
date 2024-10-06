@@ -1,0 +1,18 @@
+{
+  "name": "collect-your-gamingtools",
+  "version": "1.0.0",
+  "description": "A <b> responsive and dynamic website </b> to showcase the best gaming accessories for every gamer!",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./Tailwind_Css/input.css -o ./Tailwind_Css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
+  }
+}

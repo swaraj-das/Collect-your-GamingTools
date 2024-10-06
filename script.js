@@ -23,10 +23,49 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Smooth scroll to top when the button is clicked
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    const progressRing = scrollToTopBtn.querySelector('circle');
+    const rootElement = document.documentElement;
+    
+    const radius = progressRing.r.baseVal.value;
+    const circumference = radius * 2 * Math.PI;
+
+    progressRing.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressRing.style.strokeDashoffset = circumference;
+
+    function setProgress(percent) {
+        const offset = circumference - percent / 100 * circumference;
+        progressRing.style.strokeDashoffset = offset;
+    }
+
+    function handleScroll() {
+        const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+        const scrolled = rootElement.scrollTop / scrollTotal;
+
+        if (scrolled > 0.1) {
+            scrollToTopBtn.classList.add('opacity-100', 'visible');
+            scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+        } else {
+            scrollToTopBtn.classList.remove('opacity-100', 'visible');
+            scrollToTopBtn.classList.add('opacity-0', 'invisible');
+        }
+
+        requestAnimationFrame(() => {
+            setProgress(scrolled * 100);
+        });
+    }
+
+    function scrollToTop() {
+        rootElement.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    scrollToTopBtn.addEventListener('click', scrollToTop);
+    window.addEventListener('scroll', handleScroll);
+
+    // Initial check in case the page is already scrolled on load
+    handleScroll();
+});
