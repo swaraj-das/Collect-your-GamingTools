@@ -220,7 +220,6 @@ nav ul li.login:hover {
 button {
     width: 140px;
     border: 0;
-    padding: 14px 12px;
     outline: none;
     color: #fff;
     font-size: 16px;
@@ -232,6 +231,10 @@ button {
     background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
     transition: background 0.3s ease-in-out;
 }
+#cart-btn
+{
+    padding: 12px 14px;
+}
 
 button img {
     width: 30px;
@@ -242,11 +245,25 @@ button:hover img {
     display: block;
 }
 
-button:hover {
+#cart-btn:hover
+{
     width: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+#buy-btn:hover
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.btn-section
+{   display: inline-flex;
+    gap: 15px;
 }
 
 .col-1::after {
