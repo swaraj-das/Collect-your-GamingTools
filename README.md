@@ -47,19 +47,7 @@ Contributions are what make the **open-source** community such an amazing place 
 
 🔃 Open a <b>pull request</b>.
 
-
-## 📄 Workflow Configuration
-
-The `.github/workflows/auto-label-action.yml` file is used to automatically add labels to new issues and pull requests. This helps in organizing and managing the repository more efficiently.
-
-### Permissions Required
-
-The GitHub token used in the workflow file must have the following permissions:
-- `issues: write`
-- `pull-requests: write`
-- `contents: read`
-
-These permissions ensure that the workflow can read the repository contents and write labels to issues and pull requests.
+We welcome all contributions to improve **Collect Your GamingTools**! If you'd like to contribute, please follow the [Contributing.md](./Contributing.md) to get details on how to get started.
 
 ## 👥 Team
 

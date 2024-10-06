@@ -9,6 +9,7 @@ function toggleMenu() {
     }
 }
 
+
   
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -44,6 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 =======
+=======
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Website loaded successfully!");
+});
+
 // Show or hide the scroll-top button based on scroll position
 window.addEventListener('scroll', function() {
     const scrollTopButton = document.querySelector('.scroll-top');
