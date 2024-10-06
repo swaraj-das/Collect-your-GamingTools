@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        html {
+            overflow-y: scroll;
+        }
+
+        html::-webkit-scrollbar {
+            width: 9px;
+            transition: width 0.3s ease;
+            margin: 10px;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: linear-gradient(90deg, #ff459f, #ff9532, #ff459f);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            padding-top: 80px; /* To avoid navbar overlap */
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            background-color: #fff;
+            z-index: 1000;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 50px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .website-name {
+            margin-left: 16px;
+            font-size: 24px;
+            font-weight: bold;
+            color: transparent;
+            background: linear-gradient(90deg, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff, #8a2be2, #ff459f);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            display: inline-block;
+            animation: rainbow 5s linear infinite;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        .menu-icon {
+            width: 25px;
+            cursor: pointer;
+            display: none;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            transition: color 0.5s, transform 0.5s;
+        }
+
+        nav ul li a:hover {
+            color: #e00999;
+            transform: scale(1.18);
+        }
+
+        nav ul li.login {
+            background: linear-gradient(to right, #fb5283, #ff3527);
+            height: 24px;
+            border-radius: 20px;
+            padding: 4px 18px;
+            cursor: pointer;
+        }
+
+        nav ul li.login a {
+            color: #fff;
+        }
+
+        /* Checkout page specific styles */
+        .checkout-container {
+            max-width: 500px; /* Limit width of the form */
+            margin: 100px auto; /* Center the form on the page */
+            padding: 30px;
+            background-color: #ffffff; /* White background for the form */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+        }
+
+        .checkout-container h2 {
+            font-size: 32px;
+            color: #003366;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column; 
+        }
+
+        label {
+            margin-bottom: 5px; /* Space between label and input */
+            color: #003366; /* Dark blue color for labels */
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 15px; /* Space below input fields */
+            border: 1px solid #ccc; /* Light grey border */
+            border-radius: 5px; /* Rounded corners */
+            transition: border-color 0.3s ease; /* Smooth border transition */
+        }
+
+        input:focus, textarea:focus {
+            border-color: #003366; /* Dark blue border on focus */
+            outline: none; /* Remove outline */
+        }
+
+        button {
+            padding: 10px;
+            background-color: #ff3527; /* Button color */
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            color: #ffffff; /* White text */
+            font-size: 18px;
+            cursor: pointer; /* Cursor changes to pointer on hover */
+            transition: background-color 0.3s ease; /* Smooth background transition */
+        }
+
+        button:hover {
+            background-color: #d94b41; /* Darker on hover */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .checkout-container {
+                margin: 200px auto; 
+                padding: 20px; /* Reduced padding on smaller screens */
+            }
+
+            .checkout-container h2 {
+                font-size: 24px;
+            }
+
+            input, textarea {
+                font-size: 16px; /* Larger font for inputs */
+            }
+
+            button {
+                font-size: 16px; /* Larger button text */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/"> <img src="../images/logo.png" class="logo" alt="Logo"></a>
+        <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+        <nav>
+            <ul id="menuList">
+                <li><a href="#">Game Controllers</a></li>
+                <li><a href="#">VR Accessories</a></li>
+                <li><a href="#">Media Remotes</a></li>
+                <li><a href="#">Others</a></li>
+                <li class="login"><a href="login/login.html">Login</a></li>
+            </ul>
+        </nav>
+        <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+    </div>
+
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <form id="checkoutForm" onsubmit="handleCheckout(event)">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Shipping Address</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+
+    <script>
+        function handleCheckout(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Gather checkout details
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+            const phone = document.getElementById('phone').value;
+
+            // Example: logging values to console (replace with actual checkout processing)
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Address:", address);
+            console.log("Phone Number:", phone);
+            
+            // Redirect to payment page
+            window.location.href = "payment.html"; // For example, navigate to the payment page
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+
+        html::-webkit-scrollbar {
+            width: 9px;
+            transition: width 0.3s ease;
+            margin: 10px;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: linear-gradient(90deg, #ff459f, #ff9532, #ff459f);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        }
+        body {
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            padding-top: 80px; 
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            background-color: #fff;
+            z-index: 1000;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 50px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .website-name {
+            margin-left: 16px;
+            font-size: 20px;
+            font-weight: bold;
+            color: transparent;
+            background: linear-gradient(90deg, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff, #8a2be2, #ff459f);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            display: inline-block;
+            animation: rainbow 5s linear infinite;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            transition: color 0.5s, transform 0.5s;
+        }
+
+        nav ul li a:hover {
+            color: #e00999;
+            transform: scale(1.18);
+        }
+
+        nav ul li.login {
+            background: linear-gradient(to right, #fb5283, #ff3527);
+            height: 24px;
+            border-radius: 20px;
+            padding: 4px 18px;
+            cursor: pointer;
+        }
+
+        nav ul li.login a {
+            color: #fff;
+        }
+
+        .payment-container {
+            max-width: 500px; 
+            margin: 100px auto; 
+            padding: 30px;
+            background-color: #ffffff; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            color: #003366;
+        }
+        form {
+            display: flex;
+            flex-direction: column; 
+        }
+        label {
+            margin-bottom: 5px; 
+            color: #003366; 
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 10px;
+            margin-bottom: 15px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            width: 100%; 
+        }
+
+        button {
+            padding: 10px;
+            background-color: #ff9900; 
+            border: none;
+            border-radius: 5px; 
+            color: #ffffff; 
+            font-size: 18px;
+            cursor: pointer; 
+            width: 100%; 
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e68a00; 
+        }
+
+        .notification {
+            display: none;
+            position: absolute;
+            top: 550px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: #ff3527;
+            color: white;
+            border-radius: 5px;
+            transition: opacity 0.5s;
+            z-index: 1000; 
+        }
+
+        @media (max-width: 768px) {
+            .payment-container {
+                margin: 500px auto; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/"> <img src="../images/logo.png" class="logo" alt="Logo"></a>
+        <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+        <nav>
+            <ul>
+                <li><a href="#">Game Controllers</a></li>
+                <li><a href="#">VR Accessories</a></li>
+                <li><a href="#">Media Remotes</a></li>
+                <li><a href="#">Others</a></li>
+                <li class="login"><a href="login/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="payment-container">
+        <h2>Payment Details</h2>
+        <form id="paymentForm" onsubmit="handlePayment(event)">
+            <label for="cardNumber">Card Number</label>
+            <input type="tel" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+
+            <label for="expiryDate">Expiry Date</label>
+            <input type="month" id="expiryDate" name="expiryDate">
+
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="cvv" placeholder="123">
+
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod">
+                <option value="" disabled selected>Select a payment method</option>
+                <option value="credit">Credit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+
+    <div class="notification" id="notification" aria-live="polite">Transaction Successful!</div>
+
+    <script>
+        function handlePayment(event) {
+            event.preventDefault();
+            const cardNumber = document.getElementById('cardNumber').value;
+            const expiryDate = document.getElementById('expiryDate').value;
+            const cvv = document.getElementById('cvv').value;
+            const paymentMethod = document.getElementById('paymentMethod').value;
+
+            console.log("Card Number:", cardNumber);
+            console.log("Expiry Date:", expiryDate);
+            console.log("CVV:", cvv);
+            console.log("Payment Method:", paymentMethod);
+
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            notification.style.opacity = 1;
+
+            setTimeout(() => {
+                notification.style.opacity = 0;
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 500);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
