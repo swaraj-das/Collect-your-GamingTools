@@ -9,7 +9,7 @@ on:
 permissions:
   issues: write
   pull-requests: write
-  contents: read # Required to read repository contents
+  contents: write # Required to read repository contents
 
 jobs:
   label:

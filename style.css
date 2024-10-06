@@ -259,7 +259,6 @@
   button {
     width: 140px;
     border: 0;
-    padding: 14px 12px;
     outline: none;
     color: #fff;
     font-size: 16px;
@@ -273,7 +272,11 @@
   }
   
   button img {
-    width: 30px;
+{
+    padding: 12px 14px;
+}
+
+button img {
     display: none;
   }
   
@@ -282,6 +285,10 @@
   }
   
   button:hover {
+}
+
+#cart-btn:hover
+{
     width: 160px;
     display: flex;
     align-items: center;
@@ -290,6 +297,23 @@
   
   .col-1::after {
     content: "";
+
+}
+#buy-btn:hover
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.btn-section
+{   display: inline-flex;
+    gap: 15px;
+}
+
+.col-1::after {
+    content: '';
     width: 10px;
     height: 63%;
     background: linear-gradient(#ff459f, #ff6062);
