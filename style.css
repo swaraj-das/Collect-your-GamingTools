@@ -682,19 +682,7 @@ button:hover {
   
 
   /*----------------------------------------------- faq */
-  /* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
-/* body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-} */
-
+ 
 .faq-container{
     width: 90%;
     max-width: 1200px;
@@ -796,7 +784,7 @@ details[open] .faq-answer {
     color: #ff459f; 
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .container {
         padding: 1rem;
     }
@@ -816,4 +804,4 @@ details[open] .faq-answer {
     .faq-question {
         font-size: 1.3rem;
     }
-}
+} */
