@@ -680,3 +680,139 @@ button:hover {
     background: #ff6062;
   }
   
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.faq-section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    margin-top: 2rem;
+    border-left: 6px solid #ff459f; 
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #ff459f, #ff9532);
+    background-clip: text;
+    color: transparent;
+}
+
+.faq-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #7f8c8d;
+}
+
+.faq-list {
+    margin-top: 3rem;
+}
+
+.faq-item {
+    background-color: #ecf0f1;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px); 
+        background-color: #ff459f; 
+    color: white;
+}
+
+.faq-item summary {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem;
+    background: linear-gradient(90deg, #ff459f, #ff9532, #ff459f); 
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-item summary:hover {
+    background-color: #ff459f;
+    color: white;
+}
+
+.faq-answer {
+    font-size: 1.1rem;
+    color: #34495e;
+    padding: 1rem;
+    border-top: 2px solid #bdc3c7;
+}
+
+details[open] summary {
+    background-color: #ff459f; 
+    color: white;
+}
+
+details[open] .faq-answer {
+    background-color: #f9f9f9; 
+}
+
+.faq-contact {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.faq-contact strong {
+    color: #ff459f; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .faq-title {
+        font-size: 2.5rem;
+    }
+
+    .faq-description {
+        font-size: 1rem;
+    }
+
+    .faq-item {
+        padding: 1rem;
+    }
+
+    .faq-question {
+        font-size: 1.3rem;
+    }
+}
