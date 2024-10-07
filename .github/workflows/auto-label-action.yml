@@ -9,6 +9,7 @@ on:
 permissions:
   issues: write
   pull-requests: write
+  contents: write # Required to read repository contents
 
 jobs:
   label:
@@ -27,3 +28,4 @@ jobs:
           hacktoberfest
           hacktoberfest-accepted
           gssoc-ext
+          gssoc-extd

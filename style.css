@@ -49,6 +49,61 @@ html::-webkit-scrollbar-thumb:window-inactive {
     margin: 18px 0;
 }
 
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cta-btn {
+    background-color: white;
+    color: #ce0606;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #c9565a;
+    color: white;
+}
+
 @keyframes rainbow {
     0% {
         background-position: 0% 50%;
@@ -165,7 +220,6 @@ nav ul li.login:hover {
 button {
     width: 140px;
     border: 0;
-    padding: 14px 12px;
     outline: none;
     color: #fff;
     font-size: 16px;
@@ -177,6 +231,10 @@ button {
     background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
     transition: background 0.3s ease-in-out;
 }
+#cart-btn
+{
+    padding: 12px 14px;
+}
 
 button img {
     width: 30px;
@@ -187,11 +245,25 @@ button:hover img {
     display: block;
 }
 
-button:hover {
+#cart-btn:hover
+{
     width: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+#buy-btn:hover
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.btn-section
+{   display: inline-flex;
+    gap: 15px;
 }
 
 .col-1::after {
@@ -317,127 +389,159 @@ button:hover {
     font-weight: 600;
 }
 
-.footer-container {
-    background-color: #444444;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
+.footer {
+    background: #303036;
+    color: #d3d3d3;
+    padding: 50px 0 0;
+    font-family: 'Arial', sans-serif;
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-section {
-    flex: 1 1 200px;
-    margin: 10px 20px;
-    max-width: 300px;
-    text-align: left;
+    flex: 1;
+    margin-bottom: 40px;
+    min-width: 300px;
+    padding: 0 20px;
 }
 
-.footer-section .logo-name {
+.footer h2 {
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.logo-container {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-}
-
-.footer-section .logo-name img {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.footer-section .logo-name h4 {
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.footer-section .contact {
-    font-size: 14px;
-    line-height: 28px;
-    color: #d3d3d3;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.footer-section .follow {
-    margin-left: 20px;
-}
-
-.footer-section .contact:hover {
-    color: #ffee05;
-}
-
-.footer-section h4 {
     margin-bottom: 20px;
-    margin-top: 16px;
 }
 
-.footer-section p {
-    line-height: 22px;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: justify;
+.footer-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.about-text {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.socials {
+    margin-top: 20px;
+}
+
+.socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #d3d3d3;
+    transition: all .3s;
+}
+
+.socials a:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #d3d3d3;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.links ul a:hover {
+    color: white;
+    padding-left: 10px;
+}
+
+.contact-form .text-input {
+    background: #272727;
+    color: #bebdbd;
+    margin-bottom: 20px;
+    line-height: 1.5rem;
+    padding: 10px 15px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contact-form textarea.text-input {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form .contact-btn {
+    float: right;
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.contact-form .contact-btn:hover {
+    background: #45a049;
 }
 
 .footer-bottom {
-    border-top: 0.7px dashed #e4e4e4;
-    padding-top: 20px;
-    max-width: 30%;
-    margin: 0 auto;
+    background: #343a40;
+    color: #686868;
     text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
 }
 
-.footer-bottom p {
-    margin: 5px 0;
-    font-size: 12px;
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    
+    .contact-form .contact-btn {
+        width: 100%;
+        float: none;
+    }
 }
-
-.social-links a {
-    text-decoration: none;
-}
-
-.social-links a:first-child {
-    color: #3b5998;
-}
-
-.social-links a:nth-child(2) {
-    color: #1DA1F2;
-}
-
-.social-links a:last-child {
-    color: #0077b5;
-}
-
-.instagram-link {
-    display: inline-block;
-}
-
-.instagram-icon {
-    font-size: 64px;
-    background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    mask-image: url('https://unpkg.com/ionicons@5.5.2/dist/svg/logo-instagram.svg');
-    mask-size: cover;
-    color: transparent;
-}
-/* Changed the below CSS style to apply only size and margin to the other logos[Except X(Twitter)] */
-.social-links ion-icon {
-    font-size: 30px;
-    margin: 14px;
-}
-/* Grouped the animation for all the icons together for better usability. */
-.social-links ion-icon, .twitterlogo {
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.social-links ion-icon:hover, .twitterlogo:hover {
-    transform: scale(1.2);
-}
-
 
 
 
@@ -628,3 +732,54 @@ button:hover {
     background: #ff6062;
   }
   
+  .hidden {
+    display: none;
+}
+
+.search-bar {
+    text-align: center;
+    margin: 15px 0;
+    display: flex;
+    justify-content: flex-end; /* Align to right */
+    align-items: center;
+    gap: 8px; /* Space between input and button */
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px; /* Adjust width to make it smaller */
+    margin: 20px auto 0 auto; /* Right alignment with some margin */
+    position: relative;
+    right: 80px; /* Push it further right */
+}
+
+#search-input {
+    width: 60%;  /* Smaller input size */
+    padding: 8px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 50px;
+    background-color: #fff;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
