@@ -282,3 +282,20 @@ body{
 a{
     text-decoration: none;
 }
+
+
+.linksHome{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #eb6289;
+    background-color: rgb(255, 211, 211);
+    color: black;
+    padding: 15px;
+    font-size: large;
+    text-decoration: none;
+    border-radius: 15px;
+}
+a{
+    text-decoration: none;
+}
