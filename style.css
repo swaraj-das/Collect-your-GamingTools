@@ -458,15 +458,57 @@ button:hover img {
     margin-right: 10px;
     text-align: center;
     line-height: 40px;
-    border-radius: 50%;
+    border-radius:50%;
     color: #d3d3d3;
     transition: all .3s;
 }
 
-.socials a:hover {
-    background: #4CAF50;
-    color: white;
+.socials .fa-facebook {
+    /* Add the transition effect */
+    transition: transform 0.3s ease!important;
 }
+
+.socials a:hover .fa-facebook {
+    color: #1877F2 !important;
+    transform: scale(1.3) !important;
+}
+
+
+/* for instagram */
+
+.socials .fa-instagram {
+    /* Add the transition effect */
+    transition: transform 0.3s ease!important;
+}
+
+.socials a:hover .fa-instagram{
+    color: #C13584 !important;
+    transform: scale(1.3) !important;;
+} 
+
+/* for twitter */
+
+.socials .fa-twitter {
+    /* Add the transition effect */
+    transition: transform 0.3s ease!important;
+}
+
+.socials a:hover .fa-twitter {
+    color: #1DA1F2 !important;
+    transform: scale(1.3) !important;;
+} 
+
+/* for youtube */
+.socials .fa-youtube {
+    /* Add the transition effect */
+    transition: transform 0.3s ease!important;
+}
+
+.socials a:hover .fa-youtube {
+    color: #FF0000 !important;
+    transform: scale(1.3) !important;;
+} 
+
 
 .links ul {
     list-style-type: none;
