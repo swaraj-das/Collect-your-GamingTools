@@ -469,23 +469,43 @@ button:hover img {
 }
 
 .social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    font-size: 1rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #b74b4b;
     text-decoration: none;
 }
 
+.social-links a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #b74b4b;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+/* Custom colors for individual social media platforms */
 .social-links a:first-child {
-    color: #3b5998;
+    color: #3b5998; /* Facebook */
 }
 
 .social-links a:nth-child(2) {
-    color: #1DA1F2;
+    color: #1DA1F2; /* Twitter */
+}
+
+.social-links a:nth-child(3) {
+    color: #e6683c; /* Instagram */
 }
 
 .social-links a:last-child {
-    color: #0077b5;
-}
-
-.instagram-link {
-    display: inline-block;
+    color: #0077b5; /* LinkedIn */
 }
 
 .instagram-icon {
@@ -505,6 +525,8 @@ button:hover img {
 
 .social-links ion-icon:hover {
     transform: scale(1.2);
+}
+
 }
 
 
