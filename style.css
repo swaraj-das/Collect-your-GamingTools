@@ -467,23 +467,22 @@ button:hover img {
 .socials a:hover{
     transform: scale(1.2); /* Zoom effect on hover */
 }
-
+/* Hover zoom effect for facebook icon */
 .socials .facebook:hover {
     background: blue;
     color: white;
-    
  } 
-
+ /* Hover zoom effect for instagram icon */
  .socials .instagram:hover {
     background: orangered;
     color: white;
  } 
-
+ /* Hover zoom effect for twitter[X] icon */
  .socials .twitter:hover {
     background: black;
     color: white;
  } 
-
+ /* Hover zoom effect for youtube icon */
  .socials .youtube:hover {
     background: red;
     color: white;
