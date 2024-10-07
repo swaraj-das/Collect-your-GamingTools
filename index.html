@@ -18,10 +18,10 @@
                 <a href="/"><span class="website-name">Collect your GamingTools</span></a>
                 <nav>
                     <ul id="menuList">
-                        <li><a href="#">Game Controllers</a></li>
-                        <li><a href="#">VR Accessories</a></li>
-                        <li><a href="#">Media Remotes</a></li>
-                        <li><a href="#">Others</a></li>
+                        <li><a href="#controller">Game Controllers</a></li>
+                        <li><a href="#vrsection">VR Accessories</a></li>
+                        <li><a href="#keyboard">Gaming Keyboard</a></li>
+                        <li><a href="#others">Others</a></li>
                         <li class="login"><a href="login/login.html">Login</a></li>
                     </ul>
                 </nav>
@@ -45,7 +45,7 @@
             </section>
 
         <!-- PS4 Controller Section -->
-        <div class="row">
+        <div class="row" id="controller">
             <div class="col-1">
                 <h2>PS4 V2 Dualshock 4</h2>
                 <h3>Wireless Controllers for PlayStation 4</h3>
@@ -136,8 +136,70 @@
             </div>
         </div>
 
-        <!-- Gaming Mouse Section -->
+         <!-- VR Headset Section -->
+         <div class="row" id="vrsection">
+            <div class="col-1">
+                <h2>Meta Quest Pro</h2>
+                <h3>VR Headset from Meta</h3>
+                <p>(Official)</p>
+                <div class="price">
+                    <span class="original-price">&#8377;40000</span>
+                    <span class="discounted-price">&#8377;35200</span>
+                    <span class="discount">12% off</span>
+                </div>
+                <div class="rating">
+                    <span>★★★★☆</span>
+                    <p>(871 reviews)</p>
+                </div>
+                <div class="overall-rating">
+                    <span>Overall Rating:</span>
+                    <p class="star">4.2★</p>
+                </div>
+                <div class="btn-section">
+                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                </div>
+            </div>
+            <div class="col-2">
+                <img src="images/metaquest.jpg" class="controller" alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
+                <div class="color-box"></div>
+                
+            </div>
+        </div>
+
+        <!-- VR Headset Section 2 -->
         <div class="row">
+            <div class="col-1">
+                <h2>Apple Vision Pro</h2>
+                <h3>VR Headset from Apple</h3>
+                <p>(Official)</p>
+                <div class="price">
+                    <span class="original-price">&#8377;293999</span>
+                    <span class="discounted-price">&#8377;264599</span>
+                    <span class="discount">10% off</span>
+                </div>
+                <div class="rating">
+                    <span>★★★★★</span>
+                    <p>(235 reviews)</p>
+                </div>
+                <div class="overall-rating">
+                    <span>Overall Rating:</span>
+                    <p class="star">4.8★</p>
+                </div>
+                <div class="btn-section">
+                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                </div>
+            </div>
+            <div class="col-2">
+                <img src="images/visionpro.png" class="controller" alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
+                <div class="color-box"></div>
+                
+            </div>
+        </div>
+
+        <!-- Gaming Mouse Section -->
+        <div class="row" id="others">
             <div class="col-1">
                 <h2>Logitech G502 Hero</h2>
                 <h3>High Performance Gaming Mouse</h3>
@@ -168,8 +230,8 @@
         </div>
 
         <!-- Gaming Keyboard Section -->
-        <div class="row">
-            <div class="col-1">
+        <div class="row" id="keyboard">
+            <div class="col-1" >
                 <h2>Razer BlackWidow</h2>
                 <h3>Mechanical Gaming Keyboard</h3>
                 <p>(Wired)</p>

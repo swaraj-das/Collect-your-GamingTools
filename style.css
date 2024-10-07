@@ -5,6 +5,7 @@
 }
 html {
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
