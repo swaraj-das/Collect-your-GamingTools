@@ -18,10 +18,10 @@
                 <a href="/"><span class="website-name">Collect your GamingTools</span></a>
                 <nav>
                     <ul id="menuList">
-                        <li><a href="#">Game Controllers</a></li>
-                        <li><a href="#">VR Accessories</a></li>
-                        <li><a href="#">Media Remotes</a></li>
-                        <li><a href="#">Others</a></li>
+                        <li><a href="#game">Game Controllers</a></li>
+                        <!-- <li><a href="#">VR Accessories</a></li> -->
+                        <li><a href="#Media">Media Remotes</a></li>
+                        <li><a href="#other">Others</a></li>
                         <li class="login"><a href="login/login.html">Login</a></li>
                     </ul>
                 </nav>
@@ -45,6 +45,7 @@
             </section>
 
         <!-- PS4 Controller Section -->
+       <section id="game">
         <div class="row">
             <div class="col-1">
                 <h2>PS4 V2 Dualshock 4</h2>
@@ -73,7 +74,7 @@
                 <div class="color-box"></div>
             </div>
         </div>
-
+    
         <!-- Xbox Controller Section -->
         <div class="row">
             <div class="col-1">
@@ -135,8 +136,9 @@
                 
             </div>
         </div>
-
+    </section>
         <!-- Gaming Mouse Section -->
+         <section id="Media">
         <div class="row">
             <div class="col-1">
                 <h2>Logitech G502 Hero</h2>
@@ -228,8 +230,9 @@
                
             </div>
         </div>
-
+    </section>
         <!-- Gaming Chair Section -->
+         <section id="other">
         <div class="row">
             <div class="col-1">
                 <h2>Secretlab Omega</h2>
@@ -260,6 +263,7 @@
             </div>
         </div>
     </div>
+</section>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section about">
@@ -313,7 +317,12 @@
     <div class="scroll-top" onclick="scrollToTop()">
         <ion-icon name="arrow-up-outline"></ion-icon>
     </div>
-
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });</script>
+    </body>
     <!-- this script is for twitter icon  starts -->
  <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
  <!-- this script is for twitter icon  ends -->
@@ -323,6 +332,6 @@
     <!-- Ionicons Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    
 
 </html>
