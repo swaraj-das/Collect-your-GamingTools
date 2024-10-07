@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -732,10 +732,7 @@ button:hover img {
     background: #ff6062;
   }
   
-  .hidden {
-    display: none;
-}
-
+   
 .search-bar {
     text-align: center;
     margin: 15px 0;
@@ -751,6 +748,7 @@ button:hover img {
     margin: 20px auto 0 auto; /* Right alignment with some margin */
     position: relative;
     right: 80px; /* Push it further right */
+    margin-bottom: 15px;
 }
 
 #search-input {
@@ -783,3 +781,4 @@ button:hover img {
 .search-bar button:hover {
     background-color: #555;
 }
+ 
