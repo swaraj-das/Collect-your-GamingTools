@@ -225,7 +225,7 @@ body{
     font-size: 15px; 
 }
 
-.links a:first-child: hover{
+.links a:first-child:hover{
     text-decoration: underline;
 }
 
@@ -233,9 +233,8 @@ body{
     margin-right: 20px; 
 }
 
-.links a: hover {
+.links a:hover {
     color: #ff80ab;
-}
 }
 
 .links {
@@ -257,7 +256,7 @@ body{
     font-size: 15px; 
 }
 
-.links a:first-child: hover{
+.links a:first-child:hover{
     text-decoration: underline;
 }
 
@@ -265,6 +264,21 @@ body{
     margin-right: 20px; 
 }
 
-.links a: hover {
+.links a:hover {
     color: #ff80ab;
+}
+
+.linksHome{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fb5283;
+    background-color: rgb(255, 211, 211);
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+a{
+    text-decoration: none;
 }
