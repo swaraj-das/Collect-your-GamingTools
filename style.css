@@ -230,7 +230,6 @@ nav ul li.login:hover {
 button {
     width: 140px;
     border: 0;
-    padding: 14px 12px;
     outline: none;
     color: #fff;
     font-size: 16px;
@@ -239,6 +238,10 @@ button {
     border-radius: 6px;
     cursor: pointer;
     transition: width 0.5s;
+}
+#cart-btn
+{
+    padding: 12px 14px;
 }
 
 button img {
@@ -250,11 +253,25 @@ button:hover img {
     display: block;
 }
 
-button:hover {
+#cart-btn:hover
+{
     width: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+#buy-btn:hover
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.btn-section
+{   display: inline-flex;
+    gap: 15px;
 }
 
 .col-1::after {
@@ -340,31 +357,54 @@ button:hover {
 }
 
 .footer-container {
-    background-color: #444444;
+    background-color: #444444; /* Darker background */
     color: #fff;
     padding: 40px 20px;
     text-align: center;
     position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer {
+    background: #303036; /* Slightly different footer background */
+    color: #d3d3d3; /* Light gray text color */
+    padding: 50px 0 0;
+}
+
+.overall-rating {
+    margin: 14px 0;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.overall-rating .star {
+    margin-left: 5px;
+    color: #ff3c6d; /* Bright star color */
+    font-weight: 600;
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-section {
-    flex: 1 1 200px;
-    margin: 10px 20px;
-    max-width: 300px;
-    text-align: left;
+    flex: 1;
+    margin-bottom: 40px;
+    min-width: 300px;
+    padding: 0 20px;
 }
 
-.footer-section .logo-name {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+.footer h2 {
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 20px;
 }
 
 .footer-section .contact {
@@ -375,6 +415,7 @@ button:hover {
 .footer-section .social-media a {
     color: #fff;
     margin: 0 5px;
+    text-decoration: none;
 }
 
 .footer-section a {
@@ -383,7 +424,74 @@ button:hover {
 }
 
 .footer-section a:hover {
-    color: var(--primary-gradient);
+    color: #ffee00; /* Adding a hover effect */
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.about-text {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.socials {
+    margin-top: 20px;
+}
+
+.socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #d3d3d3;
+    transition: all .3s;
+}
+
+.socials a:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #d3d3d3;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.footer-section a:hover {
+    color: var(--primary-gradient); /* Use the gradient color on hover */
 }
 
 .scroll-top {
@@ -396,14 +504,189 @@ button:hover {
     border: none;
     padding: 10px;
     cursor: pointer;
+    display: flex; /* Using flexbox to center content */
+    align-items: center; /* Vertically centers the arrow */
+    justify-content: center; /* Horizontally centers the arrow */
 }
 
 .scroll-top:hover {
-    background: var(--primary-gradient);
+    background: var(--primary-gradient); /* Background color on hover */
 }
 
 .scroll-top.show {
-    display: flex; /* Flexbox to center content */
+    display: flex; /* Show when class 'show' is added */
+}
+.links ul a:hover {
+    color: white;
+    padding-left: 10px;
+}
+
+.contact-form .text-input {
+    background: #272727;
+    color: #bebdbd;
+    margin-bottom: 20px;
+    line-height: 1.5rem;
+    padding: 10px 15px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contact-form textarea.text-input {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form .contact-btn {
+    float: right;
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.contact-form .contact-btn:hover {
+    background: #45a049;
+}
+
+.footer-bottom {
+    background: #343a40;
+    color: #686868;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    
+    .contact-form .contact-btn {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+
+
+/* -----------------------------------------------Responsiveness----------------------------------------------------- */
+
+
+/* ----------------------------for mobiles--------------------------------------- */
+
+@media only screen and (max-width: 700px) {
+
+    .menu-icon {
+        margin-right: 40px;
+    }
+
+    nav ul {
+        width: 100%;
+        background: linear-gradient(to right, #fb5283, #ff3527);
+        position: absolute;
+        top: 73px;
+        right: 0;
+        z-index: 2;
+        margin-right: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: 50px;
+    }
+
+    nav ul li a {
+        color: #fff;
+    }
+
+    nav ul li a:hover {
+        color: #ffee00;
+        transform: scale(1.18);
+    }
+
+    .login a {
+        background-color: (#ff459f, #ff9532);
+        color: white;
+        padding: 4px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    .login a:hover {
+        background-color: #e05599;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        margin: 100px 0;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+    .col-2 .controller {
+        width: 77%;
+    }
+
+    .color-box {
+        transform: translateX(75px);
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+    }
+
+    .col-1 h2 {
+        font-size: 35px;
+    }
+
+    .col-1 h3 {
+        font-size: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-section .logo-name {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        max-width: fit-content;
+    }
 }
 
 
@@ -412,3 +695,82 @@ button:hover {
         display: none;
     }
 }
+.footer-section a:hover {
+    color: var(--primary-gradient); /* Use the gradient color on hover */
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff459f;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Flexbox to center content */
+    align-items: center; /* Vertically centers the arrow */
+    justify-content: center; /* Horizontally centers the arrow */
+}
+
+.scroll-top:hover {
+    background: #ff6062; /* Background color on hover */
+}
+
+.scroll-top.show {
+    display: flex; /* Show when class 'show' is added */
+}
+
+.hidden {
+    display: none;
+}
+
+.search-bar {
+    text-align: center;
+    margin: 15px 0;
+    display: flex;
+    justify-content: flex-end; /* Align to right */
+    align-items: center;
+    gap: 8px; /* Space between input and button */
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px; /* Adjust width to make it smaller */
+    margin: 20px auto 0 auto; /* Center alignment with some margin */
+    position: relative;
+    right: 80px; /* Push it further right */
+}
+
+#search-input {
+    width: 60%;  /* Smaller input size */
+    padding: 8px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 50px;
+    background-color: #fff;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
