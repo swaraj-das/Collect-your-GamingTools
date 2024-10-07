@@ -461,12 +461,32 @@ button:hover img {
     border-radius: 50%;
     color: #d3d3d3;
     transition: all .3s;
+    transition: transform 0.3s ease, background 0.3s ease; /* Added transform property */
 }
 
-.socials a:hover {
-    background: #4CAF50;
-    color: white;
+.socials a:hover{
+    transform: scale(1.2); /* Zoom effect on hover */
 }
+/* Hover zoom effect for facebook icon */
+.socials .facebook:hover {
+    background: blue;
+    color: white;
+ } 
+ /* Hover zoom effect for instagram icon */
+ .socials .instagram:hover {
+    background: orangered;
+    color: white;
+ } 
+ /* Hover zoom effect for twitter[X] icon */
+ .socials .twitter:hover {
+    background: black;
+    color: white;
+ } 
+ /* Hover zoom effect for youtube icon */
+ .socials .youtube:hover {
+    background: red;
+    color: white;
+ } 
 
 .links ul {
     list-style-type: none;
