@@ -94,6 +94,7 @@ button[type="submit"]:hover {
 
 html {
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
