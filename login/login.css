@@ -56,6 +56,25 @@ label {
     font-size: 16px;
 }
 
+.pass{
+    display: flex;
+}
+
+#showPasswordbtn{
+    position: absolute;
+    right: 18%;
+    top: 51%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+#showPasswordbtn:hover{
+    cursor: pointer;
+}
+
 input[type="text"], input[type="password"] {
     width: 100%;
     padding: 0.75rem;
@@ -225,7 +244,7 @@ body{
     font-size: 15px; 
 }
 
-.links a:first-child: hover{
+.links a:first-child:hover{
     text-decoration: underline;
 }
 
@@ -264,9 +283,8 @@ body{
 }
 
 
-.links a: hover {
+.links a:hover {
     color: #ff80ab;
-}
 }
 
 .links {
@@ -288,7 +306,7 @@ body{
     font-size: 15px; 
 }
 
-.links a:first-child: hover{
+.links a:first-child:hover{
     text-decoration: underline;
 }
 
@@ -296,6 +314,6 @@ body{
     margin-right: 20px; 
 }
 
-.links a: hover {
+.links a:hover {
     color: #ff80ab;
 }

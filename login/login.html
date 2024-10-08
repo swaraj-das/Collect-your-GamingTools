@@ -1,71 +1,99 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Collect your GamingTools</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div class="login-container">
-        <h1>Login to Your Account</h1>
-        <form action="#" method="post">
-            <div class="input-group">
-                <label for="username">Gmail</label>
-                <input type="text" id="gmail" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div ontouchstart="">
-  <div class="button">
-    <a href="#">Login</a>
-  </div>
-</div>
-        </form>
-        <div class="links">
-            <a href="forgot.html" class="hal">Forgot Password?</a>
-            <a href="../SignUp/signup.html" class="hal2">Sign Up</a>
+      <h1>Login to Your Account</h1>
+      <form action="#" method="post">
+        <div class="input-group">
+          <label for="username">Gmail</label>
+          <input type="text" id="gmail" name="username" required />
         </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="pass">
+            <input type="password" id="password" name="password" required />
+            <button type="button" id="showPasswordBtn">
+              <i class="fa-regular fa-eye" id="passicon"></i>
+            </button>
+          </div>
+        </div>
+        <div ontouchstart="">
+          <div class="button">
+            <a href="#">Login</a>
+          </div>
+        </div>
+      </form>
+      <div class="links">
+        <a href="forgot.html" class="hal">Forgot Password?</a>
+        <a href="../SignUp/signup.html" class="hal2">Sign Up</a>
+      </div>
     </div>
-</body>
+  </body>
 
-<script>
+  <script>
     const login = document.querySelector(".button");
 
-    login.addEventListener("click",(e)=>{
-        e.preventDefault();
+    login.addEventListener("click", (e) => {
+      e.preventDefault();
 
-        const email = document.querySelector("#gmail").value;
-        const password = document.querySelector("#password").value;
-        const userData = {
-            email,
-            password
-        }
-        console.log(userData)
-        loginUser(userData)
-    })
+      const email = document.querySelector("#gmail").value;
+      const password = document.querySelector("#password").value;
+      const userData = {
+        email,
+        password,
+      };
+      console.log(userData);
+      loginUser(userData);
+    });
 
-    const loginUser = async (user)=>{
-    try{
-        const res = await fetch("http://localhost:5000/auth/signin",{
-            method:"POST",
-            credentials:"include",
-            redirect:"follow",
-            headers:{"content-type":"application/json"},
-            body:JSON.stringify(user)
-        })
+    // Show password
+    document.getElementById("showPasswordBtn").addEventListener("click", () => {
+      const password = document.getElementById("password");
+      const icon = document.getElementById("passicon");
+
+      if (password.type === "password") {
+        password.type = "text";
+        icon.classList.remove("fa-regular", "fa-eye");
+        icon.classList.add("fa-solid", "fa-eye-slash");
+      } else {
+        password.type = "password";
+        icon.classList.remove("fa-solid", "fa-eye-slash");
+        icon.classList.add("fa-regular", "fa-eye");
+      }
+    });
+
+    const loginUser = async (user) => {
+      try {
+        const res = await fetch("http://localhost:5000/auth/signin", {
+          method: "POST",
+          credentials: "include",
+          redirect: "follow",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(user),
+        });
         if (!res.ok) {
-            throw new Error(`HTTP error! status: ${res.status}`);
+          throw new Error(`HTTP error! status: ${res.status}`);
         }
         const data = await res.json();
-  
 
-        window.location.href="http://127.0.0.1:5500/Collect-your-GamingTools/index.html"
-    }catch(e){
+        window.location.href =
+          "http://127.0.0.1:5500/Collect-your-GamingTools/index.html";
+      } catch (e) {
         console.log(e.message);
-    }
-    }
-</script>
+      }
+    };
+  </script>
 </html>

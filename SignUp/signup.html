@@ -6,6 +6,13 @@
     <title>Sign Up for GamingTools</title>
     <link rel="stylesheet" href="signup.css">
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
     <div class="signup-container">
@@ -21,16 +28,22 @@
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <div class="pass">
+                    <input type="password" id="password" name="password" required>
+                    <button id="showPasswordBtn"><i class="fa-regular fa-eye" id="passicon"></i></button>
+                </div>
             </div>
             <div class="input-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
+                <div class="pass">
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <button id="showPasswordBtn-conf"><i class="fa-regular fa-eye" id="passicon-conf"></i></button>
+                </div>
             </div>
             <button type="submit" class="signup-button">Sign Up</button>
         </form>
         <div class="links">
-            <a href="../login/login.html"><u>Already have an account? Login</u></a>
+            <a>Already have an account? <u><a href="../login/login.html">Login</a></u></a>
         </div>
     </div>
 
@@ -58,6 +71,38 @@
             registeruser(userdata);
 
         } )
+
+        // Show password
+        document.getElementById("showPasswordBtn").addEventListener("click", () => {
+        const password = document.getElementById("password");
+        const icon = document.getElementById("passicon");
+
+        if (password.type === "password") {
+            password.type = "text";
+            icon.classList.remove("fa-regular", "fa-eye");
+            icon.classList.add("fa-solid", "fa-eye-slash");
+        } else {
+            password.type = "password";
+            icon.classList.remove("fa-solid", "fa-eye-slash");
+            icon.classList.add("fa-regular", "fa-eye");
+        }
+        });
+
+        // Show password-conf
+        document.getElementById("showPasswordBtn-conf").addEventListener("click", () => {
+        const password = document.getElementById("confirm-password");
+        const icon = document.getElementById("passicon-conf");
+
+        if (password.type === "password") {
+            password.type = "text";
+            icon.classList.remove("fa-regular", "fa-eye");
+            icon.classList.add("fa-solid", "fa-eye-slash");
+        } else {
+            password.type = "password";
+            icon.classList.remove("fa-solid", "fa-eye-slash");
+            icon.classList.add("fa-regular", "fa-eye");
+        }
+        });
 
 
         const registeruser = async(user)=>{

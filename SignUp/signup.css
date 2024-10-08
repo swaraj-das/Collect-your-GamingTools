@@ -14,10 +14,7 @@ body {
     height: 100vh;
     color: white;
     text-shadow: 1px 1px 2px #000;
-}
-
-.signup-container {
-    
+}.signup-container {
     opacity: 0.75;
     background-color: rgba(0, 0, 0, 0);
     padding: 5rem;
@@ -29,6 +26,35 @@ body {
     animation: fadeIn 2s ease-in-out;
     background-color: black;
     margin: auto;
+}
+
+.pass {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pass input {
+    width: 100%;
+    padding-right: 40px; /* Add padding to avoid text overlap with the button */
+}
+
+#showPasswordBtn, 
+#showPasswordBtn-conf {
+    position: absolute;
+    right: 10px; /* Align the button to the right of the input field */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    border: 1px solid transparent;
+    height: 30px;
+    font-size: 20px;
+    background-color: transparent; /* Make the button background transparent */
+    color: white;
+}
+
+#showPasswordBtn:hover,
+#showPasswordBtn-conf:hover {
+    cursor: pointer;
 }
 
 
