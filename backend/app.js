@@ -1,10 +1,11 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-const authRouter = require('./router/authRoute.js');
-const databaseconnect = require('./config/databaseConfig.js');
-const cookieParser = require('cookie-parser');
-const cors = require('cors');
+const authRouter = require("./router/authRoute.js");
+const emailRouter = require("./router/EmailRoute.js");
+const databaseconnect = require("./config/databaseConfig.js");
+const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
 // connect to db
 databaseconnect();
@@ -15,10 +16,11 @@ app.use(cookieParser()); // Third-party middleware
 app.use(cors({ origin: [process.env.CLIENT_URL], credentials: true })); //Third-party middleware
 
 // Auth router
-app.use('/auth', authRouter);
+app.use("/auth", authRouter);
+app.use("/email", emailRouter);
 
-app.use('/', (req, res) => {
-  res.status(200).json({ data: 'JWTauth server ;)' });
+app.use("/", (req, res) => {
+  res.status(200).json({ data: "JWTauth server ;)" });
 });
 
 module.exports = app;
