@@ -27,12 +27,14 @@
                 </nav>
 
              <!-- Search Bar (initially hidden) -->
+              <div class="search_bar_container"> 
             <div class="search-bar hidden" id="searchBar">
                 <input type="text" id="search-input" placeholder="Search..." />
                 <button type="button" onclick="performSearch()">🔍</button>
             </div>
             
                 <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+            </div>
             </div>
 
             <section class="hero">
@@ -293,7 +295,7 @@
                 </ul>
             </div>
             <div class="footer-section contact-form">
-                <h2>Contact Us</h2>
+                <h2 class="footer_Section_head">Contact Us</h2>
                 <form action="#" method="post">
                     <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
                     <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
