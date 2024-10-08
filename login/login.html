@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,8 +11,8 @@
         <h1>Login to Your Account</h1>
         <form action="#" method="post">
             <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <label for="username">Gmail</label>
+                <input type="text" id="gmail" name="username" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
@@ -26,9 +25,47 @@
 </div>
         </form>
         <div class="links">
-            <a href="#">Forgot Password?</a>
-            <a href="../SignUp/signup.html">Sign Up</a>
+            <a href="forgot.html" class="hal">Forgot Password?</a>
+            <a href="../SignUp/signup.html" class="hal2">Sign Up</a>
         </div>
     </div>
 </body>
+
+<script>
+    const login = document.querySelector(".button");
+
+    login.addEventListener("click",(e)=>{
+        e.preventDefault();
+
+        const email = document.querySelector("#gmail").value;
+        const password = document.querySelector("#password").value;
+        const userData = {
+            email,
+            password
+        }
+        console.log(userData)
+        loginUser(userData)
+    })
+
+    const loginUser = async (user)=>{
+    try{
+        const res = await fetch("http://localhost:5000/auth/signin",{
+            method:"POST",
+            credentials:"include",
+            redirect:"follow",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(user)
+        })
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        const data = await res.json();
+  
+
+        window.location.href="http://127.0.0.1:5500/Collect-your-GamingTools/index.html"
+    }catch(e){
+        console.log(e.message);
+    }
+    }
+</script>
 </html>
