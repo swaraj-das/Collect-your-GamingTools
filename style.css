@@ -286,11 +286,16 @@ nav {
     text-align: right;
     margin-right: 100px;
 }
-
+nav ul{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
 nav ul li {
     list-style: none;
     display: inline;
     margin-right: 30px;
+    text-wrap: nowrap;
 }
 
 nav ul li a {
