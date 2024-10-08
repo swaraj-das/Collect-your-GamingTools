@@ -1,8 +1,16 @@
+:root {
+    --primary-gradient: linear-gradient(90deg, #ff459f, #ff9532, #ffd700);
+    --secondary-gradient: linear-gradient(to right, #fb5283, #ff3527);
+    --dark-overlay: rgba(0, 0, 0, 0.5);
+    --button-hover-bg: #c9565a;
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
+
 html {
     overflow-y: scroll;
 }
@@ -15,13 +23,14 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: linear-gradient(90deg, #ff459f, #ff9532, #ff459f);
+    background: var(--primary-gradient);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 html::-webkit-scrollbar-thumb:window-inactive {
     background: rgb(156, 156, 156);
 }
+
 .container {
     width: 100%;
     min-height: 100vh;
@@ -40,7 +49,6 @@ html::-webkit-scrollbar-thumb:window-inactive {
     overflow: hidden;
     background-color: #fff;
     z-index: 1000;
- 
 }
 
 .logo {
@@ -54,12 +62,14 @@ html::-webkit-scrollbar-thumb:window-inactive {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg'); 
+    background-image: url('https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
     color: white;
     text-align: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
 }
 
 .overlay {
@@ -68,7 +78,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    background: var(--dark-overlay); /* Dark overlay for better text visibility */
     z-index: 1;
 }
 
@@ -90,29 +100,28 @@ html::-webkit-scrollbar-thumb:window-inactive {
 }
 
 .cta-btn {
-    background-color: white;
-    color: #ce0606;
-    padding: 15px 30px;
+    background: var(--primary-gradient);
+    border: none;
+    color: white;
+    padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
     font-size: 16px;
-    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .cta-btn:hover {
-    background-color: #c9565a;
-    color: white;
+    background-color: var(--button-hover-bg);
 }
 
 @keyframes rainbow {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
@@ -120,10 +129,10 @@ html::-webkit-scrollbar-thumb:window-inactive {
 
 .website-name {
     margin-left: 16px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     color: transparent;
-    background: linear-gradient(90deg, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff, #8a2be2, #ff459f);
+    background: var(--primary-gradient);
     background-size: 400% 400%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -132,12 +141,13 @@ html::-webkit-scrollbar-thumb:window-inactive {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bolder;
     cursor: pointer;
+    will-change: background-position;
 }
 
 .menu-icon {
     width: 25px;
     cursor: pointer;
-    display: none;
+    display: block; /* Changed to block */
 }
 
 nav {
@@ -167,7 +177,7 @@ nav ul li a:hover {
 }
 
 nav ul li.login {
-    background: linear-gradient(to right, #fb5283, #ff3527);
+    background: var(--secondary-gradient);
     height: 24px;
     border-radius: 20px;
     padding: 4px 18px;
@@ -224,12 +234,10 @@ button {
     color: #fff;
     font-size: 16px;
     font-weight: bolder;
-    background: linear-gradient(to right, #fb5283, #ff3527);
+    background: var(--primary-gradient);
     border-radius: 6px;
     cursor: pointer;
     transition: width 0.5s;
-    background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
-    transition: background 0.3s ease-in-out;
 }
 #cart-btn
 {
@@ -291,7 +299,7 @@ button:hover img {
     position: absolute;
     right: 0;
     top: 0;
-    background: linear-gradient(#ff459f, #ff9532);
+    background: var(--primary-gradient);
     border-radius: 20px 0 0 20px;
     height: 100%;
     width: 80%;
@@ -327,32 +335,6 @@ button:hover img {
     margin-left: 15px;
 }
 
-.add-btn img {
-    width: 40px;
-    margin-bottom: 5px;
-}
-
-.add-btn {
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    border: 1.5px solid #fff;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-
-.add-btn p {
-    font-size: 16px;
-}
-
-.add-btn:hover {
-    transform: scale(1.1);
-}
-
 .rating {
     display: flex;
     align-items: center;
@@ -363,7 +345,6 @@ button:hover img {
     font-size: 26px;
     margin-right: 10px;
     background: linear-gradient(to right, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff);
-    /* Example gradient colors */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -373,6 +354,21 @@ button:hover img {
     font-size: 14px;
     color: #707070;
     margin: 0;
+}
+
+.footer-container {
+    background-color: #444444; /* Darker background */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer {
+    background: #303036; /* Slightly different footer background */
+    color: #d3d3d3; /* Light gray text color */
+    padding: 50px 0 0;
 }
 
 .overall-rating {
@@ -385,15 +381,8 @@ button:hover img {
 
 .overall-rating .star {
     margin-left: 5px;
-    color: #ff3c6d;
+    color: #ff3c6d; /* Bright star color */
     font-weight: 600;
-}
-
-.footer {
-    background: #303036;
-    color: #d3d3d3;
-    padding: 50px 0 0;
-    font-family: 'Arial', sans-serif;
 }
 
 .footer-content {
@@ -418,6 +407,25 @@ button:hover img {
     margin-bottom: 20px;
 }
 
+.footer-section .contact {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.footer-section .social-media a {
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #ffee00; /* Adding a hover effect */
+}
 .logo-container {
     display: flex;
     align-items: center;
@@ -502,6 +510,32 @@ button:hover img {
     transition: all .3s;
 }
 
+.footer-section a:hover {
+    color: var(--primary-gradient); /* Use the gradient color on hover */
+}
+
+.scroll-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: flex; /* Using flexbox to center content */
+    align-items: center; /* Vertically centers the arrow */
+    justify-content: center; /* Horizontally centers the arrow */
+}
+
+.scroll-top:hover {
+    background: var(--primary-gradient); /* Background color on hover */
+}
+
+.scroll-top.show {
+    display: flex; /* Show when class 'show' is added */
+}
 .links ul a:hover {
     color: white;
     padding-left: 10px;
@@ -673,67 +707,16 @@ button:hover img {
     .footer-bottom {
         max-width: fit-content;
     }
-
 }
 
 
-/* --------------------------for tabs------------------------------------ */
-
-
-@media only screen and (max-width: 1180px) {
-
+@media only screen and (min-width: 700px) {
     .menu-icon {
-        margin-right: 60px;
+        display: none;
     }
-
-    nav ul {
-        width: 100%;
-        background: linear-gradient(to right, #fb5283, #ff3527);
-        position: absolute;
-        top: 73px;
-        right: 0;
-        z-index: 2;
-        margin-right: 21px;
-    }
-
-    nav ul li {
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        text-align: center;
-        margin-left: 50px;
-    }
-
-    nav ul li a {
-        color: #fff;
-    }
-
-    nav ul li a:hover {
-        color: #ffee00;
-        transform: scale(1.18);
-    }
-
-    .login a {
-        background-color: #752280;
-        color: white;
-        padding: 4px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        display: inline-block;
-    }
-
-    .login a:hover {
-        background-color: (#f267ff, #ff9532);
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    #menuList {
-        overflow: hidden;
-        transition: 0.5s;
-    }
+}
+.footer-section a:hover {
+    color: var(--primary-gradient); /* Use the gradient color on hover */
 }
 
 .scroll-top {
@@ -746,13 +729,20 @@ button:hover img {
     cursor: pointer;
     display: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .scroll-top:hover {
-    background: #ff6062;
-  }
-  
-  .hidden {
+    display: flex; /* Flexbox to center content */
+    align-items: center; /* Vertically centers the arrow */
+    justify-content: center; /* Horizontally centers the arrow */
+}
+
+.scroll-top:hover {
+    background: #ff6062; /* Background color on hover */
+}
+
+.scroll-top.show {
+    display: flex; /* Show when class 'show' is added */
+}
+
+.hidden {
     display: none;
 }
 
@@ -768,7 +758,7 @@ button:hover img {
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 250px; /* Adjust width to make it smaller */
-    margin: 20px auto 0 auto; /* Right alignment with some margin */
+    margin: 20px auto 0 auto; /* Center alignment with some margin */
     position: relative;
     right: 80px; /* Push it further right */
 }
@@ -803,3 +793,4 @@ button:hover img {
 .search-bar button:hover {
     background-color: #555;
 }
+
