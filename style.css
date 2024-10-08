@@ -951,3 +951,18 @@ button:hover img {
 .search-bar button:hover {
     background-color: #555;
 }
+.btn-section button, .btn-section a button {
+    display: inline-block; /* Make them consistent */
+    padding: 20px 20px; /* Set equal padding */
+    font-size: 16px; /* Set a common font size */
+    width: auto; /* Adjust width to content */
+    border: none; /* Ensure no borders affect size */
+    background-color: #007BFF; /* Example background color */
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-section a {
+    text-decoration: none; /* Remove underline */
+}
