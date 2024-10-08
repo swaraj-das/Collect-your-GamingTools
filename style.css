@@ -117,6 +117,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .navbar {
