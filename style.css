@@ -143,7 +143,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
 nav {
     flex: 1;
     text-align: right;
-    margin-right: 100px;
+    margin: 0px 80px 30px 0px;
 }
 
 nav ul li {
@@ -216,7 +216,9 @@ nav ul li.login:hover {
     font-weight: 500;
     cursor: pointer;
 }
-
+.search_bar_container{
+    margin: 0px 100px 30px 0px;
+}
 button {
     width: 140px;
     border: 0;
@@ -413,9 +415,10 @@ button:hover img {
 }
 
 .footer h2 {
-    color: white;
+    color:#ff459f;
     font-size: 1.3em;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .logo-container {
@@ -507,38 +510,59 @@ button:hover img {
     padding-left: 10px;
 }
 
-.contact-form .text-input {
-    background: #272727;
-    color: #bebdbd;
-    margin-bottom: 20px;
-    line-height: 1.5rem;
-    padding: 10px 15px;
-    border: none;
+/* General Form Styles */ 
+.contact-form {
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Input Styles */
+.text-input {
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    margin:0px 0px 10px 20px;
 }
 
-.contact-form textarea.text-input {
-    height: 120px;
-    resize: none;
+.text-input:focus {
+    outline: none;
+    border-color: #007BFF;
 }
 
-.contact-form .contact-btn {
-    float: right;
-    font-size: 1.1em;
-    font-family: 'Arial', sans-serif;
-    background: #4CAF50;
-    color: white;
+/* Button Styles */
+.contact-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007BFF;
+    color: #fff;
     border: none;
-    padding: 12px 20px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: all .3s;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-left: 100px;;
 }
 
-.contact-form .contact-btn:hover {
-    background: #45a049;
+.contact-btn i {
+    margin-right: 8px;
 }
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+input{
+    width: 10px;
+}
+
 
 .footer-bottom {
     background: #343a40;
@@ -548,24 +572,46 @@ button:hover img {
     margin-top: 40px;
 }
 
+
+
+/* ------------------------Contact Form Responsiveness------------------------ */
+
+/* Tablets and small laptops */
 @media screen and (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
+    .contact-form {
+        max-width: 90%;
+        padding: 15px;
     }
-    
-    .footer-section {
-        margin-bottom: 30px;
+
+    .contact-form .text-input {
+        padding: 12px;
+        font-size: 15px;
     }
-    
-    .contact-form .contact-btn {
-        width: 100%;
-        float: none;
+
+    .contact-form .btn-big {
+        padding: 10px;
+        font-size: 16px;
     }
 }
 
+/* Smartphones */
+@media screen and (max-width: 500px) {
+    .contact-form {
+        max-width: 100%;
+        padding: 10px;
+    }
 
+    .contact-form .text-input {
+        padding: 10px;
+        font-size: 14px;
+    }
 
-
+    .contact-form .btn-big {
+        padding: 8px;
+        font-size: 14px;
+        margin:0px auto;
+    }
+}
 /* -----------------------------------------------Responsiveness----------------------------------------------------- */
 
 
@@ -593,6 +639,7 @@ button:hover img {
         margin-bottom: 10px;
         text-align: center;
         margin-left: 50px;
+        z-index:2;
     }
 
     nav ul li a {
@@ -602,6 +649,30 @@ button:hover img {
     nav ul li a:hover {
         color: #ffee00;
         transform: scale(1.18);
+    }
+
+    .hero {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg'); 
+        background-size: cover;
+        background-position: center;
+        height: 88vh;
+        color: white;
+        text-align: center;
+        z-index: 1;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+        z-index: 1;
     }
 
     .login a {
@@ -662,7 +733,7 @@ button:hover img {
     }
 
     .footer-section {
-        max-width: 100%;
+        max-width: 80%;
         text-align: center;
     }
 
