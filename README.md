@@ -56,7 +56,11 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 | **Swaraj Das** <br> <sub>Project Admin</sub> | **Anit Sarkar** <br> <sub>Maintainer</sub> |
 | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/swarajdas01/) | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/anit-sarkar-11906a283/) |
 
+## 🙌 Contributors
 
+<a href="https://github.com/rahulsainlll/git-trace/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=swaraj-das/Collect-your-GamingTools" />
+</a>
 
 
 
