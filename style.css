@@ -711,7 +711,102 @@ button:hover img {
     }
 }
 
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px; 
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    background-color: #1f2937;
+    border: 2px solid white; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-sizing: border-box; 
+}
 
+  .toggle-arrow {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    padding: 12px;
+}
+
+.social-sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #333;
+    padding: 3px;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    z-index: 1;
+}
+
+.social-sidebar ul{
+    list-style: none;
+    margin: 0;
+}
+
+.social-sidebar li {
+    display: block;    
+    margin: 12px 0;        
+    position: relative;  
+}
+
+.social-sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border: none;
+    border-bottom: none;
+    border-radius: 50%;
+    display: flex;              
+    justify-content: center;   
+    align-items: center;      
+    width: 30px;   
+    height: 30px; 
+    margin: 0 10px;
+}
+
+.social-sidebar a:hover i {
+    transform: scale(1.5);
+}
+
+.social-sidebar li a:hover {
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #1f2937;
+    transform: scale(1.1);
+}
+
+.social-sidebar i {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.social-sidebar a:hover i {
+    transform: scale(1.1);
+}
 
 
 /* -----------------------------------------------Responsiveness----------------------------------------------------- */
