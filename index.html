@@ -12,47 +12,46 @@
 </head>
 
 <body>
-        <div class="container">
-            <div class="navbar">
-                <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
-                <a href="/"><span class="website-name">Collect your GamingTools</span></a>
-                <nav>
-                    <ul id="menuList">
-                        <li><a href="#">Game Controllers</a></li>
-                        <li><a href="#">VR Accessories</a></li>
-                        <li><a href="#">Media Remotes</a></li>
-                        <li><a href="#contact us">Contact Us</a></li>
-                        <li><a href="#">Others</a></li>
-                        <li class="login"><a href="login/login.html">Login</a></li>
-                    <label class="switch">
-                        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-                        <span class="slider"></span>
-                    </label>
-                    </ul>
-                </nav>
+    <div class="container">
+        <div class="navbar">
+            <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
+            <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="#">Game Controllers</a></li>
+                    <li><a href="#">VR Accessories</a></li>
+                    <li><a href="#">Media Remotes</a></li>
+                    <li><a href="#contact us">Contact Us</a></li>
+                    <li><a href="#">Others</a></li>
+                    <li class="login"><a href="login/login.html">Login</a></li>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                    <span class="slider"></span>
+                </label>
+                </ul>
+            </nav>
 
-             <!-- Search Bar (initially hidden) -->
-            <div class="search-bar hidden" id="searchBar">
-                <input type="text" id="search-input" placeholder="Search..." />
-                <button type="button" onclick="performSearch()">🔍</button>
+         <!-- Search Bar (initially hidden) -->
+        <div class="search-bar hidden" id="searchBar">
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button type="button" onclick="performSearch()">🔍</button>
+        </div>
+        
+            <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+        </div>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+            <span class="slider"></span>
+        </label>
+
+        <section class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1>Welcome to GamingTools</h1>
+                <p>Your one-stop shop for all gaming accessories.</p>
+                <a href="#" class="cta-btn">Explore Products</a>
             </div>
-            
-                <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
-            </div>
-            <label class="switch">
-                <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-                <span class="slider"></span>
-            </label>
-
-            <section class="hero">
-                <div class="overlay"></div>
-                <div class="hero-content">
-                    <h1>Welcome to GamingTools</h1>
-                    <p>Your one-stop shop for all gaming accessories.</p>
-                    <a href="#" class="cta-btn">Explore Products</a>
-                </div>
-            </section>
-
+        </section>
         <!-- PS4 Controller Section -->
         <div class="row">
             <div class="col-1">
@@ -73,8 +72,10 @@
                     <p class="star">4.1★</p>
                 </div>
                 <div class="btn-section">
-                <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <a href="https://www.amazon.in/Sony-Dualshock-Wireless-Controller-PlayStation/dp/B08NYC5KL4/ref=sr_1_1" id="buy-link">
+                        <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    </a>
+                    <button type="button" id="cart-btn" onclick="addToCart('PS4 V2 Dualshock 4')">Add to Cart<img src="images/add.png" alt="Cart"></button> 
                 </div>
             </div>
             <div class="col-2">
@@ -82,7 +83,7 @@
                 <div class="color-box"></div>
             </div>
         </div>
-
+        
         <!-- Xbox Controller Section -->
         <div class="row">
             <div class="col-1">
@@ -103,17 +104,18 @@
                     <p class="star">4.8★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <a href=https://www.amazon.in/s?k=xbox+wireless+controller&i=videogames&adgrpid=58950226076&ext_vrnc=hi&hvadid=294143517974&hvdev=c&hvlocphy=9184506&hvnetw=g&hvqmt=e&hvrand=3564823517997692826&hvtargid=kwd-299434314223&hydadcr=27747_1814451&tag=googinhydr1-21&ref=pd_sl_12eeg1o9vx_e" id="buy-link">
+                        <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    </a>
+                    <button type="button" id="cart-btn" onclick="addToCart('Xbox Wireless Controller')">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2">
-                <img src="images/newcontroller3.png" class="controller" alt="Controller"> <!-- replaced old blurry image with enhanced image -->
+                <img src="images/newcontroller3.png" class="controller" alt="Controller">
                 <div class="color-box"></div>
-                
             </div>
         </div>
-
+        
         <!-- Nintendo Switch Controller Section -->
         <div class="row">
             <div class="col-1">
@@ -134,17 +136,18 @@
                     <p class="star">4.2★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <a href="https://dacby.com/sell-detail/?pid=aU0&Name=Nintendo-Switch-Pro-Controller-Black-(Sell)" id="buy-link">
+                        <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    </a>
+                    <button type="button" id="cart-btn" onclick="addToCart('Nintendo Switch Pro Controller')">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2">
-                <img src="images/controller2.png" class="controller" alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
+                <img src="images/controller2.png" class="controller" alt="Controller">
                 <div class="color-box"></div>
-                
             </div>
         </div>
-
+        
         <!-- Gaming Mouse Section -->
         <div class="row">
             <div class="col-1">
@@ -165,17 +168,18 @@
                     <p class="star">5.0★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <a href="https://www.amazon.in/s?k=logitech+g502+hero&adgrpid=61511398480&ext_vrnc=hi&hvadid=590797816724&hvdev=c&hvlocphy=9184506&hvnetw=g&hvqmt=e&hvrand=11756245157182503852&hvtargid=kwd-507748456708&hydadcr=15879_2268703&tag=googinhydr1-21&ref=pd_sl_23hbk7atoq_e" id="buy-link">
+                        <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    </a>
+                    <button type="button" id="cart-btn" onclick="addToCart('Logitech G502 Hero')">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2">
                 <img src="images/mouse.png" class="controller" alt="Gaming Mouse">
                 <div class="color-box"></div>
-                
             </div>
         </div>
-
+        
         <!-- Gaming Keyboard Section -->
         <div class="row">
             <div class="col-1">
@@ -196,17 +200,18 @@
                     <p class="star">4.5★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <a href="https://www.amazon.in/s?k=razer+blackwidow&i=computers&adgrpid=58508469563&ext_vrnc=hi&hvadid=294112161279&hvdev=c&hvlocphy=9184506&hvnetw=g&hvqmt=b&hvrand=12289644772981519758&hvtargid=kwd-300851318058&hydadcr=22105_1811955&tag=googinhydr1-21&ref=pd_sl_p7ofvtdfq_b" id="buy-link">
+                        <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    </a>
+                    <button type="button" id="cart-btn" onclick="addToCart('Razer BlackWidow')">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2">
                 <img src="images/keyboard.png" class="controller" alt="Gaming Keyboard">
                 <div class="color-box"></div>
-                
             </div>
         </div>
-
+        
         <!-- Gaming Headset Section -->
         <div class="row">
             <div class="col-1">
@@ -227,17 +232,19 @@
                     <p class="star">4.7★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <a href="https://www.amazon.in/SteelSeries-Lossless-Wireless-Headset-Headphone/dp/B07FZVXS8H" id="buy-link">
+                        <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    </a>
+                   
+                    <button type="button" id="cart-btn" onclick="addToCart('SteelSeries Arctis 7')">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2">
                 <img src="images/headset.png" class="controller" alt="Gaming Headset">
                 <div class="color-box"></div>
-               
             </div>
         </div>
-
+        
         <!-- Gaming Chair Section -->
         <div class="row">
             <div class="col-1">
@@ -258,47 +265,47 @@
                     <p class="star">4.8★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <a href="https://www.amazon.in/Secretlab-Omega-Softweave-Fabric-Gaming/dp/B082116LYT" id="buy-link">
+                        <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    </a>
+                    <button type="button" id="cart-btn" onclick="addToCart('Secretlab Omega')">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2">
                 <img src="images/newchair.png" class="controller" alt="Gaming Chair">
                 <div class="color-box"></div>
-               
             </div>
         </div>
-    </div>
-            <section id="contact us">
-                
-                <div class="card pb-5 pt-1">
-                    <div class="card-header">
-                        <h2>Contact Us</h2>
+    </section>
+        <section id="contact us">
+            <div class="card pb-5 pt-1">
+                <div class="card-header">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-section">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
                     </div>
-                    <div class="card-body">
-                        <div class="form-section">
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Your name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="Your email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" name="message" placeholder="Your message"></textarea>
-                                </div>
-                                <button type="submit">Send</button>
-                            </form>
-                        </div>
-                        <div class="image-section">
-                            <img src="images/7725176.jpg" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
-                        </div>
+                    <div class="image-section">
+                        <img src="images/7725176.jpg" alt="Contact Image" style="max-width: 80%; height: auto; max-height: 500px;">
                     </div>
                 </div>
-            </section>
+            </div>
+                
 
     <footer class="footer">
         <div class="footer-content">
