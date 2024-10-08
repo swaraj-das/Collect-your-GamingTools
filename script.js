@@ -8,7 +8,19 @@ function toggleMenu() {
         menuList.style.maxHeight = "0px";
     }
 }
-
+ window.onscroll = function() {
+    updateProgressBar();
+  };
+  
+  
+  function updateProgressBar() {
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrollPercent = (scrollTop / scrollHeight) * 100;
+  
+      document.getElementById("progressBar").style.width = scrollPercent + "%";
+  }
+ 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Website loaded successfully!");
 });
@@ -53,3 +65,5 @@ window.onload = () => {
         themeToggle.checked = true;
     }
 };
+
+

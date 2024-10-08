@@ -87,6 +87,22 @@ button[type="submit"]:hover {
     font-family: sans-serif;
 }
 
+#progressBarContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-color: whitesmoke; 
+    z-index: 9999; 
+  }
+  
+  #progressBar {
+    height: 100%;
+    width: 0%; 
+    background: linear-gradient(to right, #fb5283, #ff3527);; 
+    transition: width 0.2s ease; 
+  }
 *.dark-mode{
     background-color: #493d3d;
     color:#f1f1f1;
