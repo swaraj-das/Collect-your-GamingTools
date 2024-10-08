@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collect your GamingTools</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,6 +25,13 @@
                         <li class="login"><a href="login/login.html">Login</a></li>
                     </ul>
                 </nav>
+
+             <!-- Search Bar (initially hidden) -->
+            <div class="search-bar hidden" id="searchBar">
+                <input type="text" id="search-input" placeholder="Search..." />
+                <button type="button" onclick="performSearch()">🔍</button>
+            </div>
+            
                 <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
             </div>
 
@@ -54,15 +63,14 @@
                     <span>Overall Rating:</span>
                     <p class="star">4.1★</p>
                 </div>
-                <button type="button" data-id="0" onclick="buyNow(0)"><a style="text-decoration: none; color: white;" href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <div class="btn-section">
+                <button type="button" id = "buy-btn"><a href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <button type="button" id = "cart-btn"><a href="Cart/cart.html">Add to Cart</a><img src="images/add.png" alt="Cart"></button>
+                </div>
             </div>
             <div class="col-2">
                 <img src="images/controller1.png" class="controller" alt="Controller">
                 <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small><a href="Cart/cart.html">Add to cart</a></small></p>
-                </div>
             </div>
         </div>
 
@@ -85,15 +93,15 @@
                     <span>Overall Rating:</span>
                     <p class="star">4.8★</p>
                 </div>
-                <button type="button" data-id="1" onclick="buyNow(0)"><a style="text-decoration: none; color: white;" href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <div class="btn-section">
+                    <button type="button" id = "buy-btn"><a href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <button type="button" id = "cart-btn"><a href="Cart/cart.html">Add to Cart</a><img src="images/add.png" alt="Cart"></button>
+                </div>
             </div>
             <div class="col-2">
-                <img src="images/controller2.png" class="controller" alt="Controller">
+                <img src="images/newcontroller3.png" class="controller" alt="Controller"> <!-- replaced old blurry image with enhanced image -->
                 <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small><a href="Cart/cart.html">Add to cart</a></small></p>
-                </div>
+                
             </div>
         </div>
 
@@ -116,15 +124,15 @@
                     <span>Overall Rating:</span>
                     <p class="star">4.2★</p>
                 </div>
-                <button type="button" data-id="2" onclick="buyNow(0)"><a style="text-decoration: none; color: white;" href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <div class="btn-section">
+                    <button type="button" id = "buy-btn"><a href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <button type="button" id = "cart-btn"><a href="Cart/cart.html">Add to Cart</a><img src="images/add.png" alt="Cart"></button>
+                </div>
             </div>
             <div class="col-2">
-                <img src="images/controller3.png" class="controller" alt="Controller">
+                <img src="images/controller2.png" class="controller" alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
                 <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small><a href="Cart/cart.html">Add to cart</a></small></p>
-                </div>
+                
             </div>
         </div>
 
@@ -147,15 +155,15 @@
                     <span>Overall Rating:</span>
                     <p class="star">5.0★</p>
                 </div>
-                <button type="button" data-id="3" onclick="buyNow(0)"><a style="text-decoration: none; color: white;" href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <div class="btn-section">
+                    <button type="button" id = "buy-btn"><a href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id = "cart-btn"><a href="Cart/cart.html">Add to Cart</a><img src="images/add.png" alt="Cart"></button>
+                </div>
             </div>
             <div class="col-2">
                 <img src="images/mouse.png" class="controller" alt="Gaming Mouse">
                 <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small><a href="Cart/cart.html">Add to cart</a></small></p>
-                </div>
+                
             </div>
         </div>
 
@@ -178,15 +186,15 @@
                     <span>Overall Rating:</span>
                     <p class="star">4.5★</p>
                 </div>
-                <button type="button" data-id="4" onclick="buyNow(0)"><a style="text-decoration: none; color: white;" href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <div class="btn-section">
+                    <button type="button" id = "buy-btn"><a href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <button type="button" id = "cart-btn"><a href="Cart/cart.html">Add to Cart</a><img src="images/add.png" alt="Cart"></button>
+                </div>
             </div>
             <div class="col-2">
                 <img src="images/keyboard.png" class="controller" alt="Gaming Keyboard">
                 <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small><a href="Cart/cart.html">Add to cart</a></small></p>
-                </div>
+                
             </div>
         </div>
 
@@ -209,15 +217,15 @@
                     <span>Overall Rating:</span>
                     <p class="star">4.7★</p>
                 </div>
-                <button type="button" data-id="5" onclick="buyNow(0)"><a style="text-decoration: none; color: white;" href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <div class="btn-section">
+                    <button type="button" id = "buy-btn"><a href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <button type="button" id = "cart-btn"><a href="Cart/cart.html">Add to Cart</a><img src="images/add.png" alt="Cart"></button>
+                </div>
             </div>
             <div class="col-2">
                 <img src="images/headset.png" class="controller" alt="Gaming Headset">
                 <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small><a href="Cart/cart.html">Add to cart</a></small></p>
-                </div>
+               
             </div>
         </div>
 
@@ -240,63 +248,64 @@
                     <span>Overall Rating:</span>
                     <p class="star">4.8★</p>
                 </div>
-                <button type="button" data-id="6" onclick="buyNow(0)"><a style="text-decoration: none; color: white;" href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                <div class="btn-section">
+                    <button type="button" id = "buy-btn"><a href="Cart/cart.html">Buy Now</a><img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id = "cart-btn"><a href="Cart/cart.html">Add to Cart</a><img src="images/add.png" alt="Cart"></button>
+                </div>
             </div>
             <div class="col-2">
-                <img src="images/chair.png" class="controller" alt="Gaming Chair">
+                <img src="images/newchair.png" class="controller" alt="Gaming Chair">
                 <div class="color-box"></div>
-                <div class="add-btn">
-                    <img src="images/add.png" alt="Add">
-                    <p><small><a href="Cart/cart.html">Add to cart</a></small></p>
-                </div>
+               
             </div>
         </div>
     </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="logo-name">
-                        <img src="images/logo.png" alt="Logo" />
-                        <h4>Collect your GamingTools</h4>
-                    </div>
-                    <p>
-                        Collect your GamingTools is your one-stop shop for the best gaming
-                        accessories. We provide a wide range of controllers, VR
-                        accessories, media remotes, and more.
-                    </p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="GamingTools Logo" class="footer-logo">
+                    <h2 class="logo-text">Collect your GamingTools</h2>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact Us</h4>
-                    <p class="contact">Email: support@gamingtools.com</p>
-                    <p class="contact">Phone: +123 456 7890</p>
-                    <h4>Our Address</h4>
-                    <p>Park Street, Kolkata - 700001</p>
-                    <p>West Bengal, India</p>
+                <p class="about-text">
+                    Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated selection of controllers, VR gear, and more.
+                </p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
+                    <span><i class="fas fa-envelope"></i> &nbsp; info@gamingtools.com</span>
                 </div>
-                <div class="footer-section">
-                    <h4 class="follow">Follow Us on</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                        <a href="https://www.twitter.com/" target="_blank">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="instagram-link">
-                            <ion-icon name="logo-instagram" class="instagram-icon"></ion-icon>
-                        </a>
-                        <a href="https://pk.linkedin.com/" target="_blank">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                    </div>
+                <div class="socials">
+                    <!-- Added classes to the <a> tags to add the Hover animations -->
+                    <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
+                    <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a>
+                    <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Collect your GamingTools - All rights reserved.</p>
-                <p>Made by Swaraj &#128512;</p>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
             </div>
+            <div class="footer-section contact-form">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+                    <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+                    <button type="submit" class="btn btn-big contact-btn">
+                        <i class="fas fa-envelope"></i>
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 GamingTools | Designed by Swaraj
         </div>
         
     </footer>
@@ -306,9 +315,12 @@
         <ion-icon name="arrow-up-outline"></ion-icon>
     </div>
 
+    <!-- this script is for twitter icon  starts -->
+ <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
+ <!-- this script is for twitter icon  ends -->
+
     <!-- Scripts -->
     <script src="script.js"></script>
-    <script src="Cart/cart.js"></script>
     <!-- Ionicons Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
