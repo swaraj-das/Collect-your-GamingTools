@@ -366,8 +366,9 @@ nav ul li.login:hover {
 }
 
 button {
-    width: 140px;
+    width: 160px;
     border: 0;
+    
     outline: none;
     color: #fff;
     font-size: 16px;
@@ -377,13 +378,33 @@ button {
     cursor: pointer;
     transition: width 0.5s;
     background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, width 0.5s, height 0.5s;
 }
-#cart-btn
+#cart-btn,
+#buy-btn
 {
-    padding: 12px 14px;
-}
+    width: 150px;
+    height: 45px;
+        padding: 10px 0px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
 
+       font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px ;
+        white-space: nowrap;
+        flex-grow: 1;
+    
+}
+#cart-btn {
+    margin-left: 20px; /* add a margin to the left of the "Add to Cart" button */
+}
 button img {
     width: 30px;
     display: none;
@@ -393,25 +414,19 @@ button:hover img {
     display: block;
 }
 
-#cart-btn:hover
-{
-    width: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-}
-#buy-btn:hover
-{
+#buy-btn:hover, #cart-btn:hover {
     width: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    transform: scale(1.1);
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 .btn-section
 {   display: inline-flex;
     gap: 15px;
+    width: 140px;
 }
 
 .col-1::after {
@@ -444,8 +459,8 @@ button:hover img {
     height: 100%;
     width: 80%;
     z-index: -1;
-    transform: translateX(150px);
 }
+    
 
 .price {
     margin: 20px 0;
@@ -501,6 +516,32 @@ button:hover img {
     transform: scale(1.1);
 }
 
+
+
+#cart-btn img, #buy-btn img {
+    width: 30px;
+    display: inline-block;
+    visibility: hidden;
+    max-width: 30px;
+    transition: opacity 0.3s ease;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#cart-btn:hover img, #buy-btn:hover img {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+#cart-btn:hover span {
+    margin-left: 10px;
+    transition: margin-left 0.3s ease;
+}
+/* Ensure only the button is affected by hover */
+.col-1, .col-2 {
+    transition: none;
+}
 .rating {
     display: flex;
     align-items: center;
