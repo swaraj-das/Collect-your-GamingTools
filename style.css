@@ -536,12 +536,13 @@ button:hover img {
     color: #ff3c6d;
     font-weight: 600;
 }
-
 .footer {
-    background: #303036;
+    background: linear-gradient(135deg, #303036, #1c1c1e);
     color: #d3d3d3;
     padding: 50px 0 0;
     font-family: 'Arial', sans-serif;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+    font-size: 0.9em; /* Decreased overall font size */
 }
 
 .footer-content {
@@ -562,8 +563,9 @@ button:hover img {
 
 .footer h2 {
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2em; /* Decreased heading size */
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .logo-container {
@@ -573,25 +575,29 @@ button:hover img {
 }
 
 .footer-logo {
-    width: 60px;
+    width: 50px; /* Slightly reduced logo size */
     height: auto;
     margin-right: 15px;
+    filter: drop-shadow(0 0 5px #fff);
 }
 
 .logo-text {
-    font-size: 1.5em;
+    font-size: 1.4em; /* Decreased logo text size */
     margin: 0;
+    color: #ffda44;
 }
 
 .about-text {
     line-height: 1.5;
     margin-bottom: 20px;
+    font-size: 0.95em; /* Decreased about text size */
 }
 
 .contact span {
     display: block;
-    font-size: 1.1em;
+    font-size: 1em; /* Decreased contact info size */
     margin-bottom: 8px;
+    color: #fff;
 }
 
 .socials {
@@ -600,41 +606,30 @@ button:hover img {
 
 .socials a {
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: rgba(255,255,255,0.1);
+    width: 35px; /* Decreased social icon size */
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
     margin-right: 10px;
     text-align: center;
-    line-height: 40px;
+    line-height: 35px;
     border-radius: 50%;
     color: #d3d3d3;
-    transition: all .3s;
-    transition: transform 0.3s ease, background 0.3s ease; /* Added transform property */
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.socials a:hover{
-    transform: scale(1.2); /* Zoom effect on hover */
+.socials a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
-/* Hover zoom effect for facebook icon */
-.socials .facebook:hover {
-    background: blue;
-    color: white;
- } 
- /* Hover zoom effect for instagram icon */
- .socials .instagram:hover {
-    background: orangered;
-    color: white;
- } 
- /* Hover zoom effect for twitter[X] icon */
- .socials .twitter:hover {
-    background: black;
-    color: white;
- } 
- /* Hover zoom effect for youtube icon */
- .socials .youtube:hover {
-    background: red;
-    color: white;
- } 
+
+.socials .facebook:hover { background: #3b5998; color: white; }
+.socials .instagram:hover { background: #e1306c; color: white; }
+.socials .twitter:hover { background: #1da1f2; color: white; }
+.socials .youtube:hover { background: #ff0000; color: white; }
+.socials .twitch:hover { background: #6441a5; color: white; }
+.socials .github:hover { background: #333; color: white; }
+.socials .discord:hover { background: #7289DA; color: white; }
 
 .links ul {
     list-style-type: none;
@@ -644,14 +639,14 @@ button:hover img {
 .links ul a {
     display: block;
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1em; /* Decreased link size */
     color: #d3d3d3;
     text-decoration: none;
     transition: all .3s;
 }
 
 .links ul a:hover {
-    color: white;
+    color: #ffda44;
     padding-left: 10px;
 }
 
@@ -664,28 +659,32 @@ button:hover img {
     border: none;
     width: 100%;
     border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 0.9em; /* Decreased input text size */
 }
 
 .contact-form textarea.text-input {
-    height: 120px;
+    height: 100px; /* Reduced textarea height */
     resize: none;
 }
 
 .contact-form .contact-btn {
-    float: right;
-    font-size: 1.1em;
+    display: inline-block;
+    font-size: 1em; /* Decreased button text size */
     font-family: 'Arial', sans-serif;
-    background: #4CAF50;
+    background: linear-gradient(135deg, #4CAF50, #3e8e41);
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 10px 15px; /* Reduced button padding */
     border-radius: 5px;
     cursor: pointer;
-    transition: all .3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all .3s ease;
 }
 
 .contact-form .contact-btn:hover {
     background: #45a049;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
 .footer-bottom {
@@ -694,22 +693,24 @@ button:hover img {
     text-align: center;
     padding: 15px 0;
     margin-top: 40px;
+    font-size: 0.9em; /* Decreased footer bottom text size */
 }
 
 @media screen and (max-width: 768px) {
     .footer-content {
         flex-direction: column;
     }
-    
+
     .footer-section {
         margin-bottom: 30px;
     }
-    
+
     .contact-form .contact-btn {
         width: 100%;
         float: none;
     }
 }
+
 
 
 
