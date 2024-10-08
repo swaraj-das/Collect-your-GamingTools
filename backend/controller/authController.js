@@ -14,7 +14,7 @@ const emailValidator = require("email-validator");
 
 const signUp = async (req, res, next) => {
   const { name, email, password, confirmPassword } = req.body;
-
+console.log(name , email,password,confirmPassword)
   /// every field is required
   if (!name || !email || !password || !confirmPassword) {
     return res.status(400).json({
@@ -137,7 +137,7 @@ const signIn = async (req, res, next) => {
 const logout = async (req, res, next) => {
   try {
     const cookieOption = {
-      expires: new Date(), // current expiry date
+      expires: new Date(Date.now()), // current expiry date
       httpOnly: true //  not able to modify  the cookie in client side
     };
 
