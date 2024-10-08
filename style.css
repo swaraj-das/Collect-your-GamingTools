@@ -728,11 +728,10 @@ button:hover img {
     nav ul {
         width: 100%;
         background: linear-gradient(to right, #fb5283, #ff3527);
-        position: absolute;
+        position: fixed;
         top: 73px;
         right: 0;
         z-index: 2;
-        margin-right: 20px;
     }
 
     nav ul li {
@@ -837,11 +836,10 @@ button:hover img {
     nav ul {
         width: 100%;
         background: linear-gradient(to right, #fb5283, #ff3527);
-        position: absolute;
+        position: fixed;
         top: 73px;
         right: 0;
         z-index: 2;
-        margin-right: 21px;
     }
 
     nav ul li {
