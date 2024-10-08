@@ -133,6 +133,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
     min-height: 100vh;
     padding-right: 5%;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -246,11 +247,16 @@ nav {
     text-align: right;
     margin-right: 100px;
 }
-
+nav ul{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
 nav ul li {
     list-style: none;
     display: inline;
     margin-right: 30px;
+    text-wrap: nowrap;
 }
 
 nav ul li a {
