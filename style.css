@@ -1,8 +1,97 @@
+.card {
+    width: 50%; /* Set a specific width */
+    margin: 10px auto; /* Center horizontally with automatic margins */
+    padding: 20px; /* Add padding */
+    margin-bottom: 70px;
+
+   
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+.card-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 90%;
+    border-bottom: 1px solid #ddd;
+    border-radius: 6px;
+  }
+.card-body {
+    display: flex;
+    justify-content: space-between; /* Form on the left and image on the right */
+    align-items: flex-start; /* Align content to the top */
+}
+
+.form-section {
+    width: 50%; /* Width for the form section */
+}
+
+.image-section {
+    width: 50%; /* Width for the image section */
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%; /* Make sure image does not exceed its container width */
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%; /* Adjust width for better alignment */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px; /* Adjust height for textarea */
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #444;
+}
+
+
+
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
+
+*.dark-mode{
+    background-color: #493d3d;
+    color:#f1f1f1;
+}
+
 html {
     overflow-y: scroll;
 }
@@ -28,7 +117,6 @@ html::-webkit-scrollbar-thumb:window-inactive {
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 .navbar {
@@ -40,8 +128,60 @@ html::-webkit-scrollbar-thumb:window-inactive {
     overflow: hidden;
     background-color: #fff;
     z-index: 1000;
- 
 }
+
+.dark-mode .navbar{
+    background-color: #493d3d;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px !important;
+    height: 24px !important;
+    margin-right: 20px;
+
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 6px;
+    bottom: 2px;
+    top:1px;
+    background-color: black;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background:linear-gradient(to right, #fb5283, #ff3527) !important;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
 
 .logo {
     width: 50px;
@@ -148,7 +288,7 @@ nav {
 
 nav ul li {
     list-style: none;
-    display: inline-block;
+    display: inline;
     margin-right: 30px;
 }
 
@@ -161,6 +301,9 @@ nav ul li a {
     transition: color 0.5s, transform 0.5s;
 }
 
+.dark-mode nav ul li a{
+    color:#ccc;
+}
 nav ul li a:hover {
     color: #e00999;
     transform: scale(1.18);
@@ -182,6 +325,7 @@ nav ul li.login:hover {
     color: #fff;
 }
 
+
 .row {
     display: flex;
     justify-content: space-between;
@@ -200,6 +344,10 @@ nav ul li.login:hover {
     color: #000;
     cursor: pointer;
     letter-spacing: 1px;
+}
+
+.dark-mode h2{
+    color: #ccc;
 }
 
 .col-1 h3 {
@@ -461,12 +609,32 @@ button:hover img {
     border-radius: 50%;
     color: #d3d3d3;
     transition: all .3s;
+    transition: transform 0.3s ease, background 0.3s ease; /* Added transform property */
 }
 
-.socials a:hover {
-    background: #4CAF50;
-    color: white;
+.socials a:hover{
+    transform: scale(1.2); /* Zoom effect on hover */
 }
+/* Hover zoom effect for facebook icon */
+.socials .facebook:hover {
+    background: blue;
+    color: white;
+ } 
+ /* Hover zoom effect for instagram icon */
+ .socials .instagram:hover {
+    background: orangered;
+    color: white;
+ } 
+ /* Hover zoom effect for twitter[X] icon */
+ .socials .twitter:hover {
+    background: black;
+    color: white;
+ } 
+ /* Hover zoom effect for youtube icon */
+ .socials .youtube:hover {
+    background: red;
+    color: white;
+ } 
 
 .links ul {
     list-style-type: none;
