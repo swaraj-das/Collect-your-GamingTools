@@ -951,3 +951,96 @@ button:hover img {
 .search-bar button:hover {
     background-color: #555;
 }
+
+/* Contact Page Styles */
+#contact-header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#contact-main {
+    padding: 20px;
+    position: relative; /* Set position relative for the background image */
+}
+
+/* Background Image for the Main Section */
+#contact-main::before {
+    content: ""; /* Create an empty element for the background */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/Contactbg.jpg'); /* Add your image URL here */
+    background-size: cover; /* Cover the whole section */
+    background-position: center; /* Center the image */
+    opacity: 0.3; /* Set low opacity for the image */
+    z-index: 0; /* Make sure it is behind the content */
+}
+
+/* Contact Form Styles */
+#contact-form {
+    background: rgba(255, 255, 255, 0.9); /* Set a white background with slight transparency */
+    padding: 60px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    max-width: 500px;
+    margin: 20px auto;
+    position: relative; /* Ensure the form is above the background */
+    z-index: 1; /* Make sure it is above the background image */
+}
+
+#contact-form h2 {
+    margin-bottom: 20px;
+}
+
+#contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submit-button {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#submit-button:hover {
+    background: #555;
+}
+
+#contact-footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333; /* Keep the footer background dark */
+    color: #fff;
+    position: relative; /* Make sure the footer is above any background */
+    z-index: 1; /* Ensure footer is above any background elements */
+}
+
+#contact-footer p {
+    margin: 5px 0;
+}
+
+#contact-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#contact-footer a:hover {
+    text-decoration: underline;
+}
