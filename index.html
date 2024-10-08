@@ -269,37 +269,43 @@
             </div>
         </div>
     </div>
-            <section id="contact us">
-                
-                <div class="card pb-5 pt-1">
-                    <div class="card-header">
-                        <h2>Contact Us</h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-section">
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Your name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="Your email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" name="message" placeholder="Your message"></textarea>
-                                </div>
-                                <button type="submit">Send</button>
-                            </form>
+    <section id="contact-us">
+        <div class="card pb-5 pt-1">
+            <div class="card-header">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="card-body">
+                <div class="form-section">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
                         </div>
-                        <div class="image-section">
-                            <img src="images/7725176.jpg" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required>
                         </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-btn">Send</button>
+                    </form>
+                    <!-- Confirmation message container -->
+                    <div id="confirmationMessage" class="confirmation-message hidden">
+                        Thank you!<br>
+                        WFe are absolutely committed to making you a happy customer.
+                        We will read your feedback, and we'll take it seriously.
                     </div>
                 </div>
-            </section>
-
+                <div class="image-section">
+                    <img src="images/7725176.jpg" alt="Contact Image" style="max-width: 80%; height: auto; max-height: 500px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section about">
@@ -360,10 +366,28 @@
  <!-- this script is for twitter icon  ends -->
 
     <!-- Scripts -->
-    <script src="script.js"></script>
     <!-- Ionicons Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent actual form submission
+
+                // Check if code executes up to this point
+                // console.log("Form submission intercepted.");
+
+                // Use confirm instead of alert to check
+                confirm("Thank you!\nWe are absolutely committed to making you a happy customer.\nWe will read your feedback and take it seriously.");
+
+                // Clear the form fields after displaying the alert
+                form.reset();
+            });
+        });
+    </script>
 </body>
 
 </html>

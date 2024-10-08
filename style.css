@@ -655,7 +655,7 @@ button:hover img {
     padding-left: 10px;
 }
 
-.contact-form .text-input {
+.-form .text-input {
     background: #272727;
     color: #bebdbd;
     margin-bottom: 20px;
@@ -664,6 +664,15 @@ button:hover img {
     border: none;
     width: 100%;
     border-radius: 5px;
+}
+
+.confirmation-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
 }
 
 .contact-form textarea.text-input {
@@ -707,7 +716,7 @@ button:hover img {
     
     .contact-form .contact-btn {
         width: 100%;
-        float: none;
+        float: nonecontact;
     }
 }
 
@@ -884,25 +893,23 @@ button:hover img {
     }
 }
 
-.scroll-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+/* Style for light mode */
+.scroll-top.light-mode {
     background: #ff459f;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .scroll-top:hover {
-    background: #ff6062;
-  }
-  
-  .hidden {
+    color: white;
+}
+
+/* Style for dark mode */
+.scroll-top.dark-mode {
+    background: #333;
+    color: white;
+}
+
+/* Add the hidden class */
+.hidden {
     display: none;
 }
+
 
 .search-bar {
     text-align: center;

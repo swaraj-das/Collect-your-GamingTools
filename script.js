@@ -23,6 +23,9 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+
+
 // Smooth scroll to top when the button is clicked
 function scrollToTop() {
     window.scrollTo({
@@ -30,6 +33,37 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
+// Function to update mode for the scroll button
+function updateScrollButtonMode() {
+    const scrollButton = document.querySelector('.scroll-top');
+    const isDarkMode = document.body.classList.contains('dark-mode'); // Check body for dark mode
+
+    if (isDarkMode) {
+        scrollButton.classList.add('dark-mode');
+        scrollButton.classList.remove('light-mode');
+    } else {
+        scrollButton.classList.add('light-mode');
+        scrollButton.classList.remove('dark-mode');
+    }
+}
+
+// Show or hide the button based on scroll position
+window.addEventListener('scroll', () => {
+    const scrollButton = document.querySelector('.scroll-top');
+    if (window.scrollY > 200) {
+        scrollButton.classList.remove('hidden');
+    } else {
+        scrollButton.classList.add('hidden');
+    }
+});
+
+// Event listener for toggling mode (example toggle button listener)
+document.querySelector('#dark-mode-toggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode'); // Toggle dark mode on body
+    updateScrollButtonMode(); // Update button mode when toggled
+});
+
 
 function toggleTheme() {
     const body = document.body;
@@ -53,3 +87,17 @@ window.onload = () => {
         themeToggle.checked = true;
     }
 };
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    
+    if (form) {
+        console.log("Form found, adding event listener.");
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            alert("Thank you for your feedback!");
+            form.reset(); // Clear the form
+        });
+    } else {
+        console.log("Form not found, cannot add event listener.");
+    }
+});
