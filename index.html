@@ -22,8 +22,13 @@
                         <li><a href="#">Game Controllers</a></li>
                         <li><a href="#">VR Accessories</a></li>
                         <li><a href="#">Media Remotes</a></li>
+                        <li><a href="#contact us">Contact Us</a></li>
                         <li><a href="#">Others</a></li>
                         <li class="login"><a href="login/login.html">Login</a></li>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                        <span class="slider"></span>
+                    </label>
                     </ul>
                     
                 </nav>
@@ -38,6 +43,10 @@
             <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
 
             </div>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                <span class="slider"></span>
+            </label>
 
             <section class="hero">
                 <div class="overlay"></div>
@@ -264,6 +273,37 @@
             </div>
         </div>
     </div>
+            <section id="contact us">
+                
+                <div class="card pb-5 pt-1">
+                    <div class="card-header">
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-section">
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Your email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" placeholder="Your message"></textarea>
+                                </div>
+                                <button type="submit">Send</button>
+                            </form>
+                        </div>
+                        <div class="image-section">
+                            <img src="images/7725176.jpg" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section about">
@@ -279,10 +319,11 @@
                     <span><i class="fas fa-envelope"></i> &nbsp; info@gamingtools.com</span>
                 </div>
                 <div class="socials">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#" ><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <!-- Added classes to the <a> tags to add the Hover animations -->
+                    <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
+                    <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a>
+                    <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-section links">
