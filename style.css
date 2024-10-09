@@ -1075,3 +1075,129 @@ button:hover img {
     background-color: #c9565a;
     color: white;
 }
+
+
+  
+  .faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+  }
+  
+  .faq {
+    margin-bottom: 15px;
+  }
+  
+  .faq input[type="checkbox"] {
+    display: none;
+  }
+  
+  .faq-question {
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #f6763f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-question:hover {
+    background-color: #ff6b6b;
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #ffe0b5;
+    color: #333;
+    border-left: 4px solid #ff8552;
+    transition: max-height 0.4s ease;
+  }
+  
+  .faq input[type="checkbox"]:checked ~ .faq-answer {
+    max-height: 150px;
+    padding: 15px;
+  }
+  
+
+/* Body styles for consistency */
+#review-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  
+  /* Review Section Container */
+  .reviews-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section Title */
+  .reviews-title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual Review Card */
+  .review-card {
+    margin-bottom: 15px; /* Reduced margin to shorten height */
+    padding: 15px; /* Reduced padding */
+    background-color: #ffe0b5;
+    border-left: 3px solid #ff8552; /* Thinner border */
+    border-radius: 8px; /* Slightly smaller border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover Effect for Review Cards */
+  .review-card:hover {
+    transform: translateY(-3px); /* Slightly less lift on hover */
+  }
+  
+  /* Reviewer Name */
+  .reviewer-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px; /* Slightly smaller gap */
+  }
+  
+  /* Review Rating */
+  .review-rating {
+    font-size: 1.2em;
+    color: #ff8552;
+    margin-bottom: 8px; /* Slightly smaller gap */
+  }
+  
+  /* Review Text */
+  .review-text {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5; /* Slightly tighter line height */
+  }
+  
