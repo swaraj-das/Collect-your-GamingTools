@@ -678,6 +678,10 @@ button:hover img {
     }
 }
 
+#contact {
+    padding-top: 100px; /* Adjust the padding as needed */
+}
+
 .close-btn {
     position: absolute;
     top: -10px;
