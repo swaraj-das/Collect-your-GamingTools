@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+
 }
 
 .container {
@@ -10,16 +11,23 @@
     padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
+    background-color: rgb(250, 249, 246);
     overflow: hidden;
 }
 
 .navbar {
-    width: 100%;
+    width: 55%;
+    height: 65px;
+    border-radius: 50px;
     display: flex;
     align-items: center;
     position: fixed;
-    top: 0;
-    background-color: #fff;
+    top: 3%;
+    left: 23%;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 0 .6rem 0 2rem;
+    box-shadow: 5px 5px 5px 2px #808080 inset;
     z-index: 1000;
 }
 
@@ -67,25 +75,34 @@
 
 nav {
     flex: 1;
-    text-align: right;
+    display: flex;
+    text-align: center;
     margin-right: 100px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
     list-style: none;
-    display: inline-block;
-    margin-right: 30px;
+    position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #000;
-    font-size: 14px;
-    font-weight: bold;
+    color: #1b1818;
+    font-size: 16px;
+    font-weight: bolder;
     display: inline-block;
+    padding: 5px 15px; 
     transition: color 0.5s, transform 0.5s;
 }
 
+#pad{
+    font-size: 28px;
+}
 nav ul li a:hover {
     color: #e00999;
     transform: scale(1.18);
@@ -95,7 +112,7 @@ nav ul li.login {
     background: linear-gradient(to right, #fb5283, #ff3527);
     height: 24px;
     border-radius: 20px;
-    padding: 4px 18px;
+    padding: 5px 15px;
     cursor: pointer;
 }
 
@@ -556,3 +573,4 @@ button:hover {
         overflow: hidden;
         transition: 0.5s;
     }
+}
