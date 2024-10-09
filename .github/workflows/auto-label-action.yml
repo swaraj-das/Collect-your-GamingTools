@@ -25,7 +25,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         labels: |
-          hacktoberfest
           hacktoberfest-accepted
           gssoc-ext
-          gssoc-extd
