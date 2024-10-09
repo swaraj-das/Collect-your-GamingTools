@@ -298,6 +298,16 @@ nav ul li.login:hover {
     justify-content: space-between;
     align-items: center;
     margin: 120px 0;
+    border: none; /* Removes any border */
+    outline: none; /* Removes any outline */
+}
+.row .controller{
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+
+}
+.row .controller:hover {
+    transform: scale(1.2); /* Zooms in the image on hover */
+
 }
 
 .col-1 {
@@ -966,52 +976,57 @@ button:hover img {
     display: none;
 }
 
-.search-bar {
-    text-align: center;
-    margin: 15px 0;
+/* Search Bar Styles */
+#searchBar {
     display: flex;
-    justify-content: flex-end; /* Align to right */
     align-items: center;
-    gap: 8px; /* Space between input and button */
-    background-color: #f0f0f0;
-    padding: 8px 15px;
-    border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 250px; /* Adjust width to make it smaller */
-    margin: 20px auto 0 auto; /* Right alignment with some margin */
-    position: relative;
-    right: 80px; /* Push it further right */
+    justify-content: center;
+    padding: 8px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 350px;
+    max-width: 100%;
+    margin: 0 auto; /* Centered */
+    transition: all 0.3s ease;
 }
 
+/* Search Input Field */
 #search-input {
-    width: 60%;  /* Smaller input size */
-    padding: 8px 10px;
-    font-size: 14px;
+    flex: 1;
+    padding: 10px 20px;
     border: none;
-    border-radius: 50px;
-    background-color: #fff;
     outline: none;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-#search-input:focus {
-    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.search-bar button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
     font-size: 16px;
     border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for input */
+    margin-right: 10px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.search-bar button:hover {
-    background-color: #555;
+/* Search Button */
+#searchBar button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect for Button */
+#searchBar button:hover {
+    background-color: #45a049; /* Slightly darker green */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Hover Effect for Input */
+#search-input:focus {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Highlight input when focused */
+    background-color: #f1f1f1;
 }
 
 .hero {
