@@ -24,9 +24,9 @@ html::-webkit-scrollbar-thumb:window-inactive {
 }
 .container {
     width: 100%;
-    min-height: 100vh;
-    padding-left: 5%;
-    padding-right: 5%;
+    min-height:100vh;
+    /* padding-left: 5%;
+    padding-right: 5%; */
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -132,6 +132,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bolder;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .menu-icon {
@@ -144,14 +145,13 @@ nav {
     flex: 1;
     text-align: right;
     margin-right: 100px;
+    width: 70%vw;
 }
-
 nav ul li {
     list-style: none;
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 28px;
 }
-
 nav ul li a {
     text-decoration: none;
     color: #000;
@@ -160,7 +160,6 @@ nav ul li a {
     display: inline-block;
     transition: color 0.5s, transform 0.5s;
 }
-
 nav ul li a:hover {
     color: #e00999;
     transform: scale(1.18);
@@ -216,7 +215,16 @@ nav ul li.login:hover {
     font-weight: 500;
     cursor: pointer;
 }
-
+.login{
+    border: rgb(240, 128, 128) solid;
+    width: 43px;
+    border-radius: 10px;
+    background-color: rgb(240, 128, 128);
+}
+.login:hover{
+    font-weight: 900px;
+    color:rgb(241, 3, 3);
+}
 button {
     width: 140px;
     border: 0;
