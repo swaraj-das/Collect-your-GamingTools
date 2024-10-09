@@ -13,7 +13,8 @@ const {
 
 authRouter.post("/signup", signUp);
 authRouter.post("/signin", signIn);
-
+authRouter.post("/forgotpassword", forgotPassword);
+authRouter.post("/resetpassword/:token", resetPassword);
 
 authRouter.get("/user", jwtAuth, getUser);
 authRouter.get("/logout", jwtAuth, logout);

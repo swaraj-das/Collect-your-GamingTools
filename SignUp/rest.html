@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .reset-password-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4cae4c;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 10px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="reset-password-container">
+    <h2>Reset Password</h2>
+    <form id="resetPasswordForm">
+      <input type="password" id="password" placeholder="New password" required />
+      <input type="password" id="confirmPassword" placeholder="Confirm new password" required />
+      <button type="submit">Reset Password</button>
+    </form>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    // Get the reset token from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+
+    document.getElementById('resetPasswordForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      try {
+        const response = await fetch(`http://localhost:5000/auth/resetpassword/${token}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password, confirmPassword })
+        });
+
+        const data = await response.json();
+        console.log(data);
+        const message = document.getElementById('message');
+
+        if (data.success) {
+          message.style.color = 'green';
+          message.textContent = 'Password reset successful. You can now log in.';
+        } else {
+          message.style.color = 'red';
+          message.textContent = data.message;
+        }
+      } catch (error) {
+        document.getElementById('message').textContent = 'An error occurred.';
+      }
+    });
+  </script>
+</body>
+</html>

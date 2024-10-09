@@ -12,15 +12,16 @@
 <body>
     <div class="login-container">
         <h1>Forgot Password</h1>
-        <form action="#" method="post">
+        <form action="#" method="post" id="forgotPasswordForm">
             <div class="input-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <span id="error-message"></span>
+            <!-- Proper Button Element -->
             <div ontouchstart="">
                 <div class="button">
-                    <a href="#">Reset Password</a>
+                    <a href="#" >Reset Password</a>
                 </div>
             </div>
         </form>
@@ -30,33 +31,42 @@
     </div>
 
     <script>
-        let btn = document.querySelector(".button");
-        const errorMessage = document.getElementById('error-message');
-        const emailInput = document.getElementById('email');
+         const btn = document.querySelector('.button');
+         btn.addEventListener('click', async function (e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
 
-        function isValidEmail(email) {
-            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            return emailRegex.test(email);
-        }
+            try {
+                const response = await fetch('http://localhost:5000/auth/forgotpassword', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
 
-        btn.addEventListener("click", (e) => {
-            e.preventDefault(); // prevent form submission
-            const emailValue = emailInput.value.trim();
+                const data = await response.json();
+                console.log(data);
+                
+                const message = document.getElementById('error-message');
 
-            if (emailValue === '') {
-                errorMessage.textContent = 'First write your email';
-                errorMessage.style.color = 'red';
-            } else if (!isValidEmail(emailValue)) {
-                errorMessage.textContent = 'Invalid email address';
-                errorMessage.style.color = 'red';
-            } else {
-                // submit the form or perform the password reset logic here
-                errorMessage.textContent = '';
-                setTimeout(() => {
-                    alert("Please check your Email to reset your password.")
-                }, 300)
+                if (data.success) {
+                    message.style.color = 'green';
+                    message.textContent = 'Reset link sent to your email.';
+
+                    // Redirect to reset password page after a short delay
+                    setTimeout(() => {
+                        window.location.href = `../signUp/rest.html?token=${data.token}`;
+                    }, 2000);  // Delay of 2 seconds
+                } else {
+                    message.style.color = 'red';
+                    message.textContent = data.message;
+                }
+            } catch (error) {
+                // Correct ID for the error message
+                const message = document.getElementById('error-message');
+                message.style.color = 'red';
+                message.textContent = 'An error occurred.';
             }
-        })
+        });
     </script>
 </body>
 
