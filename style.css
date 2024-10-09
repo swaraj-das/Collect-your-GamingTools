@@ -4,7 +4,6 @@
     padding: 20px; /* Add padding */
     margin-bottom: 70px;
 
-   
     border: 1px solid #ccc; /* Optional: Add a border */
     border-radius: 8px; /* Optional: Add rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
@@ -18,7 +17,7 @@
     width: 90%;
     border-bottom: 1px solid #ddd;
     border-radius: 6px;
-  }
+}
 .card-body {
     display: flex;
     justify-content: space-between; /* Form on the left and image on the right */
@@ -50,7 +49,8 @@ label {
     margin-bottom: 10px;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%; /* Adjust width for better alignment */
     padding: 10px;
     border: 1px solid #ccc;
@@ -74,13 +74,6 @@ button[type="submit"]:hover {
     background-color: #444;
 }
 
-
-
-
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -93,19 +86,19 @@ button[type="submit"]:hover {
     left: 0;
     width: 100%;
     height: 7px;
-    background-color: whitesmoke; 
-    z-index: 9999; 
-  }
-  
-  #progressBar {
+    background-color: whitesmoke;
+    z-index: 9999;
+}
+
+#progressBar {
     height: 100%;
-    width: 0%; 
-    background: linear-gradient(to right, #fb5283, #ff3527);; 
-    transition: width 0.2s ease; 
-  }
-*.dark-mode{
+    width: 0%;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    transition: width 0.2s ease;
+}
+*.dark-mode {
     background-color: #493d3d;
-    color:#f1f1f1;
+    color: #f1f1f1;
 }
 
 html {
@@ -147,7 +140,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
     z-index: 1000;
 }
 
-.dark-mode .navbar{
+.dark-mode .navbar {
     background-color: #493d3d;
 }
 
@@ -157,16 +150,15 @@ html::-webkit-scrollbar-thumb:window-inactive {
     width: 60px !important;
     height: 24px !important;
     margin-right: 20px;
+}
 
-  }
-  
-  .switch input {
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -174,31 +166,30 @@ html::-webkit-scrollbar-thumb:window-inactive {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    transition: .4s;
+    transition: 0.4s;
     border-radius: 34px;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 22px;
     width: 22px;
     left: 6px;
     bottom: 2px;
-    top:1px;
+    top: 1px;
     background-color: black;
-    transition: .4s;
+    transition: 0.4s;
     border-radius: 50%;
-  }
-  
-  input:checked + .slider {
-    background:linear-gradient(to right, #fb5283, #ff3527) !important;
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked + .slider {
+    background: linear-gradient(to right, #fb5283, #ff3527) !important;
+}
+
+input:checked + .slider:before {
     transform: translateX(26px);
-  }
-  
+}
 
 .logo {
     width: 50px;
@@ -225,13 +216,23 @@ html::-webkit-scrollbar-thumb:window-inactive {
     font-size: 20px;
     font-weight: bold;
     color: transparent;
-    background: linear-gradient(90deg, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff, #8a2be2, #ff459f);
+    background: linear-gradient(
+        90deg,
+        #ff459f,
+        #ff9532,
+        #ffd700,
+        #32cd32,
+        #1e90ff,
+        #8a2be2,
+        #ff459f
+    );
     background-size: 400% 400%;
     -webkit-background-clip: text;
     background-clip: text;
     display: inline-block;
     animation: rainbow 5s linear infinite;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
     font-weight: bolder;
     cursor: pointer;
 }
@@ -247,7 +248,7 @@ nav {
     text-align: right;
     margin-right: 100px;
 }
-nav ul{
+nav ul {
     margin-left: 20px;
     display: flex;
     flex-direction: row;
@@ -268,8 +269,8 @@ nav ul li a {
     transition: color 0.5s, transform 0.5s;
 }
 
-.dark-mode nav ul li a{
-    color:#ccc;
+.dark-mode nav ul li a {
+    color: #ccc;
 }
 nav ul li a:hover {
     color: #e00999;
@@ -292,7 +293,6 @@ nav ul li.login:hover {
     color: #fff;
 }
 
-
 .row {
     display: flex;
     justify-content: space-between;
@@ -313,7 +313,7 @@ nav ul li.login:hover {
     letter-spacing: 1px;
 }
 
-.dark-mode h2{
+.dark-mode h2 {
     color: #ccc;
 }
 
@@ -346,8 +346,7 @@ button {
     background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
     transition: background 0.3s ease-in-out;
 }
-#cart-btn
-{
+#cart-btn {
     padding: 12px 14px;
 }
 
@@ -360,29 +359,26 @@ button:hover img {
     display: block;
 }
 
-#cart-btn:hover
-{
+#cart-btn:hover {
     width: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
-#buy-btn:hover
-{
+#buy-btn:hover {
     width: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
 }
-.btn-section
-{   display: inline-flex;
+.btn-section {
+    display: inline-flex;
     gap: 15px;
 }
 
 .col-1::after {
-    content: '';
+    content: "";
     width: 10px;
     height: 63%;
     background: linear-gradient(#ff459f, #ff6062);
@@ -477,7 +473,14 @@ button:hover img {
 .rating span {
     font-size: 26px;
     margin-right: 10px;
-    background: linear-gradient(to right, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff);
+    background: linear-gradient(
+        to right,
+        #ff459f,
+        #ff9532,
+        #ffd700,
+        #32cd32,
+        #1e90ff
+    );
     /* Example gradient colors */
     -webkit-background-clip: text;
     background-clip: text;
@@ -508,7 +511,7 @@ button:hover img {
     background: #303036;
     color: #d3d3d3;
     padding: 50px 0 0;
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
 }
 
 .footer-content {
@@ -569,39 +572,39 @@ button:hover img {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     margin-right: 10px;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
     color: #d3d3d3;
-    transition: all .3s;
+    transition: all 0.3s;
     transition: transform 0.3s ease, background 0.3s ease; /* Added transform property */
 }
 
-.socials a:hover{
+.socials a:hover {
     transform: scale(1.2); /* Zoom effect on hover */
 }
 /* Hover zoom effect for facebook icon */
 .socials .facebook:hover {
     background: blue;
     color: white;
- } 
- /* Hover zoom effect for instagram icon */
- .socials .instagram:hover {
+}
+/* Hover zoom effect for instagram icon */
+.socials .instagram:hover {
     background: orangered;
     color: white;
- } 
- /* Hover zoom effect for twitter[X] icon */
- .socials .twitter:hover {
+}
+/* Hover zoom effect for twitter[X] icon */
+.socials .twitter:hover {
     background: black;
     color: white;
- } 
- /* Hover zoom effect for youtube icon */
- .socials .youtube:hover {
+}
+/* Hover zoom effect for youtube icon */
+.socials .youtube:hover {
     background: red;
     color: white;
- } 
+}
 
 .links ul {
     list-style-type: none;
@@ -614,7 +617,7 @@ button:hover img {
     font-size: 1.1em;
     color: #d3d3d3;
     text-decoration: none;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 .links ul a:hover {
@@ -641,14 +644,14 @@ button:hover img {
 .contact-form .contact-btn {
     float: right;
     font-size: 1.1em;
-    font-family: 'Arial', sans-serif;
-    background: #4CAF50;
+    font-family: "Arial", sans-serif;
+    background: #4caf50;
     color: white;
     border: none;
     padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 .contact-form .contact-btn:hover {
@@ -667,11 +670,11 @@ button:hover img {
     .footer-content {
         flex-direction: column;
     }
-    
+
     .footer-section {
         margin-bottom: 30px;
     }
-    
+
     .contact-form .contact-btn {
         width: 100%;
         float: none;
@@ -681,22 +684,22 @@ button:hover img {
 .close-btn {
     position: absolute;
     top: -10px;
-    right: -10px; 
+    right: -10px;
     width: 25px;
     height: 25px;
     font-size: 20px;
     color: white;
     cursor: pointer;
     background-color: #1f2937;
-    border: 2px solid white; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    box-sizing: border-box; 
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
-  .toggle-arrow {
+.toggle-arrow {
     position: fixed;
     top: 50%;
     left: 0;
@@ -723,19 +726,19 @@ button:hover img {
     padding: 3px;
     border-radius: 0 15px 15px 0;
     border: none;
-    transition: background-color 0.3s ease, transform 0.3s ease; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 1;
 }
 
-.social-sidebar ul{
+.social-sidebar ul {
     list-style: none;
     margin: 0;
 }
 
 .social-sidebar li {
-    display: block;    
-    margin: 12px 0;        
-    position: relative;  
+    display: block;
+    margin: 12px 0;
+    position: relative;
 }
 
 .social-sidebar a {
@@ -747,11 +750,11 @@ button:hover img {
     border: none;
     border-bottom: none;
     border-radius: 50%;
-    display: flex;              
-    justify-content: center;   
-    align-items: center;      
-    width: 30px;   
-    height: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
     margin: 0 10px;
 }
 
@@ -768,21 +771,18 @@ button:hover img {
 
 .social-sidebar i {
     display: inline-block;
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 }
 
 .social-sidebar a:hover i {
     transform: scale(1.1);
 }
 
-
 /* -----------------------------------------------Responsiveness----------------------------------------------------- */
-
 
 /* ----------------------------for mobiles--------------------------------------- */
 
 @media only screen and (max-width: 700px) {
-
     .menu-icon {
         margin-right: 40px;
     }
@@ -883,15 +883,11 @@ button:hover img {
     .footer-bottom {
         max-width: fit-content;
     }
-
 }
-
 
 /* --------------------------for tabs------------------------------------ */
 
-
 @media only screen and (max-width: 1180px) {
-
     .menu-icon {
         margin-right: 60px;
     }
@@ -949,21 +945,25 @@ button:hover img {
 .scroll-top {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    width: 20px;
+    right: 90px;
     background: #ff459f;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
     display: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .scroll-top:hover {
+}
+.scroll-top:hover {
     background: #ff6062;
-  }
-  
-  .hidden {
+}
+
+.hidden {
     display: none;
+}
+#ico{
+    margin-left:1px ;
+    font-size: large;
 }
 
 .search-bar {
@@ -984,7 +984,7 @@ button:hover img {
 }
 
 #search-input {
-    width: 60%;  /* Smaller input size */
+    width: 60%; /* Smaller input size */
     padding: 8px 10px;
     font-size: 14px;
     border: none;
@@ -1019,7 +1019,7 @@ button:hover img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg'); 
+    background-image: url("https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -1033,7 +1033,12 @@ button:hover img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    background: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* Dark overlay for better text visibility */
     z-index: 1;
 }
 
@@ -1069,9 +1074,7 @@ button:hover img {
     color: white;
 }
 
-
-  
-  .faq-container {
+.faq-container {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
@@ -1079,25 +1082,25 @@ button:hover img {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .faq-title {
+}
+
+.faq-title {
     text-align: center;
     font-size: 1.8em;
     color: #333;
     margin-bottom: 20px;
     color: #ff6b6b;
-  }
-  
-  .faq {
+}
+
+.faq {
     margin-bottom: 15px;
-  }
-  
-  .faq input[type="checkbox"] {
+}
+
+.faq input[type="checkbox"] {
     display: none;
-  }
-  
-  .faq-question {
+}
+
+.faq-question {
     padding: 15px;
     font-size: 1.2em;
     background-color: #f6763f;
@@ -1107,13 +1110,13 @@ button:hover img {
     cursor: pointer;
     display: block;
     transition: background-color 0.3s ease;
-  }
-  
-  .faq-question:hover {
+}
+
+.faq-question:hover {
     background-color: #ff6b6b;
-  }
-  
-  .faq-answer {
+}
+
+.faq-answer {
     max-height: 0;
     overflow: hidden;
     padding: 0 15px;
@@ -1121,13 +1124,12 @@ button:hover img {
     color: #333;
     border-left: 4px solid #ff8552;
     transition: max-height 0.4s ease;
-  }
-  
-  .faq input[type="checkbox"]:checked ~ .faq-answer {
+}
+
+.faq input[type="checkbox"]:checked ~ .faq-answer {
     max-height: 150px;
     padding: 15px;
-  }
-  
+}
 
 /* Body styles for consistency */
 #review-body {
@@ -1135,10 +1137,10 @@ button:hover img {
     margin: 0;
     padding: 0;
     background-color: white;
-  }
-  
-  /* Review Section Container */
-  .reviews-container {
+}
+
+/* Review Section Container */
+.reviews-container {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
@@ -1146,18 +1148,18 @@ button:hover img {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Section Title */
-  .reviews-title {
+}
+
+/* Section Title */
+.reviews-title {
     text-align: center;
     font-size: 1.8em;
     color: #ff6b6b;
     margin-bottom: 20px;
-  }
-  
-  /* Individual Review Card */
-  .review-card {
+}
+
+/* Individual Review Card */
+.review-card {
     margin-bottom: 15px; /* Reduced margin to shorten height */
     padding: 15px; /* Reduced padding */
     background-color: #ffe0b5;
@@ -1165,32 +1167,31 @@ button:hover img {
     border-radius: 8px; /* Slightly smaller border radius */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-  }
-  
-  /* Hover Effect for Review Cards */
-  .review-card:hover {
+}
+
+/* Hover Effect for Review Cards */
+.review-card:hover {
     transform: translateY(-3px); /* Slightly less lift on hover */
-  }
-  
-  /* Reviewer Name */
-  .reviewer-name {
+}
+
+/* Reviewer Name */
+.reviewer-name {
     font-size: 1.2em;
     font-weight: bold;
     color: #333;
     margin-bottom: 8px; /* Slightly smaller gap */
-  }
-  
-  /* Review Rating */
-  .review-rating {
+}
+
+/* Review Rating */
+.review-rating {
     font-size: 1.2em;
     color: #ff8552;
     margin-bottom: 8px; /* Slightly smaller gap */
-  }
-  
-  /* Review Text */
-  .review-text {
+}
+
+/* Review Text */
+.review-text {
     font-size: 1em;
     color: #555;
     line-height: 1.5; /* Slightly tighter line height */
-  }
-  
+}

@@ -37,11 +37,27 @@ window.addEventListener('scroll', function() {
 
 // Smooth scroll to top when the button is clicked
 function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    const scrollDuration = 500; // Duration of the scroll animation in ms
+    const scrollStep = -window.scrollY / (scrollDuration / 15);
+
+    const scrollInterval = setInterval(() => {
+        if (window.scrollY !== 0) {
+            window.scrollBy(0, scrollStep);
+        } else {
+            clearInterval(scrollInterval);
+        }
+    }, 15);
 }
+
+window.onscroll = function () {
+    const scrollBtn = document.querySelector('.scroll-top');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollBtn.style.display = 'flex';
+    } else {
+        scrollBtn.style.display = 'none';
+    }
+};
+
 
 function toggleTheme() {
     const body = document.body;
