@@ -23,10 +23,12 @@
                 <a href="/"><span class="website-name">Collect your GamingTools</span></a>
                 <nav>
                     <ul id="menuList">
+
                         <li><a href="#controller">Game Controllers</a></li>
                         <li><a href="#vrsection">VR Accessories</a></li>
                         <li><a href="#keyboard">Gaming Keyboard</a></li>
-                        <li><a href="#others">Others</a></li>
+                        <li><a href="#other">Others</a></li>
+
                         <li class="login"><a href="login/login.html">Login</a></li>
                     <label class="switch">
                         <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
@@ -61,7 +63,9 @@
             </section>
 
         <!-- PS4 Controller Section -->
+
         <div class="row" id="controller">
+
             <div class="col-1">
                 <h2>PS4 V2 Dualshock 4</h2>
                 <h3>Wireless Controllers for PlayStation 4</h3>
@@ -89,7 +93,7 @@
                 <div class="color-box"></div>
             </div>
         </div>
-
+    
         <!-- Xbox Controller Section -->
         <div class="row">
             <div class="col-1">
@@ -152,6 +156,7 @@
             </div>
         </div>
 
+
          <!-- VR Headset Section -->
          <div class="row" id="vrsection">
             <div class="col-1">
@@ -184,6 +189,7 @@
         </div>
 
         <!-- VR Headset Section 2 -->
+
         <div class="row">
             <div class="col-1">
                 <h2>Apple Vision Pro</h2>
@@ -306,8 +312,9 @@
                
             </div>
         </div>
-
+    </section>
         <!-- Gaming Chair Section -->
+         <section id="other">
         <div class="row">
             <div class="col-1">
                 <h2>Secretlab Omega</h2>
@@ -338,6 +345,7 @@
             </div>
         </div>
     </div>
+
             <section id="contact us">
                 
                 <div class="card pb-5 pt-1">
@@ -439,7 +447,12 @@
     <div class="scroll-top" onclick="scrollToTop()">
         <ion-icon name="arrow-up-outline"></ion-icon>
     </div>
-
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });</script>
+    </body>
     <!-- this script is for twitter icon  starts -->
  <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
  <!-- this script is for twitter icon  ends -->
@@ -448,6 +461,7 @@
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 
     <script>
         window.embeddedChatbotConfig = {
