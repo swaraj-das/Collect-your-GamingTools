@@ -9,8 +9,26 @@ function toggleMenu() {
   }
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Website loaded successfully!");
+
+ window.onscroll = function() {
+    updateProgressBar();
+  };
+  
+  
+  function updateProgressBar() {
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrollPercent = (scrollTop / scrollHeight) * 100;
+  
+      document.getElementById("progressBar").style.width = scrollPercent + "%";
+  }
+ 
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Website loaded successfully!");
+
 });
 
 // Show or hide the scroll-top button based on scroll position
@@ -54,6 +72,7 @@ window.onload = () => {
   }
 };
 
+
 async function SendEmail(e) {
   e.preventDefault();
   const Name = document.getElementById("name").value;
@@ -77,5 +96,8 @@ async function SendEmail(e) {
   } catch (error) {
     console.error("Error:", error);
     alert("An error occurred while sending the email.");
-  }
+ 
 }
+
+
+
