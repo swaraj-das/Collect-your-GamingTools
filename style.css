@@ -87,22 +87,6 @@ button[type="submit"]:hover {
     font-family: sans-serif;
 }
 
-#progressBarContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 7px;
-    background-color: whitesmoke; 
-    z-index: 9999; 
-  }
-  
-  #progressBar {
-    height: 100%;
-    width: 0%; 
-    background: linear-gradient(to right, #fb5283, #ff3527);; 
-    transition: width 0.2s ease; 
-  }
 *.dark-mode{
     background-color: #493d3d;
     color:#f1f1f1;
@@ -110,7 +94,6 @@ button[type="submit"]:hover {
 
 html {
     overflow-y: scroll;
-    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
@@ -131,9 +114,9 @@ html::-webkit-scrollbar-thumb:window-inactive {
 .container {
     width: 100%;
     min-height: 100vh;
+    padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 .navbar {
@@ -206,6 +189,61 @@ html::-webkit-scrollbar-thumb:window-inactive {
     margin: 18px 0;
 }
 
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cta-btn {
+    background-color: white;
+    color: #ce0606;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #c9565a;
+    color: white;
+}
+
 @keyframes rainbow {
     0% {
         background-position: 0% 50%;
@@ -247,16 +285,11 @@ nav {
     text-align: right;
     margin-right: 100px;
 }
-nav ul{
-    margin-left: 20px;
-    display: flex;
-    flex-direction: row;
-}
+
 nav ul li {
     list-style: none;
     display: inline;
     margin-right: 30px;
-    text-wrap: nowrap;
 }
 
 nav ul li a {
@@ -308,7 +341,7 @@ nav ul li.login:hover {
 
 .col-1 h2 {
     font-size: 54px;
-    color: var(--text-color);
+    color: #000;
     cursor: pointer;
     letter-spacing: 1px;
 }
@@ -319,7 +352,7 @@ nav ul li.login:hover {
 
 .col-1 h3 {
     font-size: 30px;
-    color: var(--text-color);
+    color: #707070;
     font-weight: 100;
     margin: 20px 0 10px;
     cursor: pointer;
@@ -327,16 +360,17 @@ nav ul li.login:hover {
 
 .col-1 p {
     font-size: 16px;
-    color: var(--text-color);
+    color: #a1a1a1;
     font-weight: 500;
     cursor: pointer;
 }
 
 button {
-    width: 140px;
+    width: 160px;
     border: 0;
+    
     outline: none;
-    color: var(--text-color);
+    color: #fff;
     font-size: 16px;
     font-weight: bolder;
     background: linear-gradient(to right, #fb5283, #ff3527);
@@ -344,13 +378,33 @@ button {
     cursor: pointer;
     transition: width 0.5s;
     background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, width 0.5s, height 0.5s;
 }
-#cart-btn
+#cart-btn,
+#buy-btn
 {
-    padding: 12px 14px;
-}
+    width: 150px;
+    height: 45px;
+        padding: 10px 0px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
 
+       font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px ;
+        white-space: nowrap;
+        flex-grow: 1;
+    
+}
+#cart-btn {
+    margin-left: 20px; /* add a margin to the left of the "Add to Cart" button */
+}
 button img {
     width: 30px;
     display: none;
@@ -360,25 +414,19 @@ button:hover img {
     display: block;
 }
 
-#cart-btn:hover
-{
-    width: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-}
-#buy-btn:hover
-{
+#buy-btn:hover, #cart-btn:hover {
     width: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    transform: scale(1.1);
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 .btn-section
 {   display: inline-flex;
     gap: 15px;
+    width: 140px;
 }
 
 .col-1::after {
@@ -411,8 +459,8 @@ button:hover img {
     height: 100%;
     width: 80%;
     z-index: -1;
-    transform: translateX(150px);
 }
+    
 
 .price {
     margin: 20px 0;
@@ -421,20 +469,20 @@ button:hover img {
 
 .original-price {
     font-size: 20px;
-    color: var(--text-color);
+    color: #a1a1a1;
     text-decoration: line-through;
     margin-right: 15px;
 }
 
 .discounted-price {
     font-size: 24px;
-    color: var(--text-color);
+    color: #000;
     font-weight: bold;
 }
 
 .discount {
     background-color: #ff3c6d;
-    color: var(--text-color);
+    color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -451,7 +499,7 @@ button:hover img {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    color: var(--text-color);
+    color: #fff;
     cursor: pointer;
     border: 1.5px solid #fff;
     padding: 10px;
@@ -468,6 +516,32 @@ button:hover img {
     transform: scale(1.1);
 }
 
+
+
+#cart-btn img, #buy-btn img {
+    width: 30px;
+    display: inline-block;
+    visibility: hidden;
+    max-width: 30px;
+    transition: opacity 0.3s ease;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#cart-btn:hover img, #buy-btn:hover img {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+#cart-btn:hover span {
+    margin-left: 10px;
+    transition: margin-left 0.3s ease;
+}
+/* Ensure only the button is affected by hover */
+.col-1, .col-2 {
+    transition: none;
+}
 .rating {
     display: flex;
     align-items: center;
@@ -678,102 +752,7 @@ button:hover img {
     }
 }
 
-.close-btn {
-    position: absolute;
-    top: -10px;
-    right: -10px; 
-    width: 25px;
-    height: 25px;
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-    background-color: #1f2937;
-    border: 2px solid white; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    box-sizing: border-box; 
-}
 
-  .toggle-arrow {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-in-out;
-    background-color: #333;
-    padding: 5px;
-    border-radius: 0 10px 10px 0;
-    cursor: pointer;
-    color: white;
-    font-size: 25px;
-    padding: 12px;
-}
-
-.social-sidebar {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background-color: #333;
-    padding: 3px;
-    border-radius: 0 15px 15px 0;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-    z-index: 1;
-}
-
-.social-sidebar ul{
-    list-style: none;
-    margin: 0;
-}
-
-.social-sidebar li {
-    display: block;    
-    margin: 12px 0;        
-    position: relative;  
-}
-
-.social-sidebar a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    padding: 10px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    border: none;
-    border-bottom: none;
-    border-radius: 50%;
-    display: flex;              
-    justify-content: center;   
-    align-items: center;      
-    width: 30px;   
-    height: 30px; 
-    margin: 0 10px;
-}
-
-.social-sidebar a:hover i {
-    transform: scale(1.5);
-}
-
-.social-sidebar li a:hover {
-    background-color: #ffffff;
-    border-radius: 50%;
-    color: #1f2937;
-    transform: scale(1.1);
-}
-
-.social-sidebar i {
-    display: inline-block;
-    transition: transform 0.3s ease-in-out; 
-}
-
-.social-sidebar a:hover i {
-    transform: scale(1.1);
-}
 
 
 /* -----------------------------------------------Responsiveness----------------------------------------------------- */
@@ -999,7 +978,7 @@ button:hover img {
     box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.search-bar button {
+.search-bar utton {
     background-color: #333;
     color: #fff;
     border: none;
@@ -1013,184 +992,3 @@ button:hover img {
 .search-bar button:hover {
     background-color: #555;
 }
-
-.hero {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg'); 
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: white;
-    text-align: center;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.cta-btn {
-    background-color: white;
-    color: #ce0606;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.cta-btn:hover {
-    background-color: #c9565a;
-    color: white;
-}
-
-
-  
-  .faq-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .faq-title {
-    text-align: center;
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 20px;
-    color: #ff6b6b;
-  }
-  
-  .faq {
-    margin-bottom: 15px;
-  }
-  
-  .faq input[type="checkbox"] {
-    display: none;
-  }
-  
-  .faq-question {
-    padding: 15px;
-    font-size: 1.2em;
-    background-color: #f6763f;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    transition: background-color 0.3s ease;
-  }
-  
-  .faq-question:hover {
-    background-color: #ff6b6b;
-  }
-  
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 15px;
-    background-color: #ffe0b5;
-    color: #333;
-    border-left: 4px solid #ff8552;
-    transition: max-height 0.4s ease;
-  }
-  
-  .faq input[type="checkbox"]:checked ~ .faq-answer {
-    max-height: 150px;
-    padding: 15px;
-  }
-  
-
-/* Body styles for consistency */
-#review-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-  }
-  
-  /* Review Section Container */
-  .reviews-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Section Title */
-  .reviews-title {
-    text-align: center;
-    font-size: 1.8em;
-    color: #ff6b6b;
-    margin-bottom: 20px;
-  }
-  
-  /* Individual Review Card */
-  .review-card {
-    margin-bottom: 15px; /* Reduced margin to shorten height */
-    padding: 15px; /* Reduced padding */
-    background-color: #ffe0b5;
-    border-left: 3px solid #ff8552; /* Thinner border */
-    border-radius: 8px; /* Slightly smaller border radius */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  /* Hover Effect for Review Cards */
-  .review-card:hover {
-    transform: translateY(-3px); /* Slightly less lift on hover */
-  }
-  
-  /* Reviewer Name */
-  .reviewer-name {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 8px; /* Slightly smaller gap */
-  }
-  
-  /* Review Rating */
-  .review-rating {
-    font-size: 1.2em;
-    color: #ff8552;
-    margin-bottom: 8px; /* Slightly smaller gap */
-  }
-  
-  /* Review Text */
-  .review-text {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.5; /* Slightly tighter line height */
-  }
-  
