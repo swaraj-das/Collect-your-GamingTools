@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collect your GamingTools</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+     <div class="navbar">
+        <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
+        <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="GameControllers.html">Game Controllers</a></li>
+                    <li><a href="VrAccessories.html">VR Accessories</a></li>
+                    <li><a href="Others.html">Others</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li ><a href="login/login.html"><div class="login">Login</div></a></li>
+                </ul>
+            </nav>
+
+             <!-- Search Bar (initially hidden) -->
+            <div class="search-bar hidden" id="searchBar">
+               <input type="text" id="search-input" placeholder="Search..." />
+            <button type="button" onclick="performSearch()">🔍</button>
+            </div>
+        </div>
+        <!-- VR Headset Section 2 -->
+        <div class="row">
+            <div class="col-1">
+                <h2>Apple Vision Pro</h2>
+                <h3>VR Headset from Apple</h3>
+                <p>(Official)</p>
+                <div class="price">
+                    <span class="original-price">&#8377;293999</span>
+                    <span class="discounted-price">&#8377;264599</span>
+                    <span class="discount">10% off</span>
+                </div>
+                <div class="rating">
+                    <span>★★★★★</span>
+                    <p>(235 reviews)</p>
+                </div>
+                <div class="overall-rating">
+                    <span>Overall Rating:</span>
+                    <p class="star">4.8★</p>
+                </div>
+                <div class="btn-section">
+                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                </div>
+            </div>
+            <div class="col-2">
+                <img src="images/visionpro.png" class="controller" alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
+                <div class="color-box"></div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+               <h2>VALVE Steam Deck OLED  </h2>
+               <h3>512GB SSD + 16GB RAM - 7.4</h3>
+               <p></p>
+               <div class="price">
+                  <span class="original-price">&#8377;84,990</span>
+                  <span class="discounted-price">&#8377;63990</span>
+                  <span class="discount">25% off</span>
+              </div>
+              <div class="rating">
+                 <span>★★★★☆</span>
+                 <p>(3052 reviews)</p>
+             </div>
+             <div class="overall-rating">
+                  <span>Overall Rating:</span>
+                  <p class="star">4.1★</p>
+             </div>
+             <div class="btn-section">
+                 <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                 <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+             </div>
+            </div>
+            <div class="col-2">
+                 <img src="https://m.media-amazon.com/images/I/51Nw-kEg9zL._SX679_.jpg" class="controller" alt="Controller">
+                 <div class="color-box"></div>
+           </div>
+        </div>
+        <!-- VR Headset Section -->
+        <div class="row" id="vrsection">
+            <div class="col-1">
+                <h2>Meta Quest Pro</h2>
+                <h3>VR Headset from Meta</h3>
+                <p>(Official)</p>
+                <div class="price">
+                    <span class="original-price">&#8377;40000</span>
+                    <span class="discounted-price">&#8377;35200</span>
+                    <span class="discount">12% off</span>
+                </div>
+                <div class="rating">
+                    <span>★★★★☆</span>
+                    <p>(871 reviews)</p>
+                </div>
+                <div class="overall-rating">
+                    <span>Overall Rating:</span>
+                    <p class="star">4.2★</p>
+                </div>
+                <div class="btn-section">
+                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                </div>
+            </div>
+            <div class="col-2">
+                <img src="images/metaquest.jpg" class="controller" alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
+                <div class="color-box"></div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+               <h2>HPX PS VR Controller Camera Adapter</h2>
+               <h3>Connector Cable for PS5 PS4 PSVR</h3>
+               <p></p>
+               <div class="price">
+                  <span class="original-price">&#8377;4,399</span>
+                  <span class="discounted-price">&#8377;2,485</span>
+                  <span class="discount">44% off</span>
+              </div>
+              <div class="rating">
+                 <span>★★★★☆</span>
+                 <p>(3002 reviews)</p>
+             </div>
+             <div class="overall-rating">
+                  <span>Overall Rating:</span>
+                  <p class="star">4.5★</p>
+             </div>
+             <div class="btn-section">
+                 <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                 <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+             </div>
+            </div>
+            <div class="col-2">
+                 <img src="https://m.media-amazon.com/images/I/61dyXqKf-uL._SX679_.jpg" class="controller" alt="Controller">
+                 <div class="color-box"></div>
+           </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+               <h2>Drumstone VR Headset</h2>
+               <h3>Glasses Stereo Headphones 3D Glasses Headset Helmets</h3>
+               <p>(Compatible/Generic)</p>
+               <div class="price">
+                  <span class="original-price">&#8377;3,999</span>
+                  <span class="discounted-price">&#8377;1,799</span>
+                  <span class="discount">-55% off</span>
+              </div>
+              <div class="rating">
+                 <span>★★★★☆</span>
+                 <p>(2102 reviews)</p>
+             </div>
+             <div class="overall-rating">
+                  <span>Overall Rating:</span>
+                  <p class="star">4.9★</p>
+             </div>
+             <div class="btn-section">
+                 <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                 <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+             </div>
+            </div>
+            <div class="col-2">
+                 <img src="https://m.media-amazon.com/images/I/51UZ47oy7SL._SX679_.jpg" class="controller" alt="Controller">
+                 <div class="color-box"></div>
+           </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "PQ-VOcdM1R3PiYlZUrsTY",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="PQ-VOcdM1R3PiYlZUrsTY"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+</body>
