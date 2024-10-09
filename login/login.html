@@ -7,13 +7,28 @@
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 </head>
 <body>
+    <div class="navbar">
+        <a href="/"> <img src="../images/logo.png" class="logo" alt="Logo"></a>
+        <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+        <nav>
+            <ul id="menuList">
+                <li><a href="#">Game Controllers</a></li>
+                <li><a href="#">VR Accessories</a></li>
+                <li><a href="#">Media Remotes</a></li>
+                <li><a href="#">Others</a></li>
+                <li class="login"><a href="login/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+        <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
     <div class="linksHome">
         <a href="../index.html">home</a>
     </div>
     <div class="login-container">
         
         <h1>Login to Your Account</h1>
-        <form action="#" method="post">
+        <form action="index.html" method="post">
             <div class="input-group">
                 <label for="username">Gmail</label>
                 <input type="text" id="gmail" name="username" required>
