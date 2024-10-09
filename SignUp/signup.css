@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding:5px;
+    padding:0;
 }
 
 body {
@@ -9,8 +9,9 @@ body {
     background-size: cover;
     font-family: 'Trebuchet MS', Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
     height: 100vh;
     color: white;
     text-shadow: 1px 1px 2px #000;
@@ -20,7 +21,7 @@ body {
     
     opacity: 0.75;
     background-color: rgba(0, 0, 0, 0);
-    padding: 5rem;
+    padding:3rem 5rem;
     border-radius: 20px;
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -44,7 +45,7 @@ body {
 }
 
 h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-size: 1.5rem;
     color: #fb5283;
 }
@@ -150,4 +151,35 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .links a:hover {
     color: #ff80ab;
     text-decoration: underline;
+}
+
+#link-home{
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 5px white;
+    border-radius: 15px;
+    padding: 8px 15px;
+
+    margin-left: 1rem;
+    margin-top: 1rem;
+    
+}
+
+#link-home:hover{
+    border: 1px solid rgb(202, 202, 202);
+    box-shadow: 0 0 5px #424242;
+    background-color: #42424222;
+    border-radius: 15px;
+    padding: 8px 15px;
+
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+#link-home a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    text-shadow: none;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    
 }
