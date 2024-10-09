@@ -978,7 +978,7 @@ button:hover img {
     box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.search-bar button {
+.search-bar utton {
     background-color: #333;
     color: #fff;
     border: none;
