@@ -58,9 +58,6 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 
 ## 🙌 Contributors
 
-<a href="https://github.com/swaraj-das/git-trace/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=swaraj-das/Collect-your-GamingTools" />
-</a>
 
 
 
