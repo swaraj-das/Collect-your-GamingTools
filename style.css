@@ -834,6 +834,12 @@ button:hover img {
     #menuList {
         overflow: hidden;
         transition: 0.5s;
+        display: flex;
+    }
+    #menult-cart{
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .row {
