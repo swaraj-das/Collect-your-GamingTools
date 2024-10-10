@@ -1,14 +1,15 @@
 .card {
-    width: 50%; /* Set a specific width */
-    margin: 10px auto; /* Center horizontally with automatic margins */
-    padding: 20px; /* Add padding */
+    width: 90%;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
     margin-bottom: 70px;
 
-   
-    border: 1px solid #ccc; /* Optional: Add a border */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .card-header {
     background-color: #333;
     color: #fff;
@@ -18,26 +19,59 @@
     width: 90%;
     border-bottom: 1px solid #ddd;
     border-radius: 6px;
-  }
+}
+
 .card-body {
     display: flex;
-    justify-content: space-between; /* Form on the left and image on the right */
-    align-items: flex-start; /* Align content to the top */
+    flex-direction: column;
+    align-items: stretch;
+}
+
+@media (min-width: 600px) {
+    .card-body {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .form-section {
-    width: 50%; /* Width for the form section */
+    flex: 1;
+    padding: 10px;
 }
 
 .image-section {
-    width: 50%; /* Width for the image section */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Center the image */
+    justify-content: center;
     align-items: center;
 }
 
+/* Hide image on mobile */
+@media (max-width: 600px) {
+    .image-section {
+        display: none; 
+    }
+
+    .form-section {
+        width: 100%;
+    }
+
+    .card {
+        padding: 10px;
+    }
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    padding-right: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 .image-section img {
-    max-width: 100%; /* Make sure image does not exceed its container width */
+    max-width: 100%;
     height: auto;
 }
 
