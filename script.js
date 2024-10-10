@@ -78,3 +78,20 @@ function toggleSidebar() {
         console.error("Sidebar element not found");
     }
 };
+
+function performSearch(){
+    let searchTerm = document.getElementById('search-input').value.toLowerCase();
+    console.log(searchTerm);
+    let cards = document.querySelectorAll('.row');
+
+    cards.forEach(function (card) {
+        let cardHeading = card.querySelector('.card-heading').innerText.toLowerCase();
+        
+        // Check if the search term is in the card heading or description
+        if (cardHeading.includes(searchTerm)) {
+            card.style.display = "block"; // Show the card
+        } else {
+            card.style.display = "none"; // Hide the card
+        }
+    });
+}
