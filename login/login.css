@@ -56,6 +56,25 @@ label {
     font-size: 16px;
 }
 
+.pass{
+    display: flex;
+}
+
+#showPasswordbtn{
+    position: absolute;
+    right: 18%;
+    top: 51%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+#showPasswordbtn:hover{
+    cursor: pointer;
+}
+
 input[type="text"], input[type="password"] {
     width: 100%;
     padding: 0.75rem;
