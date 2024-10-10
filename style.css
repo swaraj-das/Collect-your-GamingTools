@@ -504,34 +504,48 @@ button:hover img {
     font-weight: 600;
 }
 
-.footer {
-    background: #303036;
-    color: #d3d3d3;
-    padding: 50px 0 0;
+footer {
+    background-color: #2c3e50; /* From version 1 */
+    color: #d3d3d3; /* Combining color from version 2 */
+    padding: 50px 0; /* Keeping padding from version 2 */
     font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    background-color: #444444; /* Keeping from version 1 */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
+
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.footer {
+    display: flex; /* Ensure flex is defined if not already in your code */
+    justify-content: space-around; /* Keep the first version's justify-content */
+    max-width: 1200px; /* Use the max-width from the second version */
+    margin: 0 auto; /* Keep the margin from the second version */
+    padding: 20px; /* Adjusting to include both padding properties */
 }
 
 .footer-section {
     flex: 1;
-    margin-bottom: 40px;
-    min-width: 300px;
-    padding: 0 20px;
+    margin: 20px; /* Use margin from the first version */
+    margin-bottom: 40px; /* Use margin-bottom from the second version */
+    min-width: 300px; /* Keep the min-width from the second version */
+    padding: 0 20px; /* Keep padding from the second version */
 }
 
 .footer h2 {
-    color: white;
-    font-size: 1.3em;
-    margin-bottom: 20px;
+    color: white; /* Keep the header color from the second version */
+    font-size: 1.3em; /* Use font-size from the second version */
+    margin-bottom: 20px; /* Keep margin from the second version */
 }
+
 
 .logo-container {
     display: flex;
@@ -545,10 +559,18 @@ button:hover img {
     margin-right: 15px;
 }
 
-.logo-text {
-    font-size: 1.5em;
-    margin: 0;
+.footer-section .logo-name h4 {
+    font-size: 22px; /* Keep the font size from the first version */
+    color: #ffee05; /* Keep the color from the first version */
+    margin: 20px 0; /* Keep the margin from the first version */
+    font-weight: 600; /* Keep the font-weight from the first version */
 }
+
+.logo-text {
+    font-size: 1.5em; /* Keep this font size from the second version */
+    margin: 0; /* Keep this margin from the second version */
+}
+
 
 .about-text {
     line-height: 1.5;
@@ -575,33 +597,59 @@ button:hover img {
     line-height: 40px;
     border-radius: 50%;
     color: #d3d3d3;
-    transition: all .3s;
-    transition: transform 0.3s ease, background 0.3s ease; /* Added transform property */
+.footer-section .follow {
+    margin-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid transparent;
+    background: linear-gradient(to right, #ff459f, #ff9532);
+    border-radius: 25px;
+    width: 150px;
+    transition: all 0.4s ease; /* Using this transition for follow button */
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px; 
 }
 
-.socials a:hover{
-    transform: scale(1.2); /* Zoom effect on hover */
+.footer-section .follow:hover {
+    background: linear-gradient(to right, #ff9532, #ff459f);
+    border: 2px solid #ffee05;
+    transform: scale(1.1); /* Slight zoom-in effect */
+    color: #000;
 }
-/* Hover zoom effect for facebook icon */
+
+.socials a:hover {
+    transform: scale(1.2); /* Zoom effect on hover for social links */
+    transition: transform 0.3s ease, background 0.3s ease; /* Added transform and background properties */
+}
+
+/* Hover zoom effect for social media icons */
 .socials .facebook:hover {
     background: blue;
     color: white;
- } 
- /* Hover zoom effect for instagram icon */
- .socials .instagram:hover {
+} 
+
+.socials .instagram:hover {
     background: orangered;
     color: white;
- } 
- /* Hover zoom effect for twitter[X] icon */
- .socials .twitter:hover {
+} 
+
+.socials .twitter:hover {
     background: black;
     color: white;
- } 
- /* Hover zoom effect for youtube icon */
- .socials .youtube:hover {
+} 
+
+.socials .youtube:hover {
     background: red;
     color: white;
- } 
+} 
 
 .links ul {
     list-style-type: none;
@@ -614,46 +662,58 @@ button:hover img {
     font-size: 1.1em;
     color: #d3d3d3;
     text-decoration: none;
-    transition: all .3s;
+    transition: all 0.3s; /* Maintain transition for links */
 }
 
 .links ul a:hover {
     color: white;
-    padding-left: 10px;
+    padding-left: 10px; /* Padding change on hover for links */
 }
 
 .contact-form .text-input {
     background: #272727;
     color: #bebdbd;
     margin-bottom: 20px;
-    line-height: 1.5rem;
-    padding: 10px 15px;
-    border: none;
-    width: 100%;
-    border-radius: 5px;
+.footer-section h4 {
+    margin-top: 16px; /* Keep this margin from the first version */
+    font-size: 18px; /* Keep the font size from the first version */
+    color: #ffee05; /* Keep the color from the first version */
+    font-weight: bold; /* Keep font-weight from the first version */
+}
+
+.footer-section p {
+    line-height: 24px; /* Keep line height from the first version */
+    font-size: 15px; /* Keep font size from the first version */
+    font-weight: 400; /* Keep font-weight from the first version */
+    text-align: justify; /* Keep text alignment from the first version */
+    color: #ecf0f1; /* Keep color from the first version */
 }
 
 .contact-form textarea.text-input {
-    height: 120px;
-    resize: none;
+    line-height: 1.5rem; /* Add line height from the second version */
+    padding: 10px 15px; /* Add padding from the second version */
+    border: none; /* Add border from the second version */
+    width: 100%; /* Add width from the second version */
+    border-radius: 5px; /* Add border-radius from the second version */
 }
 
 .contact-form .contact-btn {
     float: right;
-    font-size: 1.1em;
-    font-family: 'Arial', sans-serif;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all .3s;
+    font-size: 1.1em; /* Keep font size from the second version */
+    font-family: 'Arial', sans-serif; /* Keep font family from the second version */
+    background: #4CAF50; /* Keep background from the second version */
+    color: white; /* Keep color from the second version */
+    border: none; /* Keep border from the second version */
+    padding: 12px 20px; /* Keep padding from the second version */
+    border-radius: 5px; /* Keep border-radius from the second version */
+    cursor: pointer; /* Keep cursor property from the second version */
+    transition: all 0.3s; /* Keep transition from the second version */
 }
 
 .contact-form .contact-btn:hover {
-    background: #45a049;
+    background: #45a049; /* Keep hover background from the second version */
 }
+
 
 .footer-bottom {
     background: #343a40;
@@ -678,37 +738,50 @@ button:hover img {
     }
 }
 
-.close-btn {
-    position: absolute;
-    top: -10px;
-    right: -10px; 
-    width: 25px;
-    height: 25px;
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-    background-color: #1f2937;
-    border: 2px solid white; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    box-sizing: border-box; 
+.social-links img {
+    height: 35px; /* Keep height from the first version */
+    margin: 14px; /* Keep margin from the first version */
+    cursor: pointer; /* Keep cursor property from the first version */
+    transition: transform 0.3s, filter 0.3s; /* Keep transition from the first version */
+    filter: grayscale(100%); /* Keep filter from the first version */
 }
 
-  .toggle-arrow {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-in-out;
-    background-color: #333;
-    padding: 5px;
-    border-radius: 0 10px 10px 0;
-    cursor: pointer;
-    color: white;
-    font-size: 25px;
-    padding: 12px;
+.social-links img:hover {
+    transform: scale(1.2); /* Keep hover scale effect from the first version */
+    filter: grayscale(0); /* Keep hover filter effect from the first version */
+}
+
+.close-btn {
+    position: absolute; /* Keep position from the second version */
+    top: -10px; /* Keep top positioning from the second version */
+    right: -10px; /* Keep right positioning from the second version */
+    width: 25px; /* Keep width from the second version */
+    height: 25px; /* Keep height from the second version */
+    font-size: 20px; /* Keep font size from the second version */
+    color: white; /* Keep color from the second version */
+    cursor: pointer; /* Keep cursor property from the second version */
+    background-color: #1f2937; /* Keep background color from the second version */
+    border: 2px solid white; /* Keep border from the second version */
+    border-radius: 50%; /* Keep border-radius from the second version */
+    display: flex; /* Keep display property from the second version */
+    align-items: center; /* Keep alignment from the second version */
+    justify-content: center; /* Keep justify-content from the second version */
+    box-sizing: border-box; /* Keep box-sizing from the second version */
+}
+
+.toggle-arrow {
+    position: fixed; /* Keep position from the second version */
+    top: 50%; /* Keep top positioning from the second version */
+    left: 0; /* Keep left positioning from the second version */
+    transform: translateY(-50%); /* Keep transform from the second version */
+    transition: transform 0.3s ease-in-out; /* Keep transition from the second version */
+    background-color: #333; /* Keep background color from the second version */
+    padding: 5px; /* Keep padding from the second version */
+    border-radius: 0 10px 10px 0; /* Keep border-radius from the second version */
+    cursor: pointer; /* Keep cursor property from the second version */
+    color: white; /* Keep color from the second version */
+    font-size: 25px; /* Keep font size from the second version */
+    padding: 12px; /* Adjust padding to maintain consistency */
 }
 
 .social-sidebar {
