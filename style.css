@@ -351,18 +351,36 @@ button {
     padding: 12px 14px;
 }
 
-button img {
-    width: 30px;
+/* button img {
+    width: 18px;
     display: none;
 }
 
 button:hover img {
     display: block;
+} */
+
+#buy-btn img{
+    width: 30px;
+    display: none;
+}
+
+#buy-btn:hover img{
+    display: block;
+}
+
+#cart-btn img{
+    width: 18px;
+    display: none;
+}
+
+#cart-btn:hover img{
+    display: block;
 }
 
 #cart-btn:hover
 {
-    width: 160px;
+    width: 140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -370,7 +388,7 @@ button:hover img {
 }
 #buy-btn:hover
 {
-    width: 160px;
+    width: 140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
