@@ -381,6 +381,18 @@ button:hover img {
     gap: 15px;
 }
 
+.btn{
+    background: transparent;
+    border: none;
+    margin: 10px;
+    font-size: 40px;
+    outline: none;
+    color: gray;
+}
+
+.btn i:hover{
+    cursor : pointer;
+}
 .col-1::after {
     content: '';
     width: 10px;
