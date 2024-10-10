@@ -622,7 +622,7 @@ button:hover img {
     padding-left: 10px;
 }
 
-.contact-form .text-input {
+.-form .text-input {
     background: #272727;
     color: #bebdbd;
     margin-bottom: 20px;
@@ -631,6 +631,15 @@ button:hover img {
     border: none;
     width: 100%;
     border-radius: 5px;
+}
+
+.confirmation-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
 }
 
 .contact-form textarea.text-input {
@@ -674,7 +683,7 @@ button:hover img {
     
     .contact-form .contact-btn {
         width: 100%;
-        float: none;
+        float: nonecontact;
     }
 }
 
@@ -946,25 +955,40 @@ button:hover img {
     }
 }
 
-.scroll-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ff459f;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .scroll-top:hover {
-    background: #ff6062;
-  }
-  
-  .hidden {
+.scroll-background {
+    position: fixed; /* Position the div fixed so it stays in view */
+    bottom: 20px; /* Adjust this value to move it up or down */
+    right: 20px; /* Adjust this value to move it left or right */
+    width: 60px; /* Width of the scroll background */
+    height: 60px; /* Height of the scroll background */
+    background-color: rgba(0, 0, 0, 0.5); /* Background color */
+    border-radius: 50%; /* Make it circular */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+
+.scroll-top:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+/* Optional: Adjust the size of the arrow icon */
+.scroll-top ion-icon {
+    font-size: 24px; /* Size of the icon */
+    color: white; /
+}
+
+
+
+
+/* Add the hidden class */
+.hidden {
     display: none;
 }
+
 
 .search-bar {
     text-align: center;
