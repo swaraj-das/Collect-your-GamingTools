@@ -2,7 +2,7 @@ const JWT = require("jsonwebtoken");
 
 // router level middleware function
 const jwtAuth = (req, res, next) => {
-  console.log(req.cookies?.token);
+  
   // get cookie token(jwt token generated using json.sign()) form the request
   const token = ( req.cookies?.token) || null;
 

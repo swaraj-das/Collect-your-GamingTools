@@ -1,16 +1,139 @@
+.card {
+    width: 50%; /* Set a specific width */
+    margin: 10px auto; /* Center horizontally with automatic margins */
+    padding: 20px; /* Add padding */
+    margin-bottom: 70px;
+
+   
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+.card-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 90%;
+    border-bottom: 1px solid #ddd;
+    border-radius: 6px;
+  }
+.card-body {
+    display: flex;
+    justify-content: space-between; /* Form on the left and image on the right */
+    align-items: flex-start; /* Align content to the top */
+}
+
+.form-section {
+    width: 50%; /* Width for the form section */
+}
+
+.image-section {
+    width: 50%; /* Width for the image section */
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%; /* Make sure image does not exceed its container width */
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%; /* Adjust width for better alignment */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px; /* Adjust height for textarea */
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #444;
+}
+
+
+
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
+#progressBarContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-color: whitesmoke; 
+    z-index: 9999; 
+  }
+  
+  #progressBar {
+    height: 100%;
+    width: 0%; 
+    background: linear-gradient(to right, #fb5283, #ff3527);; 
+    transition: width 0.2s ease; 
+  }
+*.dark-mode{
+    background-color: #493d3d;
+    color:#f1f1f1;
+}
+
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 9px;
+    transition: width 0.3s ease;
+    margin: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff459f, #ff9532, #ff459f);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+html::-webkit-scrollbar-thumb:window-inactive {
+    background: rgb(156, 156, 156);
+}
 .container {
     width: 100%;
     min-height: 100vh;
-    padding-left: 5%;
     padding-right: 5%;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -19,9 +142,63 @@
     align-items: center;
     position: fixed;
     top: 0;
+    overflow: hidden;
     background-color: #fff;
     z-index: 1000;
 }
+
+.dark-mode .navbar{
+    background-color: #493d3d;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px !important;
+    height: 24px !important;
+    margin-right: 20px;
+
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 6px;
+    bottom: 2px;
+    top:1px;
+    background-color: black;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background:linear-gradient(to right, #fb5283, #ff3527) !important;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
 
 .logo {
     width: 50px;
@@ -70,11 +247,16 @@ nav {
     text-align: right;
     margin-right: 100px;
 }
-
+nav ul{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
 nav ul li {
     list-style: none;
-    display: inline-block;
+    display: inline;
     margin-right: 30px;
+    text-wrap: nowrap;
 }
 
 nav ul li a {
@@ -86,6 +268,9 @@ nav ul li a {
     transition: color 0.5s, transform 0.5s;
 }
 
+.dark-mode nav ul li a{
+    color:#ccc;
+}
 nav ul li a:hover {
     color: #e00999;
     transform: scale(1.18);
@@ -107,6 +292,7 @@ nav ul li.login:hover {
     color: #fff;
 }
 
+
 .row {
     display: flex;
     justify-content: space-between;
@@ -122,13 +308,18 @@ nav ul li.login:hover {
 
 .col-1 h2 {
     font-size: 54px;
-    color: #000;
+    color: var(--text-color);
     cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.dark-mode h2{
+    color: #ccc;
 }
 
 .col-1 h3 {
     font-size: 30px;
-    color: #707070;
+    color: var(--text-color);
     font-weight: 100;
     margin: 20px 0 10px;
     cursor: pointer;
@@ -136,7 +327,7 @@ nav ul li.login:hover {
 
 .col-1 p {
     font-size: 16px;
-    color: #a1a1a1;
+    color: var(--text-color);
     font-weight: 500;
     cursor: pointer;
 }
@@ -144,15 +335,20 @@ nav ul li.login:hover {
 button {
     width: 140px;
     border: 0;
-    padding: 14px 12px;
     outline: none;
-    color: #fff;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: bolder;
     background: linear-gradient(to right, #fb5283, #ff3527);
     border-radius: 6px;
     cursor: pointer;
     transition: width 0.5s;
+    background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
+    transition: background 0.3s ease-in-out;
+}
+#cart-btn
+{
+    padding: 12px 14px;
 }
 
 button img {
@@ -164,11 +360,25 @@ button:hover img {
     display: block;
 }
 
-button:hover {
+#cart-btn:hover
+{
     width: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+#buy-btn:hover
+{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.btn-section
+{   display: inline-flex;
+    gap: 15px;
 }
 
 .col-1::after {
@@ -211,20 +421,20 @@ button:hover {
 
 .original-price {
     font-size: 20px;
-    color: #a1a1a1;
+    color: var(--text-color);
     text-decoration: line-through;
     margin-right: 15px;
 }
 
 .discounted-price {
     font-size: 24px;
-    color: #000;
+    color: var(--text-color);
     font-weight: bold;
 }
 
 .discount {
     background-color: #ff3c6d;
-    color: #fff;
+    color: var(--text-color);
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -241,7 +451,7 @@ button:hover {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
+    color: var(--text-color);
     cursor: pointer;
     border: 1.5px solid #fff;
     padding: 10px;
@@ -295,66 +505,98 @@ button:hover {
 }
 
 footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    padding: 20px 0;
+    background-color: #2c3e50; /* From version 1 */
+    color: #d3d3d3; /* Combining color from version 2 */
+    padding: 50px 0; /* Keeping padding from version 2 */
     font-family: 'Arial', sans-serif;
 }
 
 .footer-container {
-    background-color: #444444;
+    background-color: #444444; /* Keeping from version 1 */
     color: #fff;
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
-    
+}
+
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 20px;
-
-    
+.footer {
+    display: flex; /* Ensure flex is defined if not already in your code */
+    justify-content: space-around; /* Keep the first version's justify-content */
+    max-width: 1200px; /* Use the max-width from the second version */
+    margin: 0 auto; /* Keep the margin from the second version */
+    padding: 20px; /* Adjusting to include both padding properties */
 }
 
 .footer-section {
-    flex: 1 ;
-    margin: 20px;
-    max-width: 280px;
-    text-align: left;
+    flex: 1;
+    margin: 20px; /* Use margin from the first version */
+    margin-bottom: 40px; /* Use margin-bottom from the second version */
+    min-width: 300px; /* Keep the min-width from the second version */
+    padding: 0 20px; /* Keep padding from the second version */
 }
 
-.footer-section .logo-name {
+.footer h2 {
+    color: white; /* Keep the header color from the second version */
+    font-size: 1.3em; /* Use font-size from the second version */
+    margin-bottom: 20px; /* Keep margin from the second version */
+}
+
+
+.logo-container {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.footer-section .logo-name img {
-    height: 50px;
-    margin-right: 10px;
+.footer-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
 }
 
 .footer-section .logo-name h4 {
-    font-size: 22px;
-    color: #ffee05;
-    margin: 20px 0;
-    font-weight: 600;
-
+    font-size: 22px; /* Keep the font size from the first version */
+    color: #ffee05; /* Keep the color from the first version */
+    margin: 20px 0; /* Keep the margin from the first version */
+    font-weight: 600; /* Keep the font-weight from the first version */
 }
 
-.footer-section .contact {
-    font-size: 14px;
-    line-height: 28px;
+.logo-text {
+    font-size: 1.5em; /* Keep this font size from the second version */
+    margin: 0; /* Keep this margin from the second version */
+}
+
+
+.about-text {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.socials {
+    margin-top: 20px;
+}
+
+.socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
     color: #d3d3d3;
-    font-weight: 600;
-    cursor: pointer;
-    transition: color 0.3s ease;
-
-}
-
 .footer-section .follow {
     margin-left: 0;
     font-size: 16px;
@@ -369,7 +611,7 @@ footer {
     background: linear-gradient(to right, #ff459f, #ff9532);
     border-radius: 25px;
     width: 150px;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease; /* Using this transition for follow button */
     cursor: pointer;
     text-align: center;
     margin: 0 auto;
@@ -383,50 +625,228 @@ footer {
     color: #000;
 }
 
-.footer-section h4 {
+.socials a:hover {
+    transform: scale(1.2); /* Zoom effect on hover for social links */
+    transition: transform 0.3s ease, background 0.3s ease; /* Added transform and background properties */
+}
+
+/* Hover zoom effect for social media icons */
+.socials .facebook:hover {
+    background: blue;
+    color: white;
+} 
+
+.socials .instagram:hover {
+    background: orangered;
+    color: white;
+} 
+
+.socials .twitter:hover {
+    background: black;
+    color: white;
+} 
+
+.socials .youtube:hover {
+    background: red;
+    color: white;
+} 
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #d3d3d3;
+    text-decoration: none;
+    transition: all 0.3s; /* Maintain transition for links */
+}
+
+.links ul a:hover {
+    color: white;
+    padding-left: 10px; /* Padding change on hover for links */
+}
+
+.contact-form .text-input {
+    background: #272727;
+    color: #bebdbd;
     margin-bottom: 20px;
-    margin-top: 16px;
-    font-size: 18px;
-    color: #ffee05;
-    font-weight: bold;
+.footer-section h4 {
+    margin-top: 16px; /* Keep this margin from the first version */
+    font-size: 18px; /* Keep the font size from the first version */
+    color: #ffee05; /* Keep the color from the first version */
+    font-weight: bold; /* Keep font-weight from the first version */
 }
 
 .footer-section p {
-    line-height: 24px;
-    font-size: 15px;
-    font-weight: 400;
-    text-align: justify;
-    color: #ecf0f1;
+    line-height: 24px; /* Keep line height from the first version */
+    font-size: 15px; /* Keep font size from the first version */
+    font-weight: 400; /* Keep font-weight from the first version */
+    text-align: justify; /* Keep text alignment from the first version */
+    color: #ecf0f1; /* Keep color from the first version */
 }
+
+.contact-form textarea.text-input {
+    line-height: 1.5rem; /* Add line height from the second version */
+    padding: 10px 15px; /* Add padding from the second version */
+    border: none; /* Add border from the second version */
+    width: 100%; /* Add width from the second version */
+    border-radius: 5px; /* Add border-radius from the second version */
+}
+
+.contact-form .contact-btn {
+    float: right;
+    font-size: 1.1em; /* Keep font size from the second version */
+    font-family: 'Arial', sans-serif; /* Keep font family from the second version */
+    background: #4CAF50; /* Keep background from the second version */
+    color: white; /* Keep color from the second version */
+    border: none; /* Keep border from the second version */
+    padding: 12px 20px; /* Keep padding from the second version */
+    border-radius: 5px; /* Keep border-radius from the second version */
+    cursor: pointer; /* Keep cursor property from the second version */
+    transition: all 0.3s; /* Keep transition from the second version */
+}
+
+.contact-form .contact-btn:hover {
+    background: #45a049; /* Keep hover background from the second version */
+}
+
 
 .footer-bottom {
-    border-top: 0.7px dashed #e4e4e4;
-    padding-top: 20px;
-    max-width: 30%;
-    margin: 0 auto;
+    background: #343a40;
+    color: #686868;
     text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
 }
 
-.footer-bottom p {
-    margin: 5px 0;
-    font-size: 12px;
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    
+    .contact-form .contact-btn {
+        width: 100%;
+        float: none;
+    }
 }
 
 .social-links img {
-    height: 35px;
-    margin: 14px;
-    cursor: pointer;
-    transition: transform 0.3s, filter 0.3s;
-    filter: grayscale(100%);
+    height: 35px; /* Keep height from the first version */
+    margin: 14px; /* Keep margin from the first version */
+    cursor: pointer; /* Keep cursor property from the first version */
+    transition: transform 0.3s, filter 0.3s; /* Keep transition from the first version */
+    filter: grayscale(100%); /* Keep filter from the first version */
 }
 
 .social-links img:hover {
-    transform: scale(1.2);
-    filter: grayscale(0);
+    transform: scale(1.2); /* Keep hover scale effect from the first version */
+    filter: grayscale(0); /* Keep hover filter effect from the first version */
 }
 
+.close-btn {
+    position: absolute; /* Keep position from the second version */
+    top: -10px; /* Keep top positioning from the second version */
+    right: -10px; /* Keep right positioning from the second version */
+    width: 25px; /* Keep width from the second version */
+    height: 25px; /* Keep height from the second version */
+    font-size: 20px; /* Keep font size from the second version */
+    color: white; /* Keep color from the second version */
+    cursor: pointer; /* Keep cursor property from the second version */
+    background-color: #1f2937; /* Keep background color from the second version */
+    border: 2px solid white; /* Keep border from the second version */
+    border-radius: 50%; /* Keep border-radius from the second version */
+    display: flex; /* Keep display property from the second version */
+    align-items: center; /* Keep alignment from the second version */
+    justify-content: center; /* Keep justify-content from the second version */
+    box-sizing: border-box; /* Keep box-sizing from the second version */
+}
 
+.toggle-arrow {
+    position: fixed; /* Keep position from the second version */
+    top: 50%; /* Keep top positioning from the second version */
+    left: 0; /* Keep left positioning from the second version */
+    transform: translateY(-50%); /* Keep transform from the second version */
+    transition: transform 0.3s ease-in-out; /* Keep transition from the second version */
+    background-color: #333; /* Keep background color from the second version */
+    padding: 5px; /* Keep padding from the second version */
+    border-radius: 0 10px 10px 0; /* Keep border-radius from the second version */
+    cursor: pointer; /* Keep cursor property from the second version */
+    color: white; /* Keep color from the second version */
+    font-size: 25px; /* Keep font size from the second version */
+    padding: 12px; /* Adjust padding to maintain consistency */
+}
 
+.social-sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #333;
+    padding: 3px;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    z-index: 1;
+}
+
+.social-sidebar ul{
+    list-style: none;
+    margin: 0;
+}
+
+.social-sidebar li {
+    display: block;    
+    margin: 12px 0;        
+    position: relative;  
+}
+
+.social-sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border: none;
+    border-bottom: none;
+    border-radius: 50%;
+    display: flex;              
+    justify-content: center;   
+    align-items: center;      
+    width: 30px;   
+    height: 30px; 
+    margin: 0 10px;
+}
+
+.social-sidebar a:hover i {
+    transform: scale(1.5);
+}
+
+.social-sidebar li a:hover {
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #1f2937;
+    transform: scale(1.1);
+}
+
+.social-sidebar i {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.social-sidebar a:hover i {
+    transform: scale(1.1);
+}
 
 
 /* -----------------------------------------------Responsiveness----------------------------------------------------- */
@@ -597,3 +1017,253 @@ footer {
         overflow: hidden;
         transition: 0.5s;
     }
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff459f;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scroll-top:hover {
+    background: #ff6062;
+  }
+  
+  .hidden {
+    display: none;
+}
+
+.search-bar {
+    text-align: center;
+    margin: 15px 0;
+    display: flex;
+    justify-content: flex-end; /* Align to right */
+    align-items: center;
+    gap: 8px; /* Space between input and button */
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px; /* Adjust width to make it smaller */
+    margin: 20px auto 0 auto; /* Right alignment with some margin */
+    position: relative;
+    right: 80px; /* Push it further right */
+}
+
+#search-input {
+    width: 60%;  /* Smaller input size */
+    padding: 8px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 50px;
+    background-color: #fff;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cta-btn {
+    background-color: white;
+    color: #ce0606;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #c9565a;
+    color: white;
+}
+
+
+  
+  .faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+  }
+  
+  .faq {
+    margin-bottom: 15px;
+  }
+  
+  .faq input[type="checkbox"] {
+    display: none;
+  }
+  
+  .faq-question {
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #f6763f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-question:hover {
+    background-color: #ff6b6b;
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #ffe0b5;
+    color: #333;
+    border-left: 4px solid #ff8552;
+    transition: max-height 0.4s ease;
+  }
+  
+  .faq input[type="checkbox"]:checked ~ .faq-answer {
+    max-height: 150px;
+    padding: 15px;
+  }
+  
+
+/* Body styles for consistency */
+#review-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  
+  /* Review Section Container */
+  .reviews-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section Title */
+  .reviews-title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual Review Card */
+  .review-card {
+    margin-bottom: 15px; /* Reduced margin to shorten height */
+    padding: 15px; /* Reduced padding */
+    background-color: #ffe0b5;
+    border-left: 3px solid #ff8552; /* Thinner border */
+    border-radius: 8px; /* Slightly smaller border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover Effect for Review Cards */
+  .review-card:hover {
+    transform: translateY(-3px); /* Slightly less lift on hover */
+  }
+  
+  /* Reviewer Name */
+  .reviewer-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px; /* Slightly smaller gap */
+  }
+  
+  /* Review Rating */
+  .review-rating {
+    font-size: 1.2em;
+    color: #ff8552;
+    margin-bottom: 8px; /* Slightly smaller gap */
+  }
+  
+  /* Review Text */
+  .review-text {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5; /* Slightly tighter line height */
+  }
+  

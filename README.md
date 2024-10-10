@@ -23,7 +23,7 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 
 ## 🚀 Demo
 #### Check out the live demo here ⬇️ : 
-https://swaraj-das.github.io/Collect-your-GamingTools/
+https://collect-your-gaming-tools-git-main-swaraj-das-projects.vercel.app/
 
 
 ## 🛠️ Installation
@@ -47,7 +47,17 @@ Contributions are what make the **open-source** community such an amazing place 
 
 🔃 Open a <b>pull request</b>.
 
+We welcome all contributions to improve **Collect Your GamingTools**! If you'd like to contribute, please follow the [Contributing.md](./Contributing.md) to get details on how to get started.
+
+## 👥 Team
+
+| ![Swaraj Das](https://avatars.githubusercontent.com/u/151845349?v=4&s=80) | ![Anit Sarkar](https://avatars.githubusercontent.com/u/135215478?v=4&s=80) |
+|:--:|:--:|
+| **Swaraj Das** <br> <sub>Project Admin</sub> | **Anit Sarkar** <br> <sub>Maintainer</sub> |
+| [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/swarajdas01/) | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/anit-sarkar-11906a283/) |
+
+## 🙌 Contributors
 
 
-## 👨‍💻 Author
-### Created with ❤️ by Swaraj Das
+
+

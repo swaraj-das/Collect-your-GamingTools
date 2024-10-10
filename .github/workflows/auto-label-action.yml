@@ -1,0 +1,29 @@
+name: Auto Label New Issues & PRs
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]    
+
+permissions:
+  issues: write
+  pull-requests: write
+  contents: write # Required to read repository contents
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v3
+
+    - name: Add Labels to Issues & PRs
+      if: github.event_name == 'issues' || github.event_name == 'pull_request'
+      uses: actions-ecosystem/action-add-labels@v1.1.1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        labels: |
+          hacktoberfest-accepted
+          gssoc-ext
