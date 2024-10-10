@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,41 +20,57 @@
         <div class="container">
             
             <div class="navbar">
-                <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
-                <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+                <div class="logo-outer">
+                    <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
+                    <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+                </div>
                 <nav>
-                    <ul id="menuList">
+                    <ul>
                         <li><a href="#controller">Game Controllers</a></li>
                         <li><a href="#vrsection">VR Accessories</a></li>
                         <li><a href="#keyboard">Gaming Keyboard</a></li>
                         <li><a href="#others">Others</a></li>
                         <li class="login"><a href="login/login.html">Login</a></li>
-                    <label class="switch">
-                        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-                        <span class="slider"></span>
-                    </label>
+                        <li><label class="switch">
+                            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                            <span class="slider"></span>
+                        </label></li>
                     </ul>
                     
+                    <!-- Hamburger Menu Icon -->
+                    <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
                 </nav>
-
-
-             <!-- Search Bar (initially hidden) -->
-            <div class="search-bar hidden" id="searchBar">
-                <input type="text" id="search-input" placeholder="Search..." />
-                <button type="button" onclick="performSearch()">🔍</button>
             </div>
             
-            <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
-
-            </div>
-            <label class="switch">
+            
+            <nav>
+                <ul id="menuList">
+                    <li><a href="#controller">Game Controllers</a></li>
+                    <li><a href="#vrsection">VR Accessories</a></li>
+                    <li><a href="#keyboard">Gaming Keyboard</a></li>
+                    <li><a href="#others">Others</a></li>
+                    <li class="login"><a href="login/login.html">Login</a></li>
+                    <!-- Theme Toggle -->
+            <li><label class="switch">
                 <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
                 <span class="slider"></span>
-            </label>
+            </label></li>
+                </ul>
+                <!-- Hamburger Menu Icon -->
+                <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+            </nav>
 
             <section class="hero">
                 <div class="overlay"></div>
                 <div class="hero-content">
+                                 <!-- Search Bar (initially hidden) -->
+                                 
+            <div class="searchbar-outer">
+                <div class="search-bar hidden" id="searchBar">
+                    <input type="text" id="search-input" placeholder="Search..." />
+                    <button type="button" onclick="performSearch()">🔍</button>
+                </div>
+            </div>
                     <h1>Welcome to GamingTools</h1>
                     <p>Your one-stop shop for all gaming accessories.</p>
                     <a href="#" class="cta-btn">Explore Products</a>
