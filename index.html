@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="darkMode.css">
+    
 </head>
 
 <body>
@@ -51,10 +53,14 @@
                     <li><a href="#others">Others</a></li>
                     <li class="login"><a href="login/login.html">Login</a></li>
                     <!-- Theme Toggle -->
-            <li><label class="switch">
-                <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-                <span class="slider"></span>
-            </label></li>
+            <li><div class="container">
+        <h1>Dark Mode Toggle Example</h1>
+        <label class="switch">
+            <input type="checkbox" id="toggleDarkMode">
+            <span class="slider"></span>
+        </label>
+    </div>
+</li>
                 </ul>
                 <!-- Hamburger Menu Icon -->
                 <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
@@ -544,6 +550,7 @@
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src='darkMode.js'></script>
 
     <script>
         window.embeddedChatbotConfig = {
