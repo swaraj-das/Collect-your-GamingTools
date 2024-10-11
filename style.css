@@ -1,3 +1,6 @@
+overlap of scroll...collect ur game
+
+style.css
 .card {
     width: 50%; /* Set a specific width */
     margin: 10px auto; /* Center horizontally with automatic margins */
@@ -963,8 +966,8 @@ button:hover img {
     position: fixed;
     bottom: 80px; /* Increase the bottom margin to prevent overlap with chatbot */
     right: 20px; /* Keep it aligned to the right */
-    width: 53px;
-    height: 53px;
+    width: 52px;
+    height: 52px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     display: flex;
