@@ -108,7 +108,7 @@ button[type="submit"]:hover {
     transition: width 0.2s ease; 
   }
 *.dark-mode{
-    background-color: #493d3d;
+    background-color: #000000;
     color:#f1f1f1;
 }
 
