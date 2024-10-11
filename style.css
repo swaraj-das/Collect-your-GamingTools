@@ -1157,7 +1157,10 @@ button:hover img {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
+    /* display: block; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transition: background-color 0.3s ease;
   }
   
@@ -1172,14 +1175,27 @@ button:hover img {
     background-color: #ffe0b5;
     color: #333;
     border-left: 4px solid #ff8552;
-    transition: max-height 0.4s ease;
+    transition: all 0.6s ease;
   }
   
   .faq input[type="checkbox"]:checked ~ .faq-answer {
     max-height: 150px;
     padding: 15px;
   }
-  
+  .arrow {
+    margin-top: -3px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+  /* Rotate arrow on FAQ open */
+  .faq input[type="checkbox"]:checked + label .arrow {
+    transform: rotate(225deg);
+  }
 
 /* Body styles for consistency */
 #review-body {
