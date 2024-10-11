@@ -81,6 +81,7 @@ button[type="submit"]:hover {
 
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -958,34 +959,31 @@ button:hover img {
         transition: 0.5s;
     }
 }
-
 .scroll-background {
-    position: fixed; /* Position the div fixed so it stays in view */
-    bottom: 20px; /* Adjust this value to move it up or down */
-    right: 20px; /* Adjust this value to move it left or right */
-    width: 60px; /* Width of the scroll background */
-    height: 60px; /* Height of the scroll background */
-    background-color: rgba(0, 0, 0, 0.5); /* Background color */
-    border-radius: 50%; /* Make it circular */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s; /* Smooth background color change */
+    position: fixed;
+    bottom: 80px; /* Increase the bottom margin to prevent overlap with chatbot */
+    right: 20px; /* Keep it aligned to the right */
+    width: 52px;
+    height: 52px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 999; /* Ensure it layers above other content */
 }
 
 .scroll-top:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Optional: Adjust the size of the arrow icon */
 .scroll-top ion-icon {
-    font-size: 24px; /* Size of the icon */
-    color: white; /
+    font-size: 24px;
+    color: white;
 }
-
-
 
 
 /* Add the hidden class */
