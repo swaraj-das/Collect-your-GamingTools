@@ -38,8 +38,8 @@
 
 
              <!-- Search Bar (initially hidden) -->
-            <div class="search-bar hidden" id="searchBar">
-                <input type="text" id="search-input" placeholder="Search..." />
+            <div class="search-bar" id="searchBar">
+                <input type="text" id="search-input" placeholder="Search..." oninput="performSearch()" />
                 <button type="button" onclick="performSearch()">🔍</button>
             </div>
             
@@ -56,14 +56,16 @@
                 <div class="hero-content">
                     <h1>Welcome to GamingTools</h1>
                     <p>Your one-stop shop for all gaming accessories.</p>
-                    <a href="#" class="cta-btn">Explore Products</a>
+                    <a href="#controller" class="cta-btn">Explore Products</a>
                 </div>
             </section>
 
         <!-- PS4 Controller Section -->
-        <div class="row" id="controller">
+
+      <div class="row" id="controller">
+
             <div class="col-1">
-                <h2>PS4 V2 Dualshock 4</h2>
+                <h2 class="card-heading">PS4 V2 Dualshock 4</h2>
                 <h3>Wireless Controllers for PlayStation 4</h3>
                 <p>(Compatible/Generic)</p>
                 <div class="price">
@@ -93,7 +95,7 @@
         <!-- Xbox Controller Section -->
         <div class="row">
             <div class="col-1">
-                <h2>Xbox Wireless Controller</h2>
+                <h2 class="card-heading">Xbox Wireless Controller</h2>
                 <h3>Controllers for Xbox One and Series X</h3>
                 <p>(Official)</p>
                 <div class="price">
@@ -124,7 +126,7 @@
         <!-- Nintendo Switch Controller Section -->
         <div class="row">
             <div class="col-1">
-                <h2>Nintendo Switch Pro Controller</h2>
+                <h2 class="card-heading">Nintendo Switch Pro Controller</h2>
                 <h3>Wireless Controllers for Nintendo Switch</h3>
                 <p>(Official)</p>
                 <div class="price">
@@ -155,7 +157,7 @@
          <!-- VR Headset Section -->
          <div class="row" id="vrsection">
             <div class="col-1">
-                <h2>Meta Quest Pro</h2>
+                <h2 class="card-heading">Meta Quest Pro</h2>
                 <h3>VR Headset from Meta</h3>
                 <p>(Official)</p>
                 <div class="price">
@@ -186,7 +188,7 @@
         <!-- VR Headset Section 2 -->
         <div class="row">
             <div class="col-1">
-                <h2>Apple Vision Pro</h2>
+                <h2 class="card-heading">Apple Vision Pro</h2>
                 <h3>VR Headset from Apple</h3>
                 <p>(Official)</p>
                 <div class="price">
@@ -217,7 +219,7 @@
         <!-- Gaming Mouse Section -->
         <div class="row" id="others">
             <div class="col-1">
-                <h2>Logitech G502 Hero</h2>
+                <h2 class="card-heading">Logitech G502 Hero</h2>
                 <h3>High Performance Gaming Mouse</h3>
                 <p>(Wired)</p>
                 <div class="price">
@@ -248,7 +250,7 @@
         <!-- Gaming Keyboard Section -->
         <div class="row" id="keyboard">
             <div class="col-1" >
-                <h2>Razer BlackWidow</h2>
+                <h2 class="card-heading">Razer BlackWidow</h2>
                 <h3>Mechanical Gaming Keyboard</h3>
                 <p>(Wired)</p>
                 <div class="price">
@@ -279,7 +281,7 @@
         <!-- Gaming Headset Section -->
         <div class="row">
             <div class="col-1">
-                <h2>SteelSeries Arctis 7</h2>
+                <h2 class="card-heading">SteelSeries Arctis 7</h2>
                 <h3>Wireless Gaming Headset</h3>
                 <p>(Surround Sound)</p>
                 <div class="price">
@@ -310,7 +312,7 @@
         <!-- Gaming Chair Section -->
         <div class="row">
             <div class="col-1">
-                <h2>Secretlab Omega</h2>
+                <h2 class="card-heading">Secretlab Omega</h2>
                 <h3>Ergonomic Gaming Chair</h3>
                 <p>(Adjustable)</p>
                 <div class="price">
@@ -338,7 +340,83 @@
             </div>
         </div>
     </div>
-            <section id="contact us">
+
+    <!--faq section-->
+    <section id="faq">
+                
+    <div class="faq-container">
+        <h1 class="faq-title">Frequently Asked Questions</h1>
+    
+        <div class="faq">
+          <input type="checkbox" id="faq1">
+          <label for="faq1" class="faq-question">1. Does your website consist of all types of gaming tools?</label>
+          <div class="faq-answer">
+            We have tried our best to make all the tools available for enthusiastic gamers.
+          </div>
+        </div>
+    
+        <div class="faq">
+          <input type="checkbox" id="faq2">
+          <label for="faq2" class="faq-question">2. If I'm having some purchased-product related issues, can the product be replaced as per my need?</label>
+          <div class="faq-answer">
+            By considering our terms and conditions, further actions will be taken.
+          </div>
+        </div>
+    
+        <div class="faq">
+          <input type="checkbox" id="faq3">
+          <label for="faq3" class="faq-question">3. Can I buy multiple products at once?</label>
+          <div class="faq-answer">
+            Yes, you are welcomed to buy multiple products at one time.
+          </div>
+        </div>
+    
+        <div class="faq">
+          <input type="checkbox" id="faq4">
+          <label for="faq4" class="faq-question">4. Do you have any free courier services or is it paid?</label>
+          <div class="faq-answer">
+            Currently that option is unavailable. Sorry for the inconvenience.
+          </div>
+        </div>
+    
+      </div>
+  
+         <br>
+         <br>
+
+    <!--review section-->
+  
+  <section id="review-body">
+      <div class="reviews-container">
+          <h1 class="reviews-title">What Our Customers Say</h1>
+      
+          <div class="review-card">
+            <div class="reviewer-name">John Doe</div>
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">The tools on this website are fantastic! It has made gaming much more enjoyable and efficient. Highly recommend!</p>
+          </div>
+      
+          <div class="review-card">
+            <div class="reviewer-name">Jane Smith</div>
+            <div class="review-rating">★★★★☆</div>
+            <p class="review-text">Great products, but I wish there were more options available for casual gamers. Still, amazing service overall!</p>
+          </div>
+      
+          <div class="review-card">
+            <div class="reviewer-name">Alex Johnson</div>
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">Excellent customer service! I had an issue with my order, but it was resolved quickly. Definitely will buy again.</p>
+          </div>
+      
+        </div>
+      </section>
+      
+      <br>
+      <br>
+      <br>
+
+
+            <section id="contact">
                 
                 <div class="card pb-5 pt-1">
                     <div class="card-header">
@@ -397,8 +475,8 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Products</a></li>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-section contact-form">
@@ -422,10 +500,10 @@
     <!-- SIDEBAR -->
         
     <div class="social-sidebar">
-        <div class="close-btn" onclick="toggleSidebar()" title="Close Sidebar">&times;</div>
-        <ul>
+        <div class="close-btn" id="SideBar" onclick="toggleSidebar()" title="Close Sidebar">&times;</div>
+        <ul id="sidebar-content">
             <li><a class= "facebook" href="#"><i class="fa-brands fa-meta"></i></a></li>
-            <li><a class= "facebook" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a></li>
             <li><a class= "facebook" href="#"><i class="fa-brands fa-instagram"></i></a></li>
             <li><a class= "facebook" href="#"><i class="fa-brands fa-youtube"></i></a></li>
         </ul>
@@ -441,8 +519,8 @@
     </div>
 
     <!-- this script is for twitter icon  starts -->
- <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
- <!-- this script is for twitter icon  ends -->
+    <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
+    <!-- this script is for twitter icon  ends -->
 
     <!-- Scripts -->
     <script src="script.js"></script>

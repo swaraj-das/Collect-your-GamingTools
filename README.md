@@ -23,7 +23,7 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 
 ## 🚀 Demo
 #### Check out the live demo here ⬇️ : 
-https://collect-your-gaming-tools-7r1z88vx4-swaraj-das-projects.vercel.app/
+https://collect-your-gamingtools.netlify.app/
 
 
 ## 🛠️ Installation
@@ -58,9 +58,6 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 
 ## 🙌 Contributors
 
-<a href="https://github.com/rahulsainlll/git-trace/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=swaraj-das/Collect-your-GamingTools" />
-</a>
 
 
 
