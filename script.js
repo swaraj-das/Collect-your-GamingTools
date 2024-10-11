@@ -67,3 +67,21 @@ window.onload = () => {
 };
 
 
+// Newsletter Signup Form
+
+document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const emailInput = document.getElementById('email');
+    const responseMessage = document.getElementById('responseMessage');
+    
+    if (emailInput.value) {
+      responseMessage.textContent = `Thank you for subscribing, ${emailInput.value}!`;
+      emailInput.value = '';
+    } else {
+      responseMessage.textContent = 'Please enter a valid email address.';
+    }
+  });
+  
+
+

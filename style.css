@@ -1193,4 +1193,60 @@ button:hover img {
     color: #555;
     line-height: 1.5; /* Slightly tighter line height */
   }
+
+
+  /* Newsletter Section */
+
+  #newsletter {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .newsletter-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #newsletter h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #newsletter p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  #newsletterForm input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #newsletterForm button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #newsletterForm button:hover {
+    background-color: #218838;
+  }
+  
+  #responseMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    color: green;
+  }
+  
   
