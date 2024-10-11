@@ -68,10 +68,14 @@ button[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition */
 }
+    
+
 
 button[type="submit"]:hover {
     background-color: #444;
+    transform: scale(1.1);
 }
 
 
@@ -348,7 +352,8 @@ button {
 }
 #cart-btn
 {
-    padding: 12px 14px;
+   
+    margin-left: 20px;
 }
 
 button img {
@@ -360,25 +365,39 @@ button:hover img {
     display: block;
 }
 
-#cart-btn:hover
-{
-    width: 160px;
+#cart-btn,
+#buy-btn {
+    width: 150px;
+    height: 45px;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-
-}
-#buy-btn:hover
-{
-    width: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 10px;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+#buy-btn:hover,
+#cart-btn:hover {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: scale(1.1);
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 .btn-section
 {   display: inline-flex;
     gap: 15px;
+    
+   
 }
 
 .col-1::after {
