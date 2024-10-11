@@ -32,23 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Website loaded successfully!");
 });
 
-// Show or hide the scroll-top button based on scroll position
-window.addEventListener("scroll", function () {
-  const scrollTopButton = document.querySelector(".scroll-top");
-  if (window.pageYOffset > 300) {
-    scrollTopButton.style.display = "block";
+
+window.addEventListener("scroll", function() {
+  var scrollPosition = window.scrollY;
+  var height = window.innerHeight;
+  
+  if (scrollPosition > 100) {
+      document.getElementById("scrollTopBtn").style.display = "block";
   } else {
-    scrollTopButton.style.display = "none";
+      document.getElementById("scrollTopBtn").style.display = "none";
   }
 });
 
-// Smooth scroll to top when the button is clicked
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-}
+// Scroll to Top Smoothly
+document.getElementById("scrollTopBtn").addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 function toggleTheme() {
   const body = document.body;

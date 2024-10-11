@@ -1029,20 +1029,44 @@ button:hover img {
 }
 
 .scroll-top {
+    height: 60px;
+    width: 60px;
     position: fixed;
-    bottom: 20px;
+    margin-right: 60px;
+    bottom: 10px;
     right: 20px;
-    background: #ff459f;
+    background: #4570ff; /* Button background color */
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
-    display: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .scroll-top:hover {
-    background: #ff6062;
-  }
+    display: none; /* Initially hidden */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: none; /* Initially hidden */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    animation: float 2s ease-in-out infinite; /* Add animation */
+}
+
+.scroll-top:hover {
+    background: #4345cb; /* Hover color change */
+}
+
+.scroll-top i {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff; /* Arrow color */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Start at original position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}
   
   .hidden {
     display: none;
