@@ -65,5 +65,25 @@ window.onload = () => {
         themeToggle.checked = true;
     }
 };
+const cartList = document.querySelector('.cart-list');
+const addButtons = document.querySelectorAll('.add');
+
+addButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const item = event.target.closest('.item');
+        const title = item.querySelector('.title').innerText;
+        const price = item.querySelector('.price').innerText;
+        const count = item.querySelector('.count').value;
+
+        addToCart(title, price, count);
+    });
+});
+
+function addToCart(title, price, count) {
+    const cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item');
+    cartItem.innerHTML = `
+        <strong>${title}</strong> - ${price}
+
 
 
