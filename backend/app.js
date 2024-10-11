@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+const emailRouter = require("./router/EmailRoute.js");
 const authRouter = require('./router/authRoute.js');
 const databaseconnect = require('./config/databaseConfig.js');
 const cookieParser = require('cookie-parser');
@@ -16,7 +16,7 @@ app.use(cors({ origin: [process.env.CLIENT_URL], credentials: true })); //Third-
 
 // Auth router
 app.use('/auth', authRouter);
-
+app.use("/email", emailRouter);
 app.use('/', (req, res) => {
   res.status(200).json({ data: 'JWTauth server ;)' });
 });
