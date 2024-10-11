@@ -139,7 +139,6 @@ html::-webkit-scrollbar-thumb:window-inactive {
 .container {
     width: 100%;
     min-height: 100vh;
-    padding-right: 5%;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -148,6 +147,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     overflow: hidden;
@@ -211,7 +211,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
 .logo {
     width: 50px;
     cursor: pointer;
-    margin: 18px 0;
+    margin: 18px 10px;
 }
 
 @keyframes rainbow {
@@ -251,14 +251,15 @@ html::-webkit-scrollbar-thumb:window-inactive {
 }
 
 nav {
-    flex: 1;
-    text-align: right;
-    margin-right: 100px;
+    height: 78.16px;
+    display: flex;
+    align-items: center;
 }
 nav ul{
-    margin-left: 20px;
     display: flex;
     flex-direction: row;
+    height: 78.16px;
+    align-items: center;
 }
 nav ul li {
     list-style: none;
@@ -553,6 +554,10 @@ button:hover img {
     margin-right: 15px;
 }
 
+.logo-outer{
+    display: flex;
+    align-items: center;
+}
 .logo-text {
     font-size: 1.5em;
     margin: 0;
@@ -734,7 +739,7 @@ button:hover img {
 
 .social-sidebar {
     position: fixed;
-    top: 50%;
+    top: 55%;
     left: 0;
     transform: translateY(-50%);
     display: flex;
@@ -812,10 +817,11 @@ button:hover img {
         width: 100%;
         background: linear-gradient(to right, #fb5283, #ff3527);
         position: absolute;
-        top: 73px;
+        /* top: 73px; */
         right: 0;
         z-index: 2;
         margin-right: 20px;
+        position:fixed;
     }
 
     nav ul li {
@@ -978,11 +984,16 @@ button:hover img {
 
     nav ul li a {
         color: #fff;
+        font-size: 1rem;
+        padding: 2rem
     }
 
     nav ul li a:hover {
         color: #ffee00;
         transform: scale(1.18);
+    }
+    .switch{
+        margin: 50px;
     }
 
     .login a {
@@ -1005,6 +1016,10 @@ button:hover img {
     #menuList {
         overflow: hidden;
         transition: 0.5s;
+    }
+    .header .navbar{
+        align-items: center;
+        justify-content: center;
     }
 }
 .scroll-background {
@@ -1040,6 +1055,15 @@ button:hover img {
 }
 
 
+
+
+.searchbar-outer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .search-bar {
     text-align: center;
     margin: 15px 0;
@@ -1051,14 +1075,12 @@ button:hover img {
     padding: 8px 15px;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 250px; /* Adjust width to make it smaller */
-    margin: 20px auto 0 auto; /* Right alignment with some margin */
-    position: relative;
-    right: 80px; /* Push it further right */
+    width: 50%;
+    left: 27rem;
 }
 
 #search-input {
-    width: 60%;  /* Smaller input size */
+    width: 100%;  /* Smaller input size */
     padding: 8px 10px;
     font-size: 14px;
     border: none;
@@ -1113,7 +1135,8 @@ button:hover img {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    width: 100%;
 }
 
 .hero-content h1 {

@@ -1,16 +1,22 @@
 var menuList = document.getElementById("menuList");
-menuList.style.maxHeight = "0px";
+menuList.style.height = "0px";
+menuList.style.paddingTop = "0px";
+menuList.style.display = "block";
+menuList.style.position = "fixed";
+menuList.style.borderRadius = "20px";
 
 function toggleMenu() {
-  if (menuList.style.maxHeight == "0px") {
-    menuList.style.maxHeight = "160px";
-  } else {
-    menuList.style.maxHeight = "0px";
-  }
+    if (menuList.style.height == "0px") {
+        menuList.style.height = "auto";
+        menuList.style.paddingTop = "20px";
+    } else {
+        menuList.style.height = "0px";
+        menuList.style.paddingTop = "0px";
+    }
 }
-window.onscroll = function () {
-  updateProgressBar();
-};
+ window.onscroll = function() {
+    updateProgressBar();
+  };
 
 function updateProgressBar() {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
