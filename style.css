@@ -655,6 +655,10 @@ button:hover img {
     background: #45a049;
 }
 
+#contact{
+    padding-top: 100px;
+}
+
 .footer-bottom {
     background: #343a40;
     color: #686868;
@@ -1069,7 +1073,10 @@ button:hover img {
     color: white;
 }
 
-
+#faq{
+  padding-top: 100px;
+}
+                
   
   .faq-container {
     max-width: 800px;
@@ -1212,4 +1219,3 @@ button:hover img {
     pointer-events: none;
     z-index: 9999;
   }
-  
