@@ -6,6 +6,8 @@
     <title>Sign Up for GamingTools</title>
     <link rel="stylesheet" href="signup.css">
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
     <div class="linksHome">
@@ -22,13 +24,17 @@
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
             </div>
-            <div class="input-group">
+            <div class="input-group" style="position: relative;">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
+                <!-- Toggle icon for password -->
+                <i class="bi bi-eye-slash" id="togglePassword" style="position: absolute; right: 10px; top: 42px; cursor: pointer;"></i>
             </div>
-            <div class="input-group">
+            <div class="input-group" style="position: relative;">
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
+                <!-- Toggle icon for confirm password -->
+                <i class="bi bi-eye-slash" id="toggleConfirmPassword" style="position: absolute; right: 10px; top: 42px; cursor: pointer;"></i>
             </div>
             <button type="submit" class="signup-button">Sign Up</button>
         </form>
@@ -37,49 +43,27 @@
         </div>
     </div>
 
+    <!-- JavaScript for toggling password visibility -->
     <script>
-        const signup = document.querySelector(".signup-button");
+        const togglePassword = document.querySelector("#togglePassword");
+        const passwordField = document.querySelector("#password");
 
-        signup.addEventListener("click",(e)=>{
-            e.preventDefault();
+        togglePassword.addEventListener("click", function () {
+            const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+            passwordField.setAttribute("type", type);
+            this.classList.toggle("bi-eye");
+            this.classList.toggle("bi-eye-slash");
+        });
 
-            const name = document.querySelector("#username").value;
-            const email = document.querySelector("#email").value;
-            const password = document.querySelector("#password").value;
-            const confirmPassword = document.querySelector("#confirm-password").value;
+        const toggleConfirmPassword = document.querySelector("#toggleConfirmPassword");
+        const confirmPasswordField = document.querySelector("#confirm-password");
 
-            if(!name || !email || !password || !confirmPassword){
-                alert("every feild is required");
-                return;
-            }
-            const userdata = {
-                name,
-                email,
-                password,
-                confirmPassword
-            }
-            registeruser(userdata);
-
-        } )
-
-
-        const registeruser = async(user)=>{
-
-            try{
-                const res = await fetch("http://localhost:5000/auth/signup",{
-                    method:"POST",
-                    headers:{"content-type" : "application/json"},
-                    body:JSON.stringify(user)
-                })
-
-                const data = await  res.json();
-                console.log(data);
-                window.location.href="http://127.0.0.1:5500/Collect-your-GamingTools/login/login.html"
-
-            }catch(err){
-                console.log(err.message)
-            }
-        }
+        toggleConfirmPassword.addEventListener("click", function () {
+            const type = confirmPasswordField.getAttribute("type") === "password" ? "text" : "password";
+            confirmPasswordField.setAttribute("type", type);
+            this.classList.toggle("bi-eye");
+            this.classList.toggle("bi-eye-slash");
+        });
     </script>
 </body>
 </html>
