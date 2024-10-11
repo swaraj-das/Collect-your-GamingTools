@@ -955,6 +955,10 @@ button:hover img {
         overflow: hidden;
         transition: 0.5s;
     }
+    .header .navbar{
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .scroll-top {
