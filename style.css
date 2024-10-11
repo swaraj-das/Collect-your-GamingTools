@@ -963,8 +963,8 @@ button:hover img {
     position: fixed;
     bottom: 80px; /* Increase the bottom margin to prevent overlap with chatbot */
     right: 20px; /* Keep it aligned to the right */
-    width: 52px;
-    height: 52px;
+    width: 53px;
+    height: 53px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     display: flex;
