@@ -151,6 +151,22 @@ html::-webkit-scrollbar-thumb:window-inactive {
     z-index: 1000;
 }
 
+.cart-nav a {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and count */
+  }
+  
+  .cart-nav img {
+    vertical-align: middle;
+  }
+  
+  #cart-count {
+    font-size: 16px; /* Adjust font size to match */
+    vertical-align: middle;
+  }
+  
+
 .dark-mode .navbar{
     background-color: #493d3d;
 }
