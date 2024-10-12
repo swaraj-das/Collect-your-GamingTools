@@ -149,6 +149,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
     overflow: hidden;
     background-color: #fff;
     z-index: 1000;
+    box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
 }
 
 .dark-mode .navbar{
@@ -280,6 +281,41 @@ nav ul li a:hover {
     color: #e00999;
     transform: scale(1.18);
 }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block; 
+    position: relative;
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    text-decoration: none; 
+    position: relative; 
+    color: #000; 
+}
+
+
+nav ul li:not(.login) a::after {
+    content: ''; 
+    display: block; 
+    height: 0.5px; 
+    width: 0; 
+    background:  #ff3527;
+    transition: width 0.3s ease; 
+    position: absolute; 
+    left: 0; 
+    bottom: -1px; 
+}
+
+nav ul li:not(.login) a:hover::after {
+    width: 100%; 
+}
+
 
 nav ul li.login {
     background: linear-gradient(to right, #fb5283, #ff3527);
@@ -287,6 +323,10 @@ nav ul li.login {
     border-radius: 20px;
     padding: 4px 18px;
     cursor: pointer;
+}
+.underline li :hover{
+    text-decoration: underline;
+
 }
 
 nav ul li.login a {
