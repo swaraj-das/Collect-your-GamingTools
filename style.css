@@ -15,13 +15,16 @@
     padding: 10px;
     margin-bottom: 15px;
     text-align: center;
-    width: 90%;
     border-bottom: 1px solid #ddd;
     border-radius: 6px;
+    align-items: center;
   }
 .card-body {
     display: flex;
-    justify-content: space-between; /* Form on the left and image on the right */
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    justify-content: space-between; /* Form on the right and image on the left */
     align-items: flex-start; /* Align content to the top */
 }
 
@@ -30,10 +33,11 @@
 }
 
 .image-section {
-    width: 50%; /* Width for the image section */
+    width: 80%; /* Width for the image section */
     display: flex;
     justify-content: center; /* Center the image */
     align-items: center;
+    height: 70%;
 }
 
 .image-section img {
@@ -131,7 +135,6 @@ html::-webkit-scrollbar-thumb:window-inactive {
 .container {
     width: 100%;
     min-height: 100vh;
-    padding-right: 5%;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -140,6 +143,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     overflow: hidden;
@@ -203,7 +207,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
 .logo {
     width: 50px;
     cursor: pointer;
-    margin: 18px 0;
+    margin: 18px 10px;
 }
 
 @keyframes rainbow {
@@ -243,14 +247,15 @@ html::-webkit-scrollbar-thumb:window-inactive {
 }
 
 nav {
-    flex: 1;
-    text-align: right;
-    margin-right: 100px;
+    height: 78.16px;
+    display: flex;
+    align-items: center;
 }
 nav ul{
-    margin-left: 20px;
     display: flex;
     flex-direction: row;
+    height: 78.16px;
+    align-items: center;
 }
 nav ul li {
     list-style: none;
@@ -351,18 +356,36 @@ button {
     padding: 12px 14px;
 }
 
-button img {
-    width: 30px;
+/* button img {
+    width: 18px;
     display: none;
 }
 
 button:hover img {
     display: block;
+} */
+
+#buy-btn img{
+    width: 30px;
+    display: none;
+}
+
+#buy-btn:hover img{
+    display: block;
+}
+
+#cart-btn img{
+    width: 18px;
+    display: none;
+}
+
+#cart-btn:hover img{
+    display: block;
 }
 
 #cart-btn:hover
 {
-    width: 160px;
+    width: 140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -370,7 +393,7 @@ button:hover img {
 }
 #buy-btn:hover
 {
-    width: 160px;
+    width: 140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -545,6 +568,10 @@ button:hover img {
     margin-right: 15px;
 }
 
+.logo-outer{
+    display: flex;
+    align-items: center;
+}
 .logo-text {
     font-size: 1.5em;
     margin: 0;
@@ -655,6 +682,10 @@ button:hover img {
     background: #45a049;
 }
 
+#contact{
+    padding-top: 100px;
+}
+
 .footer-bottom {
     background: #343a40;
     color: #686868;
@@ -713,7 +744,7 @@ button:hover img {
 
 .social-sidebar {
     position: fixed;
-    top: 50%;
+    top: 55%;
     left: 0;
     transform: translateY(-50%);
     display: flex;
@@ -791,10 +822,11 @@ button:hover img {
         width: 100%;
         background: linear-gradient(to right, #fb5283, #ff3527);
         position: absolute;
-        top: 73px;
+        /* top: 73px; */
         right: 0;
         z-index: 2;
         margin-right: 20px;
+        position:fixed;
     }
 
     nav ul li {
@@ -866,6 +898,48 @@ button:hover img {
         font-size: 20px;
     }
 
+    input, textarea {
+        width: 160%; /* Adjust width for better alignment */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .card-body {
+        display: flex;
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+        justify-content: space-between; /* Form on the right and image on the left */
+        align-items: flex-start; /* Align content to the top */
+        flex-direction: column;
+    }
+
+    .image-section {
+        width: 90%; /* Width for the image section */
+        display: flex;
+        justify-content: center; /* Center the image */
+        align-items: center;
+        margin-bottom: 8px;
+    }
+    .form-section {
+        width: 50%; /* Width for the form section */
+    }
+    
+    
+    
+    .image-section img {
+        max-width: 120%; /* Make sure image does not exceed its container width */
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -883,7 +957,6 @@ button:hover img {
     .footer-bottom {
         max-width: fit-content;
     }
-
 }
 
 
@@ -916,11 +989,16 @@ button:hover img {
 
     nav ul li a {
         color: #fff;
+        font-size: 1rem;
+        padding: 2rem
     }
 
     nav ul li a:hover {
         color: #ffee00;
         transform: scale(1.18);
+    }
+    .switch{
+        margin: 50px;
     }
 
     .login a {
@@ -944,28 +1022,105 @@ button:hover img {
         overflow: hidden;
         transition: 0.5s;
     }
+    .header .navbar{
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .scroll-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ff459f;
-    padding: 10px;
+    bottom: 1%;
+    right: 50%;
+    background: linear-gradient(145deg, #ff459f, #ff6062);
+    color: white;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    border: none;
     cursor: pointer;
-    display: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+    overflow: visible;
+    z-index: 10; /* Ensure button is on top */
+  }
+  
+  .scroll-top.show {
+    opacity: 1;
+    visibility: visible;
   }
   
   .scroll-top:hover {
-    background: #ff6062;
+    transform: scale(1.1); /* Subtle scaling instead of expanding */
+    box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6); /* Slightly larger shadow */
   }
   
-  .hidden {
-    display: none;
-}
+  .scroll-top:active {
+    transform: scale(1.05); /* Minor scale reduction on click */
+  }
+  
+  .scroll-top-icon {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  
+  .scroll-top:hover .scroll-top-icon {
+    transform: translateY(-3px);
+  }
+  
+  /* Progress Ring Styling */
+  .progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); /* To start from the top */
+  }
+  
+  .progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
+  }
+  
+  /* Pulse Animation */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+    }
+    50% {
+      box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
+    }
+    100% {
+      box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+    }
+  }
+  
+  .scroll-top:hover {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .scroll-top.show {
+    animation: none; /* No animation when showing the button */
+  }
+  
+  .scroll-top.show:hover {
+    animation: pulse 1.5s infinite; /* Pulse on hover */
+  }
 
+.searchbar-outer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .search-bar {
     text-align: center;
     margin: 15px 0;
@@ -977,14 +1132,12 @@ button:hover img {
     padding: 8px 15px;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 250px; /* Adjust width to make it smaller */
-    margin: 20px auto 0 auto; /* Right alignment with some margin */
-    position: relative;
-    right: 80px; /* Push it further right */
+    width: 50%;
+    left: 27rem;
 }
 
 #search-input {
-    width: 60%;  /* Smaller input size */
+    width: 100%;  /* Smaller input size */
     padding: 8px 10px;
     font-size: 14px;
     border: none;
@@ -1039,7 +1192,8 @@ button:hover img {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    width: 100%;
 }
 
 .hero-content h1 {
@@ -1069,7 +1223,10 @@ button:hover img {
     color: white;
 }
 
-
+#faq{
+  padding-top: 100px;
+}
+                
   
   .faq-container {
     max-width: 800px;
@@ -1105,7 +1262,10 @@ button:hover img {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
+    /* display: block; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transition: background-color 0.3s ease;
   }
   
@@ -1120,14 +1280,27 @@ button:hover img {
     background-color: #ffe0b5;
     color: #333;
     border-left: 4px solid #ff8552;
-    transition: max-height 0.4s ease;
+    transition: all 0.6s ease;
   }
   
   .faq input[type="checkbox"]:checked ~ .faq-answer {
     max-height: 150px;
     padding: 15px;
   }
-  
+  .arrow {
+    margin-top: -3px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+  /* Rotate arrow on FAQ open */
+  .faq input[type="checkbox"]:checked + label .arrow {
+    transform: rotate(225deg);
+  }
 
 /* Body styles for consistency */
 #review-body {
