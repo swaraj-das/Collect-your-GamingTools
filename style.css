@@ -580,12 +580,14 @@ button:hover img {
 .about-text {
     line-height: 1.5;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .contact span {
     display: block;
     font-size: 1.1em;
     margin-bottom: 8px;
+    text-align: center;
 }
 
 .socials {
@@ -597,12 +599,13 @@ button:hover img {
     width: 40px;
     height: 40px;
     background: rgba(255,255,255,0.1);
-    margin-right: 10px;
+    margin-right: 10px; /* Space between icons */
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
     color: #d3d3d3;
     transition: all .3s;
+    margin-left: 24px;
     transition: transform 0.3s ease, background 0.3s ease; /* Added transform property */
 }
 
@@ -629,40 +632,61 @@ button:hover img {
     background: red;
     color: white;
  } 
+ .links {
+    display: flex;                   /* Enable flexbox */
+    flex-direction: column;         /* Arrange items in a column */
+    align-items: center;            /* Center items horizontally */
+    text-align: center;             /* Center text within links */
+}
 
 .links ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none;          /* Remove bullet points */
+    padding: 0;                     /* Remove padding */
+    margin: 0;                      /* Remove margin for better centering */
 }
 
 .links ul a {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    color: #d3d3d3;
-    text-decoration: none;
-    transition: all .3s;
+    display: block;                 /* Each link as a block element */
+    margin-bottom: 10px;           /* Space between links */
+    font-size: 1.1em;               /* Font size for links */
+    color: #d3d3d3;                /* Link color */
+    text-decoration: none;          /* No underline on links */
+    transition: all .3s;            /* Smooth transition for hover effect */
 }
 
 .links ul a:hover {
-    color: white;
-    padding-left: 10px;
+    color: white;                   /* Change color on hover */
+    padding-left: 10px;            /* Indent on hover */
+}
+
+
+.contact-form {
+    display: flex;               /* Enable flexbox */
+    flex-direction: column;      /* Align items vertically */
+    align-items: center;         /* Center items horizontally */
 }
 
 .contact-form .text-input {
+    display: flex;               /* Enable flexbox */
+    flex-direction: column;      /* Align items vertically */
+    align-items: center;   
     background: #272727;
     color: #bebdbd;
     margin-bottom: 20px;
     line-height: 1.5rem;
-    padding: 10px 15px;
+    padding: 10px 25px;
     border: none;
-    width: 100%;
+    width: 100%; /* Set your desired width */
+    max-width: 500px; /* Optional: set a maximum width */
     border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in total width */
+    text-align: center; /* Center placeholder text */
 }
 
 .contact-form textarea.text-input {
     height: 120px;
     resize: none;
+    text-align: center; /* Center placeholder text in textarea */
 }
 
 .contact-form .contact-btn {
@@ -676,7 +700,13 @@ button:hover img {
     border-radius: 5px;
     cursor: pointer;
     transition: all .3s;
+    margin-top: 10px; /* Optional: add some space above the button */
+    width: 70%; /* Set a width to center the button within the form */
+    max-width: 200px; /* Optional: set a maximum width */
+    text-align: center; 
+    margin-right: 30px;
 }
+
 
 .contact-form .contact-btn:hover {
     background: #45a049;
@@ -688,7 +718,7 @@ button:hover img {
 
 .footer-bottom {
     background: #343a40;
-    color: #686868;
+    color: white;
     text-align: center;
     padding: 15px 0;
     margin-top: 40px;
@@ -1367,3 +1397,43 @@ button:hover img {
     line-height: 1.5; /* Slightly tighter line height */
   }
   
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+.card {
+    background: #404040; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    flex: 1 1 250px; /* Grow to fill space, with a minimum width */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.card h3 {
+    margin: 0 0 10px; /* Margin for card title */
+}
+
+.card p {
+    margin: 0 0 15px; /* Margin for card description */
+}
+
+.card-link {
+    display: inline-block;
+    background: #4CAF50; /* Button color */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded button corners */
+    transition: background 0.3s; /* Smooth background change */
+}
+
+.card-link:hover {
+    background: #45a049; /* Darker green on hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
