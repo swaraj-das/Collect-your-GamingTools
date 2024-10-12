@@ -171,33 +171,28 @@ html::-webkit-scrollbar-thumb:window-inactive {
   }
   
   .slider {
-
-    position:  absolute;
-    cursor:  pointer;
-    top:  0px;
-    left:  0px;
-    right:  0px;
-    bottom:  4px;
-    background-color:  #ccc;
-    transition:  .4s;
-    border-radius:  34px;
-    width:  50px;
-
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
   }
   
   .slider:before {
-
-    position:  absolute;
-    content:  "";
-    height:  18px;
-    width:  18px;
-    left:  6px;
-    bottom:  3px;
-    top:  1px;
-    background-color:  black;
-    transition:  .4s;
-    border-radius:  50%;
-
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 6px;
+    bottom: 2px;
+    top:1px;
+    background-color: black;
+    transition: .4s;
+    border-radius: 50%;
   }
   
   input:checked + .slider {
@@ -252,35 +247,29 @@ html::-webkit-scrollbar-thumb:window-inactive {
 }
 
 nav {
-NavbarIssue
-
-    flex:  1;
-    text-align:  right;
-    margin-right:  100px;
-    margin-top:  12px;
+    height: 78.16px;
+    display: flex;
+    align-items: center;
 }
-
 nav ul{
-NavbarIssue
-    margin-left:  20px;
-    display:  flex;
-    flex-direction:  row;
-    margin-bottom:  30px;
+    display: flex;
+    flex-direction: row;
+    height: 78.16px;
+    align-items: center;
 }
-
 nav ul li {
     list-style: none;
-    display:  inline;
-    margin-right:  30px;
+    display: inline;
+    margin-right: 30px;
     text-wrap: nowrap;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #000;
-    font-size:  14px;
-    font-weight:  bold;
-    display:  inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
     transition: color 0.5s, transform 0.5s;
 }
 
@@ -292,16 +281,12 @@ nav ul li a:hover {
     transform: scale(1.18);
 }
 
-
 nav ul li.login {
-
-    background:  linear-gradient(to right, #fb5283, #ff3527);
-    height:  24px;
-    border-radius:  20px;
-    padding:  4px 18px;
-    cursor:  pointer;
-    margin-top:  -4px;
-
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    height: 24px;
+    border-radius: 20px;
+    padding: 4px 18px;
+    cursor: pointer;
 }
 
 nav ul li.login a {
@@ -1071,21 +1056,18 @@ button:hover img {
     justify-content: center;
 }
 .search-bar {
-NavbarIssue
-    text-align:  center;
-    margin:  15px 0;
-    display:  flex;
-    justify-content:  flex-end; /* Align to right */
-    align-items:  center;
-    gap:  8px; /* Space between input and button */
-    background-color:  #f0f0f0;
-    padding:  8px 15px;
-    border-radius:  50px;
-    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width:  250px; /* Adjust width to make it smaller */
-    margin:   8px auto 0 auto;
-    position:  relative;
-    right:  80px; /* Push it further right */
+    text-align: center;
+    margin: 15px 0;
+    display: flex;
+    justify-content: flex-end; /* Align to right */
+    align-items: center;
+    gap: 8px; /* Space between input and button */
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    left: 27rem;
 }
 
 #search-input {
