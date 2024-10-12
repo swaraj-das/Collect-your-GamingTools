@@ -72,10 +72,13 @@ button[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button[type="submit"]:hover {
     background-color: #444;
+    transform: scale(1.1);
+
 }
 
 
@@ -287,6 +290,7 @@ nav ul li.login {
     border-radius: 20px;
     padding: 4px 18px;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 nav ul li.login a {
@@ -295,6 +299,8 @@ nav ul li.login a {
 
 nav ul li.login:hover {
     color: #fff;
+    transform: scale(1.18);
+
 }
 
 
