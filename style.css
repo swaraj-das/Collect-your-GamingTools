@@ -524,6 +524,7 @@ button:hover img {
     flex: 1;
     margin-bottom: 40px;
     min-width: 300px;
+    margin-left: 7em;
     padding: 0 20px;
 }
 
@@ -699,7 +700,7 @@ button:hover img {
   .toggle-arrow {
     position: fixed;
     top: 50%;
-    left: 0;
+    left: 0px;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out;
     background-color: #333;
@@ -714,7 +715,7 @@ button:hover img {
 .social-sidebar {
     position: fixed;
     top: 50%;
-    left: 0;
+    left: 0px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;

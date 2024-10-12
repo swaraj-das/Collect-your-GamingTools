@@ -82,3 +82,15 @@ function performSearch(){
         }
     });
 }
+function toggleSidebar() {
+    const sidebar = document.getElementById("socialSidebar");
+    const toggleArrow = document.getElementById("toggleArrow");
+    if (sidebar.style.left === "0px" || sidebar.style.left === "") {
+
+        sidebar.style.left = "-200px"; 
+        toggleArrow.style.left = "0px"; 
+    } else {
+        sidebar.style.left = "0px"; 
+        toggleArrow.style.left = "-40px"; 
+    }
+}
