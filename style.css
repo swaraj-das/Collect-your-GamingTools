@@ -1029,7 +1029,15 @@ button:hover img {
 }
 
 .scroll-top {
+    height: 60px;
+    width: 60px;
     position: fixed;
+
+    margin-right: 60px;
+    bottom: 10px;
+    right: 20px;
+    background: #4570ff; /* Button background color */
+    padding: 10px;
     bottom: 1%;
     right: 50%;
     background: linear-gradient(145deg, #ff459f, #ff6062);
@@ -1039,6 +1047,35 @@ button:hover img {
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    display: none; /* Initially hidden */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: none; /* Initially hidden */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    animation: float 2s ease-in-out infinite; /* Add animation */
+}
+
+.scroll-top:hover {
+    background: #4345cb; /* Hover color change */
+}
+
+.scroll-top i {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff; /* Arrow color */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Start at original position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1060,6 +1097,7 @@ button:hover img {
     transform: scale(1.1); /* Subtle scaling instead of expanding */
     box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6); /* Slightly larger shadow */
   }
+
   
   .scroll-top:active {
     transform: scale(1.05); /* Minor scale reduction on click */

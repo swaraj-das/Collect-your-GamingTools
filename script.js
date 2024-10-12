@@ -15,6 +15,23 @@ function toggleMenu() {
     }
 }
 
+
+
+window.addEventListener("scroll", function() {
+  var scrollPosition = window.scrollY;
+  var height = window.innerHeight;
+  
+  if (scrollPosition > 100) {
+      document.getElementById("scrollTopBtn").style.display = "block";
+  } else {
+      document.getElementById("scrollTopBtn").style.display = "none";
+  }
+});
+
+// Scroll to Top Smoothly
+document.getElementById("scrollTopBtn").addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
 // Show or hide the scroll-top button based on scroll position
 window.addEventListener('scroll', function() {
   const scrollTopButton = document.querySelector('.scroll-top');
