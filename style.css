@@ -1032,12 +1032,20 @@ button:hover img {
     height: 60px;
     width: 60px;
     position: fixed;
+
     margin-right: 60px;
     bottom: 10px;
     right: 20px;
     background: #4570ff; /* Button background color */
     padding: 10px;
+    bottom: 1%;
+    right: 50%;
+    background: linear-gradient(145deg, #ff459f, #ff6062);
+    color: white;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    border: none;
     cursor: pointer;
     display: none; /* Initially hidden */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -1067,10 +1075,83 @@ button:hover img {
         transform: translateY(0); /* Return to original position */
     }
 }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+    overflow: visible;
+    z-index: 10; /* Ensure button is on top */
+  }
   
-  .hidden {
-    display: none;
-}
+  .scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .scroll-top:hover {
+    transform: scale(1.1); /* Subtle scaling instead of expanding */
+    box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6); /* Slightly larger shadow */
+  }
+
+  
+  .scroll-top:active {
+    transform: scale(1.05); /* Minor scale reduction on click */
+  }
+  
+  .scroll-top-icon {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  
+  .scroll-top:hover .scroll-top-icon {
+    transform: translateY(-3px);
+  }
+  
+  /* Progress Ring Styling */
+  .progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); /* To start from the top */
+  }
+  
+  .progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
+  }
+  
+  /* Pulse Animation */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+    }
+    50% {
+      box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
+    }
+    100% {
+      box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+    }
+  }
+  
+  .scroll-top:hover {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .scroll-top.show {
+    animation: none; /* No animation when showing the button */
+  }
+  
+  .scroll-top.show:hover {
+    animation: pulse 1.5s infinite; /* Pulse on hover */
+  }
 
 .searchbar-outer{
     width: 100%;
@@ -1219,7 +1300,10 @@ button:hover img {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
+    /* display: block; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transition: background-color 0.3s ease;
   }
   
@@ -1234,14 +1318,27 @@ button:hover img {
     background-color: #ffe0b5;
     color: #333;
     border-left: 4px solid #ff8552;
-    transition: max-height 0.4s ease;
+    transition: all 0.6s ease;
   }
   
   .faq input[type="checkbox"]:checked ~ .faq-answer {
     max-height: 150px;
     padding: 15px;
   }
-  
+  .arrow {
+    margin-top: -3px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+  /* Rotate arrow on FAQ open */
+  .faq input[type="checkbox"]:checked + label .arrow {
+    transform: rotate(225deg);
+  }
 
 /* Body styles for consistency */
 #review-body {
