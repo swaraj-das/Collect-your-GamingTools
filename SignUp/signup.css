@@ -1,34 +1,36 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 5px;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
 }
 
 body {
-  background: url("https://images.pexels.com/photos/7135057/pexels-photo-7135057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
-    no-repeat center center fixed;
-  background-size: cover;
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: white;
-  text-shadow: 1px 1px 2px #000;
+    background: url('https://images.pexels.com/photos/7135057/pexels-photo-7135057.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 100vh;
+    color: white;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .signup-container {
-  opacity: 0.75;
-  background-color: rgba(0, 0, 0, 0);
-  padding: 5rem;
-  border-radius: 20px;
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  max-width: 500px;
-  width: 100%;
-  animation: fadeIn 2s ease-in-out;
-  background-color: black;
-  margin: auto;
+    
+    opacity: 0.75;
+    background-color: rgba(0, 0, 0, 0);
+    padding:3rem 5rem;
+    border-radius: 20px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 2s ease-in-out;
+    background-color: black;
+    margin: auto;
 }
 
 @keyframes fadeIn {
@@ -43,9 +45,9 @@ body {
 }
 
 h1 {
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  color: #fb5283;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #fb5283;
 }
 
 .input-group {
@@ -206,4 +208,35 @@ input[type="password"]:focus {
 
 a {
   text-decoration: none;
+}
+
+#link-home{
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 5px white;
+    border-radius: 15px;
+    padding: 8px 15px;
+
+    margin-left: 1rem;
+    margin-top: 1rem;
+    
+}
+
+#link-home:hover{
+    border: 1px solid rgb(202, 202, 202);
+    box-shadow: 0 0 5px #424242;
+    background-color: #42424222;
+    border-radius: 15px;
+    padding: 8px 15px;
+
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+#link-home a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    text-shadow: none;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    
 }
