@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,41 +20,57 @@
         <div class="container">
             
             <div class="navbar">
-                <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
-                <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+                <div class="logo-outer">
+                    <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
+                    <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+                </div>
                 <nav>
-                    <ul id="menuList">
+                    <ul>
                         <li><a href="#controller">Game Controllers</a></li>
                         <li><a href="#vrsection">VR Accessories</a></li>
                         <li><a href="#keyboard">Gaming Keyboard</a></li>
                         <li><a href="#others">Others</a></li>
                         <li class="login"><a href="login/login.html">Login</a></li>
-                    <label class="switch">
-                        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-                        <span class="slider"></span>
-                    </label>
+                        <li><label class="switch">
+                            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                            <span class="slider"></span>
+                        </label></li>
                     </ul>
                     
+                    <!-- Hamburger Menu Icon -->
+                    <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
                 </nav>
-
-
-             <!-- Search Bar (initially hidden) -->
-            <div class="search-bar" id="searchBar">
-                <input type="text" id="search-input" placeholder="Search..." oninput="performSearch()" />
-                <button type="button" onclick="performSearch()">🔍</button>
             </div>
             
-            <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
-
-            </div>
-            <label class="switch">
+            
+            <nav>
+                <ul id="menuList">
+                    <li><a href="#controller">Game Controllers</a></li>
+                    <li><a href="#vrsection">VR Accessories</a></li>
+                    <li><a href="#keyboard">Gaming Keyboard</a></li>
+                    <li><a href="#others">Others</a></li>
+                    <li class="login"><a href="login/login.html">Login</a></li>
+                    <!-- Theme Toggle -->
+            <li><label class="switch">
                 <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
                 <span class="slider"></span>
-            </label>
+            </label></li>
+                </ul>
+                <!-- Hamburger Menu Icon -->
+                <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+            </nav>
 
             <section class="hero">
                 <div class="overlay"></div>
                 <div class="hero-content">
+                                 <!-- Search Bar (initially hidden) -->
+                                 
+            <div class="searchbar-outer">
+                <div class="search-bar hidden" id="searchBar">
+                    <input type="text" id="search-input" placeholder="Search..." />
+                    <button type="button" onclick="performSearch()">🔍</button>
+                </div>
+            </div>
                     <h1>Welcome to GamingTools</h1>
                     <p>Your one-stop shop for all gaming accessories.</p>
                     <a href="#controller" class="cta-btn">Explore Products</a>
@@ -349,7 +366,7 @@
     
         <div class="faq">
           <input type="checkbox" id="faq1">
-          <label for="faq1" class="faq-question">1. Does your website consist of all types of gaming tools?</label>
+          <label for="faq1" class="faq-question">1. Does your website consist of all types of gaming tools? <span class="arrow"></span></label>
           <div class="faq-answer">
             We have tried our best to make all the tools available for enthusiastic gamers.
           </div>
@@ -357,7 +374,7 @@
     
         <div class="faq">
           <input type="checkbox" id="faq2">
-          <label for="faq2" class="faq-question">2. If I'm having some purchased-product related issues, can the product be replaced as per my need?</label>
+          <label for="faq2" class="faq-question">2. If I'm having some purchased-product related issues, can the product be replaced as per my need? <span class="arrow"></span></label>
           <div class="faq-answer">
             By considering our terms and conditions, further actions will be taken.
           </div>
@@ -365,7 +382,7 @@
     
         <div class="faq">
           <input type="checkbox" id="faq3">
-          <label for="faq3" class="faq-question">3. Can I buy multiple products at once?</label>
+          <label for="faq3" class="faq-question">3. Can I buy multiple products at once? <span class="arrow"></span></label>
           <div class="faq-answer">
             Yes, you are welcomed to buy multiple products at one time.
           </div>
@@ -373,7 +390,7 @@
     
         <div class="faq">
           <input type="checkbox" id="faq4">
-          <label for="faq4" class="faq-question">4. Do you have any free courier services or is it paid?</label>
+          <label for="faq4" class="faq-question">4. Do you have any free courier services or is it paid? <span class="arrow"></span></label>
           <div class="faq-answer">
             Currently that option is unavailable. Sorry for the inconvenience.
           </div>
@@ -423,6 +440,9 @@
                         <h2>Contact Us</h2>
                     </div>
                     <div class="card-body">
+                        <div class="image-section">
+                            <img src="images/7725176.jpg" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
+                        </div>
                         <div class="form-section">
                             <form>
                                 <div class="form-group">
@@ -440,9 +460,7 @@
                                 <button type="submit">Send</button>
                             </form>
                         </div>
-                        <div class="image-section">
-                            <img src="images/7725176.jpg" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
-                        </div>
+                       
                     </div>
                 </div>
             </section>
@@ -514,9 +532,14 @@
 
 
     <!-- Scroll to Top Button -->
-    <div class="scroll-top" onclick="scrollToTop()">
+    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
+        <div class="scroll-top-icon">
         <ion-icon name="arrow-up-outline"></ion-icon>
-    </div>
+        </div>
+        <svg class="progress-ring" width="60" height="60">
+        <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"></circle>
+        </svg>
+    </button>  
 
     <!-- this script is for twitter icon  starts -->
     <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>

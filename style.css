@@ -364,7 +364,10 @@ button img {
 button:hover img {
     display: block;
 }
-
+#cart-btn {
+    padding: 12px 14px;
+    margin-left: 20px;
+}
 #cart-btn,
 #buy-btn {
     width: 150px;
