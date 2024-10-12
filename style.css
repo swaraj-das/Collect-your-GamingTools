@@ -135,7 +135,6 @@ html::-webkit-scrollbar-thumb:window-inactive {
 .container {
     width: 100%;
     min-height: 100vh;
-    box-sizing: border-box;
     overflow-x: hidden;
 }
 
@@ -149,6 +148,8 @@ html::-webkit-scrollbar-thumb:window-inactive {
     overflow: hidden;
     background-color: #fff;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #ffe6da;
 }
 
 .dark-mode .navbar{
@@ -207,7 +208,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
 .logo {
     width: 50px;
     cursor: pointer;
-    margin: 18px 10px;
+
 }
 
 @keyframes rainbow {
@@ -226,7 +227,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
 
 .website-name {
     margin-left: 16px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     color: transparent;
     background: linear-gradient(90deg, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff, #8a2be2, #ff459f);
@@ -254,8 +255,7 @@ nav {
 nav ul{
     display: flex;
     flex-direction: row;
-    height: 78.16px;
-    align-items: center;
+
 }
 nav ul li {
     list-style: none;
@@ -287,7 +287,37 @@ nav ul li.login {
     border-radius: 20px;
     padding: 4px 18px;
     cursor: pointer;
+    position : relative;
+    top: -4px;
 }
+#menuList li a {
+    text-decoration: none;
+    position: relative;
+}
+
+#menuList li:not(.login) a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust underline position */
+    left: 0;
+    width: 0;
+    height: 0.5px; /* Adjust underline thickness */
+    background-color: #ff0000; /* Change underline color */
+    transition: width 0.3s ease-in-out; /* Adjust transition duration and easing */
+}
+
+#menuList li:not(.login) a:hover::before {
+    width: 100%;
+}
+
+/* Target specific menu items, excluding the login */
+#menuList li:not(.login):nth-child(1) a:hover::before,
+#menuList li:not(.login):nth-child(2) a:hover::before,
+#menuList li:not(.login):nth-child(3) a:hover::before,
+#menuList li:not(.login):nth-child(4) a:hover::before {
+    width: 100%;
+}
+
 
 nav ul li.login a {
     color: #fff;
@@ -1132,8 +1162,7 @@ button:hover img {
     padding: 8px 15px;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    left: 27rem;
+
 }
 
 #search-input {
