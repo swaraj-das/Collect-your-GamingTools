@@ -155,6 +155,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
     background-color: #493d3d;
 }
 
+
 .switch {
     position: relative;
     display: inline-block;
@@ -543,8 +544,8 @@ button:hover img {
 }
 
 .footer {
-    background: #303036;
-    color: #d3d3d3;
+    background: #dddde4;
+    color: #0a0808;
     padding: 50px 0 0;
     font-family: 'Arial', sans-serif;
 }
@@ -566,7 +567,7 @@ button:hover img {
 }
 
 .footer h2 {
-    color: white;
+    color: rgb(14, 11, 11);
     font-size: 1.3em;
     margin-bottom: 20px;
 }
@@ -611,7 +612,7 @@ button:hover img {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(230, 216, 216, 0.1);
     margin-right: 10px;
     text-align: center;
     line-height: 40px;
@@ -632,7 +633,7 @@ button:hover img {
  /* Hover zoom effect for instagram icon */
  .socials .instagram:hover {
     background: orangered;
-    color: white;
+    color: rgb(27, 22, 22);
  } 
  /* Hover zoom effect for twitter[X] icon */
  .socials .twitter:hover {
@@ -654,19 +655,19 @@ button:hover img {
     display: block;
     margin-bottom: 10px;
     font-size: 1.1em;
-    color: #d3d3d3;
+    color: #0c0909;
     text-decoration: none;
     transition: all .3s;
 }
 
 .links ul a:hover {
-    color: white;
+    color: rgb(26, 17, 17);
     padding-left: 10px;
 }
 
 .contact-form .text-input {
-    background: #272727;
-    color: #bebdbd;
+    background: #ebe2e2;
+    color: #110d0d;
     margin-bottom: 20px;
     line-height: 1.5rem;
     padding: 10px 15px;
@@ -707,6 +708,18 @@ button:hover img {
     text-align: center;
     padding: 15px 0;
     margin-top: 40px;
+}
+
+.dark-mode .footer{
+    background-color: black;
+    color: white;
+}
+.dark-mode .footer h2{
+    color: white;
+}
+.dark-mode .links ul a {
+    color: white;
+    
 }
 
 @media screen and (max-width: 768px) {
