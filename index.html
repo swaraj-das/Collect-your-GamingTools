@@ -367,7 +367,7 @@
     
         <div class="faq">
           <input type="checkbox" id="faq1">
-          <label for="faq1" class="faq-question">1. Does your website consist of all types of gaming tools?</label>
+          <label for="faq1" class="faq-question">1. Does your website consist of all types of gaming tools? <span class="arrow"></span></label>
           <div class="faq-answer">
             We have tried our best to make all the tools available for enthusiastic gamers.
           </div>
@@ -375,7 +375,7 @@
     
         <div class="faq">
           <input type="checkbox" id="faq2">
-          <label for="faq2" class="faq-question">2. If I'm having some purchased-product related issues, can the product be replaced as per my need?</label>
+          <label for="faq2" class="faq-question">2. If I'm having some purchased-product related issues, can the product be replaced as per my need? <span class="arrow"></span></label>
           <div class="faq-answer">
             By considering our terms and conditions, further actions will be taken.
           </div>
@@ -383,7 +383,7 @@
     
         <div class="faq">
           <input type="checkbox" id="faq3">
-          <label for="faq3" class="faq-question">3. Can I buy multiple products at once?</label>
+          <label for="faq3" class="faq-question">3. Can I buy multiple products at once? <span class="arrow"></span></label>
           <div class="faq-answer">
             Yes, you are welcomed to buy multiple products at one time.
           </div>
@@ -391,7 +391,7 @@
     
         <div class="faq">
           <input type="checkbox" id="faq4">
-          <label for="faq4" class="faq-question">4. Do you have any free courier services or is it paid?</label>
+          <label for="faq4" class="faq-question">4. Do you have any free courier services or is it paid? <span class="arrow"></span></label>
           <div class="faq-answer">
             Currently that option is unavailable. Sorry for the inconvenience.
           </div>
@@ -533,9 +533,14 @@
 
 
     <!-- Scroll to Top Button -->
-    <div class="scroll-top" onclick="scrollToTop()">
+    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
+        <div class="scroll-top-icon">
         <ion-icon name="arrow-up-outline"></ion-icon>
-    </div>
+        </div>
+        <svg class="progress-ring" width="60" height="60">
+        <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"></circle>
+        </svg>
+    </button>  
 
     <!-- this script is for twitter icon  starts -->
     <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
