@@ -130,3 +130,15 @@ async function SendEmail(e) {
     alert("An error occurred while sending the email.");
   }
 }
+
+// faq
+document.querySelectorAll('.faq input[type="checkbox"]').forEach((checkbox) => {
+  checkbox.addEventListener('change', function () {
+    const answer = this.nextElementSibling.nextElementSibling; // FAQ answer div
+    if (this.checked) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    } else {
+      answer.style.maxHeight = '0px';
+    }
+  });
+});
