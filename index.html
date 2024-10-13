@@ -30,55 +30,51 @@
     </div>
 
     <div class="container">
-            
-<div class="navbar">
-    <div class="logo-outer">
-        <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
-        <a href="/"><span class="website-name">Collect your GamingTools</span></a>
-    </div>
-    <nav>
-        <ul>
+      <div class="navbar">
+        <div class="logo-outer">
+          <a href="/"> <img src="images/logo.png" class="logo" alt="Logo" /></a>
+          <a href="/"
+            ><span class="website-name">Collect your GamingTools</span></a
+          >
+        </div>
+        <nav>
+          <ul>
             <li><a href="#controller">Game Controllers</a></li>
             <li><a href="#vrsection">VR Accessories</a></li>
             <li><a href="#keyboard">Gaming Keyboard</a></li>
             <li><a href="#others">Others</a></li>
             <li class="login"><a href="login/login.html">Login</a></li>
-            <li><label class="switch">
-                <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-                <span class="slider"></span>
-            </label></li>
-            <li class="cart-nav">
-                <a href="#"><img height="25px" width="25px" src="images/cart.png" alt="Cart Icon"> <span id="cart-count">0</span></a>
+            <li>
+              <div class="dark-mode-toggle" data-hover="Dark Mode">
+                <!-- Added this div for hover effect -->
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    id="theme-toggle"
+                    onchange="toggleTheme()"
+                  />
+                  <span class="slider"></span>
+                </label>
+              </div>
             </li>
-        </ul>
-        <!-- Hamburger Menu Icon -->
-        <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
-    </nav>
-</div>
+            <!-- Inside the navbar ul -->
+            <li class="cart-nav">
+              <a href="#"
+                ><img
+                  height="25px "
+                  width="25px"
+                  src="images/cart.png"
+                  alt="Cart Icon"
+                />
+                <span id="cart-count">0</span></a
+              >
+            </li>
+          </ul>
 
-            <nav>
-                <ul>
-                    <li><a href="#controller">Game Controllers</a></li>
-                    <li><a href="#vrsection">VR Accessories</a></li>
-                    <li><a href="#keyboard">Gaming Keyboard</a></li>
-                    <li><a href="#others">Others</a></li>
-                    <li class="login"><a href="login/login.html">Login</a></li>
-                    <li>
-                        <div class="dark-mode-toggle" data-hover="Dark Mode"> <!-- Added this div for hover effect -->
-                            <label class="switch">
-                                <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            
-        
-                <!-- Hamburger Menu Icon -->
-                <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
-            </nav>
-        </div>
+          <!-- Hamburger Menu Icon -->
+          <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()" />
+        </nav>
+      </div>
 
       <nav>
         <ul id="menuList">
@@ -605,51 +601,37 @@
     </section>
 
     <footer class="footer">
-<div class="footer-content">
-  <div class="footer-section about">
-    <div class="logo-container">
-      <img src="images/logo.png" alt="GamingTools Logo" class="footer-logo" />
-      <h2 class="logo-text">Collect your GamingTools</h2>
-    </div>
-    <p class="about-text">
-      Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated selection of controllers, VR gear, and more.
-    </p>
-    <div class="contact">
-      <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
-      <span><i class="fas fa-envelope"></i> &nbsp; info@gamingtools.com</span>
-    </div>
-    <div class="socials">
-      <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
-      <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
-      <a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-      <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
-    </div>
-  </div>
-
-  <div class="footer-section links">
-    <h2>Quick Links</h2>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="Contributors/contributor.html">Contributors</a></li>
-    </ul>
-  </div>
-
-  <div class="footer-section contact-form">
-    <h2>Contact Us</h2>
-    <form action="#" method="post">
-      <input type="email" name="email" class="text-input contact-input" placeholder="Your email address..." />
-      <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-      <button type="submit" class="btn btn-big contact-btn">
-        <i class="fas fa-envelope"></i> Send
-      </button>
-    </form>
-  </div>
-</div>
-
+      <div class="footer-content">
+        <div class="footer-section about">
+          <div class="logo-container">
+            <img
+              src="images/logo.png"
+              alt="GamingTools Logo"
+              class="footer-logo"
+            />
+            <h2 class="logo-text">Collect your GamingTools</h2>
+          </div>
+          <p class="about-text">
+            Your one-stop shop for premium gaming accessories. Elevate your
+            gaming experience with our curated selection of controllers, VR
+            gear, and more.
+          </p>
+          <div class="contact">
+            <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
+            <span
+              ><i class="fas fa-envelope"></i> &nbsp; info@gamingtools.com</span
+            >
+          </div>
+          <div class="socials">
+            <!-- Added classes to the <a> tags to add the Hover animations -->
+            <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
+            <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="twitter" href="#"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
         <div class="footer-section links">
           <h2>Quick Links</h2>
           <ul>
@@ -658,6 +640,7 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#faq">FAQ</a></li>
+            <li><a href="Contributors/contributor.html">Contributors</a></li>
           </ul>
         </div>
         <div class="footer-section contact-form">
@@ -714,10 +697,14 @@
         </li>
       </ul>
     </div>
-<div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
-    <i class="fas fa-arrow-left"></i>
-</div>
-
+    <div
+      class="toggle-arrow"
+      onclick="toggleSidebar()"
+      title="Open Sidebar"
+      style="display: none"
+    >
+      <i class="fas fa-arrow-left"></i>
+    </div>
 
     <!-- Scroll to Top Button -->
     <button
@@ -743,15 +730,16 @@
     </button>
 
     <script>
-        let cartItemCount = 0;
+      let cartItemCount = 0;
 
-    // Function to handle Add to Cart button click
-        document.getElementById('cart-btn').addEventListener('click', function () {
-            cartItemCount++; // Increment cart count
-            document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
-            alert('Item added to cart'); // Show alert
+      // Function to handle Add to Cart button click
+      document
+        .getElementById("cart-btn")
+        .addEventListener("click", function () {
+          cartItemCount++; // Increment cart count
+          document.getElementById("cart-count").textContent = cartItemCount; // Update cart count display
+          alert("Item added to cart"); // Show alert
         });
-
     </script>
 
     <!-- this script is for twitter icon  starts -->
@@ -806,7 +794,6 @@
         };
       }
     </script>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

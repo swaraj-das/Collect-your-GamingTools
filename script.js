@@ -134,18 +134,18 @@ window.onload = () => {
 
 //function to remove sidebar upon clicking close button
 function toggleSidebar() {
-  const sidebar = document.querySelector('.social-sidebar');
-  const toggleArrow = document.querySelector('.toggle-arrow');
-  
+  const sidebar = document.querySelector(".social-sidebar");
+  const toggleArrow = document.querySelector(".toggle-arrow");
+
   // Check if the sidebar is currently visible
   if (sidebar.style.display === "none") {
-      // If hidden, show the sidebar and hide the toggle arrow
-      sidebar.style.display = "block";
-      toggleArrow.style.display = "none";
+    // If hidden, show the sidebar and hide the toggle arrow
+    sidebar.style.display = "block";
+    toggleArrow.style.display = "none";
   } else {
-      // If visible, hide the sidebar and show the toggle arrow
-      sidebar.style.display = "none";
-      toggleArrow.style.display = "block";
+    // If visible, hide the sidebar and show the toggle arrow
+    sidebar.style.display = "none";
+    toggleArrow.style.display = "block";
   }
 }
 
