@@ -1030,9 +1030,9 @@ button:hover img {
 
 .scroll-top {
     position: fixed;
-    bottom: 1%;
-    right: 50%;
-    background: linear-gradient(145deg, #ff459f, #ff6062);
+    bottom: 1.4%;
+    right: 5%;
+    background: linear-gradient(100deg,#ff393d, #ff3c76, #fffb05);
     color: white;
     width: 60px;
     height: 60px;
