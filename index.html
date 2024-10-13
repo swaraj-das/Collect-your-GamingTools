@@ -36,6 +36,13 @@
                             <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
                             <span class="slider"></span>
                         </label></li>
+                        <!-- Inside the navbar ul -->
+                        <li class="cart-nav">
+                         
+                                <a href="#"><img height="25px " width="25px" src="images/cart.png" alt="Cart Icon"> <span id="cart-count">0</span></a>
+                          
+                        </li>
+                        
                     </ul>
                     
                     <!-- Hamburger Menu Icon -->
@@ -533,6 +540,18 @@
         <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"></circle>
         </svg>
     </button>  
+
+    <script>
+        let cartItemCount = 0;
+
+    // Function to handle Add to Cart button click
+        document.getElementById('cart-btn').addEventListener('click', function () {
+            cartItemCount++; // Increment cart count
+            document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
+            alert('Item added to cart'); // Show alert
+        });
+
+    </script>
 
     <!-- this script is for twitter icon  starts -->
     <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
