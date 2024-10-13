@@ -711,7 +711,7 @@ button:hover img {
     padding-left: 10px;
 }
 
-.contact-form .text-input {
+.-form .text-input {
     background: #272727;
     color: #bebdbd;
     margin-bottom: 20px;
@@ -720,6 +720,15 @@ button:hover img {
     border: none;
     width: 100%;
     border-radius: 5px;
+}
+
+.confirmation-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
 }
 
 .contact-form textarea.text-input {
@@ -767,7 +776,7 @@ button:hover img {
     
     .contact-form .contact-btn {
         width: 100%;
-        float: none;
+        float: nonecontact;
     }
 }
 
@@ -1093,6 +1102,25 @@ button:hover img {
     }
 }
 
+
+/* Style for light mode */
+.scroll-top.light-mode {
+    background: #ff459f;
+    color: white;
+}
+
+/* Style for dark mode */
+.scroll-top.dark-mode {
+    background: #333;
+    color: white;
+}
+
+/* Add the hidden class */
+.hidden {
+    display: none;
+}
+
+
 .scroll-top {
     position: fixed;
     bottom: 1.4%;
@@ -1186,6 +1214,7 @@ button:hover img {
     align-items: center;
     justify-content: center;
 }
+
 .search-bar {
     text-align: center;
     margin: 15px 0;
