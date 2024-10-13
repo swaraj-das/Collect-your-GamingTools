@@ -134,14 +134,18 @@ window.onload = () => {
 
 //function to remove sidebar upon clicking close button
 function toggleSidebar() {
-  var sidebar = document.getElementById("SideBar");
-  var sidebarContent = document.getElementById("sidebar-content");
-  if (sidebar) {
-    // Remove the sidebar element and its content
-    sidebar.remove();
-    sidebarContent.remove();
+  const sidebar = document.querySelector('.social-sidebar');
+  const toggleArrow = document.querySelector('.toggle-arrow');
+  
+  // Check if the sidebar is currently visible
+  if (sidebar.style.display === "none") {
+      // If hidden, show the sidebar and hide the toggle arrow
+      sidebar.style.display = "block";
+      toggleArrow.style.display = "none";
   } else {
-    console.error("Sidebar element not found");
+      // If visible, hide the sidebar and show the toggle arrow
+      sidebar.style.display = "none";
+      toggleArrow.style.display = "block";
   }
 }
 
