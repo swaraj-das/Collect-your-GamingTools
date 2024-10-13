@@ -67,17 +67,20 @@ textarea {
 }
 
 button[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Added transition */
 }
 
 button[type="submit"]:hover {
-  background-color: #444;
+    background-color: #444;
+    transform: scale(1.1); /* Added scale effect */
 }
+
 
 * {
   margin: 0;
@@ -338,12 +341,14 @@ nav ul li:not(.login) a:hover::after {
 
 
 nav ul li.login {
-  background: linear-gradient(to right, #fb5283, #ff3527);
-  height: 24px;
-  border-radius: 20px;
-  padding: 4px 18px;
-  cursor: pointer;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    height: 24px;
+    border-radius: 20px;
+    padding: 4px 18px;
+    cursor: pointer;
+    transition: all 0.5s ease; /* Added transition */
 }
+
 .underline li :hover{
     text-decoration: underline;
 
@@ -354,39 +359,41 @@ nav ul li.login a {
 }
 
 nav ul li.login:hover {
-  color: #fff;
+    color: #fff;
+    transform: scale(1.18); /* Added scale effect on hover */
 }
 
 .chatbox-wrapper {
-  position: fixed; /* Fixes the position of the chat icon on the screen */
-  bottom: 15px; /* Distance from the bottom */
-  right: 20px; /* Distance from the right */
-  display: inline-block;
-  z-index: 1000; /* Ensures the wrapper only takes up as much space as needed */
+    position: fixed; /* Fixes the position of the chat icon on the screen */
+    bottom: 15px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    display: inline-block;
+    z-index: 1000; /* Ensures the wrapper only takes up as much space as needed */
 }
 
 /* Hover text for the chatbox */
 .chatbox-wrapper::after {
-  content: attr(data-hover); /* Use the value of the data-hover attribute */
-  position: absolute;
-  left: 50%; /* Center the text horizontally */
-  top: -40px; /* Position the text above the icon (adjust this value as needed) */
-  transform: translateX(-50%);
-  background-color: #ff9800; /* Bright orange background for better visibility */
-  color: #fff; /* White text color */
-  padding: 6px 12px; /* Increased padding for a larger tooltip */
-  border-radius: 4px; /* Rounded corners */
-  font-size: 14px; /* Increased font size for better readability */
-  opacity: 0; /* Initially hidden */
-  pointer-events: none; /* Prevent the tooltip from interfering with mouse events */
-  transition: opacity 0.3s ease; /* Smooth transition for the tooltip */
-  white-space: nowrap; /* Prevent text wrapping */
+    content: attr(data-hover); /* Use the value of the data-hover attribute */
+    position: absolute;
+    left: 50%; /* Center the text horizontally */
+    top: -40px; /* Position the text above the icon (adjust this value as needed) */
+    transform: translateX(-50%);
+    background-color: #ff9800; /* Bright orange background for better visibility */
+    color: #fff; /* White text color */
+    padding: 6px 12px; /* Increased padding for a larger tooltip */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Increased font size for better readability */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent the tooltip from interfering with mouse events */
+    transition: opacity 0.3s ease; /* Smooth transition for the tooltip */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 /* Show hover text when hovering */
 .chatbox-wrapper:hover::after {
-  opacity: 1; /* Make the text visible */
+    opacity: 1; /* Make the text visible */
 }
+
 
 .scroll-top {
   position: relative; /* Ensure that positioning is relative for the hover text */
