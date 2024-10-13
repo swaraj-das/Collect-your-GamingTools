@@ -6,18 +6,18 @@ menuList.style.position = "fixed";
 menuList.style.borderRadius = "20px";
 
 function toggleMenu() {
-    if (menuList.style.height == "0px") {
-        menuList.style.height = "auto";
-        menuList.style.paddingTop = "20px";
-    } else {
-        menuList.style.height = "0px";
-        menuList.style.paddingTop = "0px";
-    }
+  if (menuList.style.height == "0px") {
+    menuList.style.height = "auto";
+    menuList.style.paddingTop = "20px";
+  } else {
+    menuList.style.height = "0px";
+    menuList.style.paddingTop = "0px";
+  }
 }
 
-window.onscroll = function() {
-    updateProgressBar();
-  };
+window.onscroll = function () {
+  updateProgressBar();
+};
 function updateProgressBar() {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   var scrollHeight =
@@ -31,18 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Show or hide the scroll-top button based on scroll position
-window.addEventListener('scroll', function() {
-  const scrollTopButton = document.querySelector('.scroll-top');
+window.addEventListener("scroll", function () {
+  const scrollTopButton = document.querySelector(".scroll-top");
   if (window.pageYOffset > 300) {
-      scrollTopButton.style.display = 'block';
+    scrollTopButton.style.display = "block";
   } else {
-      scrollTopButton.style.display = 'none';
+    scrollTopButton.style.display = "none";
   }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-  const progressRing = scrollToTopBtn.querySelector('circle');
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  const progressRing = scrollToTopBtn.querySelector("circle");
   const rootElement = document.documentElement;
 
   const radius = progressRing.r.baseVal.value;
@@ -52,36 +52,36 @@ document.addEventListener('DOMContentLoaded', function() {
   progressRing.style.strokeDashoffset = circumference;
 
   function setProgress(percent) {
-      const offset = circumference - percent / 100 * circumference;
-      progressRing.style.strokeDashoffset = offset;
+    const offset = circumference - (percent / 100) * circumference;
+    progressRing.style.strokeDashoffset = offset;
   }
 
   function handleScroll() {
-      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-      const scrolled = (rootElement.scrollTop / scrollTotal) * 100;
+    const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+    const scrolled = (rootElement.scrollTop / scrollTotal) * 100;
 
-      // Show or hide the scroll-to-top button based on scroll position
-      if (window.pageYOffset > 300) {
-          scrollToTopBtn.classList.add('show');
-      } else {
-          scrollToTopBtn.classList.remove('show');
-      }
+    // Show or hide the scroll-to-top button based on scroll position
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("show");
+    } else {
+      scrollToTopBtn.classList.remove("show");
+    }
 
-      // Update progress circle
-      requestAnimationFrame(() => {
-          setProgress(scrolled);
-      });
+    // Update progress circle
+    requestAnimationFrame(() => {
+      setProgress(scrolled);
+    });
   }
 
   function scrollToTop() {
-      rootElement.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-      });
+    rootElement.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
-  scrollToTopBtn.addEventListener('click', scrollToTop);
-  window.addEventListener('scroll', handleScroll);
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+  window.addEventListener("scroll", handleScroll);
 
   // Initial check in case the page is already scrolled on load
   handleScroll();
@@ -99,14 +99,36 @@ function toggleTheme() {
     localStorage.setItem("theme", "light");
   }
 }
+function toggleTheme() {
+  const body = document.body;
+  const themeToggle = document.getElementById("theme-toggle");
+  const darkModeToggle = document.querySelector(".dark-mode-toggle"); // This should target the element containing your dark mode icon
+
+  // Toggle dark mode class based on the checkbox status
+  body.classList.toggle("dark-mode", themeToggle.checked);
+
+  // Save the user's preference in localStorage
+  if (themeToggle.checked) {
+    localStorage.setItem("theme", "dark");
+    darkModeToggle.setAttribute("data-hover", "Light Mode"); // Change hover text to Light Mode
+  } else {
+    localStorage.setItem("theme", "light");
+    darkModeToggle.setAttribute("data-hover", "Dark Mode"); // Change hover text to Dark Mode
+  }
+}
 
 // Load theme from localStorage on page load
 window.onload = () => {
   const savedTheme = localStorage.getItem("theme");
   const themeToggle = document.getElementById("theme-toggle");
+  const darkModeToggle = document.querySelector(".dark-mode-toggle"); // Target the dark mode icon
+
   if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
     themeToggle.checked = true;
+    darkModeToggle.setAttribute("data-hover", "Light Mode"); // Set hover text to Light Mode if dark mode is active
+  } else {
+    darkModeToggle.setAttribute("data-hover", "Dark Mode"); // Set hover text to Dark Mode if light mode is active
   }
 };
 
@@ -170,12 +192,12 @@ async function SendEmail(e) {
 
 // faq
 document.querySelectorAll('.faq input[type="checkbox"]').forEach((checkbox) => {
-  checkbox.addEventListener('change', function () {
+  checkbox.addEventListener("change", function () {
     const answer = this.nextElementSibling.nextElementSibling; // FAQ answer div
     if (this.checked) {
-      answer.style.maxHeight = answer.scrollHeight + 'px';
+      answer.style.maxHeight = answer.scrollHeight + "px";
     } else {
-      answer.style.maxHeight = '0px';
+      answer.style.maxHeight = "0px";
     }
   });
 });
