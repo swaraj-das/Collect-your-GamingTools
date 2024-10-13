@@ -183,3 +183,34 @@ document.querySelectorAll('.faq input[type="checkbox"]').forEach((checkbox) => {
     }
   });
 });
+
+const slider = document.getElementById('slider');
+let currentIndex = 0;
+const reviews = slider.children;
+const totalReviews = reviews.length;
+const cardsPerRow = 3;
+
+function showNextReview() {
+  // Hide all cards first
+  for (let i = 0; i < totalReviews; i++) {
+    reviews[i].style.display = 'none';
+  }
+
+  // Show the next set of 3 cards
+  for (let i = 0; i < cardsPerRow; i++) {
+    const indexToShow = (currentIndex + i) % totalReviews;
+    reviews[indexToShow].style.display = 'block';
+  }
+
+  // Move to the next set of cards
+  currentIndex = (currentIndex + cardsPerRow) % totalReviews;
+}
+
+// Initialize the slider by showing the first 3 cards
+for (let i = cardsPerRow; i < totalReviews; i++) {
+  reviews[i].style.display = 'none';
+}
+
+// Automatically switch to the next set of cards every 3 seconds
+setInterval(showNextReview, 3000);
+ 

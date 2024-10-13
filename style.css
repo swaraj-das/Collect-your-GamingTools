@@ -769,6 +769,9 @@ button:hover img {
         width: 100%;
         float: none;
     }
+    .review-card{
+        width: none;
+    }
 }
 
 .close-btn {
@@ -1376,7 +1379,6 @@ button:hover img {
   
   /* Review Section Container */
   .reviews-container {
-    max-width: 800px;
     margin: 40px auto;
     padding: 20px;
     background-color:rgb(71,61,61);
@@ -1393,24 +1395,27 @@ button:hover img {
     margin-bottom: 20px;
   }
   
-  /* Individual Review Card */
-  .review-card {
-    margin-bottom: 15px; /* Reduced margin to shorten height */
-    padding: 15px; /* Reduced padding */
-    background-color: #ffe0b5;
-    border-left: 3px solid #ff8552; /* Thinner border */
-    border-radius: 8px; /* Slightly smaller border radius */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+/* Individual Review Card */
+.review-card {
+    width: 25%; 
+    margin-bottom: 15px; /* Reduces the margin at the bottom */
+    padding: 15px; /* Reduces padding around content */
+    background-color: #ffe0b5; /* Light orange background for the card */
+    border-left: 3px solid #ff8552; /* Adds a thinner left border */
+    border-radius: 8px; /* Adds rounded corners to the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for a lifted effect */
+    transition: transform 0.3s ease; /* Smooth animation on hover */
   }
   
   /* Hover Effect for Review Cards */
   .review-card:hover {
-    transform: translateY(-3px); /* Slightly less lift on hover */
+    transform: translateY(-3px); /* Adds a slight upward lift when hovering */
   }
   
   /* Reviewer Name */
   .reviewer-name {
+    display: flex;
+    justify-content: center;
     font-size: 1.2em;
     font-weight: bold;
     color: #333;
@@ -1419,6 +1424,8 @@ button:hover img {
   
   /* Review Rating */
   .review-rating {
+    display: flex;
+    justify-content: center;
     font-size: 1.2em;
     color: #ff8552;
     margin-bottom: 8px; /* Slightly smaller gap */
@@ -1436,3 +1443,10 @@ button:hover img {
         width: 1000vw !important;
     }
 }
+.review-card-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+  
