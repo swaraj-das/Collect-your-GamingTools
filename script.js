@@ -55,6 +55,25 @@ function toggleTheme() {
         localStorage.setItem('theme', 'light');
     }
 }
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the dropdown icon and content
+    var dropdown = document.querySelector('.dropdown');
+    var dropdownContent = document.querySelector('.dropdown-content');
+    
+    // Toggle the display on click
+    dropdown.addEventListener('click', function () {
+        dropdownContent.classList.toggle('show');
+    });
+
+    // Close the dropdown if clicking outside of it
+    window.addEventListener('click', function (event) {
+        if (!dropdown.contains(event.target)) {
+            dropdownContent.classList.remove('show');
+        }
+    });
+});
+
+
 
 // Load theme from localStorage on page load
 window.onload = () => {

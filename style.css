@@ -24,6 +24,46 @@
     justify-content: space-between; /* Form on the left and image on the right */
     align-items: flex-start; /* Align content to the top */
 }
+/* Styling for the dropdown container */
+/* Styling for the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Styling for the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Ensures dropdown content is on top of everything else */
+    overflow: visible; /* Prevent content from being clipped */
+}
+
+/* Dropdown content items */
+.dropdown-content li {
+    padding: 12px 16px;
+    list-style-type: none;
+}
+
+.dropdown-content li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown-icon {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Add class for dropdown open */
+.dropdown-content.show {
+    display: block; /* Show when dropdown is clicked */
+}
 
 .form-section {
     width: 50%; /* Width for the form section */
