@@ -14,6 +14,20 @@
 </head>
 
 <body>
+
+    <div class="container">
+        <div class="navbar">
+            <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
+            <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="#">Game Controllers</a></li>
+                    <li><a href="#">VR Accessories</a></li>
+                    <li><a href="#">Media Remotes</a></li>
+                    <li><a href="#contact us">Contact Us</a></li>
+                    <li><a href="#">Others</a></li>
+                    <li class="login"><a href="login/login.html">Login</a></li>
+
     <div id="progressBarContainer">
         <div id="progressBar"></div>
     </div>
@@ -32,10 +46,24 @@
                         <li><a href="#keyboard">Gaming Keyboard</a></li>
                         <li><a href="#others">Others</a></li>
                         <li class="login"><a href="login/login.html">Login</a></li>
+
+
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                        <span class="slider"></span>
+                    </label>
+
+                </ul>
+            </nav>
+
+            <!-- Search Bar (initially hidden) -->
+
+
                         <li><label class="switch">
                             <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
                             <span class="slider"></span>
                         </label></li>
+
                         <!-- Inside the navbar ul -->
                         <li class="cart-nav">
                          
@@ -43,12 +71,28 @@
                           
                         </li>
                         
+
                     </ul>
                     
                     <!-- Hamburger Menu Icon -->
                     <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
                 </nav>
+
+
+
+             <!-- Search Bar (initially hidden) -->
+
+
+            <div class="search-bar hidden" id="searchBar">
+                <input type="text" id="search-input" placeholder="Search..." />
+
+            <div class="search-bar" id="searchBar">
+                <input type="text" id="search-input" placeholder="Search..." oninput="performSearch()" />
+
+                <button type="button" onclick="performSearch()">🔍</button>
+
             </div>
+
             
             
             <nav>
@@ -68,6 +112,24 @@
                 <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
             </nav>
 
+
+
+            <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+        </div>
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+            <span class="slider"></span>
+        </label>
+
+        <section class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1>Welcome to GamingTools</h1>
+                <p>Your one-stop shop for all gaming accessories.</p>
+                <a href="#" class="cta-btn">Explore Products</a>
+            </div>
+        </section>
+
             <section class="hero">
                 <div class="overlay"></div>
                 <div class="hero-content">
@@ -84,6 +146,7 @@
                     <a href="#controller" class="cta-btn" data-aos="fade-down">Explore Products</a>
                 </div>
             </section>
+
 
         <!-- PS4 Controller Section -->
 
@@ -107,8 +170,8 @@
                     <p class="star">4.1★</p>
                 </div>
                 <div class="btn-section">
-                <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -137,14 +200,20 @@
                     <p class="star">4.8★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
+
+            <div class="col-2">
+                <img src="images/newcontroller3.png" class="controller" alt="Controller">
+                <!-- replaced old blurry image with enhanced image -->
+
             <div class="col-2" data-aos="fade-left">
                 <img src="images/newcontroller3.png" class="controller" alt="Controller"> <!-- replaced old blurry image with enhanced image -->
+
                 <div class="color-box"></div>
-                
+
             </div>
         </div>
 
@@ -168,14 +237,20 @@
                     <p class="star">4.2★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
+
+            <div class="col-2">
+                <img src="images/controller2.png" class="controller"
+                    alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
+
             <div class="col-2" data-aos="fade-left">
                 <img src="images/controller2.png" class="controller" alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
+
                 <div class="color-box"></div>
-                
+
             </div>
         </div>
 
@@ -261,14 +336,14 @@
                     <p class="star">5.0★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
                 <img src="images/mouse.png" class="controller" alt="Gaming Mouse">
                 <div class="color-box"></div>
-                
+
             </div>
         </div>
 
@@ -292,14 +367,14 @@
                     <p class="star">4.5★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
                 <img src="images/keyboard.png" class="controller" alt="Gaming Keyboard">
                 <div class="color-box"></div>
-                
+
             </div>
         </div>
 
@@ -323,14 +398,14 @@
                     <p class="star">4.7★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
                 <img src="images/headset.png" class="controller" alt="Gaming Headset">
                 <div class="color-box"></div>
-               
+
             </div>
         </div>
 
@@ -354,20 +429,43 @@
                     <p class="star">4.8★</p>
                 </div>
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
                 <img src="images/newchair.png" class="controller" alt="Gaming Chair">
                 <div class="color-box"></div>
-               
+
             </div>
         </div>
     </div>
 
+
+    <section id="contact-us">
+        <div class="card pb-5 pt-1">
+            <div class="card-header">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="card-body">
+                <div class="form-section">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+
+    <!--faq section-->
+    <section id="faq">
+                
+
 <!-- FAQ Section -->
 <section id="faq">          
+
     <div class="faq-container">
         <h1 class="faq-title" data-aos="fade-right">Frequently Asked Questions</h1>  
         
@@ -459,11 +557,31 @@
                                 </div>
                                 <button type="submit">Send</button>
                             </form>
+
                         </div>
-                       
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-btn">Send</button>
+                    </form>
+                    <!-- Confirmation message container -->
+                    <div id="confirmationMessage" class="confirmation-message hidden">
+                        Thank you!<br>
+                        WFe are absolutely committed to making you a happy customer.
+                        We will read your feedback, and we'll take it seriously.
+
                     </div>
                 </div>
-            </section>
+                <div class="image-section">
+                    <img src="images/7725176.jpg" alt="Contact Image"
+                        style="max-width: 80%; height: auto; max-height: 500px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <footer class="footer">
         <div class="footer-content">
@@ -473,7 +591,8 @@
                     <h2 class="logo-text">Collect your GamingTools</h2>
                 </div>
                 <p class="about-text">
-                    Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated selection of controllers, VR gear, and more.
+                    Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated
+                    selection of controllers, VR gear, and more.
                 </p>
                 <div class="contact">
                     <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
@@ -483,7 +602,7 @@
                     <!-- Added classes to the <a> tags to add the Hover animations -->
                     <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
                     <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a>
+                    <a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
                     <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
@@ -501,7 +620,8 @@
             <div class="footer-section contact-form">
                 <h2>Feedback Form</h2>
                 <form action="#" method="post">
-                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+                    <input type="email" name="email" class="text-input contact-input"
+                        placeholder="Your email address...">
                     <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
                     <button type="submit" class="btn btn-big contact-btn">
                         <i class="fas fa-envelope"></i>
@@ -513,8 +633,15 @@
         <div class="footer-bottom">
             &copy; 2024 GamingTools | Designed by Swaraj
         </div>
-        
+
     </footer>
+
+
+    <!-- Scroll to Top Background -->
+    <div class="scroll-background">
+        <div class="scroll-top" onclick="scrollToTop()">
+            <ion-icon name="arrow-up-outline"></ion-icon>
+        </div>
 
     <!-- SIDEBAR -->
         
@@ -554,11 +681,47 @@
 
     </script>
 
+
     <!-- this script is for twitter icon  starts -->
     <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
     <!-- this script is for twitter icon  ends -->
 
     <!-- Scripts -->
+
+    <!-- Ionicons Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent actual form submission
+
+                // Check if code executes up to this point
+                // console.log("Form submission intercepted.");
+
+                // Use confirm instead of alert to check
+                confirm("Thank you!\nWe are absolutely committed to making you a happy customer.\nWe will read your feedback and take it seriously.");
+
+                // Clear the form fields after displaying the alert
+                form.reset();
+            });
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // This makes the scroll smooth
+            });
+        }
+
+    </script>
+</body>
+
+</html>
+
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -583,3 +746,4 @@
 
 
 </html>
+

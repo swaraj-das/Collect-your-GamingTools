@@ -1,3 +1,6 @@
+overlap of scroll...collect ur game
+
+style.css
 .card {
     width: 50%; /* Set a specific width */
     margin: 10px auto; /* Center horizontally with automatic margins */
@@ -78,6 +81,7 @@ button[type="submit"]:hover {
     transform: scale(1.1);
 
 }
+
 
 
 
@@ -711,7 +715,7 @@ button:hover img {
     padding-left: 10px;
 }
 
-.contact-form .text-input {
+.-form .text-input {
     background: #272727;
     color: #bebdbd;
     margin-bottom: 20px;
@@ -720,6 +724,15 @@ button:hover img {
     border: none;
     width: 100%;
     border-radius: 5px;
+}
+
+.confirmation-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
 }
 
 .contact-form textarea.text-input {
@@ -767,7 +780,7 @@ button:hover img {
     
     .contact-form .contact-btn {
         width: 100%;
-        float: none;
+        float: nonecontact;
     }
 }
 
@@ -1092,9 +1105,39 @@ button:hover img {
         justify-content: center;
     }
 }
-
-.scroll-top {
+.scroll-background {
     position: fixed;
+
+    bottom: 80px; /* Increase the bottom margin to prevent overlap with chatbot */
+    right: 20px; /* Keep it aligned to the right */
+    width: 52px;
+    height: 52px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 999; /* Ensure it layers above other content */
+}
+
+.scroll-top:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.scroll-top ion-icon {
+    font-size: 24px;
+    color: white;
+}
+
+
+/* Add the hidden class */
+.hidden {
+    display: none;
+}
+
     bottom: 1.4%;
     right: 5%;
     background: linear-gradient(100deg,#ff393d, #ff3c76, #fffb05);
@@ -1180,12 +1223,14 @@ button:hover img {
     animation: pulse 1.5s infinite; /* Pulse on hover */
   }
 
+
 .searchbar-outer{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .search-bar {
     text-align: center;
     margin: 15px 0;
