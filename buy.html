@@ -1,0 +1,260 @@
+<style>
+    /* Reset */
+
+html {
+  font-size: 10px;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgroundColor, #C3A4FF);
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-container {
+  border: 5px solid #000000;
+  background: #DBFF6E;
+  width: 75rem;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 7rem;
+}
+
+.product-container .image {
+  width: 35rem;
+  transform: rotate(-20deg);
+  margin-left: -4rem;
+}
+
+.product-container .details .cost {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.product-container .details .title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.card-container {
+  border: 5px solid #000000;
+    background-color: #ffffff;
+    height: 35rem;
+    width: 60rem;
+    margin-left: -32rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.card-details {
+  grid-area: 2/1/5/4;
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.7rem;
+  width: 90%;
+}
+
+.card-number {
+  grid-area: 1/1/1/4;
+  align-self: end;
+}
+
+.card-name {
+  grid-area: 2/1/2/4;
+  align-self: end;
+}
+
+.expires, .cvc {
+  align-self: end;
+  width: 60%;
+}
+
+.field input {
+  border-bottom: 2px solid #000000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+.mastercard {
+  display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/4;
+    justify-self: end;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #FCE32F;
+  opacity: 0.8;
+  position: relative;
+}
+
+.logo::after {
+  position: absolute;
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  background-color: #EA6564;
+  border-radius: 50%;
+  left: -50%;
+}
+
+.name {
+  font-size: 1rem;
+}
+
+.purchase-button {
+  font-family: 'IBM Plex Mono', monospace;
+    padding: 1rem 1.25rem;
+    position: relative;
+    background-color: #000000;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.02rem;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: transparent;
+    grid-area: 5/4;
+}
+
+.purchase-button::after {
+  content: attr(data-content);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #FEFC00;
+  border: 2px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  transform: translate(-0.4rem,-0.4rem);
+  transition: transform .2s cubic-bezier(.34,1.56,.64,1);
+}
+
+.purchase-button:hover::after {
+  transform: translate(0,0);
+}
+
+@media screen and (max-width: 1050px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .product-container {
+    width: 100%;
+    border-color: transparent;
+    height: 35rem;
+    align-items: center;
+    padding: 1.5rem;
+    justify-content: end;
+  }
+  
+  .product-container .image {
+    width: 30rem;
+  }
+  
+  .product-container .details {
+    text-align: center;
+  }
+  
+  .card-container {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-color: transparent;
+    margin-left: 0;
+  }
+  
+  .field label {
+    font-size: 1.3rem;
+  }
+  
+  .card-details {
+    grid-area: 2/1/5/5;
+  }
+}
+</style>
+<div class="product-container">
+    <div class="image">
+      <img src="/images/controller1.png" alt="controller1" border="0"  style="padding-bottom: 15px;"/>
+    </div>
+    <div class="details">
+      <h1 class="cost">₹3999</h1>
+      <h3 class="title">PS4 V2 Dualshock 4</h3>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="mastercard">
+      <div class="logo"></div>
+      <div class="name">mastercard</div>
+    </div>
+    <div class="card-details">
+      <div class="card-number field">
+        <label for="cn">CARD NUMBER</label>
+        <input id="cn" type="text" />
+      </div>
+      <div class="card-name field">
+        <label for="cna">NAME ON CARD</label>
+        <input id="cna" type="text" />
+      </div>
+      <div class="expires field">
+        <label for="exp">EXPIRES</label>
+        <input id="exp" type="text" />
+      </div>
+      <div class="cvc field">
+        <label for="cvc">CVC</label>
+        <input id="cvc" type="text" />
+      </div>
+    </div>
+    <button class="purchase-button" data-content="PURCHASE">PURCHASE</button>
+  </div>
