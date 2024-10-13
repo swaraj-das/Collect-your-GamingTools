@@ -509,7 +509,38 @@ a {
     background-positon-x: 0px;
   }
 }
-
+.logo{
+  position:absolute;
+  top: 20px;
+  left: 60px;
+  right: 90%;
+  height: 100px;
+  width: 400px;
+}
+.brand{
+  float: right;
+  position: relative;
+  top: 25px;
+  right: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  color: yellow;
+  animation: change 2s infinite;
+}
+@keyframes change{
+  0%{
+    color: red;
+  }
+  25%{
+    color: white;
+  }50%{
+    color: blue;
+  }75%{
+    color: green;
+  }100%{
+    color: greenyellow;
+  }
+}
 
 
 
