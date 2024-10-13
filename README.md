@@ -23,7 +23,10 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 
 ## 🚀 Demo
 #### Check out the live demo here ⬇️ : 
-https://collect-your-gaming-tools-7r1z88vx4-swaraj-das-projects.vercel.app/
+
+https://collect-your-gamingtools.netlify.app/
+
+
 
 
 ## 🛠️ Installation
@@ -56,6 +59,7 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 | **Swaraj Das** <br> <sub>Project Admin</sub> | **Anit Sarkar** <br> <sub>Maintainer</sub> |
 | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/swarajdas01/) | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/anit-sarkar-11906a283/) |
 
+## 🙌 Contributors
 
 
 
