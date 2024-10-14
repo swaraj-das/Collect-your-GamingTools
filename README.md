@@ -149,7 +149,7 @@ So what are you waiting for? Dust off your gaming gear, grab your snacks, and ge
 
 
 <p align="center">Made with ❤️ by Swaraj Das and contributors. Thank you for stopping by!</p>
-=======
+
 ![GitHub contributors](https://img.shields.io/github/contributors/swaraj-das/Collect-your-GamingTools)
 
 ![Contributors](https://contrib.rocks/image?repo=swaraj-das/Collect-your-GamingTools)
