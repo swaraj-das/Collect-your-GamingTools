@@ -646,6 +646,29 @@ button {
     font-weight: 600;
 }
 
+/* confirmation css */
+.confirmation-message {
+    display: none; /* Initially hidden */
+    background-color: rgba(0, 128, 0, 0.8); /* Green with translucency */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    position: fixed; /* Use fixed positioning to center it on the page */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Adjust position to be truly centered */
+    z-index: 10; /* Ensure it appears above other content */
+}
+
+.confirmation-message.visible {
+    display: block; /* Show the message */
+}
+
+.hidden {
+    display: none;
+}
+
 .footer {
     background: #303036;
     color: #d3d3d3;

@@ -205,3 +205,23 @@ function testimonialJs() {
 });
 }
 testimonialJs();
+
+function displayConfirmation(event) {
+  event.preventDefault(); // Prevent form submission to a server
+
+  const confirmationMessage = document.getElementById("confirmationMessage");
+  confirmationMessage.classList.add("visible"); // Show confirmation message
+  
+  // Hide the message after 3 seconds
+  setTimeout(() => {
+      confirmationMessage.classList.remove("visible"); // Hide confirmation message
+  }, 3000);
+  
+  // Clear the form fields
+  const form = event.target; // Get the form that triggered the event
+  form.reset(); // Reset the form fields
+}
+
+
+
+           
