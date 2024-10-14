@@ -32,9 +32,20 @@ https://collect-your-gamingtools.netlify.app/
 ## 🛠️ Installation
 #### To get started, simply clone the repository and open it in your browser:
 
-1. git clone `https://github.com/swaraj-das/Collect-your-GamingTools.git`
-   
-2. Then, open the `index.html` file in your browser, and you’re good to go!
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/swaraj-das/Collect-your-GamingTools.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd Collect-your-GamingTools
+    ```
+3. Open the `index.html` file in your browser:
+    ```bash
+    open index.html  # On macOS
+    start index.html # On Windows
+    xdg-open index.html # On Linux
+    ```
 
 
 ## 🤝 Contributing
@@ -60,6 +71,11 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/swarajdas01/) | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/anit-sarkar-11906a283/) |
 
 ## 🙌 Contributors
+
+![GitHub contributors](https://img.shields.io/github/contributors/swaraj-das/Collect-your-GamingTools)
+
+![Contributors](https://contrib.rocks/image?repo=swaraj-das/Collect-your-GamingTools)
+
 
 
 
