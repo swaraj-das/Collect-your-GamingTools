@@ -240,3 +240,91 @@ a {
     font-family: 'Trebuchet MS', Arial, sans-serif;
     
 }
+
+/* ... existing styles ... */
+
+.signup-button, .google-signup-button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button {
+  background-color: #f4a261;
+  color: white;
+}
+
+.signup-button:hover {
+  background-color: #e76f51;
+}
+
+.google-signup-button {
+  background-color: white;
+  color: #757575;
+  border: 1px solid #dadce0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-signup-button:hover {
+  background-color: #f8f9fa;
+}
+
+.google-signup-button img {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.or-divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #757575;
+  position: relative;
+  overflow: hidden;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: #dadce0;
+}
+
+.or-divider::before {
+  left: 0;
+}
+
+.or-divider::after {
+  right: 0;
+}
+
+.or-divider span {
+  display: inline-block;
+  position: relative;
+  padding: 0 10px;
+  background-color: #000; /* Match this with your form background color */
+}
+
+.links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.links a {
+  color: #e76f51;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}

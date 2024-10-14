@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collect your GamingTools</title>
+
+    <!--adding meta keywords and description -->
+    <meta name="keywords" content="gaming tools, game accessories, gaming gear, gaming equipment, gaming setup, game controller, gaming mouse, gaming keyboard, gaming headset, gaming software, eSports tools, gaming community, gaming chair, VR gaming tools, game streaming equipment, console gaming, PC gaming, mobile gaming, gaming tips, game reviews, gaming news">
+    <meta name="description" content="Collect and discover the ultimate gaming tools and accessories to enhance your gaming experience. From high-performance controllers and mice to immersive headsets and VR gaming equipment, we have everything you need for console, PC, and mobile gaming. Join our gaming community for tips and reviews to stay ahead in the game!">
+
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -36,6 +41,13 @@
                             <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
                             <span class="slider"></span>
                         </label></li>
+                        <!-- Inside the navbar ul -->
+                        <li class="cart-nav">
+                         
+                                <a href="#"><img height="25px " width="25px" src="images/cart.png" alt="Cart Icon"> <span id="cart-count">0</span></a>
+                          
+                        </li>
+                        
                     </ul>
                     
                     <!-- Hamburger Menu Icon -->
@@ -488,10 +500,11 @@
                     <li><a href="#">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
+                    <li><a href="Contributors/contributor.html">Contributors</a></li>
                 </ul>
             </div>
             <div class="footer-section contact-form">
-                <h2>Contact Us</h2>
+                <h2>Feedback Form</h2>
                 <form action="#" method="post">
                     <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
                     <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
@@ -520,7 +533,7 @@
         </ul>
     </div>
     <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
-        <i class="fas fa-arrow-right"></i>
+        <i class="fas fa-arrow-left"></i>
     </div>
 
 
@@ -533,6 +546,18 @@
         <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"></circle>
         </svg>
     </button>  
+
+    <script>
+        let cartItemCount = 0;
+
+    // Function to handle Add to Cart button click
+        document.getElementById('cart-btn').addEventListener('click', function () {
+            cartItemCount++; // Increment cart count
+            document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
+            alert('Item added to cart'); // Show alert
+        });
+
+    </script>
 
     <!-- this script is for twitter icon  starts -->
     <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
