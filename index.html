@@ -15,9 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -412,34 +410,6 @@
     </div>
 </section>
 
-    <!--review section-->
-  
-  <!-- <section id="review-body">
-      <div class="reviews-container">
-          <h1 class="reviews-title" data-aos="fade-right">What Our Customers Say</h1>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">John Doe</div>
-            <div class="review-rating">★★★★★</div>
-            <p class="review-text" >The tools on this website are fantastic! It has made gaming much more enjoyable and efficient. Highly recommend!</p>
-          </div>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">Jane Smith</div>
-            <div class="review-rating">★★★★☆</div>
-            <p class="review-text">Great products, but I wish there were more options available for casual gamers. Still, amazing service overall!</p>
-          </div>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">Alex Johnson</div>
-            <div class="review-rating">★★★★★</div>
-            <p class="review-text">Excellent customer service! I had an issue with my order, but it was resolved quickly. Definitely will buy again.</p>
-          </div>
-      
-        </div>
-
-      </section> -->
-
       <!-- testimonial -->
 
       <div id="page" class="site">
@@ -508,10 +478,10 @@
                             </div>
                         </li>
                     </ul>
-                    <!-- If we need pagination -->
+                    <!-- pagination -->
                     <div class="swiper-pagination"></div>
 
-                    <!-- If we need navigation buttons -->
+                    <!--  navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
 
@@ -521,14 +491,7 @@
     </div>
 
 
-             <!-- testimonial -->
-
-      
-      <br>
-      <br>
-      <br>
-
-      </section>
+             <!-- testimonial end -->
 
 
 
@@ -595,6 +558,7 @@
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="Contributors/contributor.html">Contributors</a></li>
+                    <li><a href="PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-section contact-form">
@@ -649,6 +613,24 @@
             cartItemCount++; // Increment cart count
             document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
             alert('Item added to cart'); // Show alert
+        });
+
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
 
     </script>
