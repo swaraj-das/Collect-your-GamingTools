@@ -61,6 +61,11 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 
 ## 🙌 Contributors
 
+![GitHub contributors](https://img.shields.io/github/contributors/swaraj-das/Collect-your-GamingTools)
+
+![Contributors](https://contrib.rocks/image?repo=swaraj-das/Collect-your-GamingTools)
+
+
 
 
 
