@@ -667,6 +667,7 @@ button {
     flex: 1;
     margin-bottom: 40px;
     min-width: 300px;
+    margin-left: 7em;
     padding: 0 20px;
 }
 
@@ -855,7 +856,7 @@ button {
   .toggle-arrow {
     position: fixed;
     top: 50%;
-    right: 0;
+    left: 0px;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out;
     background-color: #333;
@@ -872,6 +873,7 @@ button {
     position: fixed;
     top: 55%;
     right: 0;
+
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
