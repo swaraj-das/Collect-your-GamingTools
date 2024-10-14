@@ -1517,6 +1517,7 @@ button {
   
     .swiper-button-next {
       right: 10rem !important; 
+      /* margin-top: 100px !important; */
     }
   
     .swiper-button-prev {
@@ -1589,11 +1590,11 @@ button {
 .site{
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color:rgb(71,61,61);
     color: #000;
 }
 .container-swipe
@@ -1616,6 +1617,7 @@ button {
 .testi .head p {
     font-weight: 600;
     font-size: 25px;
+    color: white;
 }
 
 .testi .head h3{
@@ -1686,6 +1688,7 @@ button {
     font-weight: 550;
     margin-bottom: 30px;
     opacity: 0;
+    color: white;
     transform: translateX(10%);
     transition: transform 1s, opacity 1s;
 }
@@ -1792,11 +1795,170 @@ button {
 }
 
 
-  
 =======
 @media only screen and (max-width: 700px)  {
     .footer-bottom{
         width: 1000vw !important;
     }
+
+}
+/* General Styles for All Screens */
+.container-swipe {
+    width: 100%;
+    max-width: 1200px; /* Ensure container doesn't stretch too much on large screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
 }
 
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #000000; /* Optional: Background for each testimonial */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+}
+
+.thumbnail img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular image */
+}
+
+.aside {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.name h4 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #FF6F61; /* Highlight color */
+}
+
+.swiper-slide {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #000000; /* Background for each testimonial */
+}
+
+.btnns {
+    position: relative;
+    z-index: 1;
+}
+
+/* Styles for Larger Screens (min-width: 750px) */
+@media only screen and (min-width: 750px) {
+    /* Navigation button adjustments for larger screens */
+    .swiper-button-prev {
+        position: absolute;
+        left: 20px;
+        top: 50%; /* Centers button vertically */
+        transform: translateY(-50%);
+    }
+
+    .swiper-button-next {
+        position: absolute;
+        right: 20px;
+        top: 50%; /* Centers button vertically */
+        transform: translateY(-50%);
+    }
+
+    /* Use flex for larger screens */
+    .wrapper {
+        display: flex;
+        flex-direction: row; /* Horizontal layout */
+        align-items: center;
+    }
+
+    .thumbnail img {
+        width: 150px; /* Larger image size for larger screens */
+        height: 150px;
+    }
+
+    .aside {
+        margin-left: 20px;
+    }
+
+    .name h4 {
+        font-size: 22px; /* Larger text for larger screens */
+    }
+}
+
+/* Styles for Medium Screens (between 750px and 1100px) */
+@media only screen and (max-width: 1100px) and (min-width: 750px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .thumbnail img {
+        width: 120px; /* Slightly smaller image for medium screens */
+        height: 120px;
+    }
+
+    .aside {
+        margin-left: 0; /* No margin for stacked layout */
+        margin-top: 15px;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        top: 90%; /* Adjust navigation button placement */
+    }
+}
+
+/* Styles for Small Screens (max-width: 750px) */
+@media only screen and (max-width: 750px) {
+    .wrapper {
+        display: block; /* Stack elements vertically */
+        text-align: center; /* Center-align content for mobile */
+    }
+
+    .thumbnail img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto; /* Center the image */
+    }
+
+    .aside {
+        margin-top: 10px;
+    }
+
+    .name h4 {
+        font-size: 18px;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        top: 85%; /* Buttons positioned lower on small screens */
+        transform: translateY(-85%);
+    }
+
+    /* Adjust testimonial text padding for smaller screens */
+    .swiper-slide {
+        padding: 15px;
+        margin: 15px !important;
+    }
+}
+@media only screen and (min-width: 1100px){
+    .swiper-button-next{
+        margin-left: 1000px;
+        position:absolute ;
+        
+    }
+    .swiper-button-prev{
+        /* margin-right: 1000000px !important; */
+        position:absolute ;
+        left: 15px !important;
+    }
+    .btbtns {
+        position: absolute; /* or relative, fixed, sticky */
+        top: 20px;   /* Modify these values to move the element */
+        left: 50px;  /* Adjust as needed */
+      }
+      
+}
