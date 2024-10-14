@@ -406,53 +406,107 @@ button {
   background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
   transition: background 0.3s ease-in-out;
 }
-#cart-btn {
-  padding: 12px 14px;
+#buy-btn {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  width: 140px; /* Initial width */
+  padding: 10px; /* Initial padding */
+  background-color: #4caf50; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  transition: width 0.3s ease-in-out, padding 0.3s ease-in-out,
+    background-color 0.3s ease-in-out; /* Transition for background color */
 }
 
-/* button img {
-    width: 18px;
-    display: none;
+#buy-btn:hover {
+  width: 160px; /* Increased width on hover */
+  padding: 12px; /* Increased padding on hover */
+  background-color: #45a049; /* Darker green on hover */
 }
-
-button:hover img {
-    display: block;
-} */
 
 #buy-btn img {
-  width: 30px;
-  display: none;
+  width: 30px; /* Icon size */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for opacity and transform */
 }
 
 #buy-btn:hover img {
-  display: block;
+  opacity: 1; /* Fully visible on hover */
+  transform: translateX(5px); /* Slightly move the icon to the right on hover */
 }
 
-#cart-btn img {
-  width: 18px;
-  display: none;
-}
-
-#cart-btn:hover img {
-  display: block;
+#cart-btn {
+  padding: 12px 14px; /* Padding for the cart button */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  width: 140px; /* Set initial width */
+  background-color: #f44336; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Transition for background color */
 }
 
 #cart-btn:hover {
-  width: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 160px; /* Increased width on hover */
+  background-color: #e53935; /* Darker red on hover */
 }
-#buy-btn:hover {
-  width: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+
+#cart-btn img {
+  width: 18px; /* Icon size */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for opacity and transform */
 }
+
+#cart-btn:hover img {
+  opacity: 1; /* Fully visible on hover */
+  transform: translateX(5px); /* Slightly move the icon to the right on hover */
+}
+
 .btn-section {
   display: inline-flex;
-  gap: 15px;
+  gap: 15px; /* Space between buttons */
+}
+#buy-btn {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  width: 140px; /* Initial width */
+  padding: 10px; /* Initial padding */
+  background-color: #4caf50; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  transition: width 0.3s ease-in-out, padding 0.3s ease-in-out,
+    background-color 0.3s ease-in-out; /* Transition for background color */
+}
+
+#buy-btn:hover {
+  width: 160px; /* Increased width on hover */
+  padding: 12px; /* Increased padding on hover */
+  background-color: #45a049;
+  gap: 5px;
+  /* Darker green on hover */
+}
+
+.button-text {
+  margin-right: 5px; /* Space between text and icon */
+}
+
+.button-icon {
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the icon */
+}
+
+#buy-btn:hover .button-icon {
+  transform: translateX(5px); /* Move the icon to the right on hover */
+}
+
+.btn-section {
+  display: inline-flex;
+  gap: 15px; /* Space between buttons */
 }
 
 .col-1::after {
@@ -607,6 +661,10 @@ button:hover img {
   margin-bottom: 40px;
   min-width: 300px;
   padding: 0 20px;
+}
+
+.quick-links {
+  margin-left: -180px;
 }
 
 .footer h2 {
@@ -1354,21 +1412,112 @@ button:hover img {
 
 /* Body styles for consistency */
 #review-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: rgb(71, 61, 61);
+  text-align: center;
+  background-color: #eaf6fd;
+  padding: 40px 20px;
 }
 
-/* Review Section Container */
-.reviews-container {
-  max-width: 800px;
-  margin: 40px auto;
+.reviewer-img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  width: 120px;
+  height: 120px;
+}
+
+.reviewer-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.review-card {
+  background-color: white;
   padding: 20px;
-  background-color: rgb(71, 61, 61);
-  border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.review-rating {
+  color: #ffd700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 1px !important;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #2d3945 !important;
+  background-color: #9d8a3c;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  right: 25rem !important;
+}
+
+.swiper-button-prev {
+  left: 25rem !important;
+}
+
+/* Responsive behavior for smaller screens */
+@media screen and (max-width: 1110px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+
+  .swiper-button-next {
+    right: 10rem !important;
+  }
+
+  .swiper-button-prev {
+    left: 10rem !important;
+  }
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #dfc458;
+  transition: background-color 0.3s ease;
+}
+
+#review-body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgb(71, 61, 61);
 }
 
 /* Section Title */
@@ -1573,6 +1722,7 @@ footer {
   .contact span {
     font-size: 14px;
   }
+
   .links ul li a {
     font-size: 14px;
   }
