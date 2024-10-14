@@ -670,6 +670,11 @@ button {
     padding: 0 20px;
 }
 
+.quick-links {
+    margin-left: -180px;
+}
+
+
 .footer h2 {
     color: white;
     font-size: 1.3em;
