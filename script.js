@@ -183,3 +183,36 @@ document.querySelectorAll('.faq input[type="checkbox"]').forEach((checkbox) => {
     }
   });
 });
+
+
+AOS.init();
+
+
+
+    // Contact form validation and submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var formMessage = document.getElementById('formMessage');
+        
+        // Simple email validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            formMessage.innerHTML = '<p style="color: red;">Please enter a valid email address.</p>';
+            return;
+        }
+        
+        // Simulating form submission
+        formMessage.innerHTML = '<p style="color: #FF1493;">Thank you for your message, ' + name + '! We will get back to you soon.</p>';
+        
+        // Clear form fields
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+        
+        // In a real-world scenario, you would send this data to a server here
+        console.log('Form submitted:', { name, email, message });
+    });
