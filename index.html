@@ -15,8 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -412,78 +411,89 @@
     </div>
 </section>
 
-    <!--review section-->
-  
-    <section id="review-body">
-        <h1 class="reviews-title" data-aos="fade-right">What Our Customers Say</h1>
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-      
-            <!-- First review -->
-            <div class="swiper-slide">
-              <div class="review-card" data-aos="fade-right">
-                <img src="https://th.bing.com/th/id/OIP.rKAJNI-t3QhaZ53Os8P5TwHaHa?rs=1&pid=ImgDetMain" alt="John Doe" class="reviewer-img">
-                <div class="reviewer-name">John Doe</div>
-                <div class="review-rating">★★★★★</div>
-                <p class="review-text">The tools on this website are fantastic! It has made gaming much more enjoyable and efficient. Highly recommend!</p>
-              </div>
+      <!-- testimonial -->
+
+      <div id="page" class="site">
+        <div class="container-swipe">
+            <div class="testi">
+                <div class="head">
+                    <h3>Testimonials</h3>
+                    <p>What Our Customers Say</p>
+                </div>
+                <div class="body swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/girl1.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>I’ve been searching for the perfect gaming accessories for ages, and I finally found them on this website! The variety available is truly impressive; I was able to find exactly what I needed to enhance my gaming experience. The quality of the products exceeded my expectations.</p>
+                                    <div class="name">
+                                        <h4>Sarah malik</h4>
+                                        <p>★★★★★</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/boy2.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>Shopping on this website was a breeze! I love how user-friendly the interface is; it made navigating through the different categories so easy. I was able to find exactly what I needed without any hassle. The checkout process was smooth, and I received my items promptly</p>
+                                    <div class="name">
+                                        <h4>John Doe</h4>
+                                        <p>★★★★☆</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/boy1.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>My order arrived much faster than I anticipated, which was a huge plus. The customer support team was incredibly helpful when I had a question about my order. I purchased a gaming headset, and it works perfectly! It has made a significant difference in my gaming sessions.</p>
+                                    <div class="name">
+                                        <h4>Alex Johnson</h4>
+                                        <p>★★★★★</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/girl2.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>As a serious gamer, I always look for high-quality gear that can enhance my performance. I stumbled upon this website and was blown away by the selection! I purchased a gaming mouse and a mechanical keyboard, and both have drastically improved my gameplay. .</p>
+                                    <div class="name">
+                                        <h4>Emily Davismore</h4>
+                                        <p>★★★★☆</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!--  navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
             </div>
-      
-            <!-- Second review -->
-            <div class="swiper-slide">
-              <div class="review-card" data-aos="fade-right">
-                <img src="https://th.bing.com/th/id/OIP.q10JcSV8pb4VJV_RW6MzvwHaHa?rs=1&pid=ImgDetMain" alt="Jane Smith" class="reviewer-img">
-                <div class="reviewer-name">Jane Smith</div>
-                <div class="review-rating">★★★★☆</div>
-                <p class="review-text">Great products, but I wish there were more options available for casual gamers. Still, amazing service overall!</p>
-              </div>
-            </div>
-      
-            <!-- Third review -->
-            <div class="swiper-slide">
-              <div class="review-card" data-aos="fade-right">
-                <img src="https://petapixel.com/assets/uploads/2019/02/download-4.jpeg" alt="Alex Johnson" class="reviewer-img">
-                <div class="reviewer-name">Alex Johnson</div>
-                <div class="review-rating">★★★★★</div>
-                <p class="review-text">Excellent customer service! I had an issue with my order, but it was resolved quickly. Definitely will buy again.</p>
-              </div>
-            </div>
-      
-          </div>
-      
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-      
-          <!-- Add Navigation Arrows -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
         </div>
-      </section>
-      
-  <!-- <section id="review-body">
-      <div class="reviews-container">
-          <h1 class="reviews-title" data-aos="fade-right">What Our Customers Say</h1>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">John Doe</div>
-            <div class="review-rating">★★★★★</div>
-            <p class="review-text" >The tools on this website are fantastic! It has made gaming much more enjoyable and efficient. Highly recommend!</p>
-          </div>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">Jane Smith</div>
-            <div class="review-rating">★★★★☆</div>
-            <p class="review-text">Great products, but I wish there were more options available for casual gamers. Still, amazing service overall!</p>
-          </div>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">Alex Johnson</div>
-            <div class="review-rating">★★★★★</div>
-            <p class="review-text">Excellent customer service! I had an issue with my order, but it was resolved quickly. Definitely will buy again.</p>
-          </div>
-      
-        </div>
-      </section> -->
+    </div>
+
+
+             <!-- testimonial end -->
+
 
 
             <section id="contact" data-aos="fade-right">
@@ -634,6 +644,9 @@
     <!-- this script is for twitter icon  ends -->
 
     <!-- Scripts -->
+     <!-- testimonial script -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

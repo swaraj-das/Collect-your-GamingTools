@@ -183,3 +183,25 @@ document.querySelectorAll('.faq input[type="checkbox"]').forEach((checkbox) => {
     }
   });
 });
+
+
+function testimonialJs() {
+  const swiper = new Swiper('.swiper', {
+    autoHeight: true,
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+
+});
+}
+testimonialJs();
