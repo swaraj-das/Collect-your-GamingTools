@@ -34,11 +34,19 @@
             </div>
             <button type="submit" class="signup-button">Sign Up</button>
         </form>
+        <div class="or-divider">
+            <span>OR</span>
+        </div>
+        <button id="google-signup" class="google-signup-button">
+            <img src="../images/google-icon.png" alt="Google Icon" class="google-icon">
+            Sign up with Google
+        </button>
         <div class="links">
             <a href="../login/login.html"><u>Already have an account? Login</u></a>
         </div>
     </div>
 
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
         const signup = document.querySelector(".signup-button");
 
@@ -80,6 +88,41 @@
 
             }catch(err){
                 console.log(err.message)
+            }
+        }
+
+        // Add Google Sign-In
+        function handleCredentialResponse(response) {
+            // Send the token to your server to verify and create a session
+            const token = response.credential;
+            // You should implement a function to handle the token on your server
+            signUpWithGoogle(token);
+        }
+
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: 'YOUR_GOOGLE_CLIENT_ID', // Replace with your actual Google Client ID
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById("google-signup"),
+                { theme: "outline", size: "large", width: "100%" }
+            );
+        };
+
+        async function signUpWithGoogle(token) {
+            try {
+                const res = await fetch("http://localhost:5000/auth/google-signup", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ token })
+                });
+
+                const data = await res.json();
+                console.log(data);
+                window.location.href = "http://127.0.0.1:5500/Collect-your-GamingTools/login/login.html";
+            } catch (err) {
+                console.log(err.message);
             }
         }
     </script>
