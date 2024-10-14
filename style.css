@@ -667,6 +667,11 @@ button {
   margin-left: -180px;
 }
 
+.quick-links {
+    margin-left: -180px;
+}
+
+
 .footer h2 {
   color: white;
   font-size: 1.3em;
@@ -1569,6 +1574,109 @@ button {
 @media only screen and (max-width: 700px) {
   .footer-bottom {
     width: 1000vw !important;
+    text-align: center;
+    background-color: #eaf6fd;
+    padding: 40px 20px;
+  }
+  
+  .reviewer-img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .reviewer-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .review-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .review-rating {
+    color: #FFD700; 
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+.swiper-pagination {
+    position: relative; 
+    bottom: 1px !important; 
+    text-align: center; 
+  }
+  
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    opacity: 1; 
+  }
+
+  .swiper-container {
+    position: relative;
+  }
+  
+  .swiper-button-next, .swiper-button-prev {
+    color: #2d3945 !important;
+    background-color: #9D8A3C; 
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; 
+    cursor: pointer;
+  }
+  
+  .swiper-button-next {
+    right: 25rem !important; 
+  }
+  
+  .swiper-button-prev {
+    left: 25rem !important; 
+  }
+  
+  /* Responsive behavior for smaller screens */
+  @media screen and (max-width: 1110px) {
+    .swiper-button-next, .swiper-button-prev {
+      width: 30px; 
+      height: 30px;
+      padding: 5px;
+    }
+  
+    .swiper-button-next {
+      right: 10rem !important; 
+    }
+  
+    .swiper-button-prev {
+      left: 10rem !important; 
+    }
+  }
+  
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: #DFC458; 
+    transition: background-color 0.3s ease;
+  }
+  
+#review-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(71,61,61);
   }
 }
 /* General Styling for Footer */
@@ -1727,3 +1835,216 @@ footer {
     font-size: 14px;
   }
 }
+  
+
+/* testimonial */
+.site{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #000;
+}
+.container-swipe
+{
+    max-width: 1100px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+.testi{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testi .head{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.testi .head p {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.testi .head h3{
+    font-size: 34px;
+    font-weight: 800;
+    color: #ff8552;
+}
+
+.testi .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 30px 0;
+}
+
+/*thumbnail*/
+.testi .thumbnail{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.testi .thumbnail img{
+    object-fit: cover;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    transform: scale(1.5);
+    transition: transform .5s;
+
+}
+.testi .swiper-slide-active .thumbnailimg{
+    transform: scale(1);
+}
+
+.testi .thumbnail::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background-color: #ff8552;    ;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: rgb(0, 0, 2/ 35%) 0px 20px 30px -10px;
+    transition: border-radius .5s .3s;
+}
+
+.testi .swiper-slide-active .thumbnail::before{
+    border-radius: 33% 67% 50% 50% / 50% 14% 86% 50%;
+}
+.testi .aside{
+    position: relative;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+
+}
+
+.testi .aside > p{
+    position: relative;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 550;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateX(10%);
+    transition: transform 1s, opacity 1s;
+}
+
+.testi .swiper-slide-active .aside >p{
+    transform: translateX(0);
+    opacity: 1;
+}
+.testi .aside > p::before,
+.testi .aside > p::after{
+    font-family: serif;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1;
+    position: absolute;
+    color: #ffe0b5;
+    height: 40px;
+    z-index: -1;
+}
+.testi .aside > p::before{
+    content: open-quote;
+    top: -40px;
+    left: 10px;
+}
+.testi .aside > p::after{
+    content: close-quote;
+    right: 0;
+}
+
+.testi .aside .name{
+    position: relative;
+    width: fit-content;
+    line-height: 1;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: transform 1s .2s, opacity 1s .3s;
+}
+.testi .swiper-slide-active .name{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.testi .aside .name h4{
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff8552;    ;
+    opacity: .8;
+}
+
+.testi .aside .name p{
+    font-size: 15px;
+    text-align: right;
+}
+/*slider*/
+.testi :is(.swiper-button-next, .swiper-button-prev){
+    background-color: #ffe0b5;
+    top: 35%;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    transition: background-color .3s;
+    box-shadow: rgb(0, 0, 2/ 35%) 0px 20px 30px -10px;
+}
+
+.testi :is(.swiper-button-next, .swiper-button-prev):hover{
+    background-color: #ff8552;
+;
+}
+
+.testi :is(.swiper-button-next, .swiper-button-prev)::after{
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+}
+.testi.swiper-pagination{
+    position: relative;
+}
+
+.testi.swiper-pagination span{
+    background-color:#ffe0b5 ;
+    transition: width .3s;
+    opacity: 1;
+}
+
+.testi .swiper-pagination .swiper-pagination-bullet-active{
+    width: 26px;
+    border-radius: 4px;
+    background-color: #ff8552;
+}
+
+@media screen and (min-width: 768px) {
+    .testi .wrapper{
+        flex-direction: row;
+        padding: 30px 100px;
+    }
+    .testi .thumbnail{
+        width: 200px;
+        height: 200px;
+    }
+    .testi :is(swiper-button-next, .swiper-button-prev){
+        top: 50%;
+    }
+    
+}
+@media only screen and (max-width: 700px)  {
+    .footer-bottom{
+        width: 1000vw !important;
+    }
+}
+
