@@ -65,6 +65,22 @@ Welcome to **Collect Your GamingTools**! 🚀 Your ultimate destination to disco
 ## 🛠️ Installation
 
 
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/swaraj-das/Collect-your-GamingTools.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd Collect-your-GamingTools
+    ```
+3. Open the `index.html` file in your browser:
+    ```bash
+    open index.html  # On macOS
+    start index.html # On Windows
+    xdg-open index.html # On Linux
+    ```
+
+
 
 Ready to dive in? Here’s how you can get started with our awesome project!
 
