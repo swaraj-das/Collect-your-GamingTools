@@ -2880,7 +2880,8 @@ button:hover img {
   bottom: 15px; /* Distance from the bottom */
   right: 20px; /* Distance from the right */
   display: inline-block;
-  z-index: 1000; /* Ensures the wrapper only takes up as much space as needed */
+  z-index: 1000;
+  font-size: 36px; /* Ensures the wrapper only takes up as much space as needed */
 }
 
 /* Hover text for the chatbox */
