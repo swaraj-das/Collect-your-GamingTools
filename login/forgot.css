@@ -280,47 +280,29 @@ body {
   top: 20px;
   left: 20px;
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: large;
   text-decoration: none;
   border-radius: 15px;
   border: none;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 193, 219, 1) 0%,
-    rgba(245, 131, 202, 1) 100%
-  );
+  background-color: rgba(0, 0, 0, 0.8); 
   color: #fff;
-  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .linksHome:hover {
+  background-color: rgba(0, 0, 0, 1);
+  transform: translateY(-3px); 
   text-decoration: none;
-  background: linear-gradient(
-    0deg,
-    rgba(245, 131, 202, 1) 0%,
-    rgba(255, 193, 219, 1) 100%
-  );
   color: #fff;
 }
 
-.linksHome:before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  top: -180px;
-  left: 0;
-  width: 30px;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-  animation: shiny-btn1 3s ease-in-out infinite;
-}
-
 .linksHome:active {
-  box-shadow: 4px 4px 6px 0 rgba(255, 193, 219, 0.3),
-    -4px -4px 6px 0 rgba(245, 131, 202, 0.3),
-    inset -4px -4px 6px 0 rgba(255, 193, 219, 0.3),
-    inset 4px 4px 6px 0 rgba(245, 131, 202, 0.3);
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+              inset -4px -4px 6px 0 rgba(0, 0, 0, 0.5),
+              inset 4px 4px 6px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(2px); 
 }
 
 @keyframes shiny-btn1 {
