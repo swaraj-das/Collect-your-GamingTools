@@ -127,24 +127,44 @@ function toggleSidebar() {
   }
 }
 
+// Function to handle product search
 function performSearch() {
-  let searchTerm = document.getElementById("search-input").value.toLowerCase();
-  console.log(searchTerm);
-  let cards = document.querySelectorAll(".row");
+  const searchInput = document.getElementById('search-input').value.trim().toLowerCase();
 
-  cards.forEach(function (card) {
-    let cardHeading = card
-      .querySelector(".card-heading")
-      .innerText.toLowerCase();
-
-    // Check if the search term is in the card heading or description
-    if (cardHeading.includes(searchTerm)) {
-      card.style.display = "block"; // Show the card
-    } else {
-      card.style.display = "none"; // Hide the card
-    }
-  });
+  // Check for each product and redirect to the appropriate section
+  if (searchInput === 'ps4 v2 dualshock 4' || searchInput.includes('ps4')) {
+      window.location.href = '#controller'; // Redirect to PS4 controller section
+  } 
+  else if (searchInput === 'xbox wireless controller' || searchInput.includes('controller') || searchInput.includes('xbox')) {
+      window.location.href = '#xbox-section'; // Redirect to Xbox section
+  } 
+  else if (searchInput === 'nintendo switch pro controller' || searchInput.includes('nintendo')) {
+      window.location.href = '#switch-section'; // Redirect to Nintendo section
+  } 
+  else if (searchInput === 'meta quest pro' || searchInput.includes('headset') || searchInput.includes('meta quest')) {
+      window.location.href = '#vrsection'; // Redirect to Meta Quest section
+  } 
+  else if (searchInput === 'apple vision pro' || searchInput.includes('headset') || searchInput.includes('vision pro')) {
+      window.location.href = '#vrsection2'; // Redirect to Apple Vision Pro section
+  } 
+  else if (searchInput === 'logitech g502 hero' || searchInput.includes('mouse') || searchInput.includes('logitech')) {
+      window.location.href = '#others'; // Redirect to Logitech section
+  } 
+  else if (searchInput === 'razer blackwidow' || searchInput.includes('keyboard') || searchInput.includes('blackwidow')) {
+      window.location.href = '#keyboard'; // Redirect to Razer keyboard section
+  } 
+  else if (searchInput === 'steelseries arctis 7' || searchInput.includes('headset') || searchInput.includes('arctis')) {
+      window.location.href = '#headset-section'; // Redirect to SteelSeries headset section
+  } 
+  else if (searchInput === 'secretlab omega' || searchInput.includes('chair') || searchInput.includes('secretlab')) {
+      window.location.href = '#chair-section'; // Redirect to Secretlab chair section
+  } 
+  else {
+      alert('Product not found. Please try searching again!'); // No matching product
+  }
 }
+
+
 
 async function SendEmail(e) {
   e.preventDefault();
