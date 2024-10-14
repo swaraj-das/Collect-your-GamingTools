@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -412,7 +413,53 @@
 
     <!--review section-->
   
-  <section id="review-body">
+    <section id="review-body">
+        <h1 class="reviews-title" data-aos="fade-right">What Our Customers Say</h1>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+      
+            <!-- First review -->
+            <div class="swiper-slide">
+              <div class="review-card" data-aos="fade-right">
+                <img src="https://th.bing.com/th/id/OIP.rKAJNI-t3QhaZ53Os8P5TwHaHa?rs=1&pid=ImgDetMain" alt="John Doe" class="reviewer-img">
+                <div class="reviewer-name">John Doe</div>
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">The tools on this website are fantastic! It has made gaming much more enjoyable and efficient. Highly recommend!</p>
+              </div>
+            </div>
+      
+            <!-- Second review -->
+            <div class="swiper-slide">
+              <div class="review-card" data-aos="fade-right">
+                <img src="https://th.bing.com/th/id/OIP.q10JcSV8pb4VJV_RW6MzvwHaHa?rs=1&pid=ImgDetMain" alt="Jane Smith" class="reviewer-img">
+                <div class="reviewer-name">Jane Smith</div>
+                <div class="review-rating">★★★★☆</div>
+                <p class="review-text">Great products, but I wish there were more options available for casual gamers. Still, amazing service overall!</p>
+              </div>
+            </div>
+      
+            <!-- Third review -->
+            <div class="swiper-slide">
+              <div class="review-card" data-aos="fade-right">
+                <img src="https://petapixel.com/assets/uploads/2019/02/download-4.jpeg" alt="Alex Johnson" class="reviewer-img">
+                <div class="reviewer-name">Alex Johnson</div>
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">Excellent customer service! I had an issue with my order, but it was resolved quickly. Definitely will buy again.</p>
+              </div>
+            </div>
+      
+          </div>
+      
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+      
+          <!-- Add Navigation Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      
+  <!-- <section id="review-body">
       <div class="reviews-container">
           <h1 class="reviews-title" data-aos="fade-right">What Our Customers Say</h1>
       
@@ -435,7 +482,7 @@
           </div>
       
         </div>
-      </section>
+      </section> -->
 
 
             <section id="contact" data-aos="fade-right">
@@ -555,6 +602,24 @@
             cartItemCount++; // Increment cart count
             document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
             alert('Item added to cart'); // Show alert
+        });
+
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
 
     </script>
