@@ -2891,7 +2891,7 @@ button:hover img {
   left: 50%; /* Center the text horizontally */
   top: -40px; /* Position the text above the icon (adjust this value as needed) */
   transform: translateX(-50%);
-  background-color: #ff9800; /* Bright orange background for better visibility */
+  background-color: #333; /* Bright orange background for better visibility */
   color: #fff; /* White text color */
   padding: 6px 12px; /* Increased padding for a larger tooltip */
   border-radius: 4px; /* Rounded corners */
