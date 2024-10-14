@@ -1118,6 +1118,23 @@ button:hover img {
     color: white;
 }
 
+.cta-btn2 {
+    /* background-color: rgb(248, 182, 243);
+    color: #d5ad1d; */
+    background-image: linear-gradient(43deg,#d05641 0%,#c25147 45% ,#ffcc70 100%);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+.cta-btn2:hover {
+    background-color: #fffdfd;
+    color: white;
+}
+
 #faq{
   padding-top: 100px;
 }
