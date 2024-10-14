@@ -61,3 +61,4 @@ document.addEventListener("DOMContentLoaded", () => {
         conditions.special.classList.toggle("met", /[!@#$%^&*(),.?":{}|<>]/.test(password));
     });
 });
+//js code end
