@@ -123,6 +123,7 @@ We welcome all contributions! Check out [Contributing.md](./Contributing.md) for
 
 ## 🙌 Contributors
 
+
 <img src="https://github.com/user-attachments/assets/92dce0e6-9a30-4d27-888e-91cdf1eac83a" height=200  width=300 alt="GT"/>
 
 Your contributions are the heartbeat of Collect Your GamingTools! 💪 Each of you plays a vital role in shaping this project into something extraordinary. If you've been a part of this journey, don't hesitate to add your name below and let the world know you’re a key player on our team! 🌟
@@ -148,6 +149,12 @@ So what are you waiting for? Dust off your gaming gear, grab your snacks, and ge
 
 
 <p align="center">Made with ❤️ by Swaraj Das and contributors. Thank you for stopping by!</p>
+=======
+![GitHub contributors](https://img.shields.io/github/contributors/swaraj-das/Collect-your-GamingTools)
+
+![Contributors](https://contrib.rocks/image?repo=swaraj-das/Collect-your-GamingTools)
+
+
 
 
  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">

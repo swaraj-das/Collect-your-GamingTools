@@ -412,58 +412,116 @@ button {
     background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
     transition: background 0.3s ease-in-out;
 }
-#cart-btn
-{
-    padding: 12px 14px;
+#buy-btn {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
+    width: 140px; /* Initial width */
+    padding: 10px; /* Initial padding */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    transition: 
+        width 0.3s ease-in-out,
+        padding 0.3s ease-in-out,
+        background-color 0.3s ease-in-out; /* Transition for background color */
 }
 
-/* button img {
-    width: 18px;
-    display: none;
+#buy-btn:hover {
+    width: 160px; /* Increased width on hover */
+    padding: 12px; /* Increased padding on hover */
+    background-color: #45a049; /* Darker green on hover */
 }
 
-button:hover img {
-    display: block;
-} */
-
-#buy-btn img{
-    width: 30px;
-    display: none;
+#buy-btn img {
+    width: 30px; /* Icon size */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for opacity and transform */
 }
 
-#buy-btn:hover img{
-    display: block;
+#buy-btn:hover img {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(5px); /* Slightly move the icon to the right on hover */
 }
 
-#cart-btn img{
-    width: 18px;
-    display: none;
+#cart-btn {
+    padding: 12px 14px; /* Padding for the cart button */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
+    width: 140px; /* Set initial width */
+    background-color: #f44336; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    transition: 
+        width 0.3s ease-in-out,
+        background-color 0.3s ease-in-out; /* Transition for background color */
 }
 
-#cart-btn:hover img{
-    display: block;
+#cart-btn:hover {
+    width: 160px; /* Increased width on hover */
+    background-color: #e53935; /* Darker red on hover */
 }
 
-#cart-btn:hover
-{
-    width: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+#cart-btn img {
+    width: 18px; /* Icon size */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for opacity and transform */
+}
 
+#cart-btn:hover img {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(5px); /* Slightly move the icon to the right on hover */
 }
-#buy-btn:hover
-{
-    width: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+
+.btn-section {
+    display: inline-flex;
+    gap: 15px; /* Space between buttons */
 }
-.btn-section
-{   display: inline-flex;
-    gap: 15px;
+#buy-btn {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
+    width: 140px; /* Initial width */
+    padding: 10px; /* Initial padding */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    transition: 
+        width 0.3s ease-in-out,
+        padding 0.3s ease-in-out,
+        background-color 0.3s ease-in-out; /* Transition for background color */
 }
+
+#buy-btn:hover {
+    width: 160px; /* Increased width on hover */
+    padding: 12px; /* Increased padding on hover */
+    background-color: #45a049;
+    gap: 5px;
+     /* Darker green on hover */
+}
+
+.button-text {
+    margin-right: 5px; /* Space between text and icon */
+}
+
+.button-icon {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the icon */
+}
+
+#buy-btn:hover .button-icon {
+    transform: translateX(5px); /* Move the icon to the right on hover */
+}
+
+.btn-section {
+    display: inline-flex;
+    gap: 15px; /* Space between buttons */
+}
+
+
 
 .col-1::after {
     content: '';
