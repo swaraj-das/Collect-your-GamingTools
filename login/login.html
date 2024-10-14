@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,6 +6,15 @@
     <title>Collect your GamingTools</title>
     <link rel="stylesheet" href="login.css">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <style>
+        .condition {
+            color: gray; /* Default color */
+            font-size: 0.9em;
+        }
+        .condition.met {
+            color: lightgreen; /* Turns green when condition is met */
+        }
+    </style>
 </head>
 <body>
     <div class="linksHome">
@@ -23,20 +33,16 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <div ontouchstart="">
-  <div class="button">
-    <a href="#">Login</a>
-  </div>
-</div>
+                <div class="button">
+                    <a href="#">Login</a>
+                </div>
+            </div>
         </form>
         <div class="links">
             <a href="forgot.html" class="hal">Forgot Password?</a>
             <a href="../SignUp/signup.html" class="hal2">Sign Up</a>
         </div>
     </div>
-
-
-
-
 
     <footer class="footer">
         <div class="waves">
@@ -72,45 +78,62 @@
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <script>
+        const login = document.querySelector(".button");
 
-</body>
+        login.addEventListener("click",(e)=>{
+            e.preventDefault();
 
-<script>
-    const login = document.querySelector(".button");
-
-    login.addEventListener("click",(e)=>{
-        e.preventDefault();
-
-        const email = document.querySelector("#gmail").value;
-        const password = document.querySelector("#password").value;
-        const userData = {
-            email,
-            password
-        }
-        console.log(userData)
-        loginUser(userData)
-    })
-
-    const loginUser = async (user)=>{
-    try{
-        const res = await fetch("http://localhost:5000/auth/signin",{
-            method:"POST",
-            credentials:"include",
-            redirect:"follow",
-            headers:{"content-type":"application/json"},
-            body:JSON.stringify(user)
+            const email = document.querySelector("#gmail").value;
+            const password = document.querySelector("#password").value;
+            const userData = {
+                email,
+                password
+            }
+            console.log(userData)
+            loginUser(userData)
         })
-        if (!res.ok) {
-            throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        const data = await res.json();
-  
 
-        window.location.href="http://127.0.0.1:5500/Collect-your-GamingTools/index.html"
-    }catch(e){
-        console.log(e.message);
-    }
-    }
-</script>
-<script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
+        const loginUser = async (user)=>{
+            try{
+                const res = await fetch("http://localhost:5000/auth/signin",{
+                    method:"POST",
+                    credentials:"include",
+                    redirect:"follow",
+                    headers:{"content-type":"application/json"},
+                    body:JSON.stringify(user)
+                })
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                const data = await res.json();
+                window.location.href="http://127.0.0.1:5500/Collect-your-GamingTools/index.html"
+            }catch(e){
+                console.log(e.message);
+            }
+        }
+
+        // Password Strength Check
+        const passwordInput = document.querySelector("#password");
+        const conditions = {
+            length: document.getElementById("length"),
+            uppercase: document.getElementById("uppercase"),
+            lowercase: document.getElementById("lowercase"),
+            number: document.getElementById("number"),
+            special: document.getElementById("special")
+        };
+
+        passwordInput.addEventListener("input", () => {
+            const password = passwordInput.value;
+
+            // Check each condition and toggle the "met" class
+            conditions.length.classList.toggle("met", password.length >= 8);
+            conditions.uppercase.classList.toggle("met", /[A-Z]/.test(password));
+            conditions.lowercase.classList.toggle("met", /[a-z]/.test(password));
+            conditions.number.classList.toggle("met", /\d/.test(password));
+            conditions.special.classList.toggle("met", /[!@#$%^&*(),.?":{}|<>]/.test(password));
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
+</body>
 </html>
