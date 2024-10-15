@@ -107,6 +107,13 @@
 
         const email = document.querySelector("#gmail").value;
         const password = document.querySelector("#password").value;
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return; // Stop the function if email is not in the right format
+        }
+        
         const userData = {
             email,
             password
