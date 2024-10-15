@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Rating Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .rating-container {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 100px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 1000px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .stars input {
+            display: none;
+        }
+
+        .stars label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .stars input:checked ~ label,
+        .stars label:hover,
+        .stars label:hover ~ label {
+            color: #ffcc00;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="rating-container">
+        <h1>Rate our Games</h1>
+
+        <div class="stars">
+            <input type="radio" name="star" id="star1" value="5">
+            <label for="star1">&#9733;</label>
+
+            <input type="radio" name="star" id="star2" value="4">
+            <label for="star2">&#9733;</label>
+
+            <input type="radio" name="star" id="star3" value="3">
+            <label for="star3">&#9733;</label>
+
+            <input type="radio" name="star" id="star4" value="2">
+            <label for="star4">&#9733;</label>
+
+            <input type="radio" name="star" id="star5" value="1">
+            <label for="star5">&#9733;</label>
+        </div>
+
+        <textarea id="comment" placeholder="Leave a comment..."></textarea>
+
+        <button type="button" onclick="submitRating()">Submit Rating</button>
+
+        <div id="result" class="result">
+            <h3>Thank you for your rating 🤗</h3>
+            <p id="display-rating"></p>
+            <p id="display-comment"></p>
+        </div>
+    </div>
+
+    <script>
+        function submitRating() {
+            // Get selected rating
+            let rating = document.querySelector('input[name="star"]:checked');
+            let comment = document.getElementById('comment').value;
+
+            if (!rating) {
+                alert("Please select a rating.");
+                return;
+            }
+
+            // Display the rating and comment
+            document.getElementById('display-rating').textContent = "Rating: " + rating.value + " stars";
+            document.getElementById('display-comment').textContent = "Comment: " + (comment || "No comment provided.");
+
+            // Show the result section
+            document.getElementById('result').style.display = "block";
+
+            // Clear the form
+            document.querySelector('input[name="star"]:checked').checked = false;
+            document.getElementById('comment').value = '';
+        }
+    </script>
+</body>
+</html>
