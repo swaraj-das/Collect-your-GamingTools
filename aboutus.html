@@ -226,15 +226,54 @@
 
     <!-- SIDEBAR -->
         
-    <div class="social-sidebar">
-        <div class="close-btn" id="SideBar" onclick="toggleSidebar()" title="Close Sidebar">&times;</div>
-        <ul id="sidebar-content">
-            <li><a class= "facebook" href="#"><i class="fa-brands fa-meta"></i></a></li>
-            <li><a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a></li>
-            <li><a class= "facebook" href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a class= "facebook" href="#"><i class="fa-brands fa-youtube"></i></a></li>
-        </ul>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/twitter.png" alt="Twitter">
+        </a>
     </div>
+</header>
+<style>
+    /* Basic styling for the header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Styling for social media icons */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-media img {
+    width: 40px; /* Customize icon size */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.2); /* Adds zoom effect on hover */
+}
+
+</style>
+
+
     <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
         <i class="fas fa-arrow-left"></i>
     </div>
