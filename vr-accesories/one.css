@@ -279,7 +279,38 @@ button {
     border-radius: 6px;
     cursor: pointer;
     padding: 10px 20px;
+    transition: background-color 0.3s ease;
 }
+button:hover,
+button:focus {
+    background: linear-gradient(to right, #ff3527, #ffd700);
+}
+/* Style for the Buy Now button */
+/* Buy Now Button */
+header .buy-now {
+    background-color: #e4d7d3; /* Change to desired color */
+}
+
+.buy-now {
+    background: linear-gradient(to right, #e9b2ae, #fb5283); /* Same gradient as the Add to Cart button */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Adjust padding to match the existing button */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for spacing */
+    font-size: 16px; /* Match font size */
+    font-weight: bold; /* Match font weight */
+    border-radius: 6px; /* Same border-radius */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+.buy-now:hover {
+    background: linear-gradient(to right, #fb5283, #ffd700); /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
 
 .container {
     max-width: 100%;
@@ -413,7 +444,7 @@ button {
     text-align: center;
     color: #333; /* Keep this color for text within product items */
     overflow: hidden; /* Hide overflow for the shine effect */
-    transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling on hover */
 }
 
 .vr-product-item:hover {

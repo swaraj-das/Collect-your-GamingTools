@@ -26,43 +26,59 @@
 }
 /* Styling for the dropdown container */
 /* Styling for the dropdown container */
+/* Styling for the dropdown container */
 .dropdown {
     position: relative;
-    display: inline-block;
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 1000; /* Ensures the button and content stay above the image */
 }
 
 /* Styling for the dropdown content (hidden by default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1001; /* Ensures dropdown content is on top of everything else */
-    overflow: visible; /* Prevent content from being clipped */
+    display: none; /* Keep hidden by default */
+    position: absolute; /* Positioning for dropdown */
+    background-color: transparent; /* Ensure no background box */
+    z-index: 1001; /* Prevent content from being clipped */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
 }
 
 /* Dropdown content items */
 .dropdown-content li {
-    padding: 12px 16px;
-    list-style-type: none;
+    padding: 0; /* Remove padding to avoid box shape */
+    margin: 0; /* Remove margin to avoid space */
+    list-style-type: none; /* Remove bullets */
 }
 
-.dropdown-content li a {
-    text-decoration: none;
-    color: black;
-    display: block;
-}
-
-.dropdown-icon {
+/* Styling for the specific VR button */
+.vr-button {
+    background-color: transparent; /* Make the button background transparent */
+    color: #181617; /* Text color */
+     /* Add border to match text color */
+    padding: 10px 30px; /* Increase left/right padding for oval effect */
+    font-size: 16px;
+    border-radius: 25px; /* High value for oval shape */
     cursor: pointer;
-    margin-left: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center the text */
+    display: inline-block; /* Ensure proper sizing */
 }
 
-/* Add class for dropdown open */
-.dropdown-content.show {
-    display: block; /* Show when dropdown is clicked */
+.vr-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+/* Optional: Style the link inside the button */
+.vr-button a {
+    color: inherit; /* Inherit color from button */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Prevent the link from altering the button's hover color */
+.vr-button a:hover {
+    color: white; /* Change text color on link hover */
 }
 
 .form-section {
@@ -74,6 +90,8 @@
     display: flex;
     justify-content: center; /* Center the image */
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .image-section img {
@@ -185,6 +203,8 @@ html::-webkit-scrollbar-thumb:window-inactive {
     overflow: hidden;
     background-color: #fff;
     z-index: 1000;
+    padding:22px 20px;
+    height:70px;
 }
 
 .dark-mode .navbar{
