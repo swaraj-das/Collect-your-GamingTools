@@ -1230,7 +1230,12 @@ button {
       box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
     }
   }
-  
+  .socials a:hover{
+    transform:scale(1.2);
+
+  }
+
+
   .scroll-top:hover {
     animation: pulse 1.5s infinite;
   }
