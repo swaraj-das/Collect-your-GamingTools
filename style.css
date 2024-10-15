@@ -1295,6 +1295,15 @@ button {
     background-color: #555;
 }
 
+#buy-btn a{
+    text-decoration: none;
+    color: white;
+}
+#cart-btn a{
+    text-decoration: none;
+    color: white;
+}
+
 .hero {
     position: relative;
     display: flex;
