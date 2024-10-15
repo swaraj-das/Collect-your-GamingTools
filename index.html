@@ -564,6 +564,7 @@
                         <img src="images/logo.png" alt="GamingTools Logo" class="footer-logo">
                         <h2 class="logo-text">Collect your GamingTools</h2>
                     </div>
+
                     <p class="about-text">
                         Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our
                         curated selection of controllers, VR gear, and more.
@@ -578,6 +579,79 @@
                         <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
                         <a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
                         <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
+
+                    <div class="card-body">
+                        <div class="image-section">
+                            <img src="images/7725176.jpg" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
+                        </div>
+                        <div class="form-section">
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Your email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" placeholder="Your message"></textarea>
+                                </div>
+                                <button type="submit">Send</button>
+                            </form>
+                            
+                            <script>
+                                // Function to load form data from local storage
+                                function loadFormData() {
+                                    const data = JSON.parse(localStorage.getItem('formData')) || [];
+                                    if (data.length > 0) {
+                                        // Optionally, you can display the saved data
+                                        console.log('Saved Form Data:', data);
+                                    }
+                                }
+                            
+                                // Function to save form data to local storage
+                                function saveFormData() {
+                                    const name = document.getElementById('name').value;
+                                    const email = document.getElementById('email').value;
+                                    const message = document.getElementById('message').value;
+                            
+                                    // Create a new entry
+                                    const newEntry = { name, email, message };
+                            
+                                    // Get existing data from local storage or initialize an empty array
+                                    const existingData = JSON.parse(localStorage.getItem('formData')) || [];
+                            
+                                    // Add the new entry to the existing data
+                                    existingData.push(newEntry);
+                            
+                                    // Save the updated data back to local storage
+                                    localStorage.setItem('formData', JSON.stringify(existingData));
+                                }
+                            
+                                // Event listener for form submission
+                                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                                    event.preventDefault(); // Prevent the default form submission
+                                    saveFormData(); // Save form data to local storage
+                                    clearForm(); // Clear the input fields
+                                    alert('Message sent!'); // Display a confirmation message
+                                });
+                            
+                                // Function to clear input fields
+                                function clearForm() {
+                                    document.getElementById('name').value = '';
+                                    document.getElementById('email').value = '';
+                                    document.getElementById('message').value = '';
+                                }
+                            
+                                // Load the form data when the page is loaded
+                                window.onload = loadFormData;
+                            </script>
+                            
+                        </div>
+                       
+
                     </div>
                 </div>
                 <div class="footer-section quick-links">
@@ -629,6 +703,24 @@
         <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
             <i class="fas fa-arrow-left"></i>
         </div>
+
+        
+    </footer>
+
+    <!-- SIDEBAR -->
+        
+    <div class="social-sidebar">
+        <div class="close-btn" id="SideBar" onclick="toggleSidebar()" title="Close Sidebar">&times;</div>
+        <ul id="sidebar-content">
+            <li><a class= "facebook" href="#"><i class="fa-brands fa-meta"></i></a></li>
+            <li><a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a class= "instagram" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a class= "youtube" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+    </div>
+    <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
+        <i class="fas fa-arrow-left"></i>
+    </div>
 
 
         <!-- Scroll to Top Button -->
