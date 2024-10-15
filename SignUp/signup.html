@@ -14,6 +14,11 @@
         .condition.met {
             color: lightgreen; /* Turns green when condition is met */
         }
+        .error-message {
+            color: red;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -32,6 +37,7 @@
             <div class="input-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
+                <div id="email-error" class="error-message"></div> <!-- Error message container -->
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
@@ -51,6 +57,7 @@
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
+            <div id="password-error" class="error-message"></div> <!-- Password error container -->
             <button type="submit" class="signup-button">Sign Up</button>
         </form>
         <div class="or-divider">
