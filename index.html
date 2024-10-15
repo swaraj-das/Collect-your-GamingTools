@@ -35,7 +35,14 @@
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./aboutus.html">About Us</a></li>
                         <li><a href="#controller">Game Controllers</a></li>
-                        <li><a href="#vrsection">VR Accessories</a></li>
+                        <li class="dropdown">
+                            <a href="#vrsection" class="dropbtn">VR Accessories</a>
+                            <span class="dropdown-icon" onclick="toggleDropdown()">&#x25BC;</span> <!-- Dropdown arrow -->
+                            <ul class="dropdown-content" id="vrDropdown">
+                                <li><button><a href="vr-accesories/one.html">More VR Products</a></button></li>
+                            </ul>
+                        </li>
+                        
                         <li><a href="#keyboard">Gaming Keyboard</a></li>
                         <li><a href="#others">Others</a></li>
                         
@@ -209,6 +216,7 @@
                 <div class="btn-section">
                     <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button><a href="vr-accesories/one.html">More VR products</a></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -240,6 +248,7 @@
                 <div class="btn-section">
                     <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button><a href="vr-accesories/one.html">More VR products</a></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">

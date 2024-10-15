@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Accessories - Gaming Shop</title>
+    <link rel="stylesheet" href="one.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/"> <img src="logo.png" class="logo" alt="Logo"></a>
+                <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+                <div class="menu-icon" id="menu-icon">
+                    &#9776; <!-- This represents the hamburger menu icon -->
+                </div>
+            </div>
+            <ul class="nav-links" id="menu-items"> <!-- Added ID here -->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../login/login.html">Login</a></li> <!-- Corrected the path -->
+                <li><a href="../SignUp/signup.html">Sign Up</a></li> <!-- Corrected the path -->
+            </ul>
+        </nav>
+    </header>
+    <section class="video-section">
+        <video autoplay muted loop playsinline id="background-video">
+            <source src="vr.mp4" type="video/mp4">
+            <!-- Fallback content -->
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">
+            <h1>Immerse Yourself in Virtual Reality</h1>
+            <p>Unlock Next-Gen Gaming with Our VR Accessories!</p>
+        </div>
+    </section>
+    <!-- Slider Section -->
+<section class="slider-section container-fluid">
+    <div class="row d-flex align-items-center">
+        <!-- Left Text -->
+        <div class="col-md-6 content-text">
+            <h2>Get Ready for the Ultimate Adventure</h2>
+            <p>Where Fun Meets Reality....<br>Limitless Possibilities, Endless Fun....<br>Explore New Worlds, Unleash Your Imagination.....</p>
+            <h3><a href="#vr">Buy Now...</a></button></h3>
+        </div>
+       
+
+        <!-- Right Autoplay Slider -->
+        <div class="col-md-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="slider22.png" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="slider33.png" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="slider44.png" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Content Section -->
+<section class="content-section container-fluid">
+    <div class="row d-flex align-items-center">
+        <!-- Left Image -->
+        <div class="col-md-6">
+            <img src="frnd.jpg" alt="Super Rumble">
+        </div>
+
+        <!-- Right Text -->
+        <div class="col-md-6 content-text">
+            <h2>Play together, even when apart</h2>
+            <p>Feel like you’re in the same room as you battle it out with your friends. Join forces or compete for the win—and bragging rights.</p>
+        </div>
+    </div>
+</section>
+    <main>
+        <section class="vr-accessories-section" id="vr">
+            <h1>VR Gaming Accessories</h1>
+            <p>Explore our range of VR products for the ultimate gaming experience.</p>
+            <div class="vr-product-grid">
+                <!-- Product Item 1 -->
+                <div class="vr-product-item">
+                    <img src="head.png" alt="VR Headset">
+                    <h2>VR Headset</h2>
+                    <p>Experience immersive gaming with this high-quality VR headset.</p>
+                    <span class="price">$299.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Item 2 -->
+                <div class="vr-product-item">
+                    <img src="controller.png" alt="VR Controllers">
+                    <h2>VR Controllers</h2>
+                    <p>Precision controls for a seamless gaming experience.</p>
+                    <span class="price">$149.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Item 3 -->
+                <div class="vr-product-item">
+                    <img src="gloves.png" alt="VR Gloves">
+                    <h2>VR Gloves</h2>
+                    <p>Feel the game with our innovative VR gloves.</p>
+                    <span class="price">$199.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Item 4 -->
+                <div class="vr-product-item">
+                    <img src="tredmill.png" alt="VR Treadmill">
+                    <h2>VR Treadmill</h2>
+                    <p>Run, walk, or jog in your favorite games with this treadmill.</p>
+                    <span class="price">$999.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Item 5 -->
+                <div class="vr-product-item">
+                    <img src="headphone.png" alt="VR Headphones">
+                    <h2>VR Headphones</h2>
+                    <p>Enjoy crystal clear sound for an immersive experience.</p>
+                    <span class="price">$129.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Item 6 -->
+                <div class="vr-product-item">
+                    <img src="cleaner.png" alt="VR Lens Cleaner">
+                    <h2>VR Lens Cleaner</h2>
+                    <p>Keep your VR lenses clean and clear for the best experience.</p>
+                    <span class="price">$19.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Item 7 -->
+                <div class="vr-product-item">
+                    <img src="stand.png" alt="VR Stand">
+                    <h2>VR Stand</h2>
+                    <p>Store your VR headset safely with this stylish stand.</p>
+                    <span class="price">$39.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Item 8 -->
+                <div class="vr-product-item">
+                    <img src="bagpac.png" alt="VR Backpack">
+                    <h2>VR Backpack</h2>
+                    <p>Carry your VR equipment easily with this spacious backpack.</p>
+                    <span class="price">$59.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Item 9 -->
+                <div class="vr-product-item">
+                    <img src="chair.png" alt="VR Chair">
+                    <h2>VR Chair</h2>
+                    <p>Experience comfort during long gaming sessions.</p>
+                    <span class="price">$399.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Item 10 -->
+                <div class="vr-product-item">
+                    <img src="mat.png" alt="VR Floor Mat">
+                    <h2>VR Floor Mat</h2>
+                    <p>Stay oriented with our special VR floor mat.</p>
+                    <span class="price">$29.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Item 11-->
+                <div class="vr-product-item">
+                    <img src="wheel.png" alt="VR Racing Wheel">
+                    <h2>VR Racing Wheel</h2>
+                    <p>Experience realistic driving simulations with this VR racing wheel, designed for ultimate control and immersion.</p>
+                    <span class="price">$199.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            <!-- Product Item 12-->
+                <div class="vr-product-item">
+                    <img src="tracker.png" alt="VR Fitness Tracker">
+                    <h2>VR Fitness Tracker</h2>
+                    <p>Stay motivated and track your fitness progress while enjoying your VR workouts with this advanced fitness tracker.</p>
+                    <span class="price">$59.99</span>
+                    <span>Overall Rating:</span>
+                    <p class="star">4.7★</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+    
+</div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content compact">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <img src="logo.png" alt="GamingTools Logo" class="footer-logo">
+                <p class="about-text">
+                    Elevate your gaming with premium accessories.
+                </p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section links">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Section -->
+            <div class="footer-section contact">
+                <p class="contact-item"><i class="fas fa-phone"></i> 123-456-789</p>
+                <p class="contact-item"><i class="fas fa-envelope"></i> info@gamingtools.com</p>
+            </div>
+        </div>
+    
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            &copy; 2024 GamingTools | Designed by Swaraj
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            var menuItems = document.getElementById('menu-items');
+            menuItems.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,568 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and Branding */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+    width: auto;
+}
+
+.logo strong {
+    color: #FF0000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.website-name {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(90deg, #ff459f, #ff9532, #ffd700, #32cd32, #1e90ff, #8a2be2, #ff459f);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    animation: rainbow 5s linear infinite;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%; /* Takes full viewport width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+}
+
+/* Nav container */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex; /* Default display */
+    list-style: none;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.nav-links.active {
+    display: block; /* Change display when active */
+}
+
+.menu-icon {
+    cursor: pointer; /* Change cursor to pointer for better UX */
+}
+
+/* Hide the menu items on small screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide by default on small screens */
+        flex-direction: column; /* Stack items vertically */
+        background: #fff; /* Optional: background color */
+        position: absolute; /* Position it absolutely */
+        top: 50px; /* Adjust according to your header height */
+        width: 100%; /* Full width */
+        z-index: 10; /* Ensure it sits above other elements */
+    }
+    
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.5s, transform 0.5s;
+}
+
+nav ul li a:hover {
+    color: #fb5283;
+    transform: scale(1.1);
+}
+
+/* Login Button */
+nav ul li.login {
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    height: 24px;
+    border-radius: 20px;
+    padding: 4px 18px;
+    cursor: pointer;
+}
+
+nav ul li.login a {
+    color: #fff;
+}
+
+nav ul li.login:hover {
+    background-color: #ff3527;
+    color: #fff;
+}
+
+/* Responsive Menu (Mobile) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* General styling */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0;
+    padding: 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px; /* Thinner scrollbar */
+    height: 6px; /* Horizontal scrollbar if needed (optional) */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray track */
+    border-radius: 10px;
+}
+
+/* Scrollbar thumb (the part you can drag) */
+::-webkit-scrollbar-thumb {
+    background-color: #fb5283; /* Pink scrollbar color */
+    border-radius: 10px;
+    border: 2px solid #fff; /* Adds padding between scrollbar and track */
+    height: 10px; /* Shorter scrollbar thumb */
+}
+
+/* Hover effect on the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff5283; /* Darker pink when hovered */
+}
+
+@media (max-width: 768px) {
+    /* Show menu icon on smaller screens */
+    .menu-icon {
+        display: block;
+        color: #000;
+    }
+    
+    /* Hide navigation links by default on small screens */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    /* Show nav links when menu is active */
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .logo {
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 20px;
+    }
+}
+
+/* Main Content Section */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px 0;
+    overflow-x: hidden; 
+}
+
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-1 h2 {
+    font-size: 54px;
+    color: var(--text-color);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.dark-mode h2 {
+    color: #ccc;
+}
+
+/* Button Styling */
+button {
+    width: 140px;
+    border: 0;
+    outline: none;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: bolder;
+    background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Video Section Styles */
+.video-section {
+    position: relative;
+    height: 90vh; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: -1;
+    filter: blur(0%); /* Blurs the video */
+    opacity: 0.7; /* Makes the video a little faded for better readability */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 30%; /* Adjust this to position vertically */
+    left: 5%; /* Align the text to the left */
+    max-width: 40%; /* Ensure the text doesn't stretch too far */
+    color: white;
+    z-index: 2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.video-overlay h1 {
+    font-size: 3.5rem; /* Adjust as needed */
+    font-weight: 700; /* Bold font */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Adds shadow for better readability */
+}
+
+.video-overlay p {
+    font-size: 1.7rem; /* Adjust the font size */
+    font-weight: 600; /* Bold text */
+    margin-top: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for better readability */
+    line-height: 1.5;
+}
+.slider-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    padding-bottom: 0px;
+}
+
+
+.slider-section .content-text {
+    padding: 20px;
+}
+
+.slider-section .content-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.slider-section .content-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+}
+
+.carousel-indicators {
+    bottom: -20px;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #000;
+}
+.content-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    
+}
+
+.content-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content-text {
+    padding: 20px;
+}
+
+.content-text h2 {
+    font-size: 2rem;
+}
+
+.content-text p {
+    font-size: 1.1rem;
+}
+/* Main Section */
+/* Main Section */
+.vr-accessories-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e9e5df; /* Changed to white */
+    color: #000; /* Changed text color to black */
+}
+
+.vr-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vr-product-item {
+    position: relative; /* Required for the hover effect */
+    background-color: #f9f9f9; /* Adjusted background for product item */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333; /* Keep this color for text within product items */
+    overflow: hidden; /* Hide overflow for the shine effect */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+.vr-product-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Shine Effect */
+.vr-product-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.vr-product-item:hover::before {
+    opacity: 1;
+    top: -100%;
+    left: -100%;
+    transform: rotate(45deg) translate(200%, 200%);
+}
+
+/* Other styles remain the same */
+
+.vr-accessories-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.vr-accessories-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.vr-product-item img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.vr-product-item h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.vr-product-item p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FF4500;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #FF6347;
+}
+
+
+/* Footer Styling */
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 10px;
+    min-width: 180px;
+}
+
+.footer-logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.about-text {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #ddd;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links ul li {
+    margin-bottom: 5px;
+}
+
+.links ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.links ul li a:hover {
+    color: #fff;
+}
+
+.contact .contact-item {
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background: #222;
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+/* Compact Layout */
+.footer-content.compact {
+    justify-content: space-around;
+    padding: 0 10px;
+}
