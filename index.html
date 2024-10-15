@@ -616,17 +616,162 @@
                     <li><a href="PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a></li>
                 </ul>
             </div>
-            <div class="footer-section contact-form">
-                <h2>Feedback Form</h2>
-                <form action="#" method="post">
-                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
-                    <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-                    <button type="submit" class="btn btn-big contact-btn">
-                        <i class="fas fa-envelope"></i>
-                        Send
-                    </button>
-                </form>
-            </div>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Enhanced Footer Feedback Form</title>
+                <link rel="stylesheet" href="style.css">
+            </head>
+            <body>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>E-commerce Landing Page with Feedback Form</title>
+                    <link rel="stylesheet" href="style.css">
+                </head>
+                <body>
+                    <!-- Other sections of the website -->
+                
+                    <!-- Footer Section with Feedback Form -->
+                    <footer>
+                        <h2>Give Us Your Feedback</h2>
+                        <form id="feedback-form">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                            <label for="rating">Rate Your Experience:</label>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" required>
+                                <label for="star5" title="5 stars">☆</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4" title="4 stars">☆</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3" title="3 stars">☆</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2" title="2 stars">☆</label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1" title="1 star">☆</label>
+                            </div>
+                
+                            <label for="comments">Comments:</label>
+                            <textarea id="comments" name="comments" rows="4" placeholder="Tell us what you think"></textarea>
+                
+                            <button type="submit">Submit Feedback</button>
+                        </form>
+                    </footer>
+                </body>
+                
+                
+        
+                
+            
+          
+            
+            </body>
+            <style>
+              
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#feedback-form {
+    display: inline-block;
+    text-align: left;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; 
+    height: auto; 
+}
+
+#feedback-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    font-size: 14px;
+}
+
+#feedback-form textarea {
+    resize: none;
+}
+
+#feedback-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#feedback-form button:hover {
+    background-color: #0056b3;
+}
+
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+    margin: 10px 0 15px;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.rating input[type="radio"]:checked ~ label {
+    color: #f7d106;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #f7d106;
+}
+  
+
+
+
+            </style>
+            
+            
         </div>
         <div class="footer-bottom">
             &copy; 2024 GamingTools | Designed by Swaraj
@@ -634,7 +779,7 @@
         
     </footer>
 
-    <!-- SIDEBAR -->
+    
         
     <div class="social-sidebar">
         <div class="close-btn" id="SideBar" onclick="toggleSidebar()" title="Close Sidebar">&times;</div>
@@ -650,7 +795,7 @@
     </div>
 
 
-    <!-- Scroll to Top Button -->
+    
     <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
         <div class="scroll-top-icon">
         <ion-icon name="arrow-up-outline"></ion-icon>
@@ -663,11 +808,11 @@
     <script>
         let cartItemCount = 0;
 
-    // Function to handle Add to Cart button click
+    
         document.getElementById('cart-btn').addEventListener('click', function () {
-            cartItemCount++; // Increment cart count
-            document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
-            alert('Item added to cart'); // Show alert
+            cartItemCount++; 
+            document.getElementById('cart-count').textContent = cartItemCount; 
+            alert('Item added to cart'); 
         });
 
     </script>
@@ -690,12 +835,12 @@
 
     </script>
 
-    <!-- this script is for twitter icon  starts -->
+    
     <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
-    <!-- this script is for twitter icon  ends -->
+    
 
-    <!-- Scripts -->
-     <!-- testimonial script -->
+
+     
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
