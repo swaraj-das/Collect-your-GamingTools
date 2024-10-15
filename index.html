@@ -2,35 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta charset= "UTF-8">
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
     <title>Collect your GamingTools</title>
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--adding meta keywords and description -->
+    <meta name= "keywords" content="gaming tools, game accessories, gaming gear, gaming equipment, gaming setup, game controller, gaming mouse, gaming keyboard, gaming headset, gaming software, eSports tools, gaming community, gaming chair, VR gaming tools, game streaming equipment, console gaming, PC gaming, mobile gaming, gaming tips, game reviews, gaming news">
+    <meta name= "description" content="Collect and discover the ultimate gaming tools and accessories to enhance your gaming experience. From high-performance controllers and mice to immersive headsets and VR gaming equipment, we have everything you need for console, PC, and mobile gaming. Join our gaming community for tips and reviews to stay ahead in the game!">
+
+    <link rel= "shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href= "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel= "stylesheet" href="style.css">
+    <link rel= "stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
-    <div id="progressBarContainer">
-        <div id="progressBar"></div>
+    <div id= "progressBarContainer">
+        <div id= "progressBar"></div>
     </div>
       
-        <div class="container">
+        <div class= "container">
             
-            <div class="navbar">
-                <div class="logo-outer">
+            <div class= "navbar">
+                <div class= "logo-outer">
                     <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
                     <a href="/"><span class="website-name">Collect your GamingTools</span></a>
                 </div>
                 <nav>
                     <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
                         <li><a href="#controller">Game Controllers</a></li>
                         <li><a href="#vrsection">VR Accessories</a></li>
                         <li><a href="#keyboard">Gaming Keyboard</a></li>
                         <li><a href="#others">Others</a></li>
+                        
                         <li class="login"><a href="login/login.html">Login</a></li>
                         <li><label class="switch">
                             <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
@@ -405,32 +414,89 @@
     </div>
 </section>
 
-    <!--review section-->
-  
-  <section id="review-body">
-      <div class="reviews-container">
-          <h1 class="reviews-title" data-aos="fade-right">What Our Customers Say</h1>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">John Doe</div>
-            <div class="review-rating">★★★★★</div>
-            <p class="review-text" >The tools on this website are fantastic! It has made gaming much more enjoyable and efficient. Highly recommend!</p>
-          </div>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">Jane Smith</div>
-            <div class="review-rating">★★★★☆</div>
-            <p class="review-text">Great products, but I wish there were more options available for casual gamers. Still, amazing service overall!</p>
-          </div>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">Alex Johnson</div>
-            <div class="review-rating">★★★★★</div>
-            <p class="review-text">Excellent customer service! I had an issue with my order, but it was resolved quickly. Definitely will buy again.</p>
-          </div>
-      
+      <!-- testimonial -->
+
+      <div id="page" class="site">
+        <div class="container-swipe">
+            <div class="testi">
+                <div class="head">
+                    <h3>Testimonials</h3>
+                    <p>What Our Customers Say</p>
+                </div>
+                <div class="body swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/girl1.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>I’ve been searching for the perfect gaming accessories for ages, and I finally found them on this website! The variety available is truly impressive; I was able to find exactly what I needed to enhance my gaming experience. The quality of the products exceeded my expectations.</p>
+                                    <div class="name">
+                                        <h4>Sarah malik</h4>
+                                        <p>★★★★★</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/boy2.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>Shopping on this website was a breeze! I love how user-friendly the interface is; it made navigating through the different categories so easy. I was able to find exactly what I needed without any hassle. The checkout process was smooth, and I received my items promptly</p>
+                                    <div class="name">
+                                        <h4>John Doe</h4>
+                                        <p>★★★★☆</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/boy1.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>My order arrived much faster than I anticipated, which was a huge plus. The customer support team was incredibly helpful when I had a question about my order. I purchased a gaming headset, and it works perfectly! It has made a significant difference in my gaming sessions.</p>
+                                    <div class="name">
+                                        <h4>Alex Johnson</h4>
+                                        <p>★★★★★</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/girl2.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>As a serious gamer, I always look for high-quality gear that can enhance my performance. I stumbled upon this website and was blown away by the selection! I purchased a gaming mouse and a mechanical keyboard, and both have drastically improved my gameplay. .</p>
+                                    <div class="name">
+                                        <h4>Emily Davismore</h4>
+                                        <p>★★★★☆</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!--  navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
         </div>
-      </section>
+    </div>
+
+
+             <!-- testimonial end -->
+
 
 
             <section id="contact" data-aos="fade-right">
@@ -459,7 +525,59 @@
                                 </div>
                                 <button type="submit">Send</button>
                             </form>
+
                             <div id="formMessage" style="margin-top: 10px;"></div>
+
+                            
+                            <script>
+                                // Function to load form data from local storage
+                                function loadFormData() {
+                                    const data = JSON.parse(localStorage.getItem('formData')) || [];
+                                    if (data.length > 0) {
+                                        // Optionally, you can display the saved data
+                                        console.log('Saved Form Data:', data);
+                                    }
+                                }
+                            
+                                // Function to save form data to local storage
+                                function saveFormData() {
+                                    const name = document.getElementById('name').value;
+                                    const email = document.getElementById('email').value;
+                                    const message = document.getElementById('message').value;
+                            
+                                    // Create a new entry
+                                    const newEntry = { name, email, message };
+                            
+                                    // Get existing data from local storage or initialize an empty array
+                                    const existingData = JSON.parse(localStorage.getItem('formData')) || [];
+                            
+                                    // Add the new entry to the existing data
+                                    existingData.push(newEntry);
+                            
+                                    // Save the updated data back to local storage
+                                    localStorage.setItem('formData', JSON.stringify(existingData));
+                                }
+                            
+                                // Event listener for form submission
+                                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                                    event.preventDefault(); // Prevent the default form submission
+                                    saveFormData(); // Save form data to local storage
+                                    clearForm(); // Clear the input fields
+                                    alert('Message sent!'); // Display a confirmation message
+                                });
+                            
+                                // Function to clear input fields
+                                function clearForm() {
+                                    document.getElementById('name').value = '';
+                                    document.getElementById('email').value = '';
+                                    document.getElementById('message').value = '';
+                                }
+                            
+                                // Load the form data when the page is loaded
+                                window.onload = loadFormData;
+                            </script>
+                            
+
                         </div>
                        
                     </div>
@@ -488,6 +606,9 @@
                     <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
+            <div class="footer-section quick-links">
+                <!-- Quick Links Content -->
+            </div>
             <div class="footer-section links">
                 <h2>Quick Links</h2>
                 <ul>
@@ -497,6 +618,7 @@
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="Contributors/contributor.html">Contributors</a></li>
+                    <li><a href="PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-section contact-form">
@@ -524,8 +646,8 @@
         <ul id="sidebar-content">
             <li><a class= "facebook" href="#"><i class="fa-brands fa-meta"></i></a></li>
             <li><a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a></li>
-            <li><a class= "facebook" href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a class= "facebook" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a class= "instagram" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a class= "youtube" href="#"><i class="fa-brands fa-youtube"></i></a></li>
         </ul>
     </div>
     <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
@@ -554,12 +676,33 @@
         });
 
     </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+    </script>
 
     <!-- this script is for twitter icon  starts -->
     <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
     <!-- this script is for twitter icon  ends -->
 
     <!-- Scripts -->
+     <!-- testimonial script -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -577,7 +720,17 @@
         defer>
         </script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-       
+
+        <script>
+            AOS.init();
+        </script>
+
+        <div class="gtranslate_wrapper"></div>
+        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+
+
 </body>
 
 

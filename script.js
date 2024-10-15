@@ -185,6 +185,7 @@ document.querySelectorAll('.faq input[type="checkbox"]').forEach((checkbox) => {
 });
 
 
+
 AOS.init();
 
 
@@ -216,3 +217,25 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         // In a real-world scenario, you would send this data to a server here
         console.log('Form submitted:', { name, email, message });
     });
+
+function testimonialJs() {
+  const swiper = new Swiper('.swiper', {
+    autoHeight: true,
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+
+});
+}
+testimonialJs();
+
