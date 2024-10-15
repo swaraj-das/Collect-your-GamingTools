@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./popup/popup.css"/>
+
 </head>
 
 <body>
@@ -92,6 +94,33 @@
                     <a href="#controller" class="cta-btn" data-aos="fade-down">Explore Products</a>
                 </div>
             </section>
+
+        <!-- Pop-up for email registration  HTML Goes Here -->
+
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <div class="popup-left">
+                    <img src="images/popup.png" alt="Gaming Tools Image">
+                </div>
+                
+                <div class="popup-right">
+                    <a href="# " class="close1-btn"> <img  src="images/logo.png" class="logo1" alt="Logo"></a>
+                    <h1 >Unlock the Ultimate Gaming Experience!</h1>
+                    <h2 class="h2">Sign up for exclusive offers & updates</h2>
+                    <p>Join our community and get upto <strong>30% off</strong> on your first deal</p>
+                    <form id="emailForm">
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <button type="submit" class="signup-btn1">Get 30% Off Now</button>
+                    </form>
+                    <a href="#" class="no-thanks close1-btn">No thanks</a>
+                    <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pop up HTML Ends here -->
+
 
         <!-- PS4 Controller Section -->
 
@@ -699,6 +728,7 @@
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
+    <script src="popup/popup.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
