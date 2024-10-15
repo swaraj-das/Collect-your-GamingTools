@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const signupButton = document.querySelector(".signup-button");
 
     // List of trusted email domains
-    const trustedDomains = ["gmail.com", "outlook.com", "yahoo.com"];
+    const trustedDomains = ["gmail.com", "outlook.com", "yahoo.com", "hotmail.com" , "protonmail.com" , "icloud.com" , "tutanota.com"];
 
     signupButton.addEventListener("click", (e) => {
         e.preventDefault();
