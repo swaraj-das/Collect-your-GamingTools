@@ -635,141 +635,220 @@
                 </head>
                 <body>
                     <!-- Other sections of the website -->
-                
-                    <!-- Footer Section with Feedback Form -->
-                    <footer>
-                        <h2>Give Us Your Feedback</h2>
-                        <form id="feedback-form">
-                            <label for="name">Your Name:</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                
-                            <label for="email">Your Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                
-                            <label for="rating">Rate Your Experience:</label>
-                            <div class="rating">
-                                <input type="radio" id="star5" name="rating" value="5" required>
-                                <label for="star5" title="5 stars">☆</label>
-                                <input type="radio" id="star4" name="rating" value="4">
-                                <label for="star4" title="4 stars">☆</label>
-                                <input type="radio" id="star3" name="rating" value="3">
-                                <label for="star3" title="3 stars">☆</label>
-                                <input type="radio" id="star2" name="rating" value="2">
-                                <label for="star2" title="2 stars">☆</label>
-                                <input type="radio" id="star1" name="rating" value="1">
-                                <label for="star1" title="1 star">☆</label>
-                            </div>
-                
-                            <label for="comments">Comments:</label>
-                            <textarea id="comments" name="comments" rows="4" placeholder="Tell us what you think"></textarea>
-                
-                            <button type="submit">Submit Feedback</button>
-                        </form>
-                    </footer>
-                </body>
-                
-                
-        
-                
-            
-          
-            
-            </body>
-            <style>
-              
-footer {
-    background-color: #333;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
+                    
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                        <title>Feedback Form</title>
+                        <link rel="stylesheet" href="styles.css">
+                    </head>
+                    <body>
+                        <div class="form-container">
+                            <h2>We Value Your Feedback</h2>
+                            <p>Please fill out the form below to share your experience with us.</p>
+                            <form id="feedbackForm" action="#" method="POST">
+                                <!-- User Information -->
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                    <span class="error-message" id="nameError"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <span class="error-message" id="emailError"></span>
+                                </div>
+                    
+                                <!-- Feedback Type -->
+                                <div class="form-group">
+                                    <label for="feedbackType">Feedback Category:</label>
+                                    <select id="feedbackType" name="feedbackType" required>
+                                        <option value="">--Select a category--</option>
+                                        <option value="usability">Website Usability</option>
+                                        <option value="content">Content Quality</option>
+                                        <option value="service">Customer Service</option>
+                                    </select>
+                                    <span class="error-message" id="categoryError"></span>
+                                </div>
+                    
+                                <!-- Feedback Text -->
+                                <div class="form-group">
+                                    <label for="message">Feedback:</label>
+                                    <textarea id="message" name="message" rows="4" placeholder="Share your thoughts..." required></textarea>
+                                    <span class="error-message" id="messageError"></span>
+                                </div>
+                    
+                                <!-- Submit Button -->
+                                <button type="submit">Submit Feedback</button>
+                    
+                                <!-- Thank You Message -->
+                                <div class="thank-you-message" id="thankYouMessage">
+                                    Thank you for your feedback! We appreciate your input.
+                                </div>
+                            </form>
+                        </div>
+                        <style>
+                           * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-footer h2 {
-    font-size: 24px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-#feedback-form {
-    display: inline-block;
-    text-align: left;
-    background-color: #444;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px; 
-    height: auto; 
+p {
+    text-align: center;
+    color: #666;
 }
 
-#feedback-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-size: 14px;
-    color: #ddd;
-}
-
-#feedback-form input[type="text"],
-#feedback-form input[type="email"],
-#feedback-form textarea {
-    width: 100%;
-    padding: 10px;
+.form-group {
     margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #555;
-    color: white;
-    font-size: 14px;
 }
 
-#feedback-form textarea {
-    resize: none;
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
-#feedback-form button {
+input, textarea, select {
     width: 100%;
     padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
     cursor: pointer;
 }
 
-#feedback-form button:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #218838;
 }
 
-
-.rating {
-    display: flex;
-    justify-content: space-between;
-    max-width: 250px;
-    margin: 10px 0 15px;
-}
-
-.rating input[type="radio"] {
+.error-message {
+    color: red;
+    font-size: 14px;
     display: none;
 }
 
-.rating label {
-    font-size: 30px;
-    color: #ccc;
-    cursor: pointer;
-    transition: color 0.3s ease;
+.thank-you-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    font-size: 18px;
 }
 
-.rating input[type="radio"]:checked ~ label {
-    color: #f7d106;
+@media (max-width: 600px) {
+    .form-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+    }
 }
+ 
+                        </style>
+                    
+                        <script src="script.js">
+                            document.getElementById("feedbackForm").addEventListener("submit", function(event){
+    event.preventDefault(); // Prevent form from submitting
+    let isValid = true;
 
-.rating label:hover,
-.rating label:hover ~ label {
-    color: #f7d106;
-}
-  
+    // Name validation
+    const name = document.getElementById("name");
+    const nameError = document.getElementById("nameError");
+    if (name.value.trim() === "") {
+        nameError.textContent = "Name is required.";
+        nameError.style.display = "block";
+        isValid = false;
+    } else {
+        nameError.style.display = "none";
+    }
+
+    // Email validation
+    const email = document.getElementById("email");
+    const emailError = document.getElementById("emailError");
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!emailPattern.test(email.value.trim())) {
+        emailError.textContent = "Please enter a valid email address.";
+        emailError.style.display = "block";
+        isValid = false;
+    } else {
+        emailError.style.display = "none";
+    }
+
+    // Feedback Category validation
+    const feedbackType = document.getElementById("feedbackType");
+    const categoryError = document.getElementById("categoryError");
+    if (feedbackType.value === "") {
+        categoryError.textContent = "Please select a feedback category.";
+        categoryError.style.display = "block";
+        isValid = false;
+    } else {
+        categoryError.style.display = "none";
+    }
+
+    // Message validation
+    const message = document.getElementById("message");
+    const messageError = document.getElementById("messageError");
+    if (message.value.trim() === "") {
+        messageError.textContent = "Feedback message cannot be empty.";
+        messageError.style.display = "block";
+        isValid = false;
+    } else {
+        messageError.style.display = "none";
+    }
+
+    // If valid, show thank you message
+    if (isValid) {
+        document.getElementById("thankYouMessage").style.display = "block";
+    }
+});
+
+                        </script>
+                    </body>
+                    </html>
+                    
+                    
 
 
 
-            </style>
+
+
+
+
             
             
         </div>
