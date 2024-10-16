@@ -128,14 +128,6 @@ button[type="submit"]:hover {
     transform: scale(1.1);
 
 }
-
-
-
-
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -1669,7 +1661,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(34, 33, 33);
     color: #000;
 }
 .container-swipe
@@ -1881,4 +1873,3 @@ button {
         width: 1000vw !important;
     }
 }
-
