@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMhZj7z9qvhs8kcJ6D6t3h7jsKK4Gk16+/D57g" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./popup/popup.css"/>
 
@@ -528,86 +531,82 @@
 
 
 
-            <section id="contact" data-aos="fade-right">
-                
-                <div class="card pb-5 pt-1">
-                    <div class="card-header">
-                        <h2 >Contact Us</h2>
+           <section id="contact" data-aos="fade-right">
+            <div class="card pb-5 pt-1">
+                <div class="card-header">
+                    <h2>Contact Our Customer Support Team</h2>
+            <p class="contact-message">
+                We're here to assist you with any questions or concerns you may have.
+            </p>
+
+
+                </div>
+                <div class="card-body">
+                    <div class="image-section">
+                        <img src="images/7725176.jpg" alt="Contact Image"
+                            style="max-width: 80%; height: auto; max-height: 500px;">
                     </div>
-                    <div class="card-body">
-                        <div class="image-section">
-                            <img src="images/7725176.jpg" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
-                        </div>
-                        <div class="form-section">
-                            <form id="contactForm">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Your name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="Your email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" name="message" placeholder="Your message"></textarea>
-                                </div>
-                                <button type="submit">Send</button>
-                            </form>
-                            
-                            <script>
-                                // Function to load form data from local storage
-                                function loadFormData() {
-                                    const data = JSON.parse(localStorage.getItem('formData')) || [];
-                                    if (data.length > 0) {
-                                        // Optionally, you can display the saved data
-                                        console.log('Saved Form Data:', data);
-                                    }
+                    <div class="form-section">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message"><i class="fas fa-comment"></i> Message</label>
+                                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
+        
+                        <script>
+                            // Function to load form data from local storage
+                            function loadFormData() {
+                                const data = JSON.parse(localStorage.getItem('formData')) || [];
+                                if (data.length > 0) {
+                                    console.log('Saved Form Data:', data);
                                 }
-                            
-                                // Function to save form data to local storage
-                                function saveFormData() {
-                                    const name = document.getElementById('name').value;
-                                    const email = document.getElementById('email').value;
-                                    const message = document.getElementById('message').value;
-                            
-                                    // Create a new entry
-                                    const newEntry = { name, email, message };
-                            
-                                    // Get existing data from local storage or initialize an empty array
-                                    const existingData = JSON.parse(localStorage.getItem('formData')) || [];
-                            
-                                    // Add the new entry to the existing data
-                                    existingData.push(newEntry);
-                            
-                                    // Save the updated data back to local storage
-                                    localStorage.setItem('formData', JSON.stringify(existingData));
-                                }
-                            
-                                // Event listener for form submission
-                                document.getElementById('contactForm').addEventListener('submit', function(event) {
-                                    event.preventDefault(); // Prevent the default form submission
-                                    saveFormData(); // Save form data to local storage
-                                    clearForm(); // Clear the input fields
-                                    alert('Message sent!'); // Display a confirmation message
-                                });
-                            
-                                // Function to clear input fields
-                                function clearForm() {
-                                    document.getElementById('name').value = '';
-                                    document.getElementById('email').value = '';
-                                    document.getElementById('message').value = '';
-                                }
-                            
-                                // Load the form data when the page is loaded
-                                window.onload = loadFormData;
-                            </script>
-                            
-                        </div>
-                       
+                            }
+
+                            // Function to save form data to local storage
+                            function saveFormData() {
+                                const name = document.getElementById('name').value;
+                                const email = document.getElementById('email').value;
+                                const message = document.getElementById('message').value;
+
+                                const newEntry = { name, email, message };
+                                const existingData = JSON.parse(localStorage.getItem('formData')) || [];
+                                existingData.push(newEntry);
+                                localStorage.setItem('formData', JSON.stringify(existingData));
+                            }
+
+                            // Event listener for form submission
+                            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                                event.preventDefault();
+                                saveFormData();
+                                clearForm();
+                                alert('Message sent!');
+                            });
+
+                            // Function to clear input fields
+                            function clearForm() {
+                                document.getElementById('name').value = '';
+                                document.getElementById('email').value = '';
+                                document.getElementById('message').value = '';
+                            }
+
+                            // Load the form data when the page is loaded
+                            window.onload = loadFormData;
+                        </script>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+
 
     <footer class="footer">
         <div class="footer-content">
@@ -659,7 +658,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2024 GamingTools | Designed by Swaraj
+            <p>© 2024 GamingTools | All Rights Reserved</p>
+            <p>Designed and Developed by <span>Swaraj</span></p>
         </div>
         
     </footer>
