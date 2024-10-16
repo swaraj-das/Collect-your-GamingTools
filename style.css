@@ -815,11 +815,38 @@ button {
 }
 
 .footer-bottom {
-    background: #343a40;
-    color: #686868;
+    background-color: #111;
+    color: #fff;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+    padding: 20px 0;
+    
+    /* Add a subtle brand color */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: white;
+    letter-spacing: 1.02
+    px;
+}
+
+.footer-bottom p span {
+    color: #f0c040;
+    /* Highlight designer name */
+    font-weight: bold;
+}
+
+.footer-bottom p:hover {
+    color: #f0c040;
+    /* Hover effect for the footer text */
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-bottom span:hover {
+    color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -885,6 +912,7 @@ button {
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease; 
     z-index: 1;
+    border: 1px solid rgb(147, 143, 143);
 }
 
 .social-sidebar ul{
