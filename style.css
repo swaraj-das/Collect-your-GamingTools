@@ -866,37 +866,32 @@ button {
 }
 
 .footer-bottom {
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    
-    /* Add a subtle brand color */
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
-    /* Shadow for depth */
+    background-color: #1c1917; /* Dark background color */
+    padding: 12px 0; /* Spacing at the top and bottom */
+    text-align: center; /* Center the text */
+    color: #ffffff; /* White text color */
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-size: 14px; /* Font size */
+    border-top: 1px solid #ff71aa; /* Dull pink border on top */
 }
 
+.footer-bottom a {
+    color: #ff71aa; /* Dull pink for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make links bold */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.footer-bottom a:hover {
+    color: #ffd700; /* Change link color to gold on hover */
+}
+ 
 .footer-bottom p {
-    font-size: 1rem;
-    margin: 5px 0;
-    color: white;
-    letter-spacing: 1.02px;
+    margin: 5px 0; /* Space between paragraphs */
 }
 
-.footer-bottom p span {
-    color: #f0c040;
-    /* Highlight designer name */
-    font-weight: bold;
-}
-
-.footer-bottom p:hover {
-    color: #f0c040;
-    /* Hover effect for the footer text */
-    transition: color 0.3s ease-in-out;
-}
-
-.footer-bottom span:hover {
-    color: white;
+.footer-bottom span {
+    font-style: italic; /* Italicize the developer name */
 }
 
 @media screen and (max-width: 768px) {
@@ -1874,9 +1869,6 @@ button {
      
 }
 
-
-  
-=======
 @media only screen and (max-width: 700px)  {
     .footer-bottom{
         width: 1000vw !important;
