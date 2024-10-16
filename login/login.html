@@ -1,145 +1,35 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collect your GamingTools</title>
+    <title>Interactive Login Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="login.css">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <style>
-        .password-container {
-            position: relative;
-            display: inline-block;
-            width: 100%; /* Ensure full width */
-        }
-        .toggle-password {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            width: 20px; /* Adjust as needed */
-            height: 20px; /* Adjust as needed */
-            margin-top: 13px;
-        }
-        /* Optional: Ensure the input takes full width */
-        .password-container input {
-            width: calc(100% - 0px); /* Adjust for icon size */
-        }
-    </style>
 </head>
 <body>
-    <div class="linksHome">
-        <a href="../index.html">←Back</a>
-    </div>
-    <div class="login-container">
-        <h1>Login to Your Account</h1>
-        <form action="#" method="post">
-            <div class="input-group">
-                <label for="username">Gmail</label>
-                <input type="text" id="gmail" name="username" placeholder="Enter you mail-id" required>
-            </div>
-            <div class="input-group password-container">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your passsword" required>
-                <img src="https://i.postimg.cc/vBSg320Y/eye.png" alt="Toggle Password" class="toggle-password" id="toggle-password">
-            </div>
-            <div ontouchstart="">
-                <div class="button">
-                    <a href="#">Login</a>
+    <div class="container">
+        <div class="login-box">
+            <h2>Welcome back!</h2>
+            <form id="loginForm">
+                <div class="input-box">
+                    <i class='bx bx-envelope'></i>
+                    <input type="email" id="email" placeholder="Email" required>
                 </div>
-            </div>
-        </form>
-        <div class="links">
-            <a href="forgot.html" class="hal">Forgot Password?</a>
-            <a href="../SignUp/signup.html" class="hal2">Sign Up</a>
+                <div class="input-box">
+                    <i class='bx bx-lock'></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                <button type="submit" class="login-btn">Log in</button>
+                <div class="social-login">
+                    <p>Don't have an account? <a href="forgot.html">Sign up</a></p>
+                    <button class="apple-btn"><i class='bx bxl-apple'></i> Log in with Apple</button>
+                    <button class="google-btn"><i class='bx bxl-google'></i> Log in with Google</button>
+                </div>
+            </form>
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="waves">
-            <div class="wave" id="wave1"></div>
-            <div class="wave" id="wave2"></div>
-            <div class="wave" id="wave3"></div>
-            <div class="wave" id="wave4"></div>
-        </div>
-        <ul class="social-icon">
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <i class="fa-brands fa-x-twitter"></i>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a></li>
-        </ul>
-        <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="">About</a></li>
-            <li class="menu__item"><a class="menu__link" href="../index.html#controller">Services</a></li>
-            <li class="menu__item"><a class="menu__link" href="../Contributors/contributor.html">Team</a></li>
-            <li class="menu__item"><a class="menu__link" href="../index.html#contact">Contact</a></li>
-        </ul>
-        <p>&copy;2024 Collect your Gaming Tools | All Rights Reserved</p>
-    </footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="login.js"></script>
 </body>
-
-<script>
-    const login = document.querySelector(".button");
-    const togglePassword = document.getElementById('toggle-password');
-    const passwordInput = document.getElementById('password');
-
-    togglePassword.addEventListener('click', function () {
-        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        passwordInput.setAttribute('type', type);
-        this.src = type === 'password' 
-            ? 'https://i.postimg.cc/63pdpv8P/hidden.png' // Closed eye
-            : 'https://i.postimg.cc/vBSg320Y/eye.png'; // Open eye
-    });
-
-    login.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        const email = document.querySelector("#gmail").value;
-        const password = document.querySelector("#password").value;
-
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailPattern.test(email)) {
-            alert("Please enter a valid email address.");
-            return; // Stop the function if email is not in the right format
-        }
-        
-        const userData = {
-            email,
-            password
-        };
-        console.log(userData);
-        loginUser(userData);
-    });
-
-    const loginUser = async (user) => {
-        try {
-            const res = await fetch("http://localhost:5000/auth/signin", {
-                method: "POST",
-                credentials: "include",
-                redirect: "follow",
-                headers: { "content-type": "application/json" },
-                body: JSON.stringify(user)
-            });
-            if (!res.ok) {
-                throw new Error(`HTTP error! status: ${res.status}`);
-            }
-            const data = await res.json();
-            window.location.href = "http://127.0.0.1:5500/Collect-your-GamingTools/index.html";
-        } catch (e) {
-            console.log(e.message);
-        }
-    };
-</script>
-<script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
 </html>
