@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta charset= "UTF-8">
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
     <title>Collect your GamingTools</title>
 
     <!--adding meta keywords and description -->
@@ -16,17 +17,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./popup/popup.css"/>
+
 </head>
 
 <body>
-    <div id="progressBarContainer">
-        <div id="progressBar"></div>
+    <div id= "progressBarContainer">
+        <div id= "progressBar"></div>
     </div>
       
-        <div class="container">
+        <div class= "container">
             
-            <div class="navbar">
-                <div class="logo-outer">
+            <div class= "navbar">
+                <div class= "logo-outer">
                     <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
                     <a href="/"><span class="website-name">Collect your GamingTools</span></a>
                 </div>
@@ -79,7 +82,7 @@
             <section class="hero">
                 <div class="overlay"></div>
                 <div class="hero-content">
-                                 <!-- Search Bar (initially hidden) -->
+               <!-- Search Bar (initially hidden) -->
                                  
             <div class="searchbar-outer">
                 <div class="search-bar hidden" id="searchBar">
@@ -92,6 +95,33 @@
                     <a href="#controller" class="cta-btn" data-aos="fade-down">Explore Products</a>
                 </div>
             </section>
+
+        <!-- Pop-up for email registration  HTML Goes Here -->
+
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <div class="popup-left">
+                    <img src="images/popup.png" alt="Gaming Tools Image">
+                </div>
+                
+                <div class="popup-right">
+                    <a href="# " class="close1-btn"> <img  src="images/logo.png" class="logo1" alt="Logo"></a>
+                    <h1 >Unlock the Ultimate Gaming Experience!</h1>
+                    <h2 class="h2">Sign up for exclusive offers & updates</h2>
+                    <p>Join our community and get upto <strong>30% off</strong> on your first deal</p>
+                    <form id="emailForm">
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <button type="submit" class="signup-btn1">Get 30% Off Now</button>
+                    </form>
+                    <a href="#" class="no-thanks close1-btn">No thanks</a>
+                    <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pop up HTML Ends here -->
+
 
         <!-- PS4 Controller Section -->
 
@@ -699,6 +729,7 @@
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
+    <script src="popup/popup.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -718,6 +749,12 @@
         <script>
             AOS.init();
         </script>
+
+        <div class="gtranslate_wrapper"></div>
+        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+
 </body>
 
 

@@ -108,9 +108,12 @@ button[type="submit"]:hover {
     background: linear-gradient(to right, #fb5283, #ff3527);; 
     transition: width 0.2s ease; 
   }
+
 *.dark-mode{
-    background-color: #493d3d;
-    color:#f1f1f1;
+
+    background-color:  #493d3d;
+    color: #f1f1f1;
+    
 }
 
 html {
@@ -309,6 +312,7 @@ nav ul li {
     display: inline-block; 
     position: relative;
     margin: 0 15px; 
+    align-content: center;
 }
 
 nav ul li a {
@@ -1782,13 +1786,15 @@ button {
         padding: 30px 100px;
     }
     .testi .thumbnail{
+
         width: 200px;
         height: 200px;
+
     }
     .testi :is(swiper-button-next, .swiper-button-prev){
         top: 50%;
     }
-    
+     
 }
 
 

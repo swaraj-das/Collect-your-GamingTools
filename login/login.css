@@ -510,6 +510,8 @@ a {
   }
 }
 
-
+::placeholder {
+  color: white;
+}
 
 
