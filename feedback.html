@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .feedback-container {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+
+        .feedback-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-group select {
+            width: 50%;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name">
+                <p class="error-message" id="nameError">Name is required</p>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email">
+                <p class="error-message" id="emailError">Please enter a valid email</p>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Rate your experience</label>
+                <select id="rating" name="rating">
+                    <option value="">--Select Rating--</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+                <p class="error-message" id="ratingError">Please select a rating</p>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback</label>
+                <textarea id="feedback" name="feedback" placeholder="Your feedback"></textarea>
+                <p class="error-message" id="feedbackError">Feedback is required</p>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="successMessage" class="success-message"></div>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Clear previous error messages
+            let valid = true;
+            document.getElementById('nameError').style.display = 'none';
+            document.getElementById('emailError').style.display = 'none';
+            document.getElementById('ratingError').style.display = 'none';
+            document.getElementById('feedbackError').style.display = 'none';
+            document.getElementById('successMessage').textContent = '';
+
+            // Validate Name
+            const name = document.getElementById('name').value.trim();
+            if (name === "") {
+                document.getElementById('nameError').style.display = 'block';
+                valid = false;
+            }
+
+            // Validate Email
+            const email = document.getElementById('email').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                valid = false;
+            }
+
+            // Validate Rating
+            const rating = document.getElementById('rating').value;
+            if (rating === "") {
+                document.getElementById('ratingError').style.display = 'block';
+                valid = false;
+            }
+
+            // Validate Feedback
+            const feedback = document.getElementById('feedback').value.trim();
+            if (feedback === "") {
+                document.getElementById('feedbackError').style.display = 'block';
+                valid = false;
+            }
+
+            // Show success message if the form is valid
+            if (valid) {
+                document.getElementById('successMessage').textContent = "Thank you for your feedback!";
+                document.getElementById('feedbackForm').reset(); // Clear the form fields
+            }
+        });
+    </script>
+</body>
+</html>

@@ -6,6 +6,15 @@
     <title>Sign Up for GamingTools</title>
     <link rel="stylesheet" href="signup.css">
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <style>
+        .condition {
+            color: gray; /* Default color */
+            font-size: 0.9em;
+        }
+        .condition.met {
+            color: lightgreen; /* Turns green when condition is met */
+        }
+    </style>
 </head>
 <body>
 
@@ -28,6 +37,16 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
+
+            <!-- Password Recommendations Section -->
+            <div class="password-recommendations">
+                <p id="length" class="condition">At least 8 characters</p>
+                <p id="uppercase" class="condition">Contains uppercase letters</p>
+                <p id="lowercase" class="condition">Contains lowercase letters</p>
+                <p id="number" class="condition">Contains numbers</p>
+                <p id="special" class="condition">Contains special characters</p>
+            </div>
+
             <div class="input-group">
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
@@ -47,84 +66,6 @@
     </div>
 
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script>
-        const signup = document.querySelector(".signup-button");
-
-        signup.addEventListener("click",(e)=>{
-            e.preventDefault();
-
-            const name = document.querySelector("#username").value;
-            const email = document.querySelector("#email").value;
-            const password = document.querySelector("#password").value;
-            const confirmPassword = document.querySelector("#confirm-password").value;
-
-            if(!name || !email || !password || !confirmPassword){
-                alert("every feild is required");
-                return;
-            }
-            const userdata = {
-                name,
-                email,
-                password,
-                confirmPassword
-            }
-            registeruser(userdata);
-
-        } )
-
-
-        const registeruser = async(user)=>{
-
-            try{
-                const res = await fetch("http://localhost:5000/auth/signup",{
-                    method:"POST",
-                    headers:{"content-type" : "application/json"},
-                    body:JSON.stringify(user)
-                })
-
-                const data = await  res.json();
-                console.log(data);
-                window.location.href="http://127.0.0.1:5500/Collect-your-GamingTools/login/login.html"
-
-            }catch(err){
-                console.log(err.message)
-            }
-        }
-
-        // Add Google Sign-In
-        function handleCredentialResponse(response) {
-            // Send the token to your server to verify and create a session
-            const token = response.credential;
-            // You should implement a function to handle the token on your server
-            signUpWithGoogle(token);
-        }
-
-        window.onload = function () {
-            google.accounts.id.initialize({
-                client_id: 'YOUR_GOOGLE_CLIENT_ID', // Replace with your actual Google Client ID
-                callback: handleCredentialResponse
-            });
-            google.accounts.id.renderButton(
-                document.getElementById("google-signup"),
-                { theme: "outline", size: "large", width: "100%" }
-            );
-        };
-
-        async function signUpWithGoogle(token) {
-            try {
-                const res = await fetch("http://localhost:5000/auth/google-signup", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ token })
-                });
-
-                const data = await res.json();
-                console.log(data);
-                window.location.href = "http://127.0.0.1:5500/Collect-your-GamingTools/login/login.html";
-            } catch (err) {
-                console.log(err.message);
-            }
-        }
-    </script>
+    <script src="signup.js"></script> <!-- Link to the signup.js file -->
 </body>
 </html>
