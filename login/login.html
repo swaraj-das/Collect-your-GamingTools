@@ -1,74 +1,59 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collect your GamingTools</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Collect Your Gaming Tools - Login</title>
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <style>
-        .password-container {
-            position: relative;
-            display: inline-block;
-            width: 100%; /* Ensure full width */
-        }
-        .toggle-password {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            width: 20px; /* Adjust as needed */
-            height: 20px; /* Adjust as needed */
-            margin-top: 13px;
-        }
-        /* Optional: Ensure the input takes full width */
-        .password-container input {
-            width: calc(100% - 0px); /* Adjust for icon size */
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="linksHome">
         <a href="../index.html">←Back</a>
     </div>
     <div class="login-container">
-        <h1>Login to Your Account</h1>
-        <form action="#" method="post">
-            <div class="input-group">
-                <label for="username">Gmail</label>
-                <input type="text" id="gmail" name="username" placeholder="Enter you mail-id" required>
-            </div>
-            <div class="input-group password-container">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your passsword" required>
-                <img src="https://i.postimg.cc/vBSg320Y/eye.png" alt="Toggle Password" class="toggle-password" id="toggle-password">
-            </div>
-            <div ontouchstart="">
-                <div class="button">
-                    <a href="#">Login</a>
+        <div class="login-box">
+            <h1 class="login-title">Welcome to Gaming Tools Store!</h1>
+            <p class="subtitle">Enter your credentials to continue shopping for the best gaming gear.</p>
+            <form action="#" method="post">
+                <div class="input-group">
+                    <label for="username">Gmail</label>
+                    <input type="text" id="gmail" name="username" placeholder="Enter you mail-id" required>
                 </div>
-            </div>
-        </form>
-        <div class="links">
-            <a href="forgot.html" class="hal">Forgot Password?</a>
-            <a href="../SignUp/signup.html" class="hal2">Sign Up</a>
+                <div class="input-group password-container">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your passsword" required>
+                    <img src="https://i.postimg.cc/vBSg320Y/eye.png" alt="Toggle Password" class="toggle-password" id="toggle-password">
+                </div>
+                
+                <div ontouchstart="">
+                  
+                <div id="password-strength" class="password-strength"></div>  
+                <button type="submit" class="login-button">Login<a href="#"></a></button>
+                </div>
+            </form>
+                <div class="links">
+                    <a href="forgot.html" class="hal2">Forgot Password?</a>
+                    <a href="../SignUp/signup.html" class="hal">Sign Up</a>
+                </div>
+                <div class="social-login">
+                    <p>Or Login With:</p>
+                    <button type="button" class="social-button google">Login with Google</button>
+                </div> 
+            </form>
         </div>
     </div>
-
     <footer class="footer">
-        <div class="waves">
-            <div class="wave" id="wave1"></div>
-            <div class="wave" id="wave2"></div>
-            <div class="wave" id="wave3"></div>
-            <div class="wave" id="wave4"></div>
-        </div>
         <ul class="social-icon">
             <li class="social-icon__item"><a class="social-icon__link" href="#">
                 <ion-icon name="logo-facebook"></ion-icon>
             </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <i class="fa-brands fa-x-twitter"></i>
+                <ion-icon name="logo-twitter"></ion-icon>
             </a></li>
+           </a></li>
             <li class="social-icon__item"><a class="social-icon__link" href="#">
                 <ion-icon name="logo-linkedin"></ion-icon>
             </a></li>
@@ -85,14 +70,14 @@
         </ul>
         <p>&copy;2024 Collect your Gaming Tools | All Rights Reserved</p>
     </footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 
 <script>
     const login = document.querySelector(".button");
     const togglePassword = document.getElementById('toggle-password');
     const passwordInput = document.getElementById('password');
+    const passwordStrengthText = document.getElementById('password-strength');
 
     togglePassword.addEventListener('click', function () {
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -101,6 +86,32 @@
             ? 'https://i.postimg.cc/63pdpv8P/hidden.png' // Closed eye
             : 'https://i.postimg.cc/vBSg320Y/eye.png'; // Open eye
     });
+    
+    passwordInput.addEventListener('input', function() {
+        const password = this.value;
+        const strength = checkPasswordStrength(password);
+        displayPasswordStrength(strength);
+    });
+    const checkPasswordStrength = (password) => {
+        let strength = 0;
+        if (password.length >= 8) strength++; // Length check
+        if (/[A-Z]/.test(password)) strength++; // Uppercase check
+        if (/[0-9]/.test(password)) strength++; // Number check
+        if (/[\W_]/.test(password)) strength++; // Special character check
+        return strength; // Returns a value from 0 to 4
+    };
+
+    const displayPasswordStrength = (strength) => {
+        const strengthText = ["Very Weak", "Weak", "Moderate", "Strong", "Very Strong"];
+        const colors = ["red", "orange", "yellow", "lightgreen", "green"];
+        
+        if (strength > 0) {
+            passwordStrengthText.textContent = strengthText[strength - 1];
+            passwordStrengthText.style.color = colors[strength - 1];
+        } else {
+            passwordStrengthText.textContent = ""; // Clear the text if no input
+        }
+    };
 
     login.addEventListener("click", (e) => {
         e.preventDefault();
