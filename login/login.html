@@ -29,7 +29,8 @@
                 </div>
                 
                 <div ontouchstart="">
-                    
+                  
+                <div id="password-strength" class="password-strength"></div>  
                 <button type="submit" class="login-button">Login<a href="#"></a></button>
                 </div>
             </form>
@@ -76,6 +77,7 @@
     const login = document.querySelector(".button");
     const togglePassword = document.getElementById('toggle-password');
     const passwordInput = document.getElementById('password');
+    const passwordStrengthText = document.getElementById('password-strength');
 
     togglePassword.addEventListener('click', function () {
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -84,6 +86,32 @@
             ? 'https://i.postimg.cc/63pdpv8P/hidden.png' // Closed eye
             : 'https://i.postimg.cc/vBSg320Y/eye.png'; // Open eye
     });
+    
+    passwordInput.addEventListener('input', function() {
+        const password = this.value;
+        const strength = checkPasswordStrength(password);
+        displayPasswordStrength(strength);
+    });
+    const checkPasswordStrength = (password) => {
+        let strength = 0;
+        if (password.length >= 8) strength++; // Length check
+        if (/[A-Z]/.test(password)) strength++; // Uppercase check
+        if (/[0-9]/.test(password)) strength++; // Number check
+        if (/[\W_]/.test(password)) strength++; // Special character check
+        return strength; // Returns a value from 0 to 4
+    };
+
+    const displayPasswordStrength = (strength) => {
+        const strengthText = ["Very Weak", "Weak", "Moderate", "Strong", "Very Strong"];
+        const colors = ["red", "orange", "yellow", "lightgreen", "green"];
+        
+        if (strength > 0) {
+            passwordStrengthText.textContent = strengthText[strength - 1];
+            passwordStrengthText.style.color = colors[strength - 1];
+        } else {
+            passwordStrengthText.textContent = ""; // Clear the text if no input
+        }
+    };
 
     login.addEventListener("click", (e) => {
         e.preventDefault();
