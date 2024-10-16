@@ -609,60 +609,232 @@
                 </div>
             </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section about">
-                <div class="logo-container">
-                    <img src="images/logo.png" alt="GamingTools Logo" class="footer-logo">
-                    <h2 class="logo-text">Collect your GamingTools</h2>
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section about">
+                        <div class="container">
+                            <div class="section">
+                                <img alt="PlayStation logo" height="100" src="images/logo.png" width="100" />
+                                <h2>Collect your GamingTools</h2>
+                                <p>
+                                    Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated selection of controllers, VR gear, and more.
+                                </p>
+                                <div class="contact-info">
+                                    <p><i class="fas fa-phone"></i>123-456-789</p>
+                                    <p><i class="fas fa-envelope"></i>info@gamingtools.com</p>
+                                </div>
+                                <div class="social-icons">
+                                    <i class="fab fa-facebook"></i>
+                                    <i class="fab fa-instagram"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                            </div>
+            
+                            <div class="section quick-links">
+                                <h2>Quick Links</h2>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Products</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <li><a href="#faq">FAQ</a></li>
+                                    <li><a href="#">Contributors</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+            
+                            <div class="section feedback-form">
+                                <h2>Feedback Form</h2>
+                                <input placeholder="Your email address..." type="email" />
+                                <textarea placeholder="Your message..."></textarea>
+                                <button type="submit">
+                                    <i class="fas fa-paper-plane"></i> Send
+                                </button>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            &copy; 2024 GamingTools | Designed by Swaraj
+                        </div>
+                    </div>
                 </div>
-                <p class="about-text">
-                    Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated selection of controllers, VR gear, and more.
-                </p>
-                <div class="contact">
-                    <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
-                    <span><i class="fas fa-envelope"></i> &nbsp; info@gamingtools.com</span>
-                </div>
-                <div class="socials">
-                    <!-- Added classes to the <a> tags to add the Hover animations -->
-                    <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
-                    <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a>
-                    <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-section quick-links">
-                <!-- Quick Links Content -->
-            </div>
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="Contributors/contributor.html">Contributors</a></li>
-                    <li><a href="PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contact-form">
-                <h2>Feedback Form</h2>
-                <form action="#" method="post">
-                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
-                    <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-                    <button type="submit" class="btn btn-big contact-btn">
-                        <i class="fas fa-envelope"></i>
-                        Send
-                    </button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2024 GamingTools | Designed by Swaraj
-        </div>
-        
-    </footer>
+            </footer>
+            
+            <style>
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            
+                @keyframes iconBounce {
+                    0%, 100% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(-10px);
+                    }
+                }
+            
+                @keyframes handwriting {
+                    from {
+                        width: 0;
+                    }
+                    to {
+                        width: 100%;
+                    }
+                }
+            
+                @keyframes backgroundAnimation {
+                    0% {
+                        background-color: #2c2c38;
+                    }
+                    25% {
+                        background-color: #3a3a4a;
+                    }
+                    50% {
+                        background-color: #4a4a5a;
+                    }
+                    75% {
+                        background-color: #5a5a6a;
+                    }
+                    100% {
+                        background-color: #2c2c38;
+                    }
+                }
+            
+                .footer-section.about {
+                    background-color: #2c2c38;
+                    color: #ffffff;
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    animation: backgroundAnimation 10s infinite;
+                }
+            
+                .footer .container {
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 50px;
+                }
+            
+                .footer .section {
+                    flex: 1;
+                    margin: 0 20px;
+                    animation: fadeIn 1s ease-in-out;
+                }
+            
+                .footer .section h2 {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                    animation: fadeIn 1s ease-in-out, handwriting 2s steps(30) 1s forwards;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    border-right: 3px solid;
+                    width: 0;
+                }
+            
+                .footer .section p {
+                    font-size: 14px;
+                    line-height: 1.6;
+                    animation: fadeIn 1s ease-in-out;
+                    color: white;
+                }
+            
+                .contact-info i {
+                    margin-right: 10px;
+                    animation: fadeIn 1s ease-in-out;
+                }
+            
+                .social-icons i {
+                    font-size: 24px;
+                    margin: 10px;
+                    color: #ffffff;
+                    animation: fadeIn 1s ease-in-out;
+                    transition: transform 0.3s;
+                }
+            
+                .social-icons i:hover {
+                    color: #cccccc;
+                    animation: iconBounce 0.5s;
+                }
+            
+                .quick-links ul {
+                    list-style: none;
+                    padding: 0;
+                    animation: fadeIn 1s ease-in-out;
+                }
+            
+                .quick-links ul li {
+                    margin: 10px 0;
+                    animation: fadeIn 1s ease-in-out;
+                }
+            
+                .quick-links ul li a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    position: relative;
+                    animation: fadeIn 1s ease-in-out;
+                }
+            
+                .quick-links ul li a::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    display: block;
+                    background: #ffffff;
+                    transition: width 0.3s;
+                }
+            
+                .quick-links ul li a:hover::after {
+                    width: 100%;
+                }
+            
+                .feedback-form input,
+                .feedback-form textarea {
+                    width: 100%;
+                    padding: 10px;
+                    margin: 10px 0;
+                    background-color: #3a3a4a;
+                    border: none;
+                    color: #ffffff;
+                    transition: background-color 0.3s, transform 0.3s;
+                    animation: fadeIn 1s ease-in-out;
+                }
+            
+                .feedback-form input:focus,
+                .feedback-form textarea:focus {
+                    background-color: #4a4a5a;
+                    transform: scale(1.05);
+                }
+            
+                .feedback-form button {
+                    background-color: #28a745;
+                    color: #ffffff;
+                    padding: 10px 20px;
+                    border: none;
+                    cursor: pointer;
+                    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+                    animation: fadeIn 1s ease-in-out;
+                }
+            
+                .feedback-form button:hover {
+                    background-color: #218838;
+                    transform: scale(1.05);
+                    box-shadow: 0 0 10px #28a745, 0 0 20px #28a745, 0 0 30px #28a745;
+                }
+            
+                .feedback-form button i {
+                    margin-right: 5px;
+                }
+            </style>
+            
 
     <!-- SIDEBAR -->
         
