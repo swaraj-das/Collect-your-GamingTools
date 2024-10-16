@@ -184,12 +184,34 @@ body {
     transition: all 0.3s ease;
 }
 
-.google {
-    background-color: #171a21;
-    color: #fff;
+.social-buttons {
+    display: flex; /* Use flexbox for alignment */
+    gap: 10px; /* Add gap between buttons */
 }
 
+.social-button {
+    /* Optional: Add padding and styling to buttons */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+.google {
+    background-color: #ede5e4; /* Google color */
+    color: rgb(9, 7, 7); /* Text color */
+}
+
+.apple {
+    background-color: #000; /* Apple color */
+    color: white; /* Text color */
+}
 .google:hover {
+    background-color: #e6f0f3;
+    color: rgb(21, 164, 240);
+}
+.apple:hover {
     background-color: #cccccc;
     color: black;
 }
@@ -348,3 +370,4 @@ body {
         right: 10px; /* Reduce right spacing for smaller screens */
     }
 }
+
