@@ -1818,12 +1818,19 @@ button {
 /*slider*/
 .testi :is(.swiper-button-next, .swiper-button-prev){
     background-color: #ffe0b5;
-    top: 35%;
+   
     width: 38px;
     height: 38px;
     border-radius: 50%;
     transition: background-color .3s;
     box-shadow: rgb(0, 0, 2/ 35%) 0px 20px 30px -10px;
+}
+.swiper-button-next {
+    margin-right: -400px;
+}
+.swiper-button-prev {
+    margin-left: -400px;
+    margin-top: 100px;
 }
 
 .testi :is(.swiper-button-next, .swiper-button-prev):hover{
