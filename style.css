@@ -312,6 +312,7 @@ nav ul li {
     display: inline-block; 
     position: relative;
     margin: 0 15px; 
+    align-content: center;
 }
 
 nav ul li a {
