@@ -19,6 +19,39 @@ body {
     background-size: cover;
 }
 
+.button-container {
+    position: relative; /* Allows child elements to be positioned relative to this container */
+    height: 100vh; /* Example height to fill the viewport */
+}
+
+.back-button {
+    position: absolute; /* Positioning the button absolutely */
+    top: 3%; /* Move the button higher (adjust as needed) */
+    margin-left: 20px;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    padding: 10px 15px; /* Add padding for spacing */
+    font-size: 16px; /* Adjust font size */
+    color: white; /* Text color */
+    background-color: #0077b6; /* New custom blue shade */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.back-button:hover {
+    background-color: #005f8b; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.back-button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+.back-button .arrow {
+    margin-right: 8px; /* Adjust spacing between the arrow and text */
+}
+
 /* Container */
 .login-container {
     display: flex;
@@ -82,6 +115,29 @@ body {
 
 .input-group input:focus {
     box-shadow: 0 0 10px 2px #00b4d8;
+}
+
+.password-container {
+    position: relative; /* Enables absolute positioning of child elements */
+}
+
+.password-container input {
+    padding-right: 40px; /* Add padding to make space for the icon */
+    width: 100%; /* Ensure input takes full width */
+    box-sizing: border-box; /* Include padding in total width */
+    height: 40px; /* Set a fixed height for consistent sizing (adjust as needed) */
+    font-size: 16px; /* Font size for input */
+}
+
+/* Center the icon vertically within the input field */
+.password-container i {
+    position: absolute;
+    right: 15px; /* Space from right edge (adjust as needed) */
+    top: 70%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Adjust for exact vertical centering */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: #ff69b4; /* Icon color (optional) */
+    font-size: 1.2em; /* Adjust icon size */
 }
 
 /* Login Button */
@@ -278,3 +334,17 @@ body {
 ::placeholder {
     color: grey;
   }
+
+  
+/* Make the input and icon responsive */
+@media (max-width: 600px) { /* Adjust for smaller screens */
+    .password-container input {
+        height: 35px; /* Slightly reduce height */
+        font-size: 14px; /* Adjust font size */
+    }
+    
+    .password-container i {
+        font-size: 1em; /* Adjust icon size */
+        right: 10px; /* Reduce right spacing for smaller screens */
+    }
+}
