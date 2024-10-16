@@ -353,3 +353,6 @@ a {
 .links a:hover {
   text-decoration: underline;
 }
+::placeholder {
+  color: white;
+}

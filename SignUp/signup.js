@@ -40,6 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
             passwordError.style.display = "block";
             return;
         }
+        
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return; // Stop the function if the email is not in the right format
+        }
 
         const userdata = {
             name,
