@@ -645,17 +645,241 @@
                     <li><a href="PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a></li>
                 </ul>
             </div>
-            <div class="footer-section contact-form">
-                <h2>Feedback Form</h2>
-                <form action="#" method="post">
-                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
-                    <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-                    <button type="submit" class="btn btn-big contact-btn">
-                        <i class="fas fa-envelope"></i>
-                        Send
-                    </button>
-                </form>
-            </div>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Enhanced Footer Feedback Form</title>
+                <link rel="stylesheet" href="style.css">
+            </head>
+            <body>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>E-commerce Landing Page with Feedback Form</title>
+                    <link rel="stylesheet" href="style.css">
+                </head>
+                <body>
+                    <!-- Other sections of the website -->
+                    
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                        <title>Feedback Form</title>
+                        <link rel="stylesheet" href="styles.css">
+                    </head>
+                    <body>
+                        <div class="form-container">
+                            <h2>We Value Your Feedback</h2>
+                            <p>Please fill out the form below to share your experience with us.</p>
+                            <form id="feedbackForm" action="#" method="POST">
+                                <!-- User Information -->
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                    <span class="error-message" id="nameError"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <span class="error-message" id="emailError"></span>
+                                </div>
+                    
+                                <!-- Feedback Type -->
+                                <div class="form-group">
+                                    <label for="feedbackType">Feedback Category:</label>
+                                    <select id="feedbackType" name="feedbackType" required>
+                                        <option value="">--Select a category--</option>
+                                        <option value="usability">Website Usability</option>
+                                        <option value="content">Content Quality</option>
+                                        <option value="service">Customer Service</option>
+                                    </select>
+                                    <span class="error-message" id="categoryError"></span>
+                                </div>
+                    
+                                <!-- Feedback Text -->
+                                <div class="form-group">
+                                    <label for="message">Feedback:</label>
+                                    <textarea id="message" name="message" rows="4" placeholder="Share your thoughts..." required></textarea>
+                                    <span class="error-message" id="messageError"></span>
+                                </div>
+                    
+                                <!-- Submit Button -->
+                                <button type="submit">Submit Feedback</button>
+                    
+                                <!-- Thank You Message -->
+                                <div class="thank-you-message" id="thankYouMessage">
+                                    Thank you for your feedback! We appreciate your input.
+                                </div>
+                            </form>
+                        </div>
+                        <style>
+                           * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
+.thank-you-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+ 
+                        </style>
+                    
+                        <script src="script.js">
+                            document.getElementById("feedbackForm").addEventListener("submit", function(event){
+    event.preventDefault(); // Prevent form from submitting
+    let isValid = true;
+
+    // Name validation
+    const name = document.getElementById("name");
+    const nameError = document.getElementById("nameError");
+    if (name.value.trim() === "") {
+        nameError.textContent = "Name is required.";
+        nameError.style.display = "block";
+        isValid = false;
+    } else {
+        nameError.style.display = "none";
+    }
+
+    // Email validation
+    const email = document.getElementById("email");
+    const emailError = document.getElementById("emailError");
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!emailPattern.test(email.value.trim())) {
+        emailError.textContent = "Please enter a valid email address.";
+        emailError.style.display = "block";
+        isValid = false;
+    } else {
+        emailError.style.display = "none";
+    }
+
+    // Feedback Category validation
+    const feedbackType = document.getElementById("feedbackType");
+    const categoryError = document.getElementById("categoryError");
+    if (feedbackType.value === "") {
+        categoryError.textContent = "Please select a feedback category.";
+        categoryError.style.display = "block";
+        isValid = false;
+    } else {
+        categoryError.style.display = "none";
+    }
+
+    // Message validation
+    const message = document.getElementById("message");
+    const messageError = document.getElementById("messageError");
+    if (message.value.trim() === "") {
+        messageError.textContent = "Feedback message cannot be empty.";
+        messageError.style.display = "block";
+        isValid = false;
+    } else {
+        messageError.style.display = "none";
+    }
+
+    // If valid, show thank you message
+    if (isValid) {
+        document.getElementById("thankYouMessage").style.display = "block";
+    }
+});
+
+                        </script>
+                    </body>
+                    </html>
+                    
+                    
+
+
+
+
+
+
+
+            
+            
         </div>
         <div class="footer-bottom">
             <p><a href="PrivacyPolicy/PrivacyPolicy.html">© 2024 GamingTools | All Rights Reserved</a></p>
@@ -664,7 +888,7 @@
         
     </footer>
 
-    <!-- SIDEBAR -->
+    
         
     <div class="social-sidebar">
         <div class="close-btn" id="SideBar" onclick="toggleSidebar()" title="Close Sidebar">&times;</div>
@@ -680,7 +904,7 @@
     </div>
 
 
-    <!-- Scroll to Top Button -->
+    
     <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
         <div class="scroll-top-icon">
         <ion-icon name="arrow-up-outline"></ion-icon>
@@ -693,11 +917,11 @@
     <script>
         let cartItemCount = 0;
 
-    // Function to handle Add to Cart button click
+    
         document.getElementById('cart-btn').addEventListener('click', function () {
-            cartItemCount++; // Increment cart count
-            document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
-            alert('Item added to cart'); // Show alert
+            cartItemCount++; 
+            document.getElementById('cart-count').textContent = cartItemCount; 
+            alert('Item added to cart'); 
         });
 
     </script>
@@ -720,12 +944,12 @@
 
     </script>
 
-    <!-- this script is for twitter icon  starts -->
+    
     <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
-    <!-- this script is for twitter icon  ends -->
+    
 
-    <!-- Scripts -->
-     <!-- testimonial script -->
+
+     
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
