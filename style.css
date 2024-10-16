@@ -357,19 +357,29 @@ button {
     background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
     transition: background 0.3s ease-in-out;
 }
+
+#buy-btn{
+    transition: all 0.5s ease-in-out ;
+}
+
+#buy-btn:hover{
+    transform: scale(1.1);
+}
+
+#cart-btn{
+    transition: all 0.5s ease-in-out ;
+}
+
+#cart-btn:hover{
+    transform: scale(1.1);
+}
+
 #cart-btn
 {
     padding: 12px 14px;
 }
 
-/* button img {
-    width: 18px;
-    display: none;
-}
 
-button:hover img {
-    display: block;
-} */
 
 #buy-btn img{
     width: 30px;
