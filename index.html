@@ -2,16 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta charset= "UTF-8">
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
     <title>Collect your GamingTools</title>
     <link rel="stylesheet" href="preloaderStyle.css">
+    <!--adding meta keywords and description -->
+    <meta name="keywords" content="gaming tools, game accessories, gaming gear, gaming equipment, gaming setup, game controller, gaming mouse, gaming keyboard, gaming headset, gaming software, eSports tools, gaming community, gaming chair, VR gaming tools, game streaming equipment, console gaming, PC gaming, mobile gaming, gaming tips, game reviews, gaming news">
+    <meta name="description" content="Collect and discover the ultimate gaming tools and accessories to enhance your gaming experience. From high-performance controllers and mice to immersive headsets and VR gaming equipment, we have everything you need for console, PC, and mobile gaming. Join our gaming community for tips and reviews to stay ahead in the game!">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMhZj7z9qvhs8kcJ6D6t3h7jsKK4Gk16+/D57g" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./popup/popup.css"/>
+
 </head>
 
 <body>
@@ -30,21 +39,26 @@
 </div>
     <div id="progressBarContainer">
         <div id="progressBar"></div>
+    <div id= "progressBarContainer">
+        <div id= "progressBar"></div>
     </div>
       
-        <div class="container">
+        <div class= "container">
             
-            <div class="navbar">
-                <div class="logo-outer">
+            <div class= "navbar">
+                <div class= "logo-outer">
                     <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
                     <a href="/"><span class="website-name">Collect your GamingTools</span></a>
                 </div>
                 <nav>
                     <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
                         <li><a href="#controller">Game Controllers</a></li>
                         <li><a href="#vrsection">VR Accessories</a></li>
                         <li><a href="#keyboard">Gaming Keyboard</a></li>
                         <li><a href="#others">Others</a></li>
+                        
                         <li class="login"><a href="login/login.html">Login</a></li>
                         <li><label class="switch">
                             <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
@@ -85,7 +99,7 @@
             <section class="hero">
                 <div class="overlay"></div>
                 <div class="hero-content">
-                                 <!-- Search Bar (initially hidden) -->
+               <!-- Search Bar (initially hidden) -->
                                  
             <div class="searchbar-outer">
                 <div class="search-bar hidden" id="searchBar">
@@ -98,6 +112,33 @@
                     <a href="#controller" class="cta-btn" data-aos="fade-down">Explore Products</a>
                 </div>
             </section>
+
+        <!-- Pop-up for email registration  HTML Goes Here -->
+
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <div class="popup-left">
+                    <img src="images/popup.png" alt="Gaming Tools Image">
+                </div>
+                
+                <div class="popup-right">
+                    <a href="# " class="close1-btn"> <img  src="images/logo.png" class="logo1" alt="Logo"></a>
+                    <h1 >Unlock the Ultimate Gaming Experience!</h1>
+                    <h2 class="h2">Sign up for exclusive offers & updates</h2>
+                    <p>Join our community and get upto <strong>30% off</strong> on your first deal</p>
+                    <form id="emailForm">
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <button type="submit" class="signup-btn1">Get 30% Off Now</button>
+                    </form>
+                    <a href="#" class="no-thanks close1-btn">No thanks</a>
+                    <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pop up HTML Ends here -->
+
 
         <!-- PS4 Controller Section -->
 
@@ -419,65 +460,167 @@
     </div>
 </section>
 
-    <!--review section-->
-  
-  <section id="review-body">
-      <div class="reviews-container">
-          <h1 class="reviews-title" data-aos="fade-right">What Our Customers Say</h1>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">John Doe</div>
-            <div class="review-rating">★★★★★</div>
-            <p class="review-text" >The tools on this website are fantastic! It has made gaming much more enjoyable and efficient. Highly recommend!</p>
-          </div>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">Jane Smith</div>
-            <div class="review-rating">★★★★☆</div>
-            <p class="review-text">Great products, but I wish there were more options available for casual gamers. Still, amazing service overall!</p>
-          </div>
-      
-          <div class="review-card" data-aos="fade-right">
-            <div class="reviewer-name">Alex Johnson</div>
-            <div class="review-rating">★★★★★</div>
-            <p class="review-text">Excellent customer service! I had an issue with my order, but it was resolved quickly. Definitely will buy again.</p>
-          </div>
-      
+      <!-- testimonial -->
+
+      <div id="page" class="site">
+        <div class="container-swipe">
+            <div class="testi">
+                <div class="head">
+                    <h3>Testimonials</h3>
+                    <p>What Our Customers Say</p>
+                </div>
+                <div class="body swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/girl1.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>I’ve been searching for the perfect gaming accessories for ages, and I finally found them on this website! The variety available is truly impressive; I was able to find exactly what I needed to enhance my gaming experience. The quality of the products exceeded my expectations.</p>
+                                    <div class="name">
+                                        <h4>Sarah malik</h4>
+                                        <p>★★★★★</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/boy2.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>Shopping on this website was a breeze! I love how user-friendly the interface is; it made navigating through the different categories so easy. I was able to find exactly what I needed without any hassle. The checkout process was smooth, and I received my items promptly</p>
+                                    <div class="name">
+                                        <h4>John Doe</h4>
+                                        <p>★★★★☆</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/boy1.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>My order arrived much faster than I anticipated, which was a huge plus. The customer support team was incredibly helpful when I had a question about my order. I purchased a gaming headset, and it works perfectly! It has made a significant difference in my gaming sessions.</p>
+                                    <div class="name">
+                                        <h4>Alex Johnson</h4>
+                                        <p>★★★★★</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="wrapper">
+                                <div class="thumbnail">
+                                    <img src="images/girl2.png" alt="">
+                                </div>
+                                <div class="aside">
+                                    <p>As a serious gamer, I always look for high-quality gear that can enhance my performance. I stumbled upon this website and was blown away by the selection! I purchased a gaming mouse and a mechanical keyboard, and both have drastically improved my gameplay. .</p>
+                                    <div class="name">
+                                        <h4>Emily Davismore</h4>
+                                        <p>★★★★☆</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!--  navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
         </div>
-      </section>
+    </div>
 
 
-            <section id="contact" data-aos="fade-right">
-                
-                <div class="card pb-5 pt-1">
-                    <div class="card-header">
-                        <h2 >Contact Us</h2>
+             <!-- testimonial end -->
+
+
+
+           <section id="contact" data-aos="fade-right">
+            <div class="card pb-5 pt-1">
+                <div class="card-header">
+                    <h2>Contact Our Customer Support Team</h2>
+            <p class="contact-message">
+                We're here to assist you with any questions or concerns you may have.
+            </p>
+
+
+                </div>
+                <div class="card-body">
+                    <div class="image-section">
+                        <img src="images/7725176.jpg" alt="Contact Image"
+                            style="max-width: 80%; height: auto; max-height: 500px;">
                     </div>
-                    <div class="card-body">
-                        <div class="image-section">
-                            <img src="images/7725176.jpg" alt="Contact Image"style="max-width: 80%; height: auto; max-height: 500px;">
-                        </div>
-                        <div class="form-section">
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Your name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="Your email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" name="message" placeholder="Your message"></textarea>
-                                </div>
-                                <button type="submit">Send</button>
-                            </form>
-                        </div>
-                       
+                    <div class="form-section">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message"><i class="fas fa-comment"></i> Message</label>
+                                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
+        
+                        <script>
+                            // Function to load form data from local storage
+                            function loadFormData() {
+                                const data = JSON.parse(localStorage.getItem('formData')) || [];
+                                if (data.length > 0) {
+                                    console.log('Saved Form Data:', data);
+                                }
+                            }
+
+                            // Function to save form data to local storage
+                            function saveFormData() {
+                                const name = document.getElementById('name').value;
+                                const email = document.getElementById('email').value;
+                                const message = document.getElementById('message').value;
+
+                                const newEntry = { name, email, message };
+                                const existingData = JSON.parse(localStorage.getItem('formData')) || [];
+                                existingData.push(newEntry);
+                                localStorage.setItem('formData', JSON.stringify(existingData));
+                            }
+
+                            // Event listener for form submission
+                            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                                event.preventDefault();
+                                saveFormData();
+                                clearForm();
+                                alert('Message sent!');
+                            });
+
+                            // Function to clear input fields
+                            function clearForm() {
+                                document.getElementById('name').value = '';
+                                document.getElementById('email').value = '';
+                                document.getElementById('message').value = '';
+                            }
+
+                            // Load the form data when the page is loaded
+                            window.onload = loadFormData;
+                        </script>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+
 
     <footer class="footer">
         <div class="footer-content">
@@ -501,6 +644,9 @@
                     <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
+            <div class="footer-section quick-links">
+                <!-- Quick Links Content -->
+            </div>
             <div class="footer-section links">
                 <h2>Quick Links</h2>
                 <ul>
@@ -510,10 +656,11 @@
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="Contributors/contributor.html">Contributors</a></li>
+                    <li><a href="PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-section contact-form">
-                <h2>Contact Us</h2>
+                <h2>Feedback Form</h2>
                 <form action="#" method="post">
                     <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
                     <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
@@ -525,8 +672,9 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2024 GamingTools | Designed by Swaraj
-        </div>
+            <p><a href="PrivacyPolicy/PrivacyPolicy.html">© 2024 GamingTools | All Rights Reserved</a></p>
+            <p>Developed by <span><a href="https://my-portfolio-git-main-swaraj-das-projects.vercel.app/" target="_blank">Swaraj</a></span></p>
+        </div>        
         
     </footer>
 
@@ -537,8 +685,8 @@
         <ul id="sidebar-content">
             <li><a class= "facebook" href="#"><i class="fa-brands fa-meta"></i></a></li>
             <li><a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a></li>
-            <li><a class= "facebook" href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a class= "facebook" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a class= "instagram" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a class= "youtube" href="#"><i class="fa-brands fa-youtube"></i></a></li>
         </ul>
     </div>
     <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
@@ -567,6 +715,24 @@
         });
 
     </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+    </script>
 
     <!-- this script is for twitter icon  starts -->
     <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
@@ -574,7 +740,10 @@
 
     <!-- Scripts -->
     <script src="preloader.js"></script>
+     <!-- testimonial script -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="popup/popup.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -594,6 +763,12 @@
         <script>
             AOS.init();
         </script>
+
+        <div class="gtranslate_wrapper"></div>
+        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+
 </body>
 
 
