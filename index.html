@@ -16,11 +16,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
-
-<body>
-
-    <div id="progressBarContainer">
+    <body>
+    
+      <div id="progressBarContainer">
         <div id="progressBar"></div>
     </div>
       
@@ -42,21 +42,26 @@
                          <li><a href="#others">Others</a></li>
                         
                         <li class="login"><a href="login/login.html">Login</a></li>
+                        <marquee><a href="rating.html" style="padding: 5px 10px; background-color: #f59e08; color: #fff; border-radius: 5px; text-decoration: none; display: inline-block; transition: transform 0.1s; font-size: 16px;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">Rate Us</a></marquee>
+
                         <li><label class="switch">
                             <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
                             <span class="slider"></span>
                         </label></li>
+                        
                         <!-- Inside the navbar ul -->
                         <li class="cart-nav">
                          
                                 <a href="#"><img height="25px " width="25px" src="images/cart.png" alt="Cart Icon"> <span id="cart-count">0</span></a>
-                                <br>
-                                <a href="rating.html">Rate Us 🌟</a>
+                                
 
                           
                         </li>
                         
+                      
+                        
                     </ul>
+                    
                     
                     <!-- Hamburger Menu Icon -->
                     <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
@@ -719,6 +724,8 @@
         <script>
             AOS.init();
         </script>
+
+        
 
 </body>
 
