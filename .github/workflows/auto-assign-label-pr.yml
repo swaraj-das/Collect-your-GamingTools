@@ -17,7 +17,9 @@ jobs:
       uses: actions-ecosystem/action-add-labels@v1.1.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        labels: gssoc-ext
+        labels:
+          - gssoc-ext
+          - hacktoberfest-accepted
 
     - name: Assign PR to Creator
       uses: actions-ecosystem/action-assign@v1
