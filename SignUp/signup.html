@@ -14,6 +14,11 @@
         .condition.met {
             color: lightgreen; /* Turns green when condition is met */
         }
+        .error-message {
+            color: red;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -27,15 +32,16 @@
         <form action="#" method="post">
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" placeholder="Create a Username" required>
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <div id="email-error" class="error-message"></div> <!-- Error message container -->
+                <input type="email" id="email" name="email" placeholder="Enter your mail-id" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" placeholder="Create password" required>
             </div>
 
             <!-- Password Recommendations Section -->
@@ -45,12 +51,13 @@
                 <p id="lowercase" class="condition">Contains lowercase letters</p>
                 <p id="number" class="condition">Contains numbers</p>
                 <p id="special" class="condition">Contains special characters</p>
-            </div>
+    
 
             <div class="input-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required>
             </div>
+            <div id="password-error" class="error-message"></div> <!-- Password error container -->
             <button type="submit" class="signup-button">Sign Up</button>
         </form>
         <div class="or-divider">

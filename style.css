@@ -17,6 +17,24 @@
     border-radius: 6px;
     align-items: center;
   }
+  .contact-message {
+      font-size: 1.2rem;
+      
+      color: #b4abab;
+     
+      text-align: center;
+     
+      margin-top: 5px;
+     
+      line-height: 1.2;
+      
+      padding: 5px;
+ 
+      background-color: #f9f9f9;
+     
+      border-radius: 5px;
+      
+  }
 .card-body {
     display: flex;
     width: 90%;
@@ -25,7 +43,39 @@
     justify-content: space-between; /* Form on the right and image on the left */
     align-items: flex-start; /* Align content to the top */
 }
+.card-header h2 {
+    font-size: 2.1rem;
+    /* Large font size */
+    color: #333;
+    /* Dark gray color for text */
+    font-weight: bold;
+    /* Bold font weight */
+    text-align: center;
+    /* Center align the text */
+    margin: 0;
+    /* Remove default margin */
+    padding: 15px 0;
+    /* Add vertical padding */
+    position: relative;
+    /* Relative positioning for pseudo-element */
+}
 
+.card-header h2::after {
+    content: '';
+    /* Pseudo-element for the underline */
+    display: block;
+    /* Make it a block element */
+    width: 50%;
+    /* Width of the underline */
+    height: 4px;
+    /* Height of the underline */
+    background: #007bff;
+    /* Color for the underline */
+    margin: 8px auto 0;
+    /* Center align the underline */
+    border-radius: 2px;
+    /* Slightly rounded corners */
+}
 .form-section {
     width: 50%; /* Width for the form section */
 }
@@ -108,9 +158,12 @@ button[type="submit"]:hover {
     background: linear-gradient(to right, #fb5283, #ff3527);; 
     transition: width 0.2s ease; 
   }
+
 *.dark-mode{
-    background-color: #493d3d;
-    color:#f1f1f1;
+
+    background-color:  #493d3d;
+    color: #f1f1f1;
+    
 }
 
 html {
@@ -309,6 +362,7 @@ nav ul li {
     display: inline-block; 
     position: relative;
     margin: 0 15px; 
+    align-content: center;
 }
 
 nav ul li a {
@@ -835,11 +889,32 @@ button {
 }
 
 .footer-bottom {
-    background: #343a40;
-    color: #686868;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+    background-color: #1c1917; /* Dark background color */
+    padding: 12px 0; /* Spacing at the top and bottom */
+    text-align: center; /* Center the text */
+    color: #ffffff; /* White text color */
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-size: 14px; /* Font size */
+    border-top: 1px solid #ff71aa; /* Dull pink border on top */
+}
+
+.footer-bottom a {
+    color: #ff71aa; /* Dull pink for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make links bold */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.footer-bottom a:hover {
+    color: #ffd700; /* Change link color to gold on hover */
+}
+ 
+.footer-bottom p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.footer-bottom span {
+    font-style: italic; /* Italicize the developer name */
 }
 
 @media screen and (max-width: 768px) {
@@ -905,6 +980,7 @@ button {
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease; 
     z-index: 1;
+    border: 1px solid rgb(147, 143, 143);
 }
 
 .social-sidebar ul{
@@ -1805,18 +1881,17 @@ button {
         padding: 30px 100px;
     }
     .testi .thumbnail{
+
         width: 200px;
         height: 200px;
+
     }
     .testi :is(swiper-button-next, .swiper-button-prev){
         top: 50%;
     }
-    
+     
 }
 
-
-  
-=======
 @media only screen and (max-width: 700px)  {
     .footer-bottom{
         width: 1000vw !important;
