@@ -17,6 +17,24 @@
     border-radius: 6px;
     align-items: center;
   }
+  .contact-message {
+      font-size: 1.2rem;
+      
+      color: #b4abab;
+     
+      text-align: center;
+     
+      margin-top: 5px;
+     
+      line-height: 1.2;
+      
+      padding: 5px;
+ 
+      background-color: #f9f9f9;
+     
+      border-radius: 5px;
+      
+  }
 .card-body {
     display: flex;
     width: 90%;
@@ -25,7 +43,39 @@
     justify-content: space-between; /* Form on the right and image on the left */
     align-items: flex-start; /* Align content to the top */
 }
+.card-header h2 {
+    font-size: 2.1rem;
+    /* Large font size */
+    color: #333;
+    /* Dark gray color for text */
+    font-weight: bold;
+    /* Bold font weight */
+    text-align: center;
+    /* Center align the text */
+    margin: 0;
+    /* Remove default margin */
+    padding: 15px 0;
+    /* Add vertical padding */
+    position: relative;
+    /* Relative positioning for pseudo-element */
+}
 
+.card-header h2::after {
+    content: '';
+    /* Pseudo-element for the underline */
+    display: block;
+    /* Make it a block element */
+    width: 50%;
+    /* Width of the underline */
+    height: 4px;
+    /* Height of the underline */
+    background: #007bff;
+    /* Color for the underline */
+    margin: 8px auto 0;
+    /* Center align the underline */
+    border-radius: 2px;
+    /* Slightly rounded corners */
+}
 .form-section {
     width: 50%; /* Width for the form section */
 }
@@ -815,11 +865,37 @@ button {
 }
 
 .footer-bottom {
-    background: #343a40;
-    color: #686868;
+    background-color: #111;
+    color: #fff;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+    padding: 20px 0;
+    
+    /* Add a subtle brand color */
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: white;
+    letter-spacing: 1.02px;
+}
+
+.footer-bottom p span {
+    color: #f0c040;
+    /* Highlight designer name */
+    font-weight: bold;
+}
+
+.footer-bottom p:hover {
+    color: #f0c040;
+    /* Hover effect for the footer text */
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-bottom span:hover {
+    color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -885,6 +961,7 @@ button {
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease; 
     z-index: 1;
+    border: 1px solid rgb(147, 143, 143);
 }
 
 .social-sidebar ul{
