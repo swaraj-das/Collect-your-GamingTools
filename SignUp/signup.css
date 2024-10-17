@@ -18,6 +18,13 @@ body {
     text-shadow: 1px 1px 2px #000;
 }
 
+
+.error-message {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 5px;
+}
+
 .signup-container {
     
     opacity: 0.75;
@@ -345,4 +352,7 @@ a {
 
 .links a:hover {
   text-decoration: underline;
+}
+::placeholder {
+  color: white;
 }
