@@ -2,14 +2,11 @@ name: Auto Label New Issues & PRs
 
 on:
   issues:
-    types: [opened]
-  pull_request:
-    types: [opened]    
+    types: [opened]  
 
 permissions:
   issues: write
-  pull-requests: write
-  contents: write # Required to read repository contents
+  
 
 jobs:
   label:
@@ -20,7 +17,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Add Labels to Issues & PRs
-      if: github.event_name == 'issues' || github.event_name == 'pull_request'
+      if: github.event_name == 'issues'
       uses: actions-ecosystem/action-add-labels@v1.1.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
