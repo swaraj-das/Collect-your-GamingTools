@@ -209,14 +209,42 @@ button[type="submit"]:hover {
   box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
 }
 
-.cart-nav a {
+.cart-button {
   display: flex;
   align-items: center;
-  gap: 5px; /* Space between icon and count */
+  background-color: #f0c14b; /* Light golden button color */
+  padding: 6px 8px;
+  border-radius: 10px; /* Rounded button */
+  border: 1px solid #a88734; /* Border matching the button color */
+  text-decoration: none;
+  color: #111; /* Text color */
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-right: 10px;
 }
 
-.cart-nav img {
-  vertical-align: middle;
+.cart-button img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px; /* Spacing between icon and cart count */
+}
+
+.cart-button #cart-count {
+  background-color: #ff6347; /* Red background for the cart count */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%; /* Round cart count badge */
+  font-size: 14px;
+}
+
+.cart-button:hover {
+  background-color: #e2a732; /* Darker gold on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.cart-button:active {
+  transform: scale(0.95); /* Button press effect */
 }
 
 #cart-count {
