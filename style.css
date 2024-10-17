@@ -46,6 +46,94 @@ html::-webkit-scrollbar-thumb:window-inactive {
   background: rgb(156, 156, 156);
 }
 
+/*dark and light mode toggle button*/
+label {
+    width: 75px;
+    height: 30px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 30px;
+    box-shadow: inset 0px 3.75px 11.25px rgba(0, 0, 0, 0.4), inset 0px -3.75px 11.25px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transform: 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Center align the toggle switch */
+}
+
+label:after {
+    content: "";
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 1.5px;
+    left: 2.25px;
+    background: linear-gradient(180deg, #ffcc89, #d88606);
+    border-radius: 135px;
+    box-shadow: 0px 3.75px 7.5px rgba(0, 0, 0, 0.2);
+    transform: 0.3s;
+}
+
+input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+input:checked+label {
+    background: #d3d3d3;
+}
+
+input:checked+label:after {
+    left: 73px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label:active:after {
+    width: 37.5px;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: -1;
+    position: absolute;
+    transition: 0.3s;
+}
+
+input:checked+label+.background {
+    background: #242424;
+}
+
+label svg {
+    position: absolute;
+    width: 22.5px;
+    top: 3.75px;
+    z-index: 100;
+}
+
+label svg.sun {
+    left: 3.75px;
+    fill: #fff;
+    transition: 0.3s;
+}
+
+label svg.moon {
+    left: 48.75px;
+    fill: #7e7e7e;
+    transition: 0.3s;
+}
+
+input:checked+label svg.sun {
+    fill: #7e7e7e;
+}
+
+input:checked+label svg.moon {
+    fill: #fff;
+}
+
 .card {
   width: 50%; /* Set a specific width */
   margin: 10px auto; /* Center horizontally with automatic margins */
@@ -137,7 +225,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
 
 label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 input,

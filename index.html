@@ -50,10 +50,45 @@
                     <li><a href="#others">Others</a></li>
 
                     <li class="login"><a href="login/login.html">Login</a></li>
-                    <li><label class="switch">
+                    <!-- <li><label class="switch">
                             <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
                             <span class="slider"></span>
                         </label></li>
+                    -->
+                        
+                    <!--Dark and Light Mode Toggle Button-->
+                    <li>
+                        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()" />
+                        <label for="theme-toggle">
+                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                            <svg class="sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                <g id="SVGRepo_iconCarrier">
+                                    <circle cx="12" cy="12" r="6" stroke="#000000" stroke-width="1.5" />
+                                    <path d="M12 2V3" stroke="#000000" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M12 21V22" stroke="#000000" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M22 12L21 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M3 12L2 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M19.0708 4.92969L18.678 5.32252" stroke="#000000" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M5.32178 18.6777L4.92894 19.0706" stroke="#000000" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M19.0708 19.0703L18.678 18.6775" stroke="#000000" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M5.32178 5.32227L4.92894 4.92943" stroke="#000000" stroke-width="1.5" stroke-linecap="round" />
+                                </g>
+
+                            </svg>
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <svg class="moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </label>
+                    </li>
+
                     <!-- Inside the navbar ul -->
                     <a href="#" class="cart-button">
                         <img src="images/cart.png" alt="Cart Icon">
@@ -759,6 +794,25 @@
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-toggle').checked = true;
+            }
+        }
+    </script>
 
 
 </body>
