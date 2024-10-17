@@ -205,3 +205,11 @@ function testimonialJs() {
 });
 }
 testimonialJs();
+
+// Optional JS for additional button click effect
+document.querySelector('.contact-btn').addEventListener('click', function() {
+  this.classList.add('clicked');
+  setTimeout(() => {
+      this.classList.remove('clicked');
+  }, 300);
+});
