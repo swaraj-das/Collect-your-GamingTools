@@ -219,6 +219,11 @@ button[type="submit"]:hover {
   vertical-align: middle;
 }
 
+.dark-mode .cart-nav img{
+  filter: invert(1);
+}
+
+
 #cart-count {
   font-size: 16px; /* Adjust font size to match */
   vertical-align: middle;
