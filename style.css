@@ -865,29 +865,28 @@ button {
 }
 
 .footer-bottom {
-    background-color: #111;
+    background-color: #000000;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 12px 0;
     
     /* Add a subtle brand color */
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -5px 15px rgba(85, 85, 85, 0.2);
     /* Shadow for depth */
 }
 
 .footer-bottom p {
-    font-size: 1rem;
-    margin: 5px 0;
+    
+    margin: 3px 0;
     color: white;
     letter-spacing: 1.02px;
 }
 
-.footer-bottom p span {
-    color: #f0c040;
-    /* Highlight designer name */
-    font-weight: bold;
-}
 
+#link{
+    text-decoration: none;
+    
+}
 .footer-bottom p:hover {
     color: #f0c040;
     /* Hover effect for the footer text */
