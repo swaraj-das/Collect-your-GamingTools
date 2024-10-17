@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar for Light Mode */
+html.light-mode::-webkit-scrollbar {
+    width: 16px;
+}
+
+html.light-mode::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff459f, #ff9532, #ff459f);
+}
+
+html.light-mode::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+/* Scrollbar for Dark Mode */
+html.dark-mode::-webkit-scrollbar {
+    width: 16px;
+}
+
+html.dark-mode::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: linear-gradient(90deg, #0d6efd, #6610f2, #6f42c1);
+}
+
+html.dark-mode::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 8px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 50%; /* Example progress */
+    height: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Progress Bar Light Mode */
+html.light-mode .progress-bar {
+    background-color: #ff9532;
+}
+
+/* Progress Bar Dark Mode */
+html.dark-mode .progress-bar {
+    background-color: #6610f2;
+}
