@@ -828,42 +828,78 @@ button {
     padding-left: 10px;
 }
 
-.contact-form .text-input {
-    background: #272727;
-    color: #bebdbd;
-    margin-bottom: 20px;
-    line-height: 1.5rem;
-    padding: 10px 15px;
-    border: none;
+/* Input Fields */
+.text-input {
     width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #444;
+    background-color: #1a1a1a;
+    color: #fff;
     border-radius: 5px;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    transition: border-color 0.4s, box-shadow 0.4s;
 }
 
-.contact-form textarea.text-input {
-    height: 120px;
-    resize: none;
+.contact-form form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
 }
 
-.contact-form .contact-btn {
-    float: right;
-    font-size: 1.1em;
-    font-family: 'Arial', sans-serif;
-    background: #4CAF50;
-    color: white;
+/* Input focus effects */
+.text-input:focus {
+    border-color: #f39c12;
+    box-shadow: 0 0 8px #f39c12;
+    outline: none;
+}
+
+/* Button Styles */
+.contact-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e74c3c;
     border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Orbitron', sans-serif;
     cursor: pointer;
-    transition: all .3s;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-form .contact-btn:hover {
-    background: #45a049;
+.contact-btn i {
+    margin-right: 10px;
 }
 
-#contact{
-    padding-top: 100px;
+/* Button hover effects */
+.contact-btn:hover {
+    background-color: #f39c12;
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
 }
+
+.contact-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease;
+}
+
+.contact-btn:hover:before {
+    left: 100%;
+}
+
+/* Add glowing effect around the form on hover */
+
 
 .footer-bottom {
     background-color: #1c1917; /* Dark background color */
