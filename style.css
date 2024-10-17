@@ -209,42 +209,14 @@ button[type="submit"]:hover {
   box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
 }
 
-.cart-button {
+.cart-nav a {
   display: flex;
   align-items: center;
-  background-color: #f0c14b; /* Light golden button color */
-  padding: 6px 8px;
-  border-radius: 10px; /* Rounded button */
-  border: 1px solid #a88734; /* Border matching the button color */
-  text-decoration: none;
-  color: #111; /* Text color */
-  font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-right: 10px;
+  gap: 5px; /* Space between icon and count */
 }
 
-.cart-button img {
-  height: 30px;
-  width: 30px;
-  margin-right: 10px; /* Spacing between icon and cart count */
-}
-
-.cart-button #cart-count {
-  background-color: #ff6347; /* Red background for the cart count */
-  color: white;
-  padding: 5px 10px;
-  border-radius: 50%; /* Round cart count badge */
-  font-size: 14px;
-}
-
-.cart-button:hover {
-  background-color: #e2a732; /* Darker gold on hover */
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-.cart-button:active {
-  transform: scale(0.95); /* Button press effect */
+.cart-nav img {
+  vertical-align: middle;
 }
 
 #cart-count {
@@ -259,8 +231,8 @@ button[type="submit"]:hover {
 .switch {
   position: relative;
   display: inline-block;
-  width: 55px !important;
-  height: 23px !important;
+  width: 60px !important;
+  height: 24px !important;
   margin-right: 20px;
 }
 
@@ -273,10 +245,10 @@ button[type="submit"]:hover {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 5px;
+  top: 0;
   left: 0;
   right: 0;
-  bottom: -5px;
+  bottom: 0;
   background-color: #ccc;
   transition: 0.4s;
   border-radius: 34px;
@@ -464,17 +436,8 @@ nav ul li.login:hover {
   letter-spacing: 1px;
 }
 
-.dark-mode h2, .dark-mode h1{
-    color: #c3c3f0;
-}
-.dark-mode .intro{
-    color: #ccc;
-}
 .dark-mode h2 {
   color: #ccc;
-}
-.dark-mode .feature p {
-    color: #000; /* Set paragraph color to black */
 }
 
 .col-1 h3 {
@@ -819,36 +782,34 @@ button {
   line-height: 40px;
   border-radius: 50%;
   color: #d3d3d3;
-  transition: all 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  transition: all 0.3s;
+  transition: transform 0.3s ease, background 0.3s ease; /* Added transform property */
 }
 
 .socials a:hover {
-  transform: scale(1.2) rotate(10deg); /* Zoom and rotate effect */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: scale(1.2); /* Zoom effect on hover */
 }
-
-/* Hover zoom and color change effect for social icons */
+/* Hover zoom effect for facebook icon */
 .socials .facebook:hover {
-  background: linear-gradient(to right, #3b5998, #192f6a); /* Gradient background */
+  background: blue;
   color: white;
 }
-
+/* Hover zoom effect for instagram icon */
 .socials .instagram:hover {
-  background: linear-gradient(to right, #e1306c, #f77737); /* Instagram gradient */
+  background: orangered;
   color: white;
 }
-
+/* Hover zoom effect for twitter[X] icon */
 .socials .twitter:hover {
-  background: linear-gradient(to right, #1da1f2, #14171a); /* Gradient for X (Twitter) */
+  background: black;
   color: white;
 }
-
+/* Hover zoom effect for youtube icon */
 .socials .youtube:hover {
-  background: linear-gradient(to right, #ff0000, #cc0000); /* YouTube gradient */
+  background: red;
   color: white;
 }
 
-/* Links hover effect */
 .links ul {
   list-style-type: none;
   padding: 0;
@@ -860,32 +821,13 @@ button {
   font-size: 1.1em;
   color: #d3d3d3;
   text-decoration: none;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.links ul a::before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  background-color: white;
-  left: 0;
-  top: 0;
-  transform: scaleY(0);
-  transition: transform 0.3s ease;
-  transform-origin: top;
+  transition: all 0.3s;
 }
 
 .links ul a:hover {
   color: white;
   padding-left: 10px;
 }
-
-.links ul a:hover::before {
-  transform: scaleY(1); /* Add a vertical line effect on hover */
-}
-
 
 .contact-form .text-input {
   background: #272727;
