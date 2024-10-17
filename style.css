@@ -436,8 +436,17 @@ nav ul li.login:hover {
   letter-spacing: 1px;
 }
 
+.dark-mode h2, .dark-mode h1{
+    color: #c3c3f0;
+}
+.dark-mode .intro{
+    color: #ccc;
+}
 .dark-mode h2 {
   color: #ccc;
+}
+.dark-mode .feature p {
+    color: #000; /* Set paragraph color to black */
 }
 
 .col-1 h3 {
