@@ -259,8 +259,8 @@ button[type="submit"]:hover {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px !important;
-  height: 24px !important;
+  width: 55px !important;
+  height: 23px !important;
   margin-right: 20px;
 }
 
@@ -273,10 +273,10 @@ button[type="submit"]:hover {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
+  top: 5px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -5px;
   background-color: #ccc;
   transition: 0.4s;
   border-radius: 34px;
