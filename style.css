@@ -782,34 +782,36 @@ button {
   line-height: 40px;
   border-radius: 50%;
   color: #d3d3d3;
-  transition: all 0.3s;
-  transition: transform 0.3s ease, background 0.3s ease; /* Added transform property */
+  transition: all 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
 .socials a:hover {
-  transform: scale(1.2); /* Zoom effect on hover */
+  transform: scale(1.2) rotate(10deg); /* Zoom and rotate effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
-/* Hover zoom effect for facebook icon */
+
+/* Hover zoom and color change effect for social icons */
 .socials .facebook:hover {
-  background: blue;
-  color: white;
-}
-/* Hover zoom effect for instagram icon */
-.socials .instagram:hover {
-  background: orangered;
-  color: white;
-}
-/* Hover zoom effect for twitter[X] icon */
-.socials .twitter:hover {
-  background: black;
-  color: white;
-}
-/* Hover zoom effect for youtube icon */
-.socials .youtube:hover {
-  background: red;
+  background: linear-gradient(to right, #3b5998, #192f6a); /* Gradient background */
   color: white;
 }
 
+.socials .instagram:hover {
+  background: linear-gradient(to right, #e1306c, #f77737); /* Instagram gradient */
+  color: white;
+}
+
+.socials .twitter:hover {
+  background: linear-gradient(to right, #1da1f2, #14171a); /* Gradient for X (Twitter) */
+  color: white;
+}
+
+.socials .youtube:hover {
+  background: linear-gradient(to right, #ff0000, #cc0000); /* YouTube gradient */
+  color: white;
+}
+
+/* Links hover effect */
 .links ul {
   list-style-type: none;
   padding: 0;
@@ -821,13 +823,32 @@ button {
   font-size: 1.1em;
   color: #d3d3d3;
   text-decoration: none;
-  transition: all 0.3s;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.links ul a::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: white;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  transform-origin: top;
 }
 
 .links ul a:hover {
   color: white;
   padding-left: 10px;
 }
+
+.links ul a:hover::before {
+  transform: scaleY(1); /* Add a vertical line effect on hover */
+}
+
 
 .contact-form .text-input {
   background: #272727;
