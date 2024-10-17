@@ -1,3 +1,4 @@
+
 .card {
     width: 50%; /* Set a specific width */
     margin: 10px auto; /* Center horizontally with automatic margins */
@@ -841,6 +842,11 @@ button {
     transition: border-color 0.4s, box-shadow 0.4s;
 }
 
+.footer-section h2:hover{
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px orangered;
+}
+
 .contact-form form{
     width: 100%;
     display: flex;
@@ -849,6 +855,7 @@ button {
     flex-direction: column;
     padding: 10px;
 }
+
 
 /* Input focus effects */
 .text-input:focus {
