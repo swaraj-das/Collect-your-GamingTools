@@ -1864,3 +1864,75 @@ button {
     width: 1000vw !important;
   }
 }
+
+/* Section hover effect (for the whole div containing text, images, form) */
+.section {
+    transition: all 0.3s ease;
+}
+
+.section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Add shadow to the section on hover */
+    transform: scale(1.05);  /* Slightly enlarge the section */
+}
+
+/* Form hover effect */
+form {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover effects */
+    max-width: 100%;  /* Ensure form content stays within bounds */
+}
+
+form:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow on the form */
+}
+
+/* Individual input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    transition: all 0.3s ease;
+    max-width: 100%;  /* Prevent overflow */
+    box-sizing: border-box;  /* Ensure padding is included in width */
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea:hover {
+    background-color: #f0f8ff;
+    border-color: #007bff;
+    transform: scale(1.02);  /* Only slightly enlarge the hovered field */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Image hover effect */
+img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 100%;  /* Ensure image stays within its container */
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover effect */
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for size and shadow */
+}
+
+#contact:hover {
+    transform: scale(1.05);  /* Slightly enlarge the section */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Add subtle shadow on hover */
+}
