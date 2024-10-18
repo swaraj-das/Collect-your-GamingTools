@@ -38,6 +38,9 @@ If you experience or witness unacceptable behavior, you can report it by submitt
 
 Email a detailed report to admin.
 
+# action against Violation
+If any misconduct or violation of rules is found then strict actions will be taken against you and you may be out of this open source contributrions.
+
 # Information to Include: 
 
 When submitting a report, include your contact information, a detailed account of the incident (including dates, times, and individuals involved), and any relevant supporting materials.
@@ -76,6 +79,10 @@ Community Impact Guidelines were inspired by [Mozilla's code of
 conduct enforcement ladder](https://github.com/mozilla/diversity).
 
 [homepage]: https://www.contributor-covenant.org
+
+## guide for beginner contribuiter
+If ou are newbie in as acontributor on open source then you can watch our academy videos 
+(gssoc.girlscript.tech/gssoc_academy)
 
 For answers to common questions about this code of conduct, see the
 FAQ at https://www.contributor-covenant.org/faq. Translations are
