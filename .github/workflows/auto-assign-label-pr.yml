@@ -13,16 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Add Labels to PR
-      uses: actions-ecosystem/action-add-labels@v1.1.1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        labels:
-          - gssoc-ext
-          - hacktoberfest-accepted
+      - name: Add Labels to PR
+        uses: actions-ecosystem/action-add-labels@v1.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            gssoc-ext
+            hacktoberfest-accepted
 
-    - name: Assign PR to Creator
-      uses: actions-ecosystem/action-assign@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        assignees: ${{ github.actor }}
+      - name: Assign PR to Creator
+        uses: actions-ecosystem/action-assign@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: ${{ github.actor }}
