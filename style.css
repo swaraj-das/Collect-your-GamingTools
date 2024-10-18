@@ -47,7 +47,7 @@ html::-webkit-scrollbar-thumb:window-inactive {
 }
 
 /*dark and light mode toggle button*/
-label {
+.toggle-label {
     width: 75px;
     height: 30px;
     position: relative;
@@ -61,7 +61,7 @@ label {
     margin: 0 auto; /* Center align the toggle switch */
 }
 
-label:after {
+.toggle-label:after {
     content: "";
     width: 27px;
     height: 27px;
@@ -74,23 +74,23 @@ label:after {
     transform: 0.3s;
 }
 
-input {
+.toggle-input {
     width: 0;
     height: 0;
     visibility: hidden;
 }
 
-input:checked+label {
+.toggle-input:checked+ .toggle-label {
     background: #d3d3d3;
 }
 
-input:checked+label:after {
+.toggle-input:checked+ .toggle-label:after {
     left: 73px;
     transform: translateX(-100%);
     background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
-label:active:after {
+.toggle-label:active:after {
     width: 37.5px;
 }
 
@@ -103,34 +103,34 @@ label:active:after {
     transition: 0.3s;
 }
 
-input:checked+label+.background {
+.toggle-input:checked+.toggle-label+.background {
     background: #242424;
 }
 
-label svg {
+.toggle-label svg {
     position: absolute;
     width: 22.5px;
     top: 3.75px;
     z-index: 100;
 }
 
-label svg.sun {
+.toggle-label svg.sun {
     left: 3.75px;
     fill: #fff;
     transition: 0.3s;
 }
 
-label svg.moon {
+.toggle-label svg.moon {
     left: 48.75px;
     fill: #7e7e7e;
     transition: 0.3s;
 }
 
-input:checked+label svg.sun {
+.toggle-input:checked+label svg.sun {
     fill: #7e7e7e;
 }
 
-input:checked+label svg.moon {
+.toggle-input:checked+label svg.moon {
     fill: #fff;
 }
 
@@ -223,9 +223,14 @@ input:checked+label svg.moon {
   margin-bottom: 20px;
 }
 
-label {
+.toggle-label {
   display: block;
   margin-bottom: 15px;
+}
+
+label{
+    display: block;
+    margin-bottom: 15px;
 }
 
 input,
