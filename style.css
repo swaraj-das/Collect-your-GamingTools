@@ -10,6 +10,32 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Style for the popover */
+.popover {
+  display: none;
+  position: fixed;
+  top: 50px; 
+  right: 20px; 
+  background-color: bisque;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+
+.popover-content {
+  padding: 10px;
+  max-height: 200px;
+  
+}
+.popover-content p{
+  color: black;
+}
 html::-webkit-scrollbar {
   width: 12px; /* Increased the scrollbar width */
   transition: width 0.3s ease;
@@ -537,7 +563,7 @@ button {
   transform: translateX(5px); /* Slightly move the icon to the right on hover */
 }
 
-#cart-btn {
+.cart-btn {
   padding: 12px 14px; /* Padding for the cart button */
   display: flex; /* Use flexbox for alignment */
   align-items: center; /* Center align items vertically */
@@ -550,18 +576,18 @@ button {
   transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Transition for background color */
 }
 
-#cart-btn:hover {
+.cart-btn:hover {
   width: 160px; /* Increased width on hover */
   background-color: #e53935; /* Darker red on hover */
 }
 
-#cart-btn img {
+.cart-btn img {
   width: 18px; /* Icon size */
   opacity: 0; /* Initially hidden */
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for opacity and transform */
 }
 
-#cart-btn:hover img {
+.cart-btn:hover img {
   opacity: 1; /* Fully visible on hover */
   transform: translateX(5px); /* Slightly move the icon to the right on hover */
 }

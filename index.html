@@ -55,15 +55,26 @@
                             <span class="slider"></span>
                         </label></li>
                     <!-- Inside the navbar ul -->
-                    <a href="#" class="cart-button">
+                    <a href="#" class="cart-button" id="cart-icon">
                         <img src="images/cart.png" alt="Cart Icon">
                         <span id="cart-count">0</span>
                         </a>
                 </ul>
 
+                
+
                 <!-- Hamburger Menu Icon -->
                 <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
             </nav>
+        </div>
+        <div id="cart-popover" class="popover">
+            <div class="popover-content" id="popover-content">
+                <p>Your cart is empty</p>
+                
+            </div>
+            <div style="align-items: center;">
+                <button style="border-radius: 4px;">Checkout</button>
+            </div>
         </div>
         </nav>
 
@@ -152,7 +163,7 @@
                 </div>
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -182,7 +193,7 @@
                 </div>
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -214,7 +225,7 @@
                 </div>
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -246,7 +257,7 @@
                 </div>
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -278,7 +289,7 @@
                 </div>
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -310,7 +321,7 @@
                 </div>
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -341,7 +352,7 @@
                 </div>
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -372,7 +383,7 @@
                 </div>
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -403,7 +414,7 @@
                 </div>
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" class="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -719,13 +730,56 @@
 
     <script>
         let cartItemCount = 0;
+let cartItems = [];
 
-        // Function to handle Add to Cart button click
-        document.getElementById('cart-btn').addEventListener('click', function () {
-            cartItemCount++; // Increment cart count
-            document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
-            alert('Item added to cart'); // Show alert
+// Handle Add to Cart button click for all buttons with the class 'cart-btn'
+const cartButtons = document.querySelectorAll('.cart-btn');
+
+cartButtons.forEach((button) => {
+    button.addEventListener('click', function () {
+        cartItemCount++; // Increment cart count
+        document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
+
+        // Get the item name from the closest .col-1 element
+        const itemName = this.closest('.col-1').querySelector('.card-heading').textContent;
+
+        const newItem = `${itemName} ${cartItemCount}`; // Example item, you can change this
+        cartItems.push(newItem); // Add item to the cart
+
+        
+    });
+});
+
+// Handle Cart Button click to toggle popover
+document.getElementById('cart-icon').addEventListener('click', function (e) {
+    e.preventDefault();
+    const popover = document.getElementById('cart-popover');
+    const popoverContent = document.getElementById('popover-content');
+
+    if (cartItems.length > 0) {
+        popoverContent.innerHTML = ''; // Clear the popover content
+        cartItems.forEach((item, index) => {
+            const itemElement = document.createElement('p');
+            itemElement.textContent = `${index + 1}. ${item}`;
+            popoverContent.appendChild(itemElement);
         });
+    } else {
+        popoverContent.innerHTML = '<p>Your cart is empty</p>';
+    }
+
+    // Toggle popover visibility
+    popover.style.display = popover.style.display === 'block' ? 'none' : 'block';
+});
+
+// Close the popover if clicked outside
+document.addEventListener('click', function (e) {
+    const cartButton = document.getElementById('cart-icon');
+    const popover = document.getElementById('cart-popover');
+
+    if (!cartButton.contains(e.target) && !popover.contains(e.target)) {
+        popover.style.display = 'none';
+    }
+});
 
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
