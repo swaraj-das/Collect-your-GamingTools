@@ -987,7 +987,7 @@ button {
   font-size: 20px;
   color: white;
   cursor: pointer;
-  background-color: #1f2937;
+  background-color: #ff1476;
   border: 2px solid white;
   border-radius: 50%;
   display: flex;
@@ -1001,14 +1001,18 @@ button {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  transition: transform 0.3s ease-in-out;
-  background-color: #333;
+  transition: all 0.5s linear, width 0.5s ease;
+  background: linear-gradient(45deg, #8a2be2, #FF1493);
   border-radius: 10px 0 0 10px;
   cursor: pointer;
   color: white;
   font-size: 25px;
   padding: 12px;
   z-index: 1;
+}
+.toggle-arrow:hover{
+  background: linear-gradient(45deg, #8400ffa6, #ff0088ac);
+  width: 30px;
 }
 
 .social-sidebar {
@@ -1019,7 +1023,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: #333;
+  background: linear-gradient(135deg, #8514ee, #00ffffc9, #ff078b);
   padding: 3px;
   border-radius: 15px 0 0 15px;
   border: none;
@@ -1063,8 +1067,9 @@ button {
 .social-sidebar li a:hover {
   background-color: #ffffff;
   border-radius: 50%;
-  color: #1f2937;
+  /* color: #1f2937; */
   transform: scale(1.1);
+  transition: all linear 0.3s;
 }
 
 .social-sidebar i {
@@ -1074,6 +1079,22 @@ button {
 
 .social-sidebar a:hover i {
   transform: scale(1.1);
+}
+
+.social-sidebar .facebook:hover{
+  color: #1877F2;
+}
+
+.social-sidebar .twitter:hover {
+  color: black;
+}
+
+.social-sidebar .instagram:hover {
+  color: #C13584;
+}
+
+.social-sidebar .youtube:hover {
+  color: #FF0000;
 }
 
 /* -----------------------------------------------Responsiveness----------------------------------------------------- */
