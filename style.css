@@ -1939,3 +1939,48 @@ button {
     width: 1000vw !important;
   }
 }
+
+
+/* Add hover effects and shadows to the card */
+#contact .card {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-color: #54546b;
+}
+
+/* Add hover effect to the form input fields */
+#contact .form-group input,
+#contact .form-group textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .form-group input:hover,
+#contact .form-group textarea:hover {
+  border-color: #767d86;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+}
+
+/* Style the button with hover effects */
+#contact button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
