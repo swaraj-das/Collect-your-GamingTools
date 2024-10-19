@@ -5,33 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up for GamingTools</title>
     <link rel="stylesheet" href="signup.css">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <style>
+        .condition {
+            color: gray; /* Default color */
+            font-size: 0.9em;
+        }
+        .condition.met {
+            color: lightgreen; /* Turns green when condition is met */
+        }
+        .error-message {
+            color: red;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
+
+    <span id="link-home" class="linksHome">
+        <a href="../index.html">Home</a>
+    </span>
+
     <div class="signup-container">
         <h1>Create Your Account</h1>
         <form action="#" method="post">
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" placeholder="Create a Username" required>
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <div id="email-error" class="error-message"></div> <!-- Error message container -->
+                <input type="email" id="email" name="email" placeholder="Enter your mail-id" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" placeholder="Create password" required>
             </div>
+
+            <!-- Password Recommendations Section -->
+            <div class="password-recommendations">
+                <p id="length" class="condition">At least 8 characters</p>
+                <p id="uppercase" class="condition">Contains uppercase letters</p>
+                <p id="lowercase" class="condition">Contains lowercase letters</p>
+                <p id="number" class="condition">Contains numbers</p>
+                <p id="special" class="condition">Contains special characters</p>
+    
+
             <div class="input-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required>
             </div>
+            <div id="password-error" class="error-message"></div> <!-- Password error container -->
             <button type="submit" class="signup-button">Sign Up</button>
         </form>
+        <div class="or-divider">
+            <span>OR</span>
+        </div>
+        <button id="google-signup" class="google-signup-button">
+            <img src="../images/google-icon.png" alt="Google Icon" class="google-icon">
+            Sign up with Google
+        </button>
         <div class="links">
-            <a href="../login/login.html">Already have an account? Login</a>
+            <a href="../login/login.html"><u>Already have an account? Login</u></a>
         </div>
     </div>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="signup.js"></script> <!-- Link to the signup.js file -->
 </body>
 </html>

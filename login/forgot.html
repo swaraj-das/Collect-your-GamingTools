@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collect your GamingTools</title>
+    <link rel="stylesheet" href="forgot.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="linksHome">
+        <a href="../index.html">←Back</a>
+    </div>
+    <div class="login-container">
+        <h1>Forgot Password</h1>
+        <form action="#" method="post">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <span id="error-message"></span>
+            <div ontouchstart="">
+                <div class="button">
+                    <a href="#">Reset Password</a>
+                </div>
+            </div>
+        </form>
+        <div class="links">
+            <a href="login.html">Back to Login</a>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector(".button");
+        const errorMessage = document.getElementById('error-message');
+        const emailInput = document.getElementById('email');
+
+        function isValidEmail(email) {
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return emailRegex.test(email);
+        }
+
+        btn.addEventListener("click", (e) => {
+            e.preventDefault(); // prevent form submission
+            const emailValue = emailInput.value.trim();
+
+            if (emailValue === '') {
+                errorMessage.textContent = 'First write your email';
+                errorMessage.style.color = 'red';
+            } else if (!isValidEmail(emailValue)) {
+                errorMessage.textContent = 'Invalid email address';
+                errorMessage.style.color = 'red';
+            } else {
+                // submit the form or perform the password reset logic here
+                errorMessage.textContent = '';
+                setTimeout(() => {
+                    alert("Please check your Email to reset your password.")
+                }, 300)
+            }
+        })
+    </script>
+</body>
+
+</html>
