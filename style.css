@@ -146,6 +146,7 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  resize: vertical;
 }
 
 textarea {
@@ -733,10 +734,18 @@ button {
   align-items: center;
 }
 
+.overall-rating .rating-value {
+    margin-left: 8px; /* Adds space between the heading and rating */
+    color: #ff3c6d; /* Sets the rating value to pink */
+    font-weight: 600; /* Makes the rating value bold */
+    line-height: 1;
+}
+
 .overall-rating .star {
-  margin-left: 5px;
-  color: #ff3c6d;
-  font-weight: 600;
+    margin-left: 2px; /* Small gap between the rating value and the star */
+    color: #ff3c6d; /* Star color is pink as well */
+    font-weight: 600;
+    line-height: 1;
 }
 
 /* confirmation css */
@@ -773,17 +782,23 @@ button {
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+.links-tag{
+  width: 100%;
+  display: flex;
+}
 .footer-section {
   flex: 1;
   margin-bottom: 40px;
   min-width: 300px;
   padding: 0 20px;
+/* margin-left: 20px; */
+
 }
 
 .quick-links {
@@ -842,6 +857,8 @@ button {
   line-height: 40px;
   border-radius: 50%;
   color: #d3d3d3;
+  position :relative;
+  z-index: 1;
   transition: all 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
