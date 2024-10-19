@@ -33,6 +33,51 @@
 
         }
 
+        .cart-nav{
+            display: flex;
+            align-items: center;
+            background-color: #f0c14b; 
+            padding: 6px 8px;
+            border-radius: 10px; 
+            border: 1px solid #a88734; 
+            text-decoration: none;
+            color: #111; 
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .cart-nav img{
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .cart-nav #cart-count{
+            background-color: #ff6347; 
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%; 
+            font-size: 14px;
+        }
+
+        .cart-nav:hover {
+            background-color: #e2a732; 
+            transform: scale(1.05); 
+        }
+
+        .cart-nav:active {
+            transform: scale(0.95); 
+        }
+
+        #cart-count {
+            font-size: 16px; 
+            vertical-align: middle;
+        }
+
+
+
         .main-content {
             padding: 40px 0;
         }
@@ -144,7 +189,7 @@
                 <!-- Inside the navbar ul -->
                 <li class="cart-nav">
 
-                    <a href="#"><img height="25px " width="25px" src="images/cart.png" alt="Cart Icon"> <span
+                    <a href="#"><img src="images/cart.png" alt="Cart Icon"> <span
                             id="cart-count">0</span></a>
 
                 </li>
