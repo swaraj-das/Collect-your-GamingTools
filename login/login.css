@@ -3,6 +3,169 @@
 
 /* General Reset */
 * {
+ signup-form
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url('gaming.jpg'); /* Add your background image here */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 70rem;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.login-box:hover {
+  border: 1px solid rgba(0, 128, 0, 0.901);
+}
+
+h2 {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 15px;
+  padding-left: 50px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.input-box input:focus {
+  border: 1px solid rgba(0, 168, 120, 0.7);
+  box-shadow: 0 4px 15px rgba(0, 168, 120, 0.3);
+}
+
+.input-box input:focus + i {
+  color: rgb(0, 255, 183);
+}
+
+.forgot-password {
+  display: block;
+  margin: 10px 0;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color:rgb(4, 153, 111);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #00A878;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #00875f;
+  box-shadow: 0 4px 15px rgba(0, 168, 120, 0.3);
+}
+
+.social-login p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.social-login button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-login button i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.apple-btn {
+  background-color: black;
+  color: white;
+}
+
+.google-btn {
+  background-color: white;
+  color: #333;
+}
+
+.social-login button:hover {
+  transform: scale(1.03);
+}
+
+.apple-btn:hover {
+  background-color: #333;
+}
+
+.google-btn:hover {
+  background-color: #f2f2f2;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -347,4 +510,5 @@ body {
         font-size: 1em; /* Adjust icon size */
         right: 10px; /* Reduce right spacing for smaller screens */
     }
+ main
 }
