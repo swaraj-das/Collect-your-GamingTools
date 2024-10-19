@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
     <style>
         body {
 
@@ -37,16 +40,20 @@
             padding: 40px 0;
         }
 
-        h1,h2
+        h2
          {
             color: #c7becf;
             text-align: center;
             margin-bottom: 40px;
         }
-        h1 span{
-            color: #f4be0c;
+        h1{
+            color: black;
+            text-align: center;
         }
-
+        h1:hover{
+            transform: scale(1.2);
+            animation: zoom-out 1200  300;
+        }
         /* h2{
             color: #f4be0c;
             text-align: center;
@@ -122,10 +129,44 @@
                 opacity: 1;
             }
         }
+        .head{
+            text-align: center;
+        }
+        .h2 {
+    display: inline-block; /* Ensures the animation applies correctly */
+    overflow: hidden; /* Hides the text that is not yet visible */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    border-right: 3px solid; /* Creates a cursor effect */
+    
+    animation: typing 2.5s steps(15), blink-caret 0.75s step-end infinite; /* Adjust steps based on characters */
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0; /* Start with no width */
+    }
+    to {
+        width: 15ch; /* End with width equal to the length of the text */
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* No border */
+    }
+    50% {
+        border-color: black; /* Visible border */
+    }
+}
+
     </style>
 </head>
 
 <body>
+    
+      
     <div class="navbar">
         <div class="logo-outer">
             <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
@@ -173,55 +214,57 @@
 
     <div class="container main-content">
         <h1>About <span> Gaming </span>Tools</h1>
-        <p class="intro">Welcome to GamingTools, your ultimate destination for premium gaming accessories. We're
+        <p class="intro typewriter">Welcome to GamingTools, your ultimate destination for premium gaming accessories. We're
             passionate about providing gamers with the best tools to elevate their gaming experience to new heights.</p>
+        <div class="head">
+            <h2 class="h2">Why Choose Us?</h2>
+        </div>
 
-        <h2>Why Choose Us?</h2>
         
         <div class="features-grid">
-            <div class="feature">
+            <div class="feature" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-gamepad feature-icon"></i>
                 <h3>Wide Range of Accessories</h3>
                 <p>From controllers to VR headsets, we offer a comprehensive selection for all gaming platforms.</p>
             </div>
 
-            <div class="feature">
+            <div class="feature" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-tags feature-icon"></i>
                 <h3>Competitive Pricing</h3>
                 <p>Get the best gaming gear at unbeatable prices, with regular discounts and promotions.</p>
             </div>
 
-            <div class="feature">
+            <div class="feature" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-truck feature-icon"></i>
                 <h3>Free Shipping</h3>
                 <p>Enjoy free courier services on all orders, making it easy to get your hands on the latest gear.</p>
             </div>
 
-            <div class="feature">
+            <div class="feature" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-user-shield feature-icon"></i>
                 <h3>Secure Shopping</h3>
                 <p>Shop with confidence using our secure checkout process to protect your information.</p>
             </div>
 
-            <div class="feature">
+            <div class="feature" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-exchange-alt feature-icon"></i>
                 <h3>Easy Returns</h3>
                 <p>Hassle-free returns and exchanges to ensure your complete satisfaction with every purchase.</p>
             </div>
 
-            <div class="feature">
+            <div class="feature" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-headset feature-icon"></i>
                 <h3>Customer Support</h3>
                 <p>Our dedicated team is always ready to assist you with any questions or concerns.</p>
             </div>
 
-            <div class="feature">
+            <div class="feature" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-star feature-icon"></i>
                 <h3>Product Reviews</h3>
                 <p>Make informed decisions with help from our customer reviews and ratings.</p>
             </div>
 
-            <div class="feature">
+            <div class="feature" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-question-circle feature-icon"></i>
                 <h3>FAQs Section</h3>
                 <p>Find quick answers to common questions in our comprehensive FAQ section.</p>
@@ -362,7 +405,9 @@
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-
+    <script>
+        AOS.init();
+      </script>
 
 </body>
 
