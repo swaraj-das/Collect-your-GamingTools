@@ -1504,7 +1504,7 @@ button {
   }
   
   .swiper-button-prev {
-    left: 25rem !important; 
+    left: 15rem !important; 
   }
   
   /* Responsive behavior for smaller screens */
@@ -1584,8 +1584,12 @@ button {
   }
   
 
-
-
+.head p{
+    color: white;
+}
+.aside p{
+    color: white;
+}
 /* testimonial */
 .site{
     font-family: "Poppins", sans-serif;
@@ -1594,7 +1598,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< Updated upstream
     background-color:rgb(71,61,61);
+=======
+    background-color: rgb(71, 61,61);
+>>>>>>> Stashed changes
     color: #000;
 }
 .container-swipe
@@ -1629,7 +1637,7 @@ button {
 .testi .wrapper{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: flex-end; */
     gap: 60px;
     padding: 30px 0;
 }
@@ -1674,10 +1682,10 @@ button {
 }
 .testi .aside{
     position: relative;
-    padding-top: 15px;
+    padding-top: 5px;
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
+    align-self:center;
 
 }
 
@@ -1743,14 +1751,24 @@ button {
     text-align: right;
 }
 /*slider*/
-.testi :is(.swiper-button-next, .swiper-button-prev){
-    background-color: #ffe0b5;
-    top: 35%;
+.testi :is(.swiper-button-next, .swiper-button-prev) {
+    background-color: #ffffff;
+    position: absolute; /* Ensure it's positioned relative to its container */
+    top: 100%; /* Center it vertically */
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    transition: background-color .3s;
+    transition: background-color 0.3s;
     box-shadow: rgb(0, 0, 2/ 35%) 0px 20px 30px -10px;
+    transform: translateY(-50%); /* Adjusts centering */
+}
+
+.swiper-button-next {
+    right: 10px; /* Adjust to position it properly on the right */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Adjust to position it properly on the left */
 }
 
 .testi :is(.swiper-button-next, .swiper-button-prev):hover{
@@ -1761,7 +1779,7 @@ button {
 .testi :is(.swiper-button-next, .swiper-button-prev)::after{
     font-size: 16px;
     font-weight: 800;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .testi.swiper-pagination{
     position: relative;
@@ -1786,14 +1804,22 @@ button {
     }
     .testi .thumbnail{
         width: 200px;
-        height: 200px;
+        height: 300px;
     }
     .testi :is(swiper-button-next, .swiper-button-prev){
-        top: 50%;
+        top: 100%;
+        right: 200px;
     }
     
 }
-
+@media screen and (min-width: 1100px)
+{
+    .testi :is(.swiper-button-next, .swiper-button-prev){
+        top:350px;
+        right: 100px;
+        left: 700px;
+    }
+}
 
 =======
 @media only screen and (max-width: 700px)  {
