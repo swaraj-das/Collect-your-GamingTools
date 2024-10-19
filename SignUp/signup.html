@@ -6,6 +6,13 @@
     <title>Sign Up for GamingTools</title>
     <link rel="stylesheet" href="signup.css">
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
         .condition {
             color: gray; /* Default color */
@@ -41,7 +48,10 @@
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Create password" required>
+                <div class="pass">
+                    <input type="password" id="password" name="password" required>
+                    <button id="showPasswordBtn"><i class="fa-regular fa-eye" id="passicon"></i></button>
+                </div>
             </div>
 
             <!-- Password Recommendations Section -->
@@ -55,7 +65,10 @@
 
             <div class="input-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required>
+                <div class="pass">
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <button id="showPasswordBtn-conf"><i class="fa-regular fa-eye" id="passicon-conf"></i></button>
+                </div>
             </div>
             <div id="password-error" class="error-message"></div> <!-- Password error container -->
             <button type="submit" class="signup-button">Sign Up</button>
@@ -68,10 +81,85 @@
             Sign up with Google
         </button>
         <div class="links">
-            <a href="../login/login.html"><u>Already have an account? Login</u></a>
+            <a>Already have an account? <u><a href="../login/login.html">Login</a></u></a>
         </div>
     </div>
+    <script>
+        const signup = document.querySelector(".signup-button");
 
+        signup.addEventListener("click",(e)=>{
+            e.preventDefault();
+
+            const name = document.querySelector("#username").value;
+            const email = document.querySelector("#email").value;
+            const password = document.querySelector("#password").value;
+            const confirmPassword = document.querySelector("#confirm-password").value;
+
+            if(!name || !email || !password || !confirmPassword){
+                alert("every feild is required");
+                return;
+            }
+            const userdata = {
+                name,
+                email,
+                password,
+                confirmPassword
+            }
+            registeruser(userdata);
+
+        } )
+
+        // Show password
+        document.getElementById("showPasswordBtn").addEventListener("click", () => {
+        const password = document.getElementById("password");
+        const icon = document.getElementById("passicon");
+
+        if (password.type === "password") {
+            password.type = "text";
+            icon.classList.remove("fa-regular", "fa-eye");
+            icon.classList.add("fa-solid", "fa-eye-slash");
+        } else {
+            password.type = "password";
+            icon.classList.remove("fa-solid", "fa-eye-slash");
+            icon.classList.add("fa-regular", "fa-eye");
+        }
+        });
+
+        // Show password-conf
+        document.getElementById("showPasswordBtn-conf").addEventListener("click", () => {
+        const password = document.getElementById("confirm-password");
+        const icon = document.getElementById("passicon-conf");
+
+        if (password.type === "password") {
+            password.type = "text";
+            icon.classList.remove("fa-regular", "fa-eye");
+            icon.classList.add("fa-solid", "fa-eye-slash");
+        } else {
+            password.type = "password";
+            icon.classList.remove("fa-solid", "fa-eye-slash");
+            icon.classList.add("fa-regular", "fa-eye");
+        }
+        });
+
+
+        const registeruser = async(user)=>{
+
+            try{
+                const res = await fetch("http://localhost:5000/auth/signup",{
+                    method:"POST",
+                    headers:{"content-type" : "application/json"},
+                    body:JSON.stringify(user)
+                })
+
+                const data = await  res.json();
+                console.log(data);
+                window.location.href="http://127.0.0.1:5500/Collect-your-GamingTools/login/login.html"
+
+            }catch(err){
+                console.log(err.message)
+            }
+        }
+    </script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="signup.js"></script> <!-- Link to the signup.js file -->
 </body>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collect Your Gaming Tools - Login</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collect your GamingTools</title>
+    <link rel="stylesheet" href="login.css">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
@@ -42,6 +43,25 @@
                 <button type="button" class="social-button google">Login with Google</button>
             </div>
         </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="pass">
+            <input type="password" id="password" name="password" required />
+            <button type="button" id="showPasswordBtn">
+              <i class="fa-regular fa-eye" id="passicon"></i>
+            </button>
+          </div>
+        </div>
+        <div ontouchstart="">
+          <div class="button">
+            <a href="#">Login</a>
+          </div>
+        </div>
+      </form>
+      <div class="links">
+        <a href="forgot.html" class="hal">Forgot Password?</a>
+        <a href="../SignUp/signup.html" class="hal2">Sign Up</a>
+      </div>
     </div>
     <footer class="footer">
         <ul class="social-icon">
@@ -66,12 +86,64 @@
             <li class="menu__item"><a class="menu__link" href="../index.html#contact">Contact</a></li>
         </ul>
         <p>&copy;2024 Collect your Gaming Tools | All Rights Reserved</p>
-    </footer>
+    </footer>    
 
-    <script>
-        const loginButton = document.querySelector(".login-button");
+</body>
+  <script>
+  const loginButton = document.querySelector(".login-button");
         const togglePassword = document.getElementById('togglePassword');
         const passwordInput = document.getElementById('password');
+    const login = document.querySelector(".button");
+
+    login.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const email = document.querySelector("#gmail").value;
+      const password = document.querySelector("#password").value;
+      const userData = {
+        email,
+        password,
+      };
+      console.log(userData);
+      loginUser(userData);
+    });
+
+    // Show password
+    document.getElementById("showPasswordBtn").addEventListener("click", () => {
+      const password = document.getElementById("password");
+      const icon = document.getElementById("passicon");
+
+      if (password.type === "password") {
+        password.type = "text";
+        icon.classList.remove("fa-regular", "fa-eye");
+        icon.classList.add("fa-solid", "fa-eye-slash");
+      } else {
+        password.type = "password";
+        icon.classList.remove("fa-solid", "fa-eye-slash");
+        icon.classList.add("fa-regular", "fa-eye");
+      }
+    });
+
+    const loginUser = async (user) => {
+      try {
+        const res = await fetch("http://localhost:5000/auth/signin", {
+          method: "POST",
+          credentials: "include",
+          redirect: "follow",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(user),
+        });
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        const data = await res.json();
+
+        window.location.href =
+          "http://127.0.0.1:5500/Collect-your-GamingTools/index.html";
+      } catch (e) {
+        console.log(e.message);
+    }
+    }
 
         togglePassword.addEventListener('click', function () {
             const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
