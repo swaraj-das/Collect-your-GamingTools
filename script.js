@@ -15,6 +15,21 @@ function toggleMenu() {
     }
 }
 
+window.onscroll = function() {
+    updateProgressBar();
+  };
+function updateProgressBar() {
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  var scrollHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  var scrollPercent = (scrollTop / scrollHeight) * 100;
+  document.getElementById("progressBar").style.width = scrollPercent + "%";
+}
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Website loaded successfully!");
+});
+
 // Show or hide the scroll-top button based on scroll position
 window.addEventListener('scroll', function() {
   const scrollTopButton = document.querySelector('.scroll-top');
@@ -97,14 +112,18 @@ window.onload = () => {
 
 //function to remove sidebar upon clicking close button
 function toggleSidebar() {
-  var sidebar = document.getElementById("SideBar");
-  var sidebarContent = document.getElementById("sidebar-content");
-  if (sidebar) {
-    // Remove the sidebar element and its content
-    sidebar.remove();
-    sidebarContent.remove();
+  const sidebar = document.querySelector('.social-sidebar');
+  const toggleArrow = document.querySelector('.toggle-arrow');
+  
+  // Check if the sidebar is currently visible
+  if (sidebar.style.display === "none") {
+      // If hidden, show the sidebar and hide the toggle arrow
+      sidebar.style.display = "block";
+      toggleArrow.style.display = "none";
   } else {
-    console.error("Sidebar element not found");
+      // If visible, hide the sidebar and show the toggle arrow
+      sidebar.style.display = "none";
+      toggleArrow.style.display = "block";
   }
 }
 
@@ -164,3 +183,25 @@ document.querySelectorAll('.faq input[type="checkbox"]').forEach((checkbox) => {
     }
   });
 });
+
+
+function testimonialJs() {
+  const swiper = new Swiper('.swiper', {
+    autoHeight: true,
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+
+});
+}
+testimonialJs();
