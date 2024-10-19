@@ -374,6 +374,8 @@ nav ul li {
 }
 
 nav ul li a {
+  border-radius: 10px;
+  padding: 8px 20px;
   text-decoration: none;
   color: #000;
   font-size: 13px;
@@ -386,7 +388,8 @@ nav ul li a {
   color: #ccc;
 }
 nav ul li a:hover {
-  color: #e00999;
+  background-color: #ff3527;
+  color: black;
   transform: scale(1.18);
 }
 nav ul {
@@ -426,7 +429,7 @@ nav ul li:not(.login) a:hover::after {
 
 nav ul li.login {
   background: linear-gradient(to right, #fb5283, #ff3527);
-  height: 24px;
+  
   border-radius: 20px;
   padding: 4px 18px;
   cursor: pointer;
