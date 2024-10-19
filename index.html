@@ -67,6 +67,23 @@
         </div>
         </nav>
 
+        <nav>
+            <ul id="menuList">
+                <li><a href="#controller">Game Controllers</a></li>
+                <li><a href="#vrsection">VR Accessories</a></li>
+                <li><a href="#keyboard">Gaming Keyboard</a></li>
+                <li><a href="#others">Others</a></li>
+                <li class="login"><a href="login/login.html">Login</a></li>
+                <!-- Theme Toggle -->
+        <li><label class="switch">
+            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+            <span class="slider"></span>
+        </label></li>
+            </ul>
+            <!-- Hamburger Menu Icon -->
+            <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+        </nav>
+
         <section class="hero">
             <div class="overlay"></div>
             <div class="hero-content">
@@ -130,9 +147,9 @@
                     <p>(2252 reviews)</p>
                 </div>
                 <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">4.1★</p>
+                    Overall Rating<span class="rating-value">4.1</span><span class="star">★</span>
                 </div>
+                
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -160,9 +177,9 @@
                     <p>(1189 reviews)</p>
                 </div>
                 <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">4.8★</p>
+                    Overall Rating<span class="rating-value">4.8</span><span class="star">★</span>
                 </div>
+                
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -192,9 +209,9 @@
                     <p>(3145 reviews)</p>
                 </div>
                 <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">4.2★</p>
+                    Overall Rating<span class="rating-value">4.2</span><span class="star">★</span>
                 </div>
+                
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -224,9 +241,9 @@
                     <p>(871 reviews)</p>
                 </div>
                 <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">4.2★</p>
+                    Overall Rating<span class="rating-value">4.2</span><span class="star">★</span>
                 </div>
+                
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -256,9 +273,9 @@
                     <p>(235 reviews)</p>
                 </div>
                 <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">4.8★</p>
+                    Overall Rating<span class="rating-value">4.8</span><span class="star">★</span>
                 </div>
+                
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -288,9 +305,9 @@
                     <p>(9256 reviews)</p>
                 </div>
                 <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">5.0★</p>
+                    Overall Rating<span class="rating-value">5.0</span><span class="star">★</span>
                 </div>
+                
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -319,9 +336,9 @@
                     <p>(6184 reviews)</p>
                 </div>
                 <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">4.5★</p>
+                    Overall Rating<span class="rating-value">4.5</span><span class="star">★</span>
                 </div>
+                
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -350,9 +367,9 @@
                     <p>(8452 reviews)</p>
                 </div>
                 <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">4.7★</p>
+                    Overall Rating<span class="rating-value">4.7</span><span class="star">★</span>
                 </div>
+                
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -381,9 +398,9 @@
                     <p>(3564 reviews)</p>
                 </div>
                 <div class="overall-rating">
-                    <span>Overall Rating:</span>
-                    <p class="star">4.8★</p>
+                    Overall Rating<span class="rating-value">4.8</span><span class="star">★</span>
                 </div>
+                
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -677,6 +694,7 @@ StarRating
                     </form>
                 </div>
             </div>
+StarRating
             <div class="footer-bottom">
                 <p><a href="PrivacyPolicy/PrivacyPolicy.html">© 2024 GamingTools | All Rights Reserved</a></p>
                 <p>Developed by <span><a href="https://my-portfolio-git-main-swaraj-das-projects.vercel.app/" target="_blank">Swaraj</a></span></p>
@@ -692,6 +710,7 @@ StarRating
                 <li><a class= "instagram" href="#"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a class= "youtube" href="#"><i class="fa-brands fa-youtube"></i></a></li>
             </ul>
+ main
         </div>
         <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
             <i class="fas fa-arrow-left"></i>
