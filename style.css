@@ -819,6 +819,8 @@ button {
   line-height: 40px;
   border-radius: 50%;
   color: #d3d3d3;
+  position :relative;
+  z-index: 1;
   transition: all 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
