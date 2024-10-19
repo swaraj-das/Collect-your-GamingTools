@@ -758,17 +758,25 @@ button {
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
+.Legal-links{
+  margin-right: 2rem;
+}
+.links-tag{
+  width: 100%;
+  display: flex;
+}
 .footer-section {
   flex: 1;
   margin-bottom: 40px;
   min-width: 300px;
   padding: 0 20px;
+/* margin-left: 20px; */
+
 }
 
 .quick-links {
