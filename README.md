@@ -60,7 +60,7 @@ Contributions are what make the **open-source** community such an amazing place 
  </div>
 
  <br>
- [-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+ ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 
  ### 💵 How to Contribute
