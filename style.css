@@ -1726,7 +1726,7 @@ button {
   line-height: 1.5; /* Slightly tighter line height */
 }
 
-/* testimonial */
+/* testimonial section */
 .site {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
@@ -1734,15 +1734,17 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  color: #000;
+  background-color: var(--background-color); /* Adapt based on theme */
+  color: var(--text-color); /* Adapt based on theme */
 }
+
 .container-swipe {
   max-width: 1100px;
   width: 100%;
   padding: 0 30px;
   margin: 0 auto;
 }
+
 .testi {
   max-width: 900px;
   margin: 0 auto;
@@ -1756,12 +1758,13 @@ button {
 .testi .head p {
   font-weight: 600;
   font-size: 25px;
+  color: var(--text-color); /* Adapt based on theme */
 }
 
 .testi .head h3 {
   font-size: 34px;
   font-weight: 800;
-  color: #ff8552;
+  color: #ff8552; /* This color is fixed for branding */
 }
 
 .testi .wrapper {
@@ -1770,7 +1773,10 @@ button {
   align-items: center;
   gap: 60px;
   padding: 30px 0;
+  background-color: var(--background-color); /* Adapt based on theme */
+  color: var(--text-color); /* Adapt based on theme */
 }
+
 
 /*thumbnail*/
 .testi .thumbnail {
