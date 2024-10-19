@@ -167,6 +167,47 @@ button[type="submit"]:hover {
   transform: scale(1.1);
 }
 
+#progressBarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: whitesmoke;
+  z-index: 9999;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #fb5283, #ff3527);
+  transition: width 0.2s ease;
+}
+
+*.dark-mode {
+  background-color: #1b1b1b;
+  color: #f1f1f1;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+}
 
 .cart-button {
   display: flex;
@@ -778,6 +819,8 @@ button {
   line-height: 40px;
   border-radius: 50%;
   color: #d3d3d3;
+  position :relative;
+  z-index: 1;
   transition: all 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
@@ -1542,6 +1585,11 @@ button {
   margin: 0 auto;
 }
 
+.review-rating {
+  color: #ffd700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
 .swiper-pagination {
   position: relative;
@@ -1663,7 +1711,7 @@ button {
   line-height: 1.5; /* Slightly tighter line height */
 }
 
-/* testimonial */
+/* testimonial section */
 .site {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
@@ -1671,15 +1719,17 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  color: #000;
+  background-color: var(--background-color); /* Adapt based on theme */
+  color: var(--text-color); /* Adapt based on theme */
 }
+
 .container-swipe {
   max-width: 1100px;
   width: 100%;
   padding: 0 30px;
   margin: 0 auto;
 }
+
 .testi {
   max-width: 900px;
   margin: 0 auto;
@@ -1693,12 +1743,13 @@ button {
 .testi .head p {
   font-weight: 600;
   font-size: 25px;
+  color: var(--text-color); /* Adapt based on theme */
 }
 
 .testi .head h3 {
   font-size: 34px;
   font-weight: 800;
-  color: #ff8552;
+  color: #ff8552; /* This color is fixed for branding */
 }
 
 .testi .wrapper {
@@ -1707,7 +1758,10 @@ button {
   align-items: center;
   gap: 60px;
   padding: 30px 0;
+  background-color: var(--background-color); /* Adapt based on theme */
+  color: var(--text-color); /* Adapt based on theme */
 }
+
 
 /*thumbnail*/
 .testi .thumbnail {
