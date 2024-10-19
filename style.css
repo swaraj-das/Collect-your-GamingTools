@@ -146,6 +146,7 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  resize: vertical;
 }
 
 textarea {
@@ -763,9 +764,7 @@ button {
   margin: 0 auto;
   padding: 0 20px;
 }
-.Legal-links{
-  margin-right: 2rem;
-}
+
 .links-tag{
   width: 100%;
   display: flex;
