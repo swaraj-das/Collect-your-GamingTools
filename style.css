@@ -746,7 +746,7 @@ button {
  } 
  /* Hover zoom effect for twitter[X] icon */
  .socials .twitter:hover {
-    background: black;
+    background:     ;
     color: white;
  } 
  /* Hover zoom effect for youtube icon */
@@ -1493,31 +1493,32 @@ button {
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 50%;
+    top: -10px;
     transform: translateY(-50%);
     z-index: 10; 
     cursor: pointer;
   }
   
   .swiper-button-next {
-    right: 25rem !important; 
+    right: 5rem !important; 
+    top: -10px !important;
   }
   
   .swiper-button-prev {
-    left: 15rem !important; 
+    left: 5rem !important; 
+    top: -10px !important;
   }
   
   /* Responsive behavior for smaller screens */
   @media screen and (max-width: 1110px) {
     .swiper-button-next, .swiper-button-prev {
-      width: 30px; 
-      height: 30px;
+      width: 20px; 
+      height: 20px;
       padding: 5px;
     }
   
     .swiper-button-next {
       right: 10rem !important; 
-      /* margin-top: 100px !important; */
     }
   
     .swiper-button-prev {
@@ -1669,7 +1670,7 @@ button {
     bottom: 0;
     left: 0;
     width: calc(100% + 30px);
-    height: calc(100% + 30px);
+    height: calc(80% + 30px);
     background-color: #ff8552;    ;
     border-radius: 50%;
     z-index: -1;
@@ -1754,7 +1755,7 @@ button {
 .testi :is(.swiper-button-next, .swiper-button-prev) {
     background-color: #ffffff;
     position: absolute; /* Ensure it's positioned relative to its container */
-    top: 100%; /* Center it vertically */
+    top: -10px; /* Center it vertically */
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -1764,7 +1765,8 @@ button {
 }
 
 .swiper-button-next {
-    right: 10px; /* Adjust to position it properly on the right */
+    /* right: 10px;  */
+    top: -10px !important;
 }
 
 .swiper-button-prev {
@@ -1782,7 +1784,7 @@ button {
     color: rgb(0, 0, 0);
 }
 .testi.swiper-pagination{
-    position: relative;
+    position: absolute;
 }
 
 .testi.swiper-pagination span{
@@ -1815,12 +1817,18 @@ button {
 @media screen and (min-width: 1100px)
 {
     .testi :is(.swiper-button-next, .swiper-button-prev){
-        top:350px;
-        right: 100px;
-        left: 700px;
+        top: -10px;
     }
 }
-
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name > h4{
+    text-align: center;
+}
 =======
 @media only screen and (max-width: 700px)  {
     .footer-bottom{
@@ -1840,9 +1848,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0px;
     border-radius: 10px;
-    background-color: #000000; /* Optional: Background for each testimonial */
+    background-color: rgb(71, 61, 61);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
 }
 
@@ -1868,7 +1876,7 @@ button {
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
-    background-color: #000000; /* Background for each testimonial */
+    background-color: rgb(71, 61, 61);
 }
 
 .btnns {
