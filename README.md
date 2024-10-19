@@ -58,7 +58,7 @@ https://collect-your-gamingtools.netlify.app/
     ```
 2. Navigate to the project directory:
     ```bash
-    cd Collect-your-GamingTools
+    cd Collect-Your-GamingTools
     ```
 3. Open the `index.html` file in your browser:
     ```bash
