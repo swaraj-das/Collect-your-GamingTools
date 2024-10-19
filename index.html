@@ -25,10 +25,54 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./popup/popup.css" />
+    <style>
+        /* Loader styling */
+        .loader {
+            width: 120px; /* Adjust size */
+            height: 120px; /* Adjust size */
+            position: fixed; /* Stay fixed in the center */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
 
+        /* Main content styling */
+        .main-content {
+            display: none;
+            opacity: 0;
+        }
+
+        /* Show content when page is loaded */
+        body.loaded .loader {
+            display: none; /* Hide loader */
+        }
+
+        body.loaded .main-content {
+            display: block; /* Show main content */
+            animation: fadeIn 1s ease-in-out forwards; /* Fade in animation */
+        }
+
+        /* Smooth fade-in effect for content */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Body styling to prevent scrolling while the loader is visible */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f4f8;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="loader" id="loader"></div>
+    <div class="main-content">
     <div id="progressBarContainer">
         <div id="progressBar"></div>
     </div>
@@ -786,8 +830,27 @@
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <script>
+        // Load Lottie animation
+        const loader = document.getElementById('loader');
+        const animation = lottie.loadAnimation({
+            container: loader, // the DOM element that will contain the animation
+            renderer: 'svg', // the rendering method
+            loop: true, // loop the animation
+            autoplay: true, // start playing the animation
+            path: 'https://lottie.host/f0db1198-7725-40df-91d4-15dcf396f3a2/vyKXUMpsxT.json' // the path to the animation JSON
+        });
+        window.onload = function() {
+            setTimeout(function() {
+                // Stop the animation and go to the last frame
+                animation.stop();
+                document.body.classList.add('loaded');
+            }, 1500); // 1.5-second delay
+        };
+    </script>
+    </script>
+    </div>
 </body>
 
 
