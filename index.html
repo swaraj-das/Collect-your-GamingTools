@@ -53,6 +53,10 @@
             animation: fadeIn 1s ease-in-out forwards; /* Fade in animation */
         }
 
+        body.loaded .popup {
+            display: flex; /* Show popup after loading */
+        }
+
         /* Smooth fade-in effect for content */
         @keyframes fadeIn {
             to {
@@ -64,7 +68,7 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow: hidden; /* Prevent scrolling while loader is visible */
             background-color: #f0f4f8;
         }
     </style>
