@@ -146,6 +146,7 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  resize: vertical;
 }
 
 textarea {
@@ -209,14 +210,42 @@ button[type="submit"]:hover {
   box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
 }
 
-.cart-nav a {
+.cart-button {
   display: flex;
   align-items: center;
-  gap: 5px; /* Space between icon and count */
+  background-color: #f0c14b; /* Light golden button color */
+  padding: 6px 8px;
+  border-radius: 10px; /* Rounded button */
+  border: 1px solid #a88734; /* Border matching the button color */
+  text-decoration: none;
+  color: #111; /* Text color */
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-right: 10px;
 }
 
-.cart-nav img {
-  vertical-align: middle;
+.cart-button img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px; /* Spacing between icon and cart count */
+}
+
+.cart-button #cart-count {
+  background-color: #ff6347; /* Red background for the cart count */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%; /* Round cart count badge */
+  font-size: 14px;
+}
+
+.cart-button:hover {
+  background-color: #e2a732; /* Darker gold on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.cart-button:active {
+  transform: scale(0.95); /* Button press effect */
 }
 
 #cart-count {
@@ -231,8 +260,8 @@ button[type="submit"]:hover {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px !important;
-  height: 24px !important;
+  width: 55px !important;
+  height: 23px !important;
   margin-right: 20px;
 }
 
@@ -245,10 +274,10 @@ button[type="submit"]:hover {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
+  top: 5px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -5px;
   background-color: #ccc;
   transition: 0.4s;
   border-radius: 34px;
@@ -705,10 +734,18 @@ button {
   align-items: center;
 }
 
+.overall-rating .rating-value {
+    margin-left: 8px; /* Adds space between the heading and rating */
+    color: #ff3c6d; /* Sets the rating value to pink */
+    font-weight: 600; /* Makes the rating value bold */
+    line-height: 1;
+}
+
 .overall-rating .star {
-  margin-left: 5px;
-  color: #ff3c6d;
-  font-weight: 600;
+    margin-left: 2px; /* Small gap between the rating value and the star */
+    color: #ff3c6d; /* Star color is pink as well */
+    font-weight: 600;
+    line-height: 1;
 }
 
 .footer {
@@ -722,17 +759,23 @@ button {
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+.links-tag{
+  width: 100%;
+  display: flex;
+}
 .footer-section {
   flex: 1;
   margin-bottom: 40px;
   min-width: 300px;
   padding: 0 20px;
+/* margin-left: 20px; */
+
 }
 
 .quick-links {
@@ -791,34 +834,38 @@ button {
   line-height: 40px;
   border-radius: 50%;
   color: #d3d3d3;
-  transition: all 0.3s;
-  transition: transform 0.3s ease, background 0.3s ease; /* Added transform property */
+  position :relative;
+  z-index: 1;
+  transition: all 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
 .socials a:hover {
-  transform: scale(1.2); /* Zoom effect on hover */
+  transform: scale(1.2) rotate(10deg); /* Zoom and rotate effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
-/* Hover zoom effect for facebook icon */
+
+/* Hover zoom and color change effect for social icons */
 .socials .facebook:hover {
-  background: blue;
+  background: linear-gradient(to right, #3b5998, #192f6a); /* Gradient background */
   color: white;
 }
-/* Hover zoom effect for instagram icon */
+
 .socials .instagram:hover {
-  background: orangered;
+  background: linear-gradient(to right, #e1306c, #f77737); /* Instagram gradient */
   color: white;
 }
-/* Hover zoom effect for twitter[X] icon */
+
 .socials .twitter:hover {
-  background: black;
+  background: linear-gradient(to right, #1da1f2, #14171a); /* Gradient for X (Twitter) */
   color: white;
 }
-/* Hover zoom effect for youtube icon */
+
 .socials .youtube:hover {
   background: lightsalmon;
   color: white;
 }
 
+/* Links hover effect */
 .links ul {
   list-style-type: none;
   padding: 0;
@@ -830,13 +877,32 @@ button {
   font-size: 1.1em;
   color: #d3d3d3;
   text-decoration: none;
-  transition: all 0.3s;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.links ul a::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: white;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  transform-origin: top;
 }
 
 .links ul a:hover {
   color: white;
   padding-left: 10px;
 }
+
+.links ul a:hover::before {
+  transform: scaleY(1); /* Add a vertical line effect on hover */
+}
+
 
 .contact-form .text-input {
   background: #272727;
@@ -928,7 +994,7 @@ button {
   font-size: 20px;
   color: white;
   cursor: pointer;
-  background-color: #1f2937;
+  background-color: #ff1476;
   border: 2px solid white;
   border-radius: 50%;
   display: flex;
@@ -942,14 +1008,18 @@ button {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  transition: transform 0.3s ease-in-out;
-  background-color: #333;
+  transition: all 0.5s linear, width 0.5s ease;
+  background: linear-gradient(45deg, #8a2be2, #FF1493);
   border-radius: 10px 0 0 10px;
   cursor: pointer;
   color: white;
   font-size: 25px;
   padding: 12px;
   z-index: 1;
+}
+.toggle-arrow:hover{
+  background: linear-gradient(45deg, #8400ffa6, #ff0088ac);
+  width: 30px;
 }
 
 .social-sidebar {
@@ -960,7 +1030,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: #333;
+  background: linear-gradient(135deg, #8514ee, #00ffffc9, #ff078b);
   padding: 3px;
   border-radius: 15px 0 0 15px;
   border: none;
@@ -1004,8 +1074,9 @@ button {
 .social-sidebar li a:hover {
   background-color: #ffffff;
   border-radius: 50%;
-  color: #1f2937;
+  /* color: #1f2937; */
   transform: scale(1.1);
+  transition: all linear 0.3s;
 }
 
 .social-sidebar i {
@@ -1015,6 +1086,22 @@ button {
 
 .social-sidebar a:hover i {
   transform: scale(1.1);
+}
+
+.social-sidebar .facebook:hover{
+  color: #1877F2;
+}
+
+.social-sidebar .twitter:hover {
+  color: black;
+}
+
+.social-sidebar .instagram:hover {
+  color: #C13584;
+}
+
+.social-sidebar .youtube:hover {
+  color: #FF0000;
 }
 
 /* -----------------------------------------------Responsiveness----------------------------------------------------- */
@@ -1676,7 +1763,15 @@ button {
 
 /* Add these styles to ensure the inner content is styled properly */
 .container-swipe {
-  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding:30px;
+  margin: 0 auto;
+  background-color:#303036;
+}
+.testi {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .testi .head {
@@ -1863,4 +1958,49 @@ p {
   .footer-bottom {
     width: 1000vw !important;
   }
+}
+
+
+/* Add hover effects and shadows to the card */
+#contact .card {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-color: #54546b;
+}
+
+/* Add hover effect to the form input fields */
+#contact .form-group input,
+#contact .form-group textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact .form-group input:hover,
+#contact .form-group textarea:hover {
+  border-color: #767d86;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+}
+
+/* Style the button with hover effects */
+#contact button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

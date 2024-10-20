@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +11,22 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <style>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
+    <style>
         body {
 
-            font-family:  'Poppins', sans-serif;
-            line-height:  1.6;
-            color:  #333;
-            margin:  0;
-            padding:  0;
-            background-color:  white;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-image: url(https://github.com/shriyadindi/comingsoonpage/blob/main/background.png?raw=true);
+            margin: 0;
+            padding: 0;
+            background-color: white;
 
         }
 
-        .container { 
+        .container {
 
             width: 90%;
             max-width: 1200px;
@@ -32,55 +35,138 @@
             padding: 20px;
 
         }
-        
+
         .main-content {
             padding: 40px 0;
         }
-        h1, h2 {
-            color: #35424a;
+
+        h2
+         {
+            color: #c7becf;
             text-align: center;
             margin-bottom: 40px;
         }
+        h1{
+            color: black;
+            text-align: center;
+        }
+        h1:hover{
+            transform: scale(1.2);
+            animation: zoom-out 1200  300;
+        }
+        /* h2{
+            color: #f4be0c;
+            text-align: center;
+            margin-bottom: 40px;
+        } */
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
+
         .feature {
             background: #fff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             text-align: center;
         }
+
         .feature:hover {
             transform: translateX(-5px);
-            box-shadow: 5px 5px 20px rgba(0,0,0,0.15);
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
         }
+
         .feature h3 {
             color: #e8491d;
             margin-top: 20px;
         }
+
+        .feature p{
+            color:#8058ad;
+            font-weight: 600;
+        }
+
         .feature-icon {
             font-size: 48px;
             color: #e8491d;
             margin-bottom: 15px;
             transition: all 0.3s ease;
         }
+
         .feature:hover .feature-icon {
             transform: scale(1.1);
         }
+
         .intro {
             text-align: center;
             max-width: 800px;
             margin: 0 auto 40px;
             font-size: 18px;
-            color: #666;
+            color: #d0c3df;
+            font-weight: 600;
         }
+
+        .rocket {
+            width: 250px;
+            position: absolute;
+            right: 10%;
+            bottom: 0;
+            animation: rocket 4s linear infinite;
+        }
+
+        @keyframes rocket {
+            0% {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            100% {
+                bottom: 120%;
+                opacity: 1;
+            }
+        }
+        .head{
+            text-align: center;
+        }
+        .h2 {
+    display: inline-block; /* Ensures the animation applies correctly */
+    overflow: hidden; /* Hides the text that is not yet visible */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    border-right: 3px solid; /* Creates a cursor effect */
+    
+    animation: typing 2.5s steps(15), blink-caret 0.75s step-end infinite; /* Adjust steps based on characters */
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0; /* Start with no width */
+    }
+    to {
+        width: 15ch; /* End with width equal to the length of the text */
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* No border */
+    }
+    50% {
+        border-color: black; /* Visible border */
+    }
+}
+
     </style>
 </head>
+
 <body>
+    
+      
     <div class="navbar">
         <div class="logo-outer">
             <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
@@ -88,28 +174,30 @@
         </div>
         <nav>
             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
                 <li><a href="index.html">Game Controllers</a></li>
                 <li><a href="index.html">VR Accessories</a></li>
                 <li><a href="index.html">Gaming Keyboard</a></li>
                 <li><a href="index.html">Others</a></li>
-                <li><a href="./aboutus.html">About Us</a></li>
                 <li class="login"><a href="login/login.html">Login</a></li>
 
                 <!-- Inside the navbar ul -->
                 <li class="cart-nav">
-                 
-                        <a href="#"><img height="25px " width="25px" src="images/cart.png" alt="Cart Icon"> <span id="cart-count">0</span></a>
-                  
+
+                    <a href="#"><img height="25px " width="25px" src="images/cart.png" alt="Cart Icon"> <span
+                            id="cart-count">0</span></a>
+
                 </li>
-                
+
             </ul>
-            
+
             <!-- Hamburger Menu Icon -->
             <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
         </nav>
     </div>
-    
-    
+
+
     <nav>
         <ul id="menuList">
             <li><a href="index.html">Game Controllers</a></li>
@@ -125,61 +213,65 @@
 
 
     <div class="container main-content">
-        <h1>About GamingTools</h1>
-        <p class="intro" id="intro">Welcome to GamingTools, your ultimate destination for premium gaming accessories. We're passionate about providing gamers with the best tools to elevate their gaming experience to new heights.</p>
-        
-        <h2>Why Choose Us</h2>
+        <h1>About <span> Gaming </span>Tools</h1>
+        <p class="intro typewriter">Welcome to GamingTools, your ultimate destination for premium gaming accessories. We're
+            passionate about providing gamers with the best tools to elevate their gaming experience to new heights.</p>
+        <div class="head">
+            <h2 class="h2">Why Choose Us?</h2>
+        </div>
+
         
         <div class="features-grid">
-            <div class="feature">
+            <div class="feature" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-gamepad feature-icon"></i>
                 <h3>Wide Range of Accessories</h3>
                 <p>From controllers to VR headsets, we offer a comprehensive selection for all gaming platforms.</p>
             </div>
-            
-            <div class="feature">
+
+            <div class="feature" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-tags feature-icon"></i>
                 <h3>Competitive Pricing</h3>
                 <p>Get the best gaming gear at unbeatable prices, with regular discounts and promotions.</p>
             </div>
-            
-            <div class="feature">
+
+            <div class="feature" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-truck feature-icon"></i>
                 <h3>Free Shipping</h3>
                 <p>Enjoy free courier services on all orders, making it easy to get your hands on the latest gear.</p>
             </div>
-            
-            <div class="feature">
+
+            <div class="feature" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-user-shield feature-icon"></i>
                 <h3>Secure Shopping</h3>
                 <p>Shop with confidence using our secure checkout process to protect your information.</p>
             </div>
-            
-            <div class="feature">
+
+            <div class="feature" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-exchange-alt feature-icon"></i>
                 <h3>Easy Returns</h3>
                 <p>Hassle-free returns and exchanges to ensure your complete satisfaction with every purchase.</p>
             </div>
-            
-            <div class="feature">
+
+            <div class="feature" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-headset feature-icon"></i>
                 <h3>Customer Support</h3>
                 <p>Our dedicated team is always ready to assist you with any questions or concerns.</p>
             </div>
-            
-            <div class="feature">
+
+            <div class="feature" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-star feature-icon"></i>
                 <h3>Product Reviews</h3>
                 <p>Make informed decisions with help from our customer reviews and ratings.</p>
             </div>
-            
-            <div class="feature">
+
+            <div class="feature" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-question-circle feature-icon"></i>
                 <h3>FAQs Section</h3>
                 <p>Find quick answers to common questions in our comprehensive FAQ section.</p>
             </div>
-            
+
         </div>
+        <img src="https://github.com/shriyadindi/comingsoonpage/blob/main/rocket.png?raw=true" class="rocket">
     </div>
 
     <script src="darkMode.js"></script>
@@ -191,7 +283,8 @@
                     <h2 class="logo-text">Collect your GamingTools</h2>
                 </div>
                 <p class="about-text">
-                    Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated selection of controllers, VR gear, and more.
+                    Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated
+                    selection of controllers, VR gear, and more.
                 </p>
                 <div class="contact">
                     <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
@@ -201,8 +294,9 @@
                     <!-- Added classes to the <a> tags to add the Hover animations -->
                     <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
                     <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a>
+                    <a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
                     <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
+
                 </div>
             </div>
             <div class="footer-section links">
@@ -219,7 +313,8 @@
             <div class="footer-section contact-form">
                 <h2>Feedback Form</h2>
                 <form action="#" method="post">
-                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+                    <input type="email" name="email" class="text-input contact-input"
+                        placeholder="Your email address...">
                     <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
                     <button type="submit" class="btn btn-big contact-btn">
                         <i class="fas fa-envelope"></i>
@@ -231,11 +326,9 @@
         <div class="footer-bottom">
             &copy; 2024 GamingTools | Designed by Swaraj
         </div>
-        
+
     </footer>
 
-    <!-- SIDEBAR -->
-        
     <!-- SIDEBAR -->
     <div class="social-sidebar">
         <div class="close-btn" id="SideBar" onclick="toggleSidebar()" title="Close Sidebar">&times;</div>
@@ -254,17 +347,18 @@
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
         <div class="scroll-top-icon">
-        <ion-icon name="arrow-up-outline"></ion-icon>
+            <ion-icon name="arrow-up-outline"></ion-icon>
         </div>
         <svg class="progress-ring" width="60" height="60">
-        <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"></circle>
+            <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
+                cy="30"></circle>
         </svg>
-    </button>  
+    </button>
 
     <script>
         let cartItemCount = 0;
 
-    // Function to handle Add to Cart button click
+        // Function to handle Add to Cart button click
         document.getElementById('cart-btn').addEventListener('click', function () {
             cartItemCount++; // Increment cart count
             document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
@@ -284,26 +378,24 @@
 
     <script>
         window.embeddedChatbotConfig = {
-        chatbotId: "awMKW3zFwW7jzUNsN4Q8O",
-        domain: "www.chatbase.co"
+            chatbotId: "awMKW3zFwW7jzUNsN4Q8O",
+            domain: "www.chatbase.co"
         }
-        </script>
-        <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="awMKW3zFwW7jzUNsN4Q8O"
-        domain="www.chatbase.co"
-        defer>
-        </script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="awMKW3zFwW7jzUNsN4Q8O" domain="www.chatbase.co" defer>
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 
-        <div class="gtranslate_wrapper"></div>
-        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
-        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script>
+        AOS.init();
+      </script>
 
 </body>
 
