@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
-    <meta charset= "UTF-8">
-    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collect your GamingTools</title>
 
     <!--adding meta keywords and description -->
-    <meta name="keywords" content="gaming tools, game accessories, gaming gear, gaming equipment, gaming setup, game controller, gaming mouse, gaming keyboard, gaming headset, gaming software, eSports tools, gaming community, gaming chair, VR gaming tools, game streaming equipment, console gaming, PC gaming, mobile gaming, gaming tips, game reviews, gaming news">
-    <meta name="description" content="Collect and discover the ultimate gaming tools and accessories to enhance your gaming experience. From high-performance controllers and mice to immersive headsets and VR gaming equipment, we have everything you need for console, PC, and mobile gaming. Join our gaming community for tips and reviews to stay ahead in the game!">
+    <meta name="keywords"
+        content="gaming tools, game accessories, gaming gear, gaming equipment, gaming setup, game controller, gaming mouse, gaming keyboard, gaming headset, gaming software, eSports tools, gaming community, gaming chair, VR gaming tools, game streaming equipment, console gaming, PC gaming, mobile gaming, gaming tips, game reviews, gaming news">
+    <meta name="description"
+        content="Collect and discover the ultimate gaming tools and accessories to enhance your gaming experience. From high-performance controllers and mice to immersive headsets and VR gaming equipment, we have everything you need for console, PC, and mobile gaming. Join our gaming community for tips and reviews to stay ahead in the game!">
 
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./popup/popup.css"/>
-    <script type="module" src="login/auth.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMnN0tgJ7x0Yommb7w5eLKnSe+70f31z4Ox1p8a" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMhZj7z9qvhs8kcJ6D6t3h7jsKK4Gk16+/D57g" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./popup/popup.css" />
 
     <!-- Manifest file for PWA -->
     <link rel="manifest" href="/manifest.json">
@@ -27,79 +32,77 @@
 </head>
 
 <body>
-    <div id= "progressBarContainer">
-        <div id= "progressBar"></div>
+    <div id="progressBarContainer">
+        <div id="progressBar"></div>
     </div>
-      
-        <div class= "container">
-            
-            <div class= "navbar">
-                <div class= "logo-outer">
-                    <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
-                    <a href="/"><span class="website-name">Collect your GamingTools</span></a>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./aboutus.html">About Us</a></li>
-                        <li><a href="#controller">Game Controllers</a></li>
-                        <li><a href="#vrsection">VR Accessories</a></li>
-                        <li><a href="#keyboard">Gaming Keyboard</a></li>
-                        <li><a href="#others">Others</a></li>
-                        
-                        <li class="login"><a href="login/login.html" id="auth-link">Login</a></li> 
-                        <li><label class="switch">
-                            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-                            <span class="slider"></span>
-                        </label></li>
-                        <!-- Inside the navbar ul -->
-                        <li class="cart-nav">
-                         
-                                <a href="#"><img height="25px " width="25px" src="images/cart.png" alt="Cart Icon"> <span id="cart-count">0</span></a>
-                          
-                        </li>
-                        
-                    </ul>
-                    
-                    <!-- Hamburger Menu Icon -->
-                    <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
-                </nav>
+
+    <div class="container">
+
+        <div class="navbar">
+            <div class="logo-outer">
+                <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
+                <a href="/"><span class="website-name">Collect your GamingTools</span></a>
             </div>
-            
-            
             <nav>
-                <ul id="menuList">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./aboutus.html">About Us</a></li>
                     <li><a href="#controller">Game Controllers</a></li>
                     <li><a href="#vrsection">VR Accessories</a></li>
                     <li><a href="#keyboard">Gaming Keyboard</a></li>
                     <li><a href="#others">Others</a></li>
+
                     <li class="login"><a href="login/login.html">Login</a></li>
-                    <!-- Theme Toggle -->
-            <li><label class="switch">
-                <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-                <span class="slider"></span>
-            </label></li>
+                    <li><label class="switch">
+                            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                            <span class="slider"></span>
+                        </label></li>
+                    <!-- Inside the navbar ul -->
+                    <a href="#" class="cart-button">
+                        <img src="images/cart.png" alt="Cart Icon">
+                        <span id="cart-count">0</span>
+                    </a>
                 </ul>
+
                 <!-- Hamburger Menu Icon -->
                 <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
             </nav>
+        </div>
+        </nav>
 
-            <section class="hero">
-                <div class="overlay"></div>
-                <div class="hero-content">
-               <!-- Search Bar (initially hidden) -->
-                                 
-            <div class="searchbar-outer">
-                <div class="search-bar hidden" id="searchBar">
-                    <input type="text" id="search-input" placeholder="Search..." />
-                    <button type="button" onclick="performSearch()">🔍</button>
+        <nav>
+            <ul id="menuList">
+                <li><a href="#controller">Game Controllers</a></li>
+                <li><a href="#vrsection">VR Accessories</a></li>
+                <li><a href="#keyboard">Gaming Keyboard</a></li>
+                <li><a href="#others">Others</a></li>
+                <li class="login"><a href="login/login.html">Login</a></li>
+                <!-- Theme Toggle -->
+                <li><label class="switch">
+                        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                        <span class="slider"></span>
+                    </label></li>
+            </ul>
+            <!-- Hamburger Menu Icon -->
+            <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+        </nav>
+
+        <section class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <!-- Search Bar (initially hidden) -->
+
+                <div class="searchbar-outer">
+                    <div class="search-bar hidden" id="searchBar">
+                        <input type="text" id="search-input" placeholder="Search..." />
+                        <button type="button" onclick="performSearch()"><i class="fas fa-search"></i></button>
+                    </div>
                 </div>
+                <h1 data-aos="fade-down">Welcome to GamingTools</h1>
+                <p data-aos="fade-down">Your one-stop shop for all gaming accessories.</p>
+                <a href="#controller" class="cta-btn" data-aos="fade-down">Explore Products</a>
             </div>
-                    <h1 data-aos="fade-down">Welcome to GamingTools</h1>
-                    <p data-aos="fade-down">Your one-stop shop for all gaming accessories.</p>
-                    <a href="#controller" class="cta-btn" data-aos="fade-down">Explore Products</a>
-                </div>
-            </section>
+        </section>
 
         <!-- Pop-up for email registration  HTML Goes Here -->
 
@@ -109,10 +112,10 @@
                 <div class="popup-left">
                     <img src="images/popup.png" alt="Gaming Tools Image">
                 </div>
-                
+
                 <div class="popup-right">
-                    <a href="# " class="close1-btn"> <img  src="images/logo.png" class="logo1" alt="Logo"></a>
-                    <h1 >Unlock the Ultimate Gaming Experience!</h1>
+                    <a href="# " class="close1-btn"> <img src="images/logo.png" class="logo1" alt="Logo"></a>
+                    <h1>Unlock the Ultimate Gaming Experience!</h1>
                     <h2 class="h2">Sign up for exclusive offers & updates</h2>
                     <p>Join our community and get upto <strong>30% off</strong> on your first deal</p>
                     <form id="emailForm">
@@ -120,7 +123,8 @@
                         <button type="submit" class="signup-btn1">Get 30% Off Now</button>
                     </form>
                     <a href="#" class="no-thanks close1-btn">No thanks</a>
-                    <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                    <p class="terms">By signing up, you agree to our <a href="terms.html">Terms of Service</a> and <a
+                            href="PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a>.</p>
                 </div>
             </div>
         </div>
@@ -130,7 +134,7 @@
 
         <!-- PS4 Controller Section -->
 
-      <div class="row" id="controller" >
+        <div class="row" id="controller">
 
             <div class="col-1" data-aos="fade-right">
                 <h2 class="card-heading">PS4 V2 Dualshock 4</h2>
@@ -148,10 +152,10 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.1</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
-                <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
@@ -178,16 +182,17 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.8</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
-                <img src="images/newcontroller3.png" class="controller" alt="Controller"> <!-- replaced old blurry image with enhanced image -->
+                <img src="images/newcontroller3.png" class="controller" alt="Controller">
+                <!-- replaced old blurry image with enhanced image -->
                 <div class="color-box"></div>
-                
+
             </div>
         </div>
 
@@ -209,21 +214,22 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.2</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
-                <img src="images/controller2.png" class="controller" alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
+                <img src="images/controller2.png" class="controller"
+                    alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
                 <div class="color-box"></div>
-                
+
             </div>
         </div>
 
-         <!-- VR Headset Section -->
-         <div class="row" id="vrsection">
+        <!-- VR Headset Section -->
+        <div class="row" id="vrsection">
             <div class="col-1" data-aos="fade-right">
                 <h2 class="card-heading">Meta Quest Pro</h2>
                 <h3>VR Headset from Meta</h3>
@@ -240,16 +246,17 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.2</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
-                <img src="images/metaquest.jpg" class="controller" alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
+                <img src="images/metaquest.jpg" class="controller"
+                    alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
                 <div class="color-box"></div>
-                
+
             </div>
         </div>
 
@@ -271,16 +278,17 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.8</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
-                <img src="images/visionpro.png" class="controller" alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
+                <img src="images/visionpro.png" class="controller"
+                    alt="Controller"><!--changed the image, as it was interchanged with the xbox controller image-->
                 <div class="color-box"></div>
-                
+
             </div>
         </div>
 
@@ -302,16 +310,16 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">5.0</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
                 <img src="images/mouse.png" class="controller" alt="Gaming Mouse">
                 <div class="color-box"></div>
-                
+
             </div>
         </div>
 
@@ -333,16 +341,16 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.5</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
                 <img src="images/keyboard.png" class="controller" alt="Gaming Keyboard">
                 <div class="color-box"></div>
-                
+
             </div>
         </div>
 
@@ -364,16 +372,16 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.7</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
                 <img src="images/headset.png" class="controller" alt="Gaming Headset">
                 <div class="color-box"></div>
-               
+
             </div>
         </div>
 
@@ -395,62 +403,66 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.8</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
-                    <button type="button" id = "buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
-                    <button type="button" id = "cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
+                    <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
+                    <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
                 </div>
             </div>
             <div class="col-2" data-aos="fade-left">
                 <img src="images/newchair.png" class="controller" alt="Gaming Chair">
                 <div class="color-box"></div>
-               
+
             </div>
         </div>
     </div>
 
-<!-- FAQ Section -->
-<section id="faq">          
-    <div class="faq-container">
-        <h1 class="faq-title" data-aos="fade-right">Frequently Asked Questions</h1>  
-        
-        <div class="faq" data-aos="fade-right">
-            <input type="checkbox" id="faq1">
-            <label for="faq1" class="faq-question">1. Does your website consist of all types of gaming tools? <span class="arrow"></span></label>
-            <div class="faq-answer">
-                We have tried our best to make all the tools available for enthusiastic gamers.
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="faq-container">
+            <h1 class="faq-title" data-aos="fade-right">Frequently Asked Questions</h1>
+
+            <div class="faq" data-aos="fade-right">
+                <input type="checkbox" id="faq1">
+                <label for="faq1" class="faq-question">1. Does your website consist of all types of gaming tools? <span
+                        class="arrow"></span></label>
+                <div class="faq-answer">
+                    We have tried our best to make all the tools available for enthusiastic gamers.
+                </div>
+            </div>
+
+            <div class="faq" data-aos="fade-right">
+                <input type="checkbox" id="faq2">
+                <label for="faq2" class="faq-question">2. If I'm having some purchased-product related issues, can the
+                    product be replaced as per my need? <span class="arrow"></span></label>
+                <div class="faq-answer">
+                    By considering our terms and conditions, further actions will be taken.
+                </div>
+            </div>
+
+            <div class="faq" data-aos="fade-right">
+                <input type="checkbox" id="faq3">
+                <label for="faq3" class="faq-question">3. Can I buy multiple products at once? <span
+                        class="arrow"></span></label>
+                <div class="faq-answer">
+                    Yes, you are welcome to buy multiple products at one time.
+                </div>
+            </div>
+
+            <div class="faq" data-aos="fade-right">
+                <input type="checkbox" id="faq4">
+                <label for="faq4" class="faq-question">4. Do you have any free courier services or is it paid? <span
+                        class="arrow"></span></label>
+                <div class="faq-answer">
+                    We have courier services for our customers and it's absolutely free.
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="faq" data-aos="fade-right">
-            <input type="checkbox" id="faq2">
-            <label for="faq2" class="faq-question">2. If I'm having some purchased-product related issues, can the product be replaced as per my need? <span class="arrow"></span></label>
-            <div class="faq-answer">
-                By considering our terms and conditions, further actions will be taken.
-            </div>
-        </div>
+    <!-- testimonial -->
 
-        <div class="faq" data-aos="fade-right">
-            <input type="checkbox" id="faq3">
-            <label for="faq3" class="faq-question">3. Can I buy multiple products at once? <span class="arrow"></span></label>
-            <div class="faq-answer">
-                Yes, you are welcome to buy multiple products at one time.
-            </div>
-        </div>
-
-        <div class="faq" data-aos="fade-right">
-            <input type="checkbox" id="faq4">
-            <label for="faq4" class="faq-question">4. Do you have any free courier services or is it paid? <span class="arrow"></span></label>
-            <div class="faq-answer">
-                We have courier services for our customers and it's absolutely free.
-            </div>
-        </div>
-    </div>
-</section>
-
-      <!-- testimonial -->
-
-      <div id="page" class="site">
+    <div id="page" class="site">
         <div class="container-swipe">
             <div class="testi">
                 <div class="head">
@@ -465,7 +477,10 @@
                                     <img src="images/girl1.png" alt="">
                                 </div>
                                 <div class="aside">
-                                    <p>I’ve been searching for the perfect gaming accessories for ages, and I finally found them on this website! The variety available is truly impressive; I was able to find exactly what I needed to enhance my gaming experience. The quality of the products exceeded my expectations.</p>
+                                    <p>I’ve been searching for the perfect gaming accessories for ages, and I finally
+                                        found them on this website! The variety available is truly impressive; I was
+                                        able to find exactly what I needed to enhance my gaming experience. The quality
+                                        of the products exceeded my expectations.</p>
                                     <div class="name">
                                         <h4>Sarah malik</h4>
                                         <p>★★★★★</p>
@@ -479,7 +494,10 @@
                                     <img src="images/boy2.png" alt="">
                                 </div>
                                 <div class="aside">
-                                    <p>Shopping on this website was a breeze! I love how user-friendly the interface is; it made navigating through the different categories so easy. I was able to find exactly what I needed without any hassle. The checkout process was smooth, and I received my items promptly</p>
+                                    <p>Shopping on this website was a breeze! I love how user-friendly the interface is;
+                                        it made navigating through the different categories so easy. I was able to find
+                                        exactly what I needed without any hassle. The checkout process was smooth, and I
+                                        received my items promptly</p>
                                     <div class="name">
                                         <h4>John Doe</h4>
                                         <p>★★★★☆</p>
@@ -493,7 +511,10 @@
                                     <img src="images/boy1.png" alt="">
                                 </div>
                                 <div class="aside">
-                                    <p>My order arrived much faster than I anticipated, which was a huge plus. The customer support team was incredibly helpful when I had a question about my order. I purchased a gaming headset, and it works perfectly! It has made a significant difference in my gaming sessions.</p>
+                                    <p>My order arrived much faster than I anticipated, which was a huge plus. The
+                                        customer support team was incredibly helpful when I had a question about my
+                                        order. I purchased a gaming headset, and it works perfectly! It has made a
+                                        significant difference in my gaming sessions.</p>
                                     <div class="name">
                                         <h4>Alex Johnson</h4>
                                         <p>★★★★★</p>
@@ -507,7 +528,10 @@
                                     <img src="images/girl2.png" alt="">
                                 </div>
                                 <div class="aside">
-                                    <p>As a serious gamer, I always look for high-quality gear that can enhance my performance. I stumbled upon this website and was blown away by the selection! I purchased a gaming mouse and a mechanical keyboard, and both have drastically improved my gameplay. .</p>
+                                    <p>As a serious gamer, I always look for high-quality gear that can enhance my
+                                        performance. I stumbled upon this website and was blown away by the selection! I
+                                        purchased a gaming mouse and a mechanical keyboard, and both have drastically
+                                        improved my gameplay. .</p>
                                     <div class="name">
                                         <h4>Emily Davismore</h4>
                                         <p>★★★★☆</p>
@@ -528,86 +552,43 @@
         </div>
     </div>
 
+    <!-- testimonial end -->
 
-             <!-- testimonial end -->
-
-
-
-           <section id="contact" data-aos="fade-right">
-            <div class="card pb-5 pt-1">
-                <div class="card-header">
-                    <h2>Contact Our Customer Support Team</h2>
-            <p class="contact-message">
-                We're here to assist you with any questions or concerns you may have.
-            </p>
+    <section id="contact" data-aos="fade-right">
+        <div class="card pb-5 pt-1">
+            <div class="card-header">
+                <h2>Contact Our Customer Support Team</h2>
+                <p class="contact-message">
+                    We're here to assist you with any questions or concerns you may have.
+                </p>
 
 
+            </div>
+            <div class="card-body">
+                <div class="image-section">
+                    <img src="images/7725176.jpg" alt="Contact Image"
+                        style="max-width: 80%; height: auto; max-height: 500px;">
                 </div>
-                <div class="card-body">
-                    <div class="image-section">
-                        <img src="images/7725176.jpg" alt="Contact Image"
-                            style="max-width: 80%; height: auto; max-height: 500px;">
-                    </div>
-                    <div class="form-section">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name"><i class="fas fa-user"></i> Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your email">
-                            </div>
-                            <div class="form-group">
-                                <label for="message"><i class="fas fa-comment"></i> Message</label>
-                                <textarea id="message" name="message" placeholder="Your message"></textarea>
-                            </div>
-                            <button type="submit">Send</button>
-                        </form>
-        
-                        <script>
-                            // Function to load form data from local storage
-                            function loadFormData() {
-                                const data = JSON.parse(localStorage.getItem('formData')) || [];
-                                if (data.length > 0) {
-                                    console.log('Saved Form Data:', data);
-                                }
-                            }
-
-                            // Function to save form data to local storage
-                            function saveFormData() {
-                                const name = document.getElementById('name').value;
-                                const email = document.getElementById('email').value;
-                                const message = document.getElementById('message').value;
-
-                                const newEntry = { name, email, message };
-                                const existingData = JSON.parse(localStorage.getItem('formData')) || [];
-                                existingData.push(newEntry);
-                                localStorage.setItem('formData', JSON.stringify(existingData));
-                            }
-
-                            // Event listener for form submission
-                            document.getElementById('contactForm').addEventListener('submit', function (event) {
-                                event.preventDefault();
-                                saveFormData();
-                                clearForm();
-                                alert('Message sent!');
-                            });
-
-                            // Function to clear input fields
-                            function clearForm() {
-                                document.getElementById('name').value = '';
-                                document.getElementById('email').value = '';
-                                document.getElementById('message').value = '';
-                            }
-
-                            // Load the form data when the page is loaded
-                            window.onload = loadFormData;
-                        </script>
-                    </div>
+                <div class="form-section">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Message</label>
+                            <textarea id="message" name="message" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit">Send</button>
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
     <footer class="footer">
@@ -618,21 +599,24 @@
                     <h2 class="logo-text">Collect your GamingTools</h2>
                 </div>
                 <p class="about-text">
-                    Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated selection of controllers, VR gear, and more.
+                    Your one-stop shop for premium gaming accessories. Elevate your gaming experience with our curated
+                    selection of controllers, VR gear, and more.
                 </p>
                 <div class="contact">
-                    <span><a href="tel:123-456-789" style="color: white; text-decoration: none;"><i class="fas fa-phone"></i> &nbsp; 123-456-789</a></span>
-                    <span><a href="mailto:info@gamingtools.com" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> &nbsp; info@gamingtools.com</a></span>
-                </div>                              
+                    <span><a href="tel:123-456-789" style="color: white; text-decoration: none;"><i
+                                class="fas fa-phone"></i> &nbsp; 123-456-789</a></span>
+                    <span><a href="mailto:info@gamingtools.com" style="color: white; text-decoration: none;"><i
+                                class="fas fa-envelope"></i> &nbsp; info@gamingtools.com</a></span>
+                </div>
                 <div class="socials">
                     <!-- Added classes to the <a> tags to add the Hover animations -->
                     <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
                     <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="twitter" href="#" ><i class="fa-brands fa-x-twitter"></i></a>
+                    <a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
                     <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-           
+
             <div class="footer-section links">
                 <h2>Quick Links</h2>
                 <ul>
@@ -644,7 +628,7 @@
                     <li><a href="Contributors/contributor.html">Contributors</a></li>
                 </ul>
             </div>
-           
+
             <div class="footer-section links">
                 <h2>Legal Links</h2>
                 <ul>
@@ -656,11 +640,12 @@
                     <li><a href="#">Copyright Notice</a></li>
                 </ul>
             </div>
-     
+
             <div class="footer-section contact-form">
                 <h2>Feedback Form</h2>
                 <form action="#" method="post">
-                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+                    <input type="email" name="email" class="text-input contact-input"
+                        placeholder="Your email address...">
                     <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
                     <button type="submit" class="btn btn-big contact-btn">
                         <i class="fas fa-envelope"></i>
@@ -671,20 +656,21 @@
         </div>
         <div class="footer-bottom">
             <p><a href="PrivacyPolicy/PrivacyPolicy.html">© 2024 GamingTools | All Rights Reserved</a></p>
-            <p>Developed by <span><a href="https://my-portfolio-git-main-swaraj-das-projects.vercel.app/" target="_blank">Swaraj</a></span></p>
-        </div>        
-        
+            <p>Developed by <span><a href="https://my-portfolio-git-main-swaraj-das-projects.vercel.app/"
+                        target="_blank">Swaraj</a></span></p>
+        </div>
+
     </footer>
 
     <!-- SIDEBAR -->
-        
+
     <div class="social-sidebar">
         <div class="close-btn" id="SideBar" onclick="toggleSidebar()" title="Close Sidebar">&times;</div>
         <ul id="sidebar-content">
-            <li><a class= "facebook" href="https://www.facebook.com/"><i class="fa-brands fa-meta"></i></a></li>
-            <li><a class="twitter" href="https://x.com/" ><i class="fa-brands fa-x-twitter"></i></a></li>
-            <li><a class= "instagram" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a class= "youtube" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/"><i class="fa-brands fa-meta"></i></a></li>
+            <li><a class="twitter" href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a class="youtube" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
         </ul>
     </div>
     <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
@@ -695,17 +681,18 @@
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
         <div class="scroll-top-icon">
-        <ion-icon name="arrow-up-outline"></ion-icon>
+            <ion-icon name="arrow-up-outline"></ion-icon>
         </div>
         <svg class="progress-ring" width="60" height="60">
-        <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"></circle>
+            <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
+                cy="30"></circle>
         </svg>
-    </button>  
+    </button>
 
     <script>
         let cartItemCount = 0;
 
-    // Function to handle Add to Cart button click
+        // Function to handle Add to Cart button click
         document.getElementById('cart-btn').addEventListener('click', function () {
             cartItemCount++; // Increment cart count
             document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
@@ -737,8 +724,8 @@
     <!-- this script is for twitter icon  ends -->
 
     <!-- Scripts -->
-     <!-- testimonial script -->
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- testimonial script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
     <script src="popup/popup.js"></script>
@@ -747,24 +734,20 @@
 
     <script>
         window.embeddedChatbotConfig = {
-        chatbotId: "awMKW3zFwW7jzUNsN4Q8O",
-        domain: "www.chatbase.co"
+            chatbotId: "awMKW3zFwW7jzUNsN4Q8O",
+            domain: "www.chatbase.co"
         }
-        </script>
-        <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="awMKW3zFwW7jzUNsN4Q8O"
-        domain="www.chatbase.co"
-        defer>
-        </script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="awMKW3zFwW7jzUNsN4Q8O" domain="www.chatbase.co" defer>
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
-        <div class="gtranslate_wrapper"></div>
-        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
-        <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
 
 </body>
