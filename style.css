@@ -906,6 +906,8 @@ button {
 .contact-form .contact-btn {
   float: right;
   font-size: 1.1em;
+  left: -60px;
+  position: relative;
   font-family: "Arial", sans-serif;
   background: #4caf50;
   color: white;
