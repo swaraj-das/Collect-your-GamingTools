@@ -47,7 +47,7 @@
             margin-bottom: 40px;
         }
         h1{
-            color: black;
+            color: rgb(255, 255, 255);
             text-align: center;
         }
         h1:hover{
@@ -117,6 +117,9 @@
             bottom: 0;
             animation: rocket 4s linear infinite;
         }
+        .dark-mode nav ul li a img{
+            filter: invert(1);
+        }
 
         @keyframes rocket {
             0% {
@@ -175,12 +178,15 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="./aboutus.html">About Us</a></li>
                 <li><a href="index.html">Game Controllers</a></li>
                 <li><a href="index.html">VR Accessories</a></li>
                 <li><a href="index.html">Gaming Keyboard</a></li>
                 <li><a href="index.html">Others</a></li>
                 <li class="login"><a href="login/login.html">Login</a></li>
+                <li><label class="switch">
+                    <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                    <span class="slider"></span>
+                </label></li>
 
                 <!-- Inside the navbar ul -->
                 <li class="cart-nav">
