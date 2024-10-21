@@ -1441,15 +1441,13 @@ button {
 
 .hero {
   position: relative;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  color: white;
+  background: none; /* Background handled by carousel images */
   text-align: center;
+  overflow: hidden;
 }
 
 .overlay {
@@ -1458,8 +1456,59 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* General Carousel Styling */
+.carousel-slide {
+  min-width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover; /* Default behavior for all slides to fill container */
+}
+
+/* Specific Style for the First Slide */
+.carousel-slide:nth-child(1) img {
+  width: 100%;; /* Ensure it covers the full width and height */
+  height: 90vh; /* Keep it consistent with other slides */
+}
+
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active, .dot:hover {
+  background-color: red;
 }
 
 .hero-content {
