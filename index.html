@@ -25,10 +25,13 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./popup/popup.css" />
-
+    <link rel ="stylesheet" href="./Loader/Loader.css"/>
+    <link rel="manifest" href="/manifest.json">
 </head>
 
 <body>
+    <div class="loader" id="loader"></div>
+    <div class="main-content">
     <div id="progressBarContainer">
         <div id="progressBar"></div>
     </div>
@@ -58,7 +61,7 @@
                     <a href="#" class="cart-button">
                         <img src="images/cart.png" alt="Cart Icon">
                         <span id="cart-count">0</span>
-                        </a>
+                    </a>
                 </ul>
 
                 <!-- Hamburger Menu Icon -->
@@ -75,10 +78,10 @@
                 <li><a href="#others">Others</a></li>
                 <li class="login"><a href="login/login.html">Login</a></li>
                 <!-- Theme Toggle -->
-        <li><label class="switch">
-            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
-            <span class="slider"></span>
-        </label></li>
+                <li><label class="switch">
+                        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                        <span class="slider"></span>
+                    </label></li>
             </ul>
             <!-- Hamburger Menu Icon -->
             <img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
@@ -120,11 +123,8 @@
                         <button type="submit" class="signup-btn1">Get 30% Off Now</button>
                     </form>
                     <a href="#" class="no-thanks close1-btn">No thanks</a>
-                    <p class="terms">
-                        By signing up, you agree to our 
-                        <a href="PrivacyPolicy/PrivacyPolicy.html">Terms of Service</a> and 
-                        <a href="PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a>.
-                    </p>
+                    <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a
+                            href="#">Privacy Policy</a>.</p>
                 </div>
             </div>
         </div>
@@ -152,7 +152,7 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.1</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -182,7 +182,7 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.8</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -214,7 +214,7 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.2</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -246,7 +246,7 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.2</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -278,7 +278,7 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.8</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -310,7 +310,7 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">5.0</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -341,7 +341,7 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.5</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -372,7 +372,7 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.7</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -403,7 +403,7 @@
                 <div class="overall-rating">
                     Overall Rating<span class="rating-value">4.8</span><span class="star">★</span>
                 </div>
-                
+
                 <div class="btn-section">
                     <button type="button" id="buy-btn">Buy Now<img src="images/arrow.png" alt="Arrow"></button>
                     <button type="button" id="cart-btn">Add to Cart<img src="images/add.png" alt="Cart"></button>
@@ -552,10 +552,7 @@
         </div>
     </div>
 
-
     <!-- testimonial end -->
-
-
 
     <section id="contact" data-aos="fade-right">
         <div class="card pb-5 pt-1">
@@ -588,46 +585,6 @@
                         </div>
                         <button type="submit">Send</button>
                     </form>
-
-                    <script>
-                        // Function to load form data from local storage
-                        function loadFormData() {
-                            const data = JSON.parse(localStorage.getItem('formData')) || [];
-                            if (data.length > 0) {
-                                console.log('Saved Form Data:', data);
-                            }
-                        }
-
-                        // Function to save form data to local storage
-                        function saveFormData() {
-                            const name = document.getElementById('name').value;
-                            const email = document.getElementById('email').value;
-                            const message = document.getElementById('message').value;
-
-                            const newEntry = { name, email, message };
-                            const existingData = JSON.parse(localStorage.getItem('formData')) || [];
-                            existingData.push(newEntry);
-                            localStorage.setItem('formData', JSON.stringify(existingData));
-                        }
-
-                        // Event listener for form submission
-                        document.getElementById('contactForm').addEventListener('submit', function (event) {
-                            event.preventDefault();
-                            saveFormData();
-                            clearForm();
-                            alert('Message sent!');
-                        });
-
-                        // Function to clear input fields
-                        function clearForm() {
-                            document.getElementById('name').value = '';
-                            document.getElementById('email').value = '';
-                            document.getElementById('message').value = '';
-                        }
-
-                        // Load the form data when the page is loaded
-                        window.onload = loadFormData;
-                    </script>
                 </div>
             </div>
         </div>
@@ -646,9 +603,11 @@
                     selection of controllers, VR gear, and more.
                 </p>
                 <div class="contact">
-                    <span><a href="tel:123-456-789" style="color: white; text-decoration: none;"><i class="fas fa-phone"></i> &nbsp; 123-456-789</a></span>
-                    <span><a href="mailto:info@gamingtools.com" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> &nbsp; info@gamingtools.com</a></span>
-                </div>                              
+                    <span><a href="tel:123-456-789" style="color: white; text-decoration: none;"><i
+                                class="fas fa-phone"></i> &nbsp; 123-456-789</a></span>
+                    <span><a href="mailto:info@gamingtools.com" style="color: white; text-decoration: none;"><i
+                                class="fas fa-envelope"></i> &nbsp; info@gamingtools.com</a></span>
+                </div>
                 <div class="socials">
                     <!-- Added classes to the <a> tags to add the Hover animations -->
                     <a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
@@ -657,7 +616,7 @@
                     <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-           
+
             <div class="footer-section links">
                 <h2>Quick Links</h2>
                 <ul>
@@ -669,19 +628,19 @@
                     <li><a href="Contributors/contributor.html">Contributors</a></li>
                 </ul>
             </div>
-           
+
             <div class="footer-section links">
                 <h2>Legal Links</h2>
                 <ul>
                     <li><a href="PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service </a></li>
+                    <li><a href="terms.html">Terms of Service </a></li>
                     <li><a href="#">Cookie Policy</a></li>
                     <li><a href="#">Disclaimer</a></li>
                     <li><a href="#">Return Policy</a></li>
                     <li><a href="#">Copyright Notice</a></li>
                 </ul>
             </div>
-     
+
             <div class="footer-section contact-form">
                 <h2>Feedback Form</h2>
                 <form action="#" method="post">
@@ -715,7 +674,7 @@
         </ul>
     </div>
     <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
-        <i class="fas fa-arrow-left"></i>
+        <span>&#8249;</span>
     </div>
 
 
@@ -789,8 +748,11 @@
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <script src="./Loader/Loader.js"></script>
 
-
+    </script>
+    </div>
 </body>
 
 
