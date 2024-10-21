@@ -250,7 +250,7 @@ button[type="submit"]:hover {
 
 #cart-count {
   font-size: 16px; /* Adjust font size to match */
-  vertical-align: middle;
+  vertical-align: super;
 }
 
 .dark-mode .navbar {
