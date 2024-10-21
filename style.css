@@ -1732,12 +1732,12 @@ button {
 .site {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
-  color: #000;
+  color: #e7e7e7;
 }
 .container-swipe {
   max-width: 1200px;
