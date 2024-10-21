@@ -181,14 +181,16 @@
                 <li><a href="index.html">Gaming Keyboard</a></li>
                 <li><a href="index.html">Others</a></li>
                 <li class="login"><a href="login/login.html">Login</a></li>
-
+                <!-- Theme Toggle button  -->
+                <li><label class="switch">
+                    <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                    <span class="slider"></span>
+                </label></li>
                 <!-- Inside the navbar ul -->
-                <li class="cart-nav">
-
-                    <a href="#"><img height="25px " width="25px" src="images/cart.png" alt="Cart Icon"> <span
-                            id="cart-count">0</span></a>
-
-                </li>
+                <a href="#" class="cart-button">
+                    <img src="images/cart.png" alt="Cart Icon">
+                    <span id="cart-count">0</span>
+                </a>
 
             </ul>
 
