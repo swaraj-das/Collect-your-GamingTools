@@ -1937,10 +1937,34 @@ button {
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .footer-bottom {
-    width: 1000vw !important;
-  }
+StarRating
+.star-rating {
+    display: flex;
+    justify-content: center; 
+    margin-top: -20px;
+    margin-left: 30px;
+    flex-direction: row-reverse;
+}
+
+.star-rating input {
+    display: none; 
+}
+
+.star-rating label {
+    font-size: 46px; 
+    color: #ddd; 
+    cursor: pointer; 
+    transition: color 0.2s;
+}
+
+.star-rating input:checked ~ label {
+    color: #ffca28; 
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ffca28; 
+ main
 }
 
 
