@@ -47,13 +47,14 @@ html::-webkit-scrollbar-thumb:window-inactive {
 }
 
 .card {
-  width: 50%; /* Set a specific width */
-  margin: 10px auto; /* Center horizontally with automatic margins */
-  padding: 20px; /* Add padding */
-  margin-bottom: 70px;
-  border: 1px solid #ccc; /* Optional: Add a border */
-  border-radius: 8px; /* Optional: Add rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    width: 50%; /* Set a specific width */
+    margin: 10px auto; /* Center horizontally with automatic margins */
+    padding: 20px; /* Add padding */
+    margin-bottom: 70px;
+
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
 }
 .card-header {
   color: #fff;
@@ -142,10 +143,10 @@ label {
 
 input,
 textarea {
-  width: 100%; /* Adjust width for better alignment */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    width: 100%; /* Adjust width for better alignment */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   resize: vertical;
 }
 
@@ -164,30 +165,64 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #444;
-  transform: scale(1.1);
+    background-color: #444;
+        transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
 #progressBarContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 7px;
-  background-color: whitesmoke;
-  z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-color: whitesmoke;
+    z-index: 9999;
 }
 
 #progressBar {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(to right, #fb5283, #ff3527);
-  transition: width 0.2s ease;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #fb5283, #ff3527);
+    transition: width 0.2s ease;
+}
+*.dark-mode {
+    background-color: #493d3d;
+    color: #f1f1f1;
 }
 
-*.dark-mode {
-  background-color: #1b1b1b;
-  color: #f1f1f1;
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 9px;
+    transition: width 0.3s ease;
+    margin: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff459f, #ff9532, #ff459f);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+html::-webkit-scrollbar-thumb:window-inactive {
+    background: rgb(156, 156, 156);
 }
 
 .container {
@@ -253,55 +288,55 @@ button[type="submit"]:hover {
   vertical-align: middle;
 }
 
-.dark-mode .navbar {
+.dark-mode .navbar  {
   background-color: #111111;
 }
 
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 55px !important;
-  height: 23px !important;
-  margin-right: 20px;
+    position: relative;
+    display: inline-block;
+    width: 60px !important;
+    height: 24px !important;
+    margin-right: 20px;
 }
 
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 5px;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 34px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  left: 6px;
-  bottom: 2px;
-  top: 1px;
-  background-color: black;
-  transition: 0.4s;
-  border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 6px;
+    bottom: 2px;
+    top: 1px;
+    background-color: black;
+    transition: 0.4s;
+    border-radius: 50%;
 }
 
 input:checked + .slider {
-  background: linear-gradient(to right, #fb5283, #ff3527) !important;
+    background: linear-gradient(to right, #fb5283, #ff3527) !important;
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+    transform: translateX(26px);
 }
 
 .logo {
@@ -325,28 +360,29 @@ input:checked + .slider:before {
 }
 
 .website-name {
-  font-size: 18px;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(
-    90deg,
-    #ff459f,
-    #ff9532,
-    #ffd700,
-    #32cd32,
-    #1e90ff,
-    #8a2be2,
-    #ff459f
-  );
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  display: inline-block;
-  animation: rainbow 5s linear infinite;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-weight: bolder;
-  cursor: pointer;
+    margin-left: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(
+        90deg,
+        #ff459f,
+        #ff9532,
+        #ffd700,
+        #32cd32,
+        #1e90ff,
+        #8a2be2,
+        #ff459f
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    animation: rainbow 5s linear infinite;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 .menu-icon {
@@ -382,8 +418,8 @@ nav ul li a {
   transition: color 0.5s, transform 0.5s;
 }
 
-.dark-mode nav ul li a {
-  color: #ccc;
+.dark-mode nav ul li a  {
+  color:  #ccc;
 }
 nav ul li a:hover {
   color: #e00999;
@@ -468,7 +504,7 @@ nav ul li.login:hover {
 .dark-mode h2, .dark-mode h1{
     color: #c3c3f0;
 }
-.dark-mode .intro{
+.dark-mode .intro {
     color: #ccc;
 }
 .dark-mode h2 {
@@ -592,13 +628,13 @@ button {
 }
 
 .col-1::after {
-  content: "";
-  width: 10px;
-  height: 63%;
-  background: linear-gradient(#ff459f, #ff6062);
-  position: absolute;
-  left: -40px;
-  top: 8px;
+    content: "";
+    width: 10px;
+    height: 63%;
+    background: linear-gradient(#ff459f, #ff6062);
+    position: absolute;
+    left: -40px;
+    top: 8px;
 }
 
 .col-2 {
@@ -688,12 +724,19 @@ button {
   font-size: 26px;
   margin-right: 10px;
   background: linear-gradient(
+        
     to right,
+       
     #ff459f,
+       
     #ff9532,
+       
     #ffd700,
+       
     #32cd32,
+       
     #1e90ff
+    
   );
   /* Example gradient colors */
   -webkit-background-clip: text;
@@ -730,11 +773,11 @@ button {
 }
 
 .footer {
-  background: #303036;
-  color: #d3d3d3;
-  width: 100%;
-  padding: 50px 0 0;
-  font-family: "Arial", sans-serif;
+    background: #303036;
+    color: #d3d3d3;
+    width: 100%;
+    padding: 50px 0 0;
+    font-family: "Arial", sans-serif;
 }
 
 .footer-content {
@@ -809,7 +852,7 @@ button {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255,  255,  255,  0.1);
   margin-right: 10px;
   text-align: center;
   line-height: 40px;
@@ -817,10 +860,10 @@ button {
   color: #d3d3d3;
   position :relative;
   z-index: 1;
-  transition: all 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  transition: all 00.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
-.socials a:hover {
+.socials a:hover  {
   transform: scale(1.2) rotate(10deg); /* Zoom and rotate effect */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
@@ -871,7 +914,7 @@ button {
   left: 0;
   top: 0;
   transform: scaleY(0);
-  transition: transform 0.3s ease;
+  transition: transform 00.3s ease;
   transform-origin: top;
 }
 
@@ -1020,15 +1063,15 @@ button {
   border: 1px solid rgb(147, 143, 143);
 }
 
-.social-sidebar ul {
+.social-sidebar ul  {
   list-style: none;
   margin: 0;
 }
 
 .social-sidebar li {
-  display: block;
-  margin: 12px 0;
-  position: relative;
+    display: block;
+    margin: 12px 0;
+    position: relative;
 }
 
 .social-sidebar a {
@@ -1061,8 +1104,8 @@ button {
 }
 
 .social-sidebar i {
-  display: inline-block;
-  transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
 }
 
 .social-sidebar a:hover i {
@@ -1090,9 +1133,9 @@ button {
 /* ----------------------------for mobiles--------------------------------------- */
 
 @media only screen and (max-width: 700px) {
-  .menu-icon {
-    margin-right: 40px;
-  }
+    .menu-icon {
+        margin-right: 40px;
+    }
 
   nav ul {
     width: 100%;
@@ -1237,9 +1280,9 @@ button {
 /* --------------------------for tabs------------------------------------ */
 
 @media only screen and (max-width: 1180px) {
-  .menu-icon {
-    margin-right: 60px;
-  }
+    .menu-icon {
+        margin-right: 60px;
+    }
 
   nav ul {
     width: 100%;
@@ -1440,16 +1483,16 @@ button {
 }
 
 .hero {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  color: white;
-  text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
 }
 
 .overlay {
@@ -1458,7 +1501,12 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+  background: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* Dark overlay for better text visibility */
   z-index: 1;
 }
 
