@@ -52,6 +52,17 @@
                     <li><a href="#keyboard">Gaming Keyboard</a></li>
                     <li><a href="#others">Others</a></li>
 
+                    <!--adding short search bar-->
+                
+                    <li>
+                        <div class="searchbar-outer">
+                            <div class="search-bar hidden" id="searchBar">
+                                <input type="text" id="search-input" placeholder="Search..." />
+                                <button type="button" onclick="performSearch()"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </li>
+
                     <li class="login"><a href="login/login.html">Login</a></li>
                     <li><label class="switch">
                             <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
@@ -76,6 +87,7 @@
                 <li><a href="#vrsection">VR Accessories</a></li>
                 <li><a href="#keyboard">Gaming Keyboard</a></li>
                 <li><a href="#others">Others</a></li>
+
                 <li class="login"><a href="login/login.html">Login</a></li>
                 <!-- Theme Toggle -->
                 <li><label class="switch">
@@ -90,17 +102,24 @@
         <section class="hero">
             <div class="overlay"></div>
             <div class="hero-content">
-                <!-- Search Bar (initially hidden) -->
-
-                <div class="searchbar-outer">
-                    <div class="search-bar hidden" id="searchBar">
-                        <input type="text" id="search-input" placeholder="Search..." />
-                        <button type="button" onclick="performSearch()"><i class="fas fa-search"></i></button>
+                
+                <!--sldier-->
+                <div class="carousel">
+                    <div class="carousel-slide">
+                      <img src="./hero-slider/sliding-images/slide-1.jpeg" alt="Slide 1">
                     </div>
-                </div>
-                <h1 data-aos="fade-down">Welcome to GamingTools</h1>
-                <p data-aos="fade-down">Your one-stop shop for all gaming accessories.</p>
-                <a href="#controller" class="cta-btn" data-aos="fade-down">Explore Products</a>
+                    <div class="carousel-slide">
+                      <img src="./hero-slider/sliding-images/slide-2.jpeg" alt="Slide 2">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="./hero-slider/sliding-images/slide-3.jpeg" alt="Slide 3">
+                    </div>
+                  </div>
+                  <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
             </div>
         </section>
 
@@ -750,6 +769,8 @@
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
     <script src="./Loader/Loader.js"></script>
+
+    <script src="./hero-slider/effects.js"></script>
 
     </script>
     </div>
