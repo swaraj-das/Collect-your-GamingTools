@@ -23,6 +23,7 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
 
+
   /* .popuplogo{
     position: absolute;
     top: 0;
@@ -83,9 +84,16 @@
   }
 
   p {
+   
     margin-bottom: 26px;
-    color: #d7d7d7;
-    font-size: 13px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(left, #fd1c1c, #3375c7, #14addd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 12.7px;
+  }
+  .bold{
+    font-size: 13.1px;
   }
 
   input[type="email"] {
