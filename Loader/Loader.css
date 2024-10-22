@@ -6,12 +6,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
+  animation: spin 1s linear infinite; /* Add spinning animation to loader */
 }
 
 /* Main content styling */
 .main-content {
   display: none;
   opacity: 0;
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
 }
 
 /* Show content when page is loaded */
@@ -30,8 +32,20 @@ body.loaded .popup {
 
 /* Smooth fade-in effect for content */
 @keyframes fadeIn {
+  from {
+    opacity: 0; /* Start from invisible */
+  }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+      transform: translate(-50%, -50%) rotate(0deg); /* Start rotation */
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(360deg); /* Complete rotation */
   }
 }
 
@@ -41,4 +55,16 @@ body {
   padding: 0;
   overflow: hidden; /* Prevent scrolling while loader is visible */
   background-color: #f0f4f8;
+  transition: background-color 0.5s ease; /* Smooth background color transition */
+}
+
+/* Optional: Add a loading animation style */
+.loader:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 10px solid #ccc; /* Light gray border */
+  border-top: 10px solid #e8491d; /* Color for the loader */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Loader spin animation */
 }
