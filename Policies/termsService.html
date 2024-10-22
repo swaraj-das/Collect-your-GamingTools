@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Terms of Service - Collect Your Gaming Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px; /* Space between buttons */
+        }
+
+        .nav-links a, .nav-links button {
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #ffcc00; /* Yellow color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .nav-links a:hover, .nav-links button:hover {
+            background-color: #e6b800; /* Darker yellow for hover */
+        }
+
+        /* Light Theme */
+        body.light-theme {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .light-theme .tos-container {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .light-theme footer {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Dark Theme */
+        body.dark-theme {
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+        }
+
+        .dark-theme .tos-container {
+            background-color: #2b2b2b;
+            border-radius: 10px;
+        }
+
+        .dark-theme footer {
+            background-color: #151515;
+            color: #f0f0f0;
+        }
+
+        /* Terms of Service Section */
+        .tos-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .tos-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .tos-section h2 {
+            color: #ffcc00; /* Yellow heading */
+            margin-bottom: 10px;
+        }
+
+        .tos-section:hover {
+            background-color: rgba(255, 204, 0, 0.1); /* Yellow hover effect */
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Back to Home Button */
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-home-btn {
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .back-home-btn:hover {
+            background-color: #e6b800;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 2px solid #ffcc00; /* Yellow footer border */
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column; /* Stack navbar items vertically on small screens */
+            }
+
+            .nav-links {
+                flex-direction: column; /* Stack buttons vertically on small screens */
+                gap: 10px; /* Adjust gap for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Navbar with Home, About, and Theme Switcher -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="./index.html" class="nav-home">Home</a>
+            <a href="./aboutus.html" class="nav-about">About US</a>
+            <button id="theme-switcher" class="theme-btn">Switch Theme</button>
+        </div>
+    </nav>
+
+    <div class="tos-container">
+        <div class="tos-header">
+            <h1>Terms of Service</h1>
+        </div>
+
+        <div class="tos-section" id="about-terms">
+            <h2>About These Terms</h2>
+            <p>These Terms of Service govern the use of our website. By using our website, you agree to these terms and conditions.</p>
+        </div>
+
+        <div class="tos-section" id="user-responsibility">
+            <h2>User Responsibilities</h2>
+            <ul>
+                <li>Users are responsible for maintaining the confidentiality of their account information.</li>
+                <li>Users agree not to engage in any unlawful activities while using the website.</li>
+            </ul>
+        </div>
+
+        <div class="tos-section" id="modifications">
+            <h2>Modifications to the Terms</h2>
+            <p>We may modify these terms from time to time. Please check this page regularly for updates.</p>
+        </div>
+
+        <!-- Back to Home Button -->
+        <div class="back-home">
+            <a href="index.html" class="back-home-btn">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Collect Your Gaming Tools. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Theme Switching -->
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const body = document.body;
+
+        themeSwitcher.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+            themeSwitcher.textContent = body.classList.contains('dark-theme') ? 'Switch to Light Theme' : 'Switch to Dark Theme';
+        });
+    </script>
+</body>
+</html>

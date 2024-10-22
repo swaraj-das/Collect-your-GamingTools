@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Copyright - Collect Your Gaming Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background-color: #4CAF50; /* Green color */
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px; /* Space between buttons */
+        }
+
+        .nav-links a, .nav-links button {
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #8BC34A; /* Lighter green */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .nav-links a:hover, .nav-links button:hover {
+            background-color: #7CB342; /* Darker green for hover */
+        }
+
+        /* Light Theme */
+        body.light-theme {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .light-theme .content-container {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .light-theme footer {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Dark Theme */
+        body.dark-theme {
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+        }
+
+        .dark-theme .content-container {
+            background-color: #2b2b2b;
+            border-radius: 10px;
+        }
+
+        .dark-theme footer {
+            background-color: #151515;
+            color: #f0f0f0;
+        }
+
+        /* Content Container */
+        .content-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4CAF50; /* Green heading */
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #4CAF50; /* Green subheading */
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        /* Back to Home Button */
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-home-btn {
+            padding: 10px 20px;
+            background-color: #8BC34A; /* Lighter green */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .back-home-btn:hover {
+            background-color: #7CB342; /* Darker green on hover */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 2px solid #4CAF50; /* Green footer border */
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column; /* Stack navbar items vertically on small screens */
+            }
+
+            .nav-links {
+                flex-direction: column; /* Stack buttons vertically on small screens */
+                gap: 10px; /* Adjust gap for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Navbar with Home, About Us Links -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./aboutus.html">About Us</a>
+            <button id="theme-switcher" class="theme-btn">Switch Theme</button>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <h1>Copyright Notice</h1>
+        <p>&copy; 2024 Collect Your Gaming Tools. All rights reserved.</p>
+
+        <h2>Content Ownership</h2>
+        <p>All content, images, and graphics on this website are the property of Collect Your Gaming Tools unless otherwise stated. Unauthorized use or reproduction of any material from this site is prohibited.</p>
+
+        <h2>Trademark</h2>
+        <p>The trademarks, logos, and service marks displayed on this website are registered and unregistered trademarks of Collect Your Gaming Tools.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions regarding our copyright policy, please contact us at: <a href="mailto:info@collectyourgamingtools.com">info@collectyourgamingtools.com</a>.</p>
+    </div>
+
+    <!-- Back to Home Button -->
+    <div class="back-home">
+        <a href="index.html" class="back-home-btn">Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Collect Your Gaming Tools. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Theme Switching -->
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const body = document.body;
+
+        themeSwitcher.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+            themeSwitcher.textContent = body.classList.contains('dark-theme') ? 'Switch to Light Theme' : 'Switch to Dark Theme';
+        });
+    </script>
+</body>
+</html>
+Footer
+© 2024 GitH
