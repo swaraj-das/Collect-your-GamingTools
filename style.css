@@ -146,6 +146,7 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  resize: vertical;
 }
 
 textarea {
@@ -355,14 +356,14 @@ input:checked + .slider:before {
 }
 
 nav {
-  height: 50px;
+  height: 40px;
   display: flex;
   align-items: center;
 }
 nav ul {
   display: flex;
   flex-direction: row;
-  height: 50px;
+  height: 40px;
   align-items: center;
 }
 nav ul li {
@@ -386,7 +387,7 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #e00999;
-  transform: scale(1.18);
+  transform: scale(1.08);
 }
 nav ul {
   list-style-type: none;
@@ -397,7 +398,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   position: relative;
-  margin: 0 15px;
+  margin: 0 10px;
   align-content: center;
 }
 
@@ -427,7 +428,7 @@ nav ul li.login {
   background: linear-gradient(to right, #fb5283, #ff3527);
   height: 24px;
   border-radius: 20px;
-  padding: 4px 18px;
+  padding: 4px 22px;
   cursor: pointer;
   transition: all 0.5s ease;
 }
@@ -441,14 +442,14 @@ nav ul li.login a {
 
 nav ul li.login:hover {
   color: #fff;
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 120px 0;
+  margin: 80px 0;
 }
 
 .col-1 {
@@ -505,25 +506,6 @@ button {
   transition: width 0.5s;
   background: linear-gradient(to right, #ff3527, #fb5283, #ffd700);
   transition: background 0.3s ease-in-out;
-}
-#buy-btn {
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center align items vertically */
-  justify-content: center; /* Center align items horizontally */
-  width: 140px; /* Initial width */
-  padding: 10px; /* Initial padding */
-  background-color: #4caf50; /* Button background color */
-  color: white; /* Text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  transition: width 0.3s ease-in-out, padding 0.3s ease-in-out,
-    background-color 0.3s ease-in-out; /* Transition for background color */
-}
-
-#buy-btn:hover {
-  width: 160px; /* Increased width on hover */
-  padding: 12px; /* Increased padding on hover */
-  background-color: #45a049; /* Darker green on hover */
 }
 
 #buy-btn img {
@@ -733,10 +715,18 @@ button {
   align-items: center;
 }
 
+.overall-rating .rating-value {
+    margin-left: 8px; /* Adds space between the heading and rating */
+    color: #ff3c6d; /* Sets the rating value to pink */
+    font-weight: 600; /* Makes the rating value bold */
+    line-height: 1;
+}
+
 .overall-rating .star {
-  margin-left: 5px;
-  color: #ff3c6d;
-  font-weight: 600;
+    margin-left: 2px; /* Small gap between the rating value and the star */
+    color: #ff3c6d; /* Star color is pink as well */
+    font-weight: 600;
+    line-height: 1;
 }
 
 .footer {
@@ -750,17 +740,23 @@ button {
 .footer-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+.links-tag{
+  width: 100%;
+  display: flex;
+}
 .footer-section {
   flex: 1;
   margin-bottom: 40px;
   min-width: 300px;
   padding: 0 20px;
+/* margin-left: 20px; */
+
 }
 
 .quick-links {
@@ -979,7 +975,7 @@ button {
   font-size: 20px;
   color: white;
   cursor: pointer;
-  background-color: #1f2937;
+  background-color: #ff1476;
   border: 2px solid white;
   border-radius: 50%;
   display: flex;
@@ -993,14 +989,18 @@ button {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  transition: transform 0.3s ease-in-out;
-  background-color: #333;
+  transition: all 0.5s linear, width 0.5s ease;
+  background: linear-gradient(45deg, #8a2be2, #FF1493);
   border-radius: 10px 0 0 10px;
   cursor: pointer;
   color: white;
   font-size: 25px;
   padding: 12px;
   z-index: 1;
+}
+.toggle-arrow:hover{
+  background: linear-gradient(45deg, #8400ffa6, #ff0088ac);
+  width: 30px;
 }
 
 .social-sidebar {
@@ -1011,7 +1011,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: #333;
+  background: linear-gradient(135deg, #8514ee, #00ffffc9, #ff078b);
   padding: 3px;
   border-radius: 15px 0 0 15px;
   border: none;
@@ -1035,7 +1035,7 @@ button {
   text-decoration: none;
   color: white;
   font-size: 20px;
-  padding: 10px;
+  padding: 4px;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   border: none;
   border-bottom: none;
@@ -1055,8 +1055,9 @@ button {
 .social-sidebar li a:hover {
   background-color: #ffffff;
   border-radius: 50%;
-  color: #1f2937;
+  /* color: #1f2937; */
   transform: scale(1.1);
+  transition: all linear 0.3s;
 }
 
 .social-sidebar i {
@@ -1066,6 +1067,22 @@ button {
 
 .social-sidebar a:hover i {
   transform: scale(1.1);
+}
+
+.social-sidebar .facebook:hover{
+  color: #1877F2;
+}
+
+.social-sidebar .twitter:hover {
+  color: black;
+}
+
+.social-sidebar .instagram:hover {
+  color: #C13584;
+}
+
+.social-sidebar .youtube:hover {
+  color: #FF0000;
 }
 
 /* -----------------------------------------------Responsiveness----------------------------------------------------- */
@@ -1724,10 +1741,11 @@ button {
 }
 
 .container-swipe {
-  max-width: 1100px;
+  max-width: 1200px;
   width: 100%;
-  padding: 0 30px;
+  padding:30px;
   margin: 0 auto;
+  background-color:#303036;
 }
 
 .testi {
@@ -1929,4 +1947,4 @@ button {
   .footer-bottom {
     width: 1000vw !important;
   }
-}
+
