@@ -1,0 +1,44 @@
+.loader {
+  width: 120px; /* Adjust size */
+  height: 120px; /* Adjust size */
+  position: fixed; /* Stay fixed in the center */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Main content styling */
+.main-content {
+  display: none;
+  opacity: 0;
+}
+
+/* Show content when page is loaded */
+body.loaded .loader {
+  display: none; /* Hide loader */
+}
+
+body.loaded .main-content {
+  display: block; /* Show main content */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade in animation */
+}
+
+body.loaded .popup {
+  display: flex; /* Show popup after loading */
+}
+
+/* Smooth fade-in effect for content */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Body styling to prevent scrolling while the loader is visible */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling while loader is visible */
+  background-color: #f0f4f8;
+}
