@@ -1918,6 +1918,11 @@ button {
   color: #000;
 }
 
+.dark-mode .site{
+  background-color: #1b1b1b;
+  color: white;
+}
+
 .container-swipe {
   max-width: 1200px;
   width: 100%;
