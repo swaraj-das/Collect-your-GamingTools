@@ -296,6 +296,82 @@ button[type="submit"]:hover {
   border-radius: 50%;
 }
 
+.switch {
+    position: relative;
+    width: 72px;
+    height: 34px;
+    display: inline-block;
+}
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+  }
+
+  
+  .sun, .moon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    .sun {
+        background-color: #F1C40F;
+        color: white;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .moon {
+        background-color: #95A5A6;
+        color: white;
+        opacity: 0;
+        visibility: hidden;
+    }
+  
+  
+  /*
+  input:checked + .slider {
+    background:linear-gradient(to right, #fb5283, #ff3527) !important;
+  }
+  */
+  
+  input:checked + .slider .sun {
+            opacity: 0;
+            visibility: hidden;
+  }
+
+
+  input:checked + .slider .moon {
+            opacity: 1;
+            visibility: visible;
+  }
+
+  .slider .sun,
+  .slider .moon {
+        transition: transform 0.4s ease;
+    }
+=======
 input:checked + .slider {
   background: linear-gradient(to right, #fb5283, #ff3527) !important;
 }
