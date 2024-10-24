@@ -478,4 +478,13 @@ function clearForm() {
 // Load the form data when the page is loaded
 window.onload = loadFormData;
 
+let cartItemCount = 0;
 
+const cartButtons = document.querySelectorAll('#cart-btn');
+cartButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        cartItemCount++; // Increment cart count
+        document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
+        alert('Item added to cart'); // Show alert
+    });
+});
