@@ -728,6 +728,23 @@ button {
 
 .col-2 .controller {
   width: 90%;
+  z-index: 9;
+  overflow: hidden;
+}
+.col-2:hover .controller {
+    animation: scale-up 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes scale-up {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
 }
 
 .color-box {
@@ -738,8 +755,23 @@ button {
   border-radius: 20px 0 0 20px;
   height: 100%;
   width: 80%;
-  z-index: -1;
   transform: translateX(150px);
+  transition: transform 0.5s ease;
+}
+.col-2:hover .color-box {
+    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-left {
+    0% {
+        -webkit-transform: translateX(20);
+        transform: translateX(20);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }
 
 .price {
