@@ -907,7 +907,9 @@ button {
   float: right;
   font-size: 1.1em;
   
-
+  
+  left: -60px;
+  position: relative;
   font-family: "Arial", sans-serif;
   background: #4caf50;
   color: white;
@@ -916,9 +918,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s;
-  
-  left: -60px;
-  position: relative;
+
 }
 
 .contact-form .contact-btn:hover {
