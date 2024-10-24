@@ -7,22 +7,144 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="contributor.css">
     <style>
-        .homeBtn {
-            position: fixed;
-            z-index: 1000;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+        
+.navbar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+}
+.logo-outer {
+display: flex;
+align-items: center;
+}
+        
+.logo {
+  width: 36px;
+  cursor: pointer;
+  margin: 18px 10px;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.website-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #ff459f,
+    #ff9532,
+    #ffd700,
+    #32cd32,
+    #1e90ff,
+    #8a2be2,
+    #ff459f
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display:inline-block;
+  animation: rainbow 5s linear infinite;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bolder;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+nav {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  align-items: center;
+}
+nav ul li {
+  list-style: none;
+  display: inline;
+  margin-right: 30px;
+  text-wrap: nowrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.5s, transform 0.5s;
+}
+
+nav ul li a:hover {
+  color: #e00999;
+  transform: scale(1.08);
+  text-decoration: underline;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  align-content: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  position: relative;
+  color: #000;
+}
+
+
     </style>
 </head>
 <body>
 
-  <a href="../index.html" class="homeBtn">Home</a>
+  
+   <div class="navbar">
+     <div class="logo-outer">
+    <a href="/"> <img src="logo.png" class="logo" alt="Logo"></a>
+    <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+    </div>
+  <nav>
+    
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../aboutus.html">About Us</a></li>
+        
+    </ul>
+</nav>
+   </div>
+ 
 
   <div class="contributor-container">
     <!-- Hero Section -->
