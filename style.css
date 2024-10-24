@@ -514,13 +514,11 @@ nav ul li.login:hover {
 .dark-mode h2 {
   color: #ccc;
 }
-
-.dark-mode .feature p {
-    color: whitesmoke; /* Set paragraph color to black */
+.dark-mode .feature {
+  background-color: rgba(22, 18, 18, 0.908);
 }
-.dark-mode .feature{
-  background: #111111;
-  color: #000;
+.dark-mode .feature p {
+  color: aliceblue; /* Set paragraph color to light blue */
 }
 
 .col-1 h3 {
