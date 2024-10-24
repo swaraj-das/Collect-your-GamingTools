@@ -349,17 +349,14 @@ function toggleSidebar() {
 }
 
 function performSearch() {
-  let searchTerm = document.getElementById("search-input").value.toLowerCase();
-  console.log(searchTerm);
+  let searchTerm = document.getElementById("search-input").value;
   let cards = document.querySelectorAll(".row");
 
   cards.forEach(function (card) {
-    let cardHeading = card
-      .querySelector(".card-heading")
-      .innerText.toLowerCase();
+    let cardHeading = card.querySelector(".card-heading").innerText;
 
-    // Check if the search term is in the card heading or description
-    if (cardHeading.includes(searchTerm)) {
+    // Perform case-insensitive comparison
+    if (cardHeading.toLowerCase().includes(searchTerm.toLowerCase())) {
       card.style.display = "block"; // Show the card
     } else {
       card.style.display = "none"; // Hide the card
