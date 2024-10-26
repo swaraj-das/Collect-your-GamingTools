@@ -886,8 +886,8 @@ button {
 
 .footer h2 {
   color: white;
-  font-size: 1.3em;
-  margin-bottom: 20px;
+  font-size: 1.7em;
+  margin-bottom: 9px;
 }
 
 .logo-container {
@@ -969,8 +969,8 @@ button {
 }
 
 .socials .youtube:hover {
-  background: linear-gradient(to right, #ff0000, #cc0000);
-  /* YouTube gradient */
+  background: lightsalmon;
+
   color: white;
 }
 
@@ -1632,7 +1632,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529354.jpg?size=626&ext=jpg");
+  background-image: url("https://cdn.wallpaper.tn/large/4K-Wallpaper-Gaming-88690.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -1930,17 +1930,20 @@ button {
 }
 
 /* testimonial */
-.site {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  color: #000;
+/* Styling for the testimonial box */
+.testimonial-box {
+  max-width: 800px; /* Set the maximum width */
+  margin: 0 auto; /* Center the box */
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; /* Add margin at the top */
+  margin-bottom: 20px; /* Add margin at the bottom */
 }
 
+/* Add these styles to ensure the inner content is styled properly */
 .dark-mode .site{
   background-color: #1b1b1b;
   color: white;
@@ -1962,29 +1965,21 @@ button {
 
 .testi .head {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
-.testi .head p {
-  font-weight: 600;
-  font-size: 25px;
-  text-shadow: 5px 5px 9px #000;
+h3 {
+  font-size: 50px;
 }
 
-.testi .head h3 {
-  font-size: 34px;
-  font-weight: 800;
-  color: #FFD700;
-  text-shadow: -5px 5px 3px magenta
+p {
+  font-size: 10px;
 }
 
-.testi .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: self-end;
-  gap: 66px;
-  padding: 30px 0;
+.testi .body {
+  position: relative;
 }
+
 
 /*thumbnail*/
 .testi .thumbnail {
