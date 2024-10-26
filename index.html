@@ -25,13 +25,13 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./popup/popup.css" />
-
-    <!-- Manifest file for PWA -->
+    <link rel ="stylesheet" href="./Loader/Loader.css"/>
     <link rel="manifest" href="/manifest.json">
-
 </head>
 
 <body>
+    <div class="loader" id="loader"></div>
+    <div class="main-content">
     <div id="progressBarContainer">
         <div id="progressBar"></div>
     </div>
@@ -144,7 +144,7 @@
                     <a href="# " class="close1-btn"> <img src="images/logo.png" class="logo1" alt="Logo"></a>
                     <h1>Unlock the Ultimate Gaming Experience!</h1>
                     <h2 class="h2">Sign up for exclusive offers & updates</h2>
-                    <p>Join our community and get upto <strong>30% off</strong> on your first deal</p>
+                    <p class="pop_up">Join our community and get upto <strong class="bold">30% off</strong> on your first deal</p>
                     <form id="emailForm">
                         <input type="email" id="email" placeholder="Enter your email" required>
                         <button type="submit" class="signup-btn1">Get 30% Off Now</button>
@@ -637,18 +637,23 @@
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="Contributors/contributor.html">Contributors</a></li>
+                    <li><a href="contributor/contributor.html">Contributors</a></li>
                 </ul>
             </div>
 
             <div class="footer-section links">
                 <h2>Legal Links</h2>
                 <ul>
-                    <li><a href="PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service </a></li>
+                    <li><a href="Policies/PrivacyPolicy/PrivacyPolicy.html">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service </a></li>
                     <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Return Policy</a></li>
+
+                    <li><a href="disclaimer/disclaimer.html">Disclaimer</a></li>
+              
+
+
+                    <li><a href="Policies/returnPolicy.html">Return Policy</a></li>
+
                     <li><a href="#">Copyright Notice</a></li>
                 </ul>
             </div>
@@ -666,6 +671,13 @@
                 </form>
             </div>
         </div>
+        
+    <div class="visitor-counter">
+      <div>Number of Visitors</div>
+      <div class="website-counter"></div>
+    </div>
+      <script src="visi.js"></script>
+
         <div class="footer-bottom">
             <p><a href="PrivacyPolicy/PrivacyPolicy.html">© 2024 GamingTools | All Rights Reserved</a></p>
             <p>Developed by <span><a href="https://my-portfolio-git-main-swaraj-das-projects.vercel.app/"
@@ -686,7 +698,7 @@
         </ul>        
     </div>
     <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
-        <i class="fas fa-arrow-left"></i>
+        <span>&#8249;</span>
     </div>
 
 
@@ -701,17 +713,6 @@
         </svg>
     </button>
 
-    <script>
-        let cartItemCount = 0;
-
-        // Function to handle Add to Cart button click
-        document.getElementById('cart-btn').addEventListener('click', function () {
-            cartItemCount++; // Increment cart count
-            document.getElementById('cart-count').textContent = cartItemCount; // Update cart count display
-            alert('Item added to cart'); // Show alert
-        });
-
-    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
@@ -760,8 +761,11 @@
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <script src="./Loader/Loader.js"></script>
 
-
+    </script>
+    </div>
 </body>
 
 

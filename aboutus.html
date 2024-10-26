@@ -47,18 +47,20 @@
             margin-bottom: 40px;
         }
         h1{
-            color: black;
+            color: rgb(255, 255, 255);
             text-align: center;
+            transition: transform 0.3s ease-in-out;
         }
-        h1:hover{
+
+        h1:hover {
             transform: scale(1.2);
-            animation: zoom-out 1200  300;
         }
-        /* h2{
+
+        h2{
             color: #f4be0c;
             text-align: center;
             margin-bottom: 40px;
-        } */
+        }
 
         .features-grid {
             display: grid;
@@ -74,6 +76,8 @@
             transition: all 0.3s ease;
             text-align: center;
         }
+
+    
 
         .feature:hover {
             transform: translateX(-5px);
@@ -181,14 +185,16 @@
                 <li><a href="index.html">Gaming Keyboard</a></li>
                 <li><a href="index.html">Others</a></li>
                 <li class="login"><a href="login/login.html">Login</a></li>
-
+                <li><label class="switch">
+                    <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                    <span class="slider"></span>
+                </label></li>
                 <!-- Inside the navbar ul -->
-                <li class="cart-nav">
-
-                    <a href="#"><img height="25px " width="25px" src="images/cart.png" alt="Cart Icon"> <span
-                            id="cart-count">0</span></a>
-
-                </li>
+                
+                <a href="#" class="cart-button">
+                    <img src="images/cart.png" alt="Cart Icon">
+                    <span id="cart-count">0</span>
+                    </a>
 
             </ul>
 
@@ -213,7 +219,7 @@
 
 
     <div class="container main-content">
-        <h1>About <span> Gaming </span>Tools</h1>
+        <h1>About <span> GamingTools</h1>
         <p class="intro typewriter">Welcome to GamingTools, your ultimate destination for premium gaming accessories. We're
             passionate about providing gamers with the best tools to elevate their gaming experience to new heights.</p>
         <div class="head">
