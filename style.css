@@ -1302,8 +1302,8 @@ button {
 
 .scroll-top {
   position: fixed;
-  bottom: 12.4%;
-  right: 1%;
+  bottom: 1rem;
+  right: 7rem;
   background: linear-gradient(100deg, #5739ff, #ff3c76, #faf892);
   color: white;
   width: 60px;
