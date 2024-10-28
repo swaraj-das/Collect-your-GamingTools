@@ -1,6 +1,26 @@
 # 🎮 Collect Your GamingTools 🕹️
 A <b> responsive and dynamic website </b> to showcase the best gaming accessories for every gamer!
 
+<table align="center">
+    <thead align="center">
+        <tr border: 2px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/swaraj-das/Collect-your-GamingTools?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/swaraj-das/Collect-your-GamingTools?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/swaraj-das/Collect-your-GamingTools?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/swaraj-das/Collect-your-GamingTools?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/swaraj-das/Collect-your-GamingTools?style=flat&color=green&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
 
 ## ✨ Features
 🗂️ <b>Dynamic Navigation Menu</b>: Toggle visibility, designed for seamless use across all screen sizes.  
@@ -70,6 +90,15 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 | **Swaraj Das** <br> <sub>Project Admin</sub> | **Anit Sarkar** <br> <sub>Maintainer</sub> |
 | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/swarajdas01/) | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/anit-sarkar-11906a283/) |
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+## 🎉 Proudly part of GSSoC-EXT'24 & Hacktoberfest 2024 ! 🚀✨
+<div align="center">
+  <img src="images/open-source.png">
+</div>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ## 🙌 Contributors
 
 ![GitHub contributors](https://img.shields.io/github/contributors/swaraj-das/Collect-your-GamingTools)
@@ -77,6 +106,10 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 ![Contributors](https://contrib.rocks/image?repo=swaraj-das/Collect-your-GamingTools)
 
 
+## 🎉 **Join us!**
 
+Whether you’re contributing code, improving documentation, or suggesting new features, your involvement matters. We value contributions that help you learn and grow, not just for gaining points. 
+
+All the Best! 💫 **Happy Coding!** 🍳
 
 
