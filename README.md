@@ -90,6 +90,15 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 | **Swaraj Das** <br> <sub>Project Admin</sub> | **Anit Sarkar** <br> <sub>Maintainer</sub> |
 | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/swarajdas01/) | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/anit-sarkar-11906a283/) |
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+## 🎉 Proudly part of GSSoC-EXT'24 & Hacktoberfest 2024 ! 🚀✨
+<div align="center">
+  <img src="images/open-source.png">
+</div>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ## 🙌 Contributors
 
 ![GitHub contributors](https://img.shields.io/github/contributors/swaraj-das/Collect-your-GamingTools)
