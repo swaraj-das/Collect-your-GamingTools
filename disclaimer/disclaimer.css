@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #d76565, #dd8c6c); /* Gradient from light blue to deep teal */
+    color: #333;
+}
+
+header, footer {
+    background-color: rgba(0, 0, 0, 0.1); /* Light transparent background for header and footer */
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    padding: 30px;
+}
+
+.disclaimer {
+    background-color: rgba(227, 209, 225, 0.8); /* Light background with some transparency */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    color: #00695c; /* Deep teal color for headings */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}

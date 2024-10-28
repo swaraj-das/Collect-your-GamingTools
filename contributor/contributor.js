@@ -1,13 +1,25 @@
+
 // Fetch data from GitHub API
 async function fetchData() {
   try {
-      const contributorsResponse = await fetch('https://api.github.com/repos/swaraj-das/Collect-your-GamingTools/contributors');
-      const contributorsData = await contributorsResponse.json();
+      let contributors = [];
+      let page = 1;
+      let perPage = 100; // Max number of contributors per page
+      
+      while (true) {
+          const contributorsResponse = await fetch(`https://api.github.com/repos/swaraj-das/Collect-your-GamingTools/contributors?per_page=${perPage}&page=${page}`);
+          const contributorsData = await contributorsResponse.json();
+          
+          if (contributorsData.length === 0) break; // Exit loop if no more contributors
+          
+          contributors = contributors.concat(contributorsData);
+          page++; // Move to the next page
+      }
 
       const repoResponse = await fetch('https://api.github.com/repos/swaraj-das/Collect-your-GamingTools');
       const repoData = await repoResponse.json();
 
-      return { contributors: contributorsData, repoStats: repoData };
+      return { contributors, repoStats: repoData };
   } catch (error) {
       console.error('Error fetching data:', error);
       return { contributors: [], repoStats: {} };
@@ -106,3 +118,4 @@ function scrollToContribute() {
 
 // Initialize the page when the DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
+
