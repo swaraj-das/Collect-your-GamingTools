@@ -92,7 +92,7 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🎉 Proudly part of **GSSoC-24 & Hacktoberfest 2024** ! 🚀✨
+## 🎉 Proudly part of GSSoC-EXT'24 & Hacktoberfest 2024 ! 🚀✨
 <div align="center">
   <img src="images/open-source.png">
 </div>
