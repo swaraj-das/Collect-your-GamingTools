@@ -112,33 +112,30 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
   </a>
 </div>
 
-### Recent Stargazers
 <div align="center">
-  <a href="https://github.com/parteekxo"><img src="https://avatars.githubusercontent.com/u/164842537?v=4" width="40" height="40" alt="@prateekxo" /></a>
- <!--<a href="https://github.com/dipeshkumar799"><img src="https://avatars.githubusercontent.com/u/userid?s=40" width="40" height="40" alt="@dipeshkumar799" /></a>
-  <a href="https://github.com/priyanshuagarwal11"><img src="https://avatars.githubusercontent.com/u/userid?s=40" width="40" height="40" alt="@priyanshuagarwal11" /></a>
-      Add more as needed -->
+  <a href="https://github.com/parteekxo"><img src="https://avatars.githubusercontent.com/u/164842537?v=4" width="40" height="40" style="border-radius: 50%;" alt="@prateekxo" /></a>
+  <a href="https://github.com/KrishnaMohanty08"><img src="https://avatars.githubusercontent.com/u/171162522?v=4" width="40" height="40" style="border-radius: 50%;" alt="@KrishnaMohanty08" /></a>
+  <a href="https://github.com/reshamsai150"><img src="https://avatars.githubusercontent.com/u/164533685?v=4" width="40" height="40" style="border-radius: 50%;" alt="@reshamsai150" /></a>
+      <!--Add more as needed -->
   <a href="https://github.com/swaraj-das/Collect-your-GamingTools/stargazers">and others</a> starred this repository.
 </div>
 
 ---
 
-<!--## ❤️ Forkers
+## ❤️ Forkers
 
 <div align="center">
   <a href="https://github.com/your-repo-url/network/members">
-    <img src="https://img.shields.io/github/forks/your-username/your-repo.svg?style=social&label=Forks" alt="GitHub Forks"/>
   </a>
 </div>
 
-### Recent Forkers
 <div align="center">
-  <a href="https://github.com/Sayan-dev731"><img src="https://avatars.githubusercontent.com/u/userid?s=40" width="40" height="40" alt="@Sayan-dev731" /></a>
-  <a href="https://github.com/triman1905"><img src="https://avatars.githubusercontent.com/u/userid?s=40" width="40" height="40" alt="@triman1905" /></a>
-  <a href="https://github.com/shivathmikavemula"><img src="https://avatars.githubusercontent.com/u/userid?s=40" width="40" height="40" alt="@shivathmikavemula" /></a>
+  <a href="https://github.com/HimangshuSharma01"><img src="https://avatars.githubusercontent.com/u/120270398?v=4" width="40" height="40" style="border-radius: 50%;" alt="@HimangshuSharma01" /></a>
+  <a href="https://github.com/biswa2005"><img src="https://avatars.githubusercontent.com/u/117425933?v=4" width="40" height="40" style="border-radius: 50%;" alt="@biswa2005" /></a>
+  <a href="https://github.com/REHAN-18"><img src="https://avatars.githubusercontent.com/u/143922855?v=4" width="40" height="40" style="border-radius: 50%;" alt="@sREHAN-18" /></a>
   <!-- Add more as needed -->
-  <!--<a href="https://github.com/your-repo-url/network/members">and others</a> forked this repository.
-</div> -->
+  <a href="https://github.com/swaraj-das/Collect-your-GamingTools/forks">and others</a> forked this repository.
+</div>
 
 
 
