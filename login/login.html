@@ -29,9 +29,10 @@
                 </div>
                 <button type="submit" class="login-button">Login</button>
                 <button id="google-login-btn" type="button" style="display: flex; align-items: center; padding: 10px 15px; border: none; background-color: #4285F4; color: white; font-weight: bold; border-radius: 5px; cursor: pointer;">
-                    <img src="login\google logo.png" alt="Google logo" style="width: 20px; height: 20px; margin-right: 10px;">
+                    <img src="https://th.bing.com/th?id=OIP.oiwYjOqBvHy3I_LfVxRblAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="Google logo" style="width: 20px; height: 20px; margin-right: 10px;">
                     Login with Google
                 </button>
+                
             </form>
             <div class="links">
                 <a href="forgot.html" class="hal2">Forgot Password?</a>
@@ -63,12 +64,6 @@
             </li>
         </ul>
         <div class="divider" style="border-top: 1px solid #555; margin: 10px 0;"></div>
-        
-        <!-- QUICK LINKS Heading -->
-        <div style="color: #e0e0e0; font-size: 18px; font-weight: bold; margin-bottom: 10px;">
-            QUICK LINKS
-        </div>
-        
         <ul class="menu" style="display: flex; justify-content: center; list-style: none; padding: 0; margin-bottom: 5px;">
             <li class="menu__item" style="margin: 0 10px;">
                 <a class="menu__link" href="../index.html" style="color: #e0e0e0; font-size: 16px; font-weight: bold; text-decoration: none; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">
@@ -101,8 +96,29 @@
             ©2024 Collect your Gaming Tools | All Rights Reserved
         </p>
     </footer>
-       </footer>
-
+    
+    <!-- Inline CSS for hover effects and animations -->
+    <style>
+        .social-icon__link:hover {
+            color: #ff5722;
+            transform: scale(1.2);
+        }
+    
+        .menu__link:hover {
+            background-color: #ff5722;
+            color: #fff;
+        }
+    
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .social-icon, .menu {
+                flex-direction: column;
+            }
+            .social-icon__item, .menu__item {
+                margin: 5px 0;
+            }   
+        }
+    </style>
     
     <script>
         const togglePassword = document.getElementById('togglePassword');
