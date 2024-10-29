@@ -28,7 +28,10 @@
                     <i class="far fa-eye" id="togglePassword" aria-label="Toggle password visibility"></i>
                 </div>
                 <button type="submit" class="login-button">Login</button>
-                <button id='google-login-btn' type="button">Login with Google</button>
+                <button id="google-login-btn" type="button" style="display: flex; align-items: center; padding: 10px 15px; border: none; background-color: #4285F4; color: white; font-weight: bold; border-radius: 5px; cursor: pointer;">
+                    <img src="login\google logo.png" alt="Google logo" style="width: 20px; height: 20px; margin-right: 10px;">
+                    Login with Google
+                </button>
             </form>
             <div class="links">
                 <a href="forgot.html" class="hal2">Forgot Password?</a>
@@ -36,30 +39,69 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <ul class="social-icon">
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a></li>
+    <footer class="footer" style="background-color: #2b2b2b; color: #fff; padding: 10px 0; text-align: center; font-family: Arial, sans-serif;">
+        <ul class="social-icon" style="display: flex; justify-content: center; list-style: none; padding: 0; margin-bottom: 5px;">
+            <li class="social-icon__item" style="margin: 0 8px;">
+                <a class="social-icon__link" href="#" style="color: #fff; font-size: 20px; transition: color 0.3s, transform 0.3s;">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item" style="margin: 0 8px;">
+                <a class="social-icon__link" href="#" style="color: #fff; font-size: 20px; transition: color 0.3s, transform 0.3s;">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item" style="margin: 0 8px;">
+                <a class="social-icon__link" href="#" style="color: #fff; font-size: 20px; transition: color 0.3s, transform 0.3s;">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item" style="margin: 0 8px;">
+                <a class="social-icon__link" href="#" style="color: #fff; font-size: 20px; transition: color 0.3s, transform 0.3s;">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
         </ul>
-        <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="">About</a></li>
-            <li class="menu__item"><a class="menu__link" href="../index.html#controller">Services</a></li>
-            <li class="menu__item"><a class="menu__link" href="../Contributors/contributor.html">Team</a></li>
-            <li class="menu__item"><a class="menu__link" href="../index.html#contact">Contact</a></li>
+        <div class="divider" style="border-top: 1px solid #555; margin: 10px 0;"></div>
+        
+        <!-- QUICK LINKS Heading -->
+        <div style="color: #e0e0e0; font-size: 18px; font-weight: bold; margin-bottom: 10px;">
+            QUICK LINKS
+        </div>
+        
+        <ul class="menu" style="display: flex; justify-content: center; list-style: none; padding: 0; margin-bottom: 5px;">
+            <li class="menu__item" style="margin: 0 10px;">
+                <a class="menu__link" href="../index.html" style="color: #e0e0e0; font-size: 16px; font-weight: bold; text-decoration: none; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">
+                    Home
+                </a>
+            </li>
+            <li class="menu__item" style="margin: 0 10px;">
+                <a class="menu__link" href="" style="color: #e0e0e0; font-size: 16px; font-weight: bold; text-decoration: none; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">
+                    About
+                </a>
+            </li>
+            <li class="menu__item" style="margin: 0 10px;">
+                <a class="menu__link" href="../index.html#controller" style="color: #e0e0e0; font-size: 16px; font-weight: bold; text-decoration: none; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">
+                    Services
+                </a>
+            </li>
+            <li class="menu__item" style="margin: 0 10px;">
+                <a class="menu__link" href="../Contributors/contributor.html" style="color: #e0e0e0; font-size: 16px; font-weight: bold; text-decoration: none; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">
+                    Team
+                </a>
+            </li>
+            <li class="menu__item" style="margin: 0 10px;">
+                <a class="menu__link" href="../index.html#contact" style="color: #e0e0e0; font-size: 16px; font-weight: bold; text-decoration: none; padding: 5px 10px; border-radius: 4px; transition: background-color 0.3s;">
+                    Contact
+                </a>
+            </li>
         </ul>
-        <p>&copy;2024 Collect your Gaming Tools | All Rights Reserved</p>
+        <div style="border-top: 2px dashed #444; width: 80%; margin: 10px auto;"></div>
+        <p style="font-size: 12px; color: #bbb; margin-top: 10px;">
+            ©2024 Collect your Gaming Tools | All Rights Reserved
+        </p>
     </footer>
+       </footer>
 
     
     <script>
