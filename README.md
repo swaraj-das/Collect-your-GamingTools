@@ -113,9 +113,9 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 </div>
 
 <div align="center">
-  <a href="https://github.com/parteekxo"><img src="https://avatars.githubusercontent.com/u/164842537?v=4" width="40" height="40" style="border-radius: 50%;" alt="@prateekxo" /></a>
-  <a href="https://github.com/KrishnaMohanty08"><img src="https://avatars.githubusercontent.com/u/171162522?v=4" width="40" height="40" style="border-radius: 50%;" alt="@KrishnaMohanty08" /></a>
-  <a href="https://github.com/reshamsai150"><img src="https://avatars.githubusercontent.com/u/164533685?v=4" width="40" height="40" style="border-radius: 50%;" alt="@reshamsai150" /></a>
+  <a href="https://github.com/parteekxo"><img src="https://avatars.githubusercontent.com/u/164842537?v=4" width="40" height="40" style="border-radius: 50;" alt="@prateekxo" /></a>
+  <a href="https://github.com/KrishnaMohanty08"><img src="https://avatars.githubusercontent.com/u/171162522?v=4" width="40" height="40" style="border-radius: 50;" alt="@KrishnaMohanty08" /></a>
+  <a href="https://github.com/reshamsai150"><img src="https://avatars.githubusercontent.com/u/164533685?v=4" width="40" height="40" style="border-radius: 50;" alt="@reshamsai150" /></a>
       <!--Add more as needed -->
   <a href="https://github.com/swaraj-das/Collect-your-GamingTools/stargazers">and others</a> starred this repository.
 </div>
