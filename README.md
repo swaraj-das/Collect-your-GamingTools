@@ -120,7 +120,6 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
   <a href="https://github.com/swaraj-das/Collect-your-GamingTools/stargazers">and others</a> starred this repository.
 </div>
 
----
 
 ## ❤️ Forkers
 
