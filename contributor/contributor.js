@@ -1,4 +1,3 @@
-
 // Fetch data from GitHub API
 async function fetchData() {
   try {
@@ -27,13 +26,13 @@ async function fetchData() {
 }
 
 // Render stats
-function renderStats(repoStats, contributorsCount) {
+function renderStats(repoStats, contributorsCount, totalContributions) {
   const statsGrid = document.getElementById('statsGrid');
   const stats = [
-      { label: 'Contributors', value: contributorsCount, icon: 'users' },
-      { label: 'Total Contributions', value: repoStats.contributors?.reduce((sum, contributor) => sum + contributor.contributions, 0) || 0, icon: 'git-commit' },
-      { label: 'GitHub Stars', value: repoStats.stargazers_count || 0, icon: 'star' },
-      { label: 'Forks', value: repoStats.forks_count || 0, icon: 'git-branch' }
+    { label: 'Contributors', value: contributorsCount, icon: 'users' },
+    { label: 'Total Contributions', value: totalContributions, icon: 'git-commit' },
+    { label: 'GitHub Stars', value: repoStats.stargazers_count || 0, icon: 'star' },
+    { label: 'Forks', value: repoStats.forks_count || 0, icon: 'git-branch' }
   ];
 
   statsGrid.innerHTML = stats.map(stat => `
@@ -88,7 +87,10 @@ async function init() {
 
   const { contributors, repoStats } = await fetchData();
 
-  renderStats(repoStats, contributors.length);
+  // Calculate total contributions
+  const totalContributions = contributors.reduce((sum, contributor) => sum + contributor.contributions, 0);
+
+  renderStats(repoStats, contributors.length, totalContributions);
   renderContributors(contributors);
 
   loading.style.display = 'none';
@@ -118,4 +120,3 @@ function scrollToContribute() {
 
 // Initialize the page when the DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
-
