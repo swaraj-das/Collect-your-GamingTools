@@ -105,6 +105,30 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 
 ![Contributors](https://contrib.rocks/image?repo=swaraj-das/Collect-your-GamingTools)
 
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+
+## Stargazers ❤️
+
+<div align='left'>
+
+[![Stargazers repo roster for @swaraj-das/Collect-your-GamingTools](https://reporoster.com/stars/dark/swaraj-das/Collect-your-GamingTools)](https://github.com/swaraj-das/Collect-your-GamingTools/stargazers)
+
+
+</div>
+
+## Forkers ❤️
+
+[![Forkers repo roster for @swaraj-das/Collect-your-GamingTools](https://reporoster.com/forks/dark/swaraj-das/Collect-your-GamingTools)](https://github.com/swaraj-das/Collect-your-GamingTools/network/members)
+
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+
+
+
 
 ## 🎉 **Join us!**
 
