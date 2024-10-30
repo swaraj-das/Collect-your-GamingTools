@@ -40,13 +40,82 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
   </a>
 </p>
 
+## Backend or Docker Functionality
+## Requirements
+Node.js and Express for the backend
+
+MongoDB for database storage
+
+Docker for containerization
+
+## Backend Setup
+1. Clone the repository:
+```bash
+git clone https://github.com/username/collect-your-gamingtools.git
+```
+
+2. Install dependencies:
+```bash
+cd collect-your-gamingtools
+npm install
+```
+
+3. Configure environment variables:
+Create a .env file with:
+```bash
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+PORT=5000
+```
+
+4. Start the server:
+```bash
+npm start
+```
+
+## Docker
+Build the Docker image:
+```bash
+docker build -t gamingtools-backend .
+```
+
+Run the container:
+```bash
+docker run -d -p 5000:5000 --env-file .env gamingtools-backend
+```
 
 ## 🚀 Demo
 #### Check out the live demo here ⬇️ : 
 
 https://collect-your-gamingtools.netlify.app/
 
+## Website Preview
+## Home Page (Light Mode):
+![image](https://github.com/user-attachments/assets/41b3b690-bc11-4185-8752-bff0ce43fc45)
 
+## Home Page (Dark Mode):
+![image](https://github.com/user-attachments/assets/2650659d-e5ab-47dc-ad7f-1d2836b4cb57)
+
+## Signup Page:
+![image](https://github.com/user-attachments/assets/247c04f3-50aa-40ae-952b-0f2c8659aca3)
+
+## Login Page:
+![image](https://github.com/user-attachments/assets/ff959d29-5630-40d0-ade0-1603b3fc0e88)
+
+## Products Section: 
+![image](https://github.com/user-attachments/assets/6326168a-ddc6-4b6b-bfce-c57df5ca30fb)
+
+## Customer Support:
+![image](https://github.com/user-attachments/assets/d5e6405f-31b5-4f5d-aeed-766603307773)
+  
+## User Testimonials:
+![image](https://github.com/user-attachments/assets/91143032-eb65-4ff5-955a-6a12240d7ec5)
+
+## About Us:
+![image](https://github.com/user-attachments/assets/b0d2f537-b670-4aec-9d11-48151060e341)
+
+## FAQs
+![image](https://github.com/user-attachments/assets/0969e1ad-20fa-45c0-8f25-831216d1cc82)
 
 
 ## 🛠️ Installation
