@@ -2242,13 +2242,3 @@ button {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .visitor-counter {
-    height: 80px;
-    width: 80px;
-    font-size: 14px;
-  }
-  .website-counter {
-    font-size: 18px;
-  }
-}
