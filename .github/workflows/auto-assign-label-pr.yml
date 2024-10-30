@@ -1,0 +1,28 @@
+name: Auto Assign and Label PR
+
+on:
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  assign-and-label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add Labels to PR
+        uses: actions-ecosystem/action-add-labels@v1.1.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: |
+            gssoc-ext
+            hacktoberfest-accepted
+
+      - name: Assign PR to Creator
+        uses: actions-ecosystem/action-assign@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: ${{ github.actor }}
