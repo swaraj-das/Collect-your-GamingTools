@@ -262,7 +262,7 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
+    text-decoration:none;
     color: #000;
     font-size: 14px;
     font-weight: bold;
@@ -287,11 +287,11 @@ nav ul li.login {
 }
 
 nav ul li.login a {
-    color: #fff;
+    color:#000;
 }
 
 nav ul li.login:hover {
-    color: #fff;
+    color:#000;
 }
 
 
