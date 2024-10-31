@@ -2252,3 +2252,35 @@ button {
     font-size: 18px;
   }
 }
+.marquee-container {
+  width: 100%;
+  background-color: black; /* Original bgcolor */
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0 5px 0; /* Original padding */
+  font-family: "Book Antiqua", sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  z-index: 999;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+}
+.marquee {
+font-size: medium;
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%; /* Start the marquee off-screen */
+  animation: scroll-left 10s linear infinite; /* Scroll effect */
+}
+.marquee:hover {
+  animation-play-state: paused; /* Pause on hover */
+}
+@keyframes scroll-left {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
