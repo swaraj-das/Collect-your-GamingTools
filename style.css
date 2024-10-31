@@ -2271,7 +2271,7 @@ font-size: medium;
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%; /* Start the marquee off-screen */
-  animation: scroll-left 10s linear infinite; /* Scroll effect */
+  animation: scroll-left 20s linear infinite; /* Scroll effect */
 }
 .marquee:hover {
   animation-play-state: paused; /* Pause on hover */
