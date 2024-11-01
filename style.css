@@ -695,7 +695,7 @@ button {
 
 .col-2 .controller {
   width: 90%;
-  z-index: 1;
+  z-index:1;
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);    
 }
