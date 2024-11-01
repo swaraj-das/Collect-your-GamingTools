@@ -229,7 +229,7 @@ button[type="submit"]:hover {
   top: 0;
   overflow: hidden;
   background-color: #fff;
-  z-index: 1000;
+  z-index: 999999999;
   box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
 }
 
@@ -695,7 +695,7 @@ button {
 
 .col-2 .controller {
   width: 90%;
-  z-index: 9;
+  z-index:1;
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);    
 }
