@@ -22,7 +22,17 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
     </tbody>
 </table>
 
-## ✨ Features
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Backend Setup](#backend-setup)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [Team](#team)
+- [Contributors](#contributors)
+
+## Features
 🗂️ <b>Dynamic Navigation Menu</b>: Toggle visibility, designed for seamless use across all screen sizes.  
 
 🛒 <b>Product Display</b>: View gaming products with prices, discounts, and a "Buy Now" option.
@@ -33,14 +43,15 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 
 
 
-## 💻 Technologies Used ( Frontend )
+## Technologies Used 
+### Frontend
 <p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=html,css,js" />
   </a>
 </p>
 
-## 💻 Technologies Used ( Backend & Docker Functionality )
+### Backend & Docker Functionality 
 
 - 🟢 **Node.js** and **Express** for the backend
 - 🍃 **MongoDB** for database storage
@@ -52,7 +63,7 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
     </a>
 </p>
 
-## ⚙️ Backend Setup
+## Backend Setup
 1. Clone the repository:
     ```bash
     git clone https://github.com/swaraj-das/Collect-your-GamingTools.git
@@ -87,12 +98,12 @@ Run the container:
 docker run -d -p 5000:5000 --env-file .env gamingtools-backend
 ```
 
-## 🚀 Demo
+## Demo
 #### Check out the live demo here ⬇️ : 
 
 https://collect-your-gamingtools.netlify.app/
 
-## 🛠️ Installation
+## Installation
 #### To get started, simply clone the repository and open it in your browser:
 
 1. Clone the repository:
@@ -111,7 +122,7 @@ https://collect-your-gamingtools.netlify.app/
     ```
 
 
-## 🤝 Contributing
+## Contributing
 Contributions are what make the **open-source** community such an amazing place to learn, inspire, and create. Here’s how you can contribute:
 
 🍴 <b>Fork the repo</b> by clicking the "Fork" button at the top right of this page. 
@@ -126,7 +137,7 @@ Contributions are what make the **open-source** community such an amazing place 
 
 We welcome all contributions to improve **Collect Your GamingTools**! If you'd like to contribute, please follow the [Contributing.md](./Contributing.md) to get details on how to get started.
 
-## 👥 Team
+## Team
 
 | ![Swaraj Das](https://avatars.githubusercontent.com/u/151845349?v=4&s=80) | ![Anit Sarkar](https://avatars.githubusercontent.com/u/135215478?v=4&s=80) |
 |:--:|:--:|
@@ -142,7 +153,7 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🙌 Contributors
+## Contributors
 
 ![GitHub contributors](https://img.shields.io/github/contributors/swaraj-das/Collect-your-GamingTools)
 
