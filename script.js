@@ -520,3 +520,15 @@ function displayVisitorCount() {
 // Call the display function when the page loads
 document.addEventListener('DOMContentLoaded', displayVisitorCount);
 
+//Name validation function on index page , Contact us section
+
+const nameInput = document.getElementById('name');
+
+nameInput.addEventListener('input', () => {
+    const name = nameInput.value.trim();
+    if (!/^[a-zA-Z ]+$/.test(name)) {
+        nameInput.setCustomValidity('Numbers and symbols are not allowed');
+    } else {
+        nameInput.setCustomValidity('');
+    }
+});
