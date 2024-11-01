@@ -1,0 +1,12 @@
+{
+  "name": "collect-your-gamingtools",
+  "version": "1.0.0",
+  "description": "A <b> responsive and dynamic website </b> to showcase the best gaming accessories for every gamer!",
+  "main": "darkMode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
