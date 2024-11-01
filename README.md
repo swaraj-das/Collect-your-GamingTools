@@ -54,15 +54,14 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 
 ## ⚙️ Backend Setup
 1. Clone the repository:
-```bash
-git clone https://github.com/username/collect-your-gamingtools.git
-```
-
+    ```bash
+    git clone https://github.com/swaraj-das/Collect-your-GamingTools.git
+    ```
 2. Install dependencies:
-```bash
-cd collect-your-gamingtools
-npm install
-```
+    ```bash
+    cd Collect-your-GamingTools
+    npm install
+    ```
 
 3. Configure environment variables:
 Create a .env file with:
