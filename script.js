@@ -5,6 +5,22 @@ menuList.style.display = "block";
 menuList.style.position = "fixed";
 menuList.style.borderRadius = "20px";
 
+// ------------------One FAQ opened once at a time---------------------
+<script>
+   const faqInputs = document.querySelectorAll('.faq input'); 
+   faqInputs.forEach(input => { 
+   input.addEventListener('change', () => { 
+    if(input.checked){
+       faqInputs.forEach(otherInput => {
+         if (otherInput !== input) {
+           otherInput.checked = false; 
+           } 
+           });
+            }
+          }) 
+             }); 
+</script>
+// ---------------------------------------------------------------------
 function toggleMenu() {
     if (menuList.style.height == "0px") {
         menuList.style.height = "auto";

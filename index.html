@@ -703,7 +703,22 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script>
+    <!-- -------------One FAQ opened once at a time ------------------------->
+    <script> 
+    const faqInputs = document.querySelectorAll('.faq input');
+     faqInputs.forEach(input => { 
+        input.addEventListener('change', () => { 
+            if (input.checked) { 
+            faqInputs.forEach(otherInput => { 
+        if (otherInput !== input){
+             otherInput.checked = false; 
+    } 
+    });
+     } 
+    });
+});
+    </script>
+<!-- -------------------------------------------------------------------- -->
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
             spaceBetween: 30,
