@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Return Policy - Collect Your Gaming Tools</title>
+    <link rel="stylesheet" href="return-policy.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a, .nav-links button {
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #ff5733;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .nav-links a:hover, .nav-links button:hover {
+            background-color: #c74a2f;
+        }
+
+        /* Light Theme */
+        body.light-theme {
+            background-color: #eaeaea;
+            color: #333;
+        }
+
+        .light-theme .return-policy-container {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .light-theme footer {
+            background-color: #eaeaea;
+            color: #333;
+        }
+
+        /* Dark Theme */
+        body.dark-theme {
+            background-color: #282828;
+            color: #eaeaea;
+        }
+
+        .dark-theme .return-policy-container {
+            background-color: #3c3c3c;
+            border-radius: 10px;
+        }
+
+        .dark-theme footer {
+            background-color: #1a1a1a;
+            color: #eaeaea;
+        }
+
+        /* Return Policy Section */
+        .return-policy-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .policy-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .policy-section h2 {
+            color: #ff5733;
+            margin-bottom: 10px;
+        }
+
+        .policy-section:hover {
+            background-color: rgba(255, 87, 51, 0.1);
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Back to Home Button */
+        .back-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-home-btn {
+            padding: 10px 20px;
+            background-color: #ff5733;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .back-home-btn:hover {
+            background-color: #c74a2f;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 2px solid #ff5733;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Navbar with Home, About, and Theme Switcher -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-home">Home</a>
+            <a href="../aboutus.html" class="nav-about">About Us</a>
+            <button id="theme-switcher" class="theme-btn">Switch Theme</button>
+        </div>
+    </nav>
+
+    <div class="return-policy-container">
+        <div class="policy-header">
+            <h1>Return Policy</h1>
+        </div>
+
+        <div class="policy-section" id="return-conditions">
+            <h2>Return Conditions</h2>
+            <p>To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging.</p>
+        </div>
+
+        <div class="policy-section" id="return-process">
+            <h2>Return Process</h2>
+            <ul>
+                <li>Contact us within 30 days of receiving your order.</li>
+                <li>Provide your order number and the reason for the return.</li>
+                <li>Ship the item back to us using the original packaging.</li>
+                <li>Once we receive your item, we will inspect it and notify you of the approval or rejection of your return.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section" id="refunds">
+            <h2>Refunds</h2>
+            <p>If your return is approved, we will process your refund to your original payment method within a certain amount of days.</p>
+        </div>
+
+        <div class="policy-section" id="exchanges">
+            <h2>Exchanges</h2>
+            <p>If you need to exchange an item for the same item, please send us an email at support@collectyourgamingtools.com.</p>
+        </div>
+
+        <!-- Back to Home Button -->
+        <div class="back-home">
+            <a href="../index.html" class="back-home-btn">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Collect Your Gaming Tools. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Theme Switching -->
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const body = document.body;
+
+        themeSwitcher.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+            themeSwitcher.textContent = body.classList.contains('dark-theme') ? 'Switch to Light Theme' : 'Switch to Dark Theme';
+        });
+    </script>
+</body>
+</html>
