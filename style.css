@@ -1662,10 +1662,14 @@ button {
 }
 
 #faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 100px;
 }
 
 .faq-container {
+  
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
@@ -1673,13 +1677,27 @@ button {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 2 10px 8px rgba(255, 254, 254, 0.1);
+  background: linear-gradient(to right, #d72e7b, #f2994a);
 }
 
 .faq-title {
   text-align: center;
+  
+ 
   font-size: 1.8em;
-  color: #ffffff;
+  color: #000;
   margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+ 
+
+  /* Text shadow */
+  text-shadow: 5px 5px 9px #fcfbfb;
+
+  /* Add padding and display properties */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .faq {
@@ -1693,7 +1711,7 @@ button {
 .faq-question {
   padding: 15px;
   font-size: 1.2em;
-  background-color: #f6763f;
+  background-color: #2e1104;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -1706,7 +1724,7 @@ button {
 }
 
 .faq-question:hover {
-  background-color: #ff6b6b;
+  background-color: #450e0e;
 }
 
 .faq-answer {
@@ -1739,6 +1757,28 @@ button {
 .faq input[type="checkbox"]:checked+label .arrow {
   transform: rotate(225deg);
 }
+
+
+/* hover effect */
+.faq:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+  transform: scale(1.02); /* Slightly increases the size */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.faq-question:hover {
+  background-color: #450e0e; /* Change background color */
+  color: #fff; /* Keeps the text color consistent */
+}
+
+.faq-answer:hover {
+  background-color: #ffd1a1; /* Slightly darker background on hover */
+  border-left-color: #ff6b6b; /* Changes border color */
+}
+
+
+
+
 
 /* Body styles for consistency */
 #review-body {
