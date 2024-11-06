@@ -1778,7 +1778,7 @@ button {
 
 .swiper-pagination {
   position: relative;
-  bottom: 1px !important;
+  bottom: -20px !important;
   text-align: center;
   margin: 28px;
 }
