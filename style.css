@@ -1000,6 +1000,12 @@ button {
   border: none;
   width: 100%;
   border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.contact-form .text-input:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .contact-form textarea.text-input {
@@ -1011,17 +1017,19 @@ button {
   float: right;
   font-size: 1.1em;
   font-family: "Arial", sans-serif;
-  background: #4caf50;
+  background: linear-gradient(45deg, #c7c400, #ff3c76, #f5f100b9);
   color: white;
   border: none;
   padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form .contact-btn:hover {
-  background: #45a049;
+  background: linear-gradient(135deg, #c7c400, #ff393d ,#ff3c76, #f5f100b9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #contact {
