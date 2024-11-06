@@ -1,59 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     const signupButton = document.querySelector(".signup-button");
 
-    // List of trusted email domains
-    const trustedDomains = ["gmail.com", "outlook.com", "yahoo.com", "hotmail.com" , "protonmail.com" , "icloud.com" , "tutanota.com"];
-
     signupButton.addEventListener("click", (e) => {
         e.preventDefault();
-
         const name = document.querySelector("#username").value;
         const email = document.querySelector("#email").value;
         const password = document.querySelector("#password").value;
         const confirmPassword = document.querySelector("#confirm-password").value;
-        const emailError = document.querySelector("#email-error"); // Reference to email error div
-        const passwordError = document.querySelector("#password-error"); // Reference to password error div
-
-        // Clear any previous error messages
-        emailError.textContent = "";
-        emailError.style.display = "none"; // Hide the error message by default
-        passwordError.textContent = "";
-        passwordError.style.display = "none"; // Hide the error message by default
 
         if (!name || !email || !password || !confirmPassword) {
-            emailError.textContent = "Every field is required.";
-            emailError.style.display = "block";
+            alert("Every field is required.");
             return;
         }
 
-        // Email domain validation
-        const emailDomain = email.split("@")[1]; // Get the domain from the email
-        if (!trustedDomains.includes(emailDomain)) {
-            emailError.textContent = "Please use an email address from a trusted provider (e.g., Gmail, Outlook, Yahoo) etc.";
-            emailError.style.display = "block";
-            return;
-        }
-
-        // Password matching validation
         if (password !== confirmPassword) {
-            passwordError.textContent = "Passwords do not match.";
-            passwordError.style.display = "block";
+            alert("Passwords do not match.");
             return;
         }
-        
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if (!emailPattern.test(email)) {
-            alert("Please enter a valid email address.");
-            return; // Stop the function if the email is not in the right format
-        }
 
-        const userdata = {
-            name,
-            email,
-            password,
-            confirmPassword
-        };
-
+        const userdata = { name, email, password };
         registerUser(userdata);
     });
 
@@ -103,12 +68,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(user)
             });
-
             const data = await res.json();
-            console.log(data);
-            window.location.href = "http://127.0.0.1:5500/Collect-your-GamingTools/login/login.html";
+            if (data.success) {
+                alert('Signup successful! Redirecting to login...');
+                window.location.href = "../login/login.html"; // Redirect after signup
+            } else {
+                alert(data.message); // Show error message
+            }
         } catch (err) {
-            console.log(err.message);
+            alert('Error: ' + err.message); // Show error message
         }
     };
 

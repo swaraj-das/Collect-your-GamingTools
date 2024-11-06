@@ -1,0 +1,102 @@
+/* Enhanced Loader Styling */
+.loader {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border: 10px solid rgba(0, 0, 0, 0.1);
+  border-top: 10px solid #3498db; /* Main color for the loader */
+  border-radius: 50%;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite; /* Smoother, slower animation */
+}
+
+/* Adding a glowing pulse effect to the loader */
+.loader::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle, #f39c12 0%, #e8491d 100%); /* Dynamic gradient */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6), 0 0 40px rgba(255, 105, 180, 0.4); /* Soft glow */
+  animation: pulsate 1.2s ease-in-out infinite, colorChange 3s ease-in-out infinite; /* Add color change effect */
+}
+
+/* Main content styling remains the same */
+.main-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Hide loader and show content when the page is loaded */
+body.loaded .loader {
+  display: none;
+}
+
+body.loaded .main-content {
+  display: block;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Smooth fade-in effect for content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Spin animation for loader */
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Pulsating animation for inner circle */
+@keyframes pulsate {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1); /* Slightly bigger pulsate */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+/* Color change animation */
+@keyframes colorChange {
+  0% {
+    background: radial-gradient(circle, #f39c12 0%, #e8491d 100%);
+  }
+  50% {
+    background: radial-gradient(circle, #8e44ad 0%, #3498db 100%);
+  }
+  100% {
+    background: radial-gradient(circle, #f39c12 0%, #e8491d 100%);
+  }
+}
+
+/* Prevent scrolling while the loader is visible */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f0f4f8;
+  transition: background-color 0.5s ease;
+}

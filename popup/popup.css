@@ -82,14 +82,22 @@
     color: #333;
   }
 
-  p {
+  .pop_up {
     margin-bottom: 26px;
-    color: #d7d7d7;
-    font-size: 13px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(left, #fd1c1c, #3375c7, #14addd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 12.7px;
+
+  }
+
+  .bold{
+    font-size: 13.1px;
   }
 
   input[type="email"] {
-    width: 100%;
+    width: 93%;
     padding: 10px;
     margin-bottom: 16px;
     border: 1px solid #000000;

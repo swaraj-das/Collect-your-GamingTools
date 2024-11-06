@@ -8,11 +8,11 @@
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <style>
         .condition {
-            color: gray; /* Default color */
+            color: gray;
             font-size: 0.9em;
         }
         .condition.met {
-            color: lightgreen; /* Turns green when condition is met */
+            color: lightgreen;
         }
         .error-message {
             color: red;
@@ -29,30 +29,27 @@
 
     <div class="signup-container">
         <h1>Create Your Account</h1>
-        <form action="#" method="post">
+        <form id="signup-form" action="#" method="post">
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" placeholder="Create a Username" required>
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
-                <div id="email-error" class="error-message"></div> <!-- Error message container -->
+                <div id="email-error" class="error-message"></div>
                 <input type="email" id="email" name="email" placeholder="Enter your mail-id" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Create password" required>
             </div>
-
-            <!-- Password Recommendations Section -->
             <div class="password-recommendations">
                 <p id="length" class="condition">At least 8 characters</p>
                 <p id="uppercase" class="condition">Contains uppercase letters</p>
                 <p id="lowercase" class="condition">Contains lowercase letters</p>
                 <p id="number" class="condition">Contains numbers</p>
                 <p id="special" class="condition">Contains special characters</p>
-    
-
+            </div>
             <div class="input-group">
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required>
@@ -77,7 +74,7 @@
         </div>
     </div>
 
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="signup.js"></script> <!-- Link to the signup.js file -->
+    <script src="signup.js"></script>
 </body>
 </html>
+

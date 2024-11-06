@@ -1,0 +1,26 @@
+name: PR Description Check
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  validate-pr-description:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate PR Description
+        id: check_description
+        run: |
+          if [ -z "${{ github.event.pull_request.body }}" ]; then
+            echo "::error::Description is missing!"
+            exit 1
+          fi
+
+      - name: Check for issue number or 'Fixes #NEW'
+        id: check_issue_number
+        run: |
+          description="${{ github.event.pull_request.body }}"
+          if [[ ! "$description" =~ (Fixes #[0-9]+|Fixes #NEW) ]]; then
+            echo "::error::PR description must contain an issue number or 'Fixes #NEW'"
+            exit 1
+          fi

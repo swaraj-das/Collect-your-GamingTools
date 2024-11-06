@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Nexas</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="contributor.css">
+    
+    <style>
+        
+.navbar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
+}
+.logo-outer {
+display: flex;
+align-items: center;
+}
+        
+.logo {
+  width: 36px;
+  cursor: pointer;
+  margin: 18px 10px;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.website-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #ff459f,
+    #ff9532,
+    #ffd700,
+    #32cd32,
+    #1e90ff,
+    #8a2be2,
+    #ff459f
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display:inline-block;
+  animation: rainbow 5s linear infinite;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bolder;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+nav {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  align-items: center;
+}
+nav ul li {
+  list-style: none;
+  display: inline;
+  margin-right: 30px;
+  text-wrap: nowrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.5s, transform 0.5s;
+}
+
+nav ul li a:hover {
+  color: #e00999;
+  transform: scale(1.08);
+}
+nav ul li a::after {
+  content: "";
+  display: block;
+  height: 0.5px;
+  width: 0;
+  background: #ff3527;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  align-content: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  position: relative;
+  color: #000;
+}
+
+
+    </style>
+</head>
+<body>
+
+  
+   <div class="navbar">
+     <div class="logo-outer">
+    <a href="/"> <img src="logo.png" class="logo" alt="Logo"></a>
+    <a href="/"><span class="website-name">Collect your GamingTools</span></a>
+    </div>
+  <nav>
+    
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../aboutus.html">About Us</a></li>
+        
+    </ul>
+</nav>
+   </div>
+ 
+
+  <div class="contributor-container">
+    <!-- Hero Section -->
+    <section class="contributor-hero">
+        <div class="contributor-hero-content">
+            <h1>Welcome to Collect-your-GamingTools</h1>
+            <p>Empowering writers, one commit at a time</p>
+            <button class="contributor-btn contributor-btn-primary" onclick="scrollToContribute()">Become a Contributor</button>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="contributor-stats">
+        <h2>Project Statistics</h2>
+        <div class="contributor-stats-grid" id="statsGrid">
+            <!-- Stats will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Contributors Grid -->
+    <section class="contributor-contributors">
+        <h2>Meet Our Contributors</h2>
+        <div class="contributor-contributors-grid" id="contributorsGrid">
+            <!-- Contributors will be dynamically inserted here -->
+        </div>
+        <div id="loading" class="contributor-loading">
+            <div class="contributor-spinner"></div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="contribute" class="contributor-cta">
+        <h2>Ready to Make an Impact?</h2>
+        <p>Join our community and help shape the future with us at Collect-your-GamingTools</p>
+        <form id="subscribeForm">
+            <input type="email" id="emailInput" placeholder="Enter your email" required>
+            <button type="submit" class="contributor-btn contributor-btn-secondary">Get Started</button>
+        </form>
+        <div id="notification" class="contributor-notification contributor-hidden"></div>
+    </section>
+  </div>
+
+    <script src="contributor.js"></script>
+</body>
+</html>
