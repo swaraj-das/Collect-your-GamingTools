@@ -23,16 +23,17 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 </table>
 
 ## Table of Contents
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Backend Setup](#backend-setup)
-- [Demo](#demo)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [Team](#team)
-- [Contributors](#contributors)
+- [✨ Features](#features)
+- [💻 Technologies Used](#technologies-used)
+- [⚙️ Backend Setup](#backend-setup)
+- [🚀 Demo](#demo)
+- [🛠️ Installation](#installation)
+- [🤝 Contributing](#contributing)
+- [👥 Team](#team)
+- [🙌Contributors](#contributors)
 
-## Features
+<a id="features"></a>
+## ✨ Features
 🗂️ <b>Dynamic Navigation Menu</b>: Toggle visibility, designed for seamless use across all screen sizes.  
 
 🛒 <b>Product Display</b>: View gaming products with prices, discounts, and a "Buy Now" option.
@@ -42,8 +43,8 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
 📱 <b>Responsive Design</b>: Enjoy smooth navigation whether you're on mobile, tablet, or desktop! 
 
 
-
-## Technologies Used 
+<a id="technologies-used"></a>
+## 💻 Technologies Used 
 ### Frontend
 <p align="center">
   <a href="https://skillicons.dev">
@@ -63,7 +64,8 @@ A <b> responsive and dynamic website </b> to showcase the best gaming accessorie
     </a>
 </p>
 
-## Backend Setup
+<a id="backend-setup"></a>
+## ⚙️ Backend Setup
 1. Clone the repository:
     ```bash
     git clone https://github.com/swaraj-das/Collect-your-GamingTools.git
@@ -98,12 +100,14 @@ Run the container:
 docker run -d -p 5000:5000 --env-file .env gamingtools-backend
 ```
 
-## Demo
+<a id="demo"></a>
+## 🚀 Demo
 #### Check out the live demo here ⬇️ : 
 
 https://collect-your-gamingtools.netlify.app/
 
-## Installation
+<a id="installation"></a>
+## 🛠️ Installation
 #### To get started, simply clone the repository and open it in your browser:
 
 1. Clone the repository:
@@ -121,8 +125,8 @@ https://collect-your-gamingtools.netlify.app/
     xdg-open index.html # On Linux
     ```
 
-
-## Contributing
+<a id="contributing"></a>
+## 🤝 Contributing
 Contributions are what make the **open-source** community such an amazing place to learn, inspire, and create. Here’s how you can contribute:
 
 🍴 <b>Fork the repo</b> by clicking the "Fork" button at the top right of this page. 
@@ -137,7 +141,8 @@ Contributions are what make the **open-source** community such an amazing place 
 
 We welcome all contributions to improve **Collect Your GamingTools**! If you'd like to contribute, please follow the [Contributing.md](./Contributing.md) to get details on how to get started.
 
-## Team
+<a id="team"></a>
+## 👥 Team
 
 | ![Swaraj Das](https://avatars.githubusercontent.com/u/151845349?v=4&s=80) | ![Anit Sarkar](https://avatars.githubusercontent.com/u/135215478?v=4&s=80) |
 |:--:|:--:|
@@ -153,7 +158,8 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## Contributors
+<a id="contributors"></a>
+## 🙌 Contributors
 
 ![GitHub contributors](https://img.shields.io/github/contributors/swaraj-das/Collect-your-GamingTools)
 
