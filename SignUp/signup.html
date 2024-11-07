@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up for GamingTools</title>
-    <link rel="stylesheet" href="signup.css">
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up for GamingTools</title>
+        <link rel="stylesheet" href="signup.css">
+        <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <style>
         .condition {
             color: gray;
@@ -19,7 +20,38 @@
             font-size: 0.85em;
             margin-top: 5px;
         }
+        .input-group {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem; /* Add some spacing between input fields */
+        }
+        #togglePassword, #toggleConfirmPassword {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 35%; /* Adjust the vertical alignment */
+            transform: translateY(-50%);
+        }
+
+/* Bootrap costome code */
+
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -3em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
     </style>
+
+    <!-- Bootstrap Icons -->
 </head>
 <body>
 
@@ -42,6 +74,7 @@
             <div class="input-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Create password" required>
+                <i class="bi bi-eye" id="togglePassword" aria-label="Toggle password visibility"></i>
             </div>
             <div class="password-recommendations">
                 <p id="length" class="condition">At least 8 characters</p>
@@ -53,6 +86,7 @@
             <div class="input-group">
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required>
+                <i class="bi bi-eye" id="toggleConfirmPassword" aria-label="Toggle confirm password visibility"></i>
             </div>
             <div id="password-error" class="error-message"></div> <!-- Password error container -->
             <div class="input-group">
@@ -75,6 +109,25 @@
     </div>
 
     <script src="signup.js"></script>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+
+        togglePassword.addEventListener('click', () => {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            togglePassword.classList.toggle('bi-eye');
+            togglePassword.classList.toggle('bi-eye-slash');
+        });
+
+        toggleConfirmPassword.addEventListener('click', () => {
+            const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            confirmPasswordInput.setAttribute('type', type);
+            toggleConfirmPassword.classList.toggle('bi-eye');
+            toggleConfirmPassword.classList.toggle('bi-eye-slash');
+        });
+    </script>
 </body>
 </html>
-
