@@ -6,6 +6,8 @@
     <title>Collect Your Gaming Tools - Login</title>
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="login.css">
     <script src="auth.js" defer type="module"></script>
 </head>
@@ -25,8 +27,9 @@
                 <div class="input-group password-container">
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter your password" required>
-                    <i class="far fa-eye" id="togglePassword" aria-label="Toggle password visibility"></i>
+                    <i class="bi bi-eye" id="togglePassword" aria-label="Toggle password visibility"></i>
                 </div>
+                
                 <button type="submit" class="login-button">Login</button>
                 <button id='google-login-btn' type="button">Login with Google</button>
             </form>
@@ -63,14 +66,19 @@
 
     
     <script>
-        const togglePassword = document.getElementById('togglePassword');
-        const passwordInput = document.getElementById('password');
+       const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('password');
 
-        togglePassword.addEventListener('click', function () {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            this.classList.toggle('fa-eye-slash');
-        });
+togglePassword.addEventListener('click', () => {
+    // Toggle the type attribute
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    
+    // Toggle the icon
+    togglePassword.classList.toggle('bi-eye'); // Normal eye icon
+    togglePassword.classList.toggle('bi-eye-slash'); // Eye with a slash icon
+});
+
 
         document.getElementById("login-form").addEventListener("submit", async (e) => {
             e.preventDefault();
@@ -107,5 +115,6 @@
             }
         };
     </script>
+   
 </body>
 </html

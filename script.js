@@ -520,6 +520,7 @@ function displayVisitorCount() {
 // Call the display function when the page loads
 document.addEventListener('DOMContentLoaded', displayVisitorCount);
 
+poll
 
 document.addEventListener('DOMContentLoaded', function() {
   // Check if the user has already voted in this session
@@ -586,3 +587,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+ main
