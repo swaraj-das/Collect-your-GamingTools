@@ -164,16 +164,25 @@ label {
 input,
 textarea {
   width: 100%;
-  /* Adjust width for better alignment */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: vertical;
+  color: #333; /* Dark grey text color */
+  background-color: #f9f9f9; /* Light grey background */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-textarea {
-  height: 100px;
-  /* Adjust height for textarea */
+input::placeholder,
+textarea::placeholder {
+  color: #bababa; /* Placeholder text in a lighter grey */
+}
+
+input:hover,
+textarea:hover {
+  background-color: #878787 !important; /* Light grey background on hover */
+  color: #000000 !important; 
+  border-color: #999 !important; /* Slightly darker border on hover */
 }
 
 button[type="submit"] {
@@ -190,6 +199,7 @@ button[type="submit"]:hover {
   background-color: #444;
   transform: scale(1.1);
 }
+
 
 #progressBarContainer {
   position: fixed;
