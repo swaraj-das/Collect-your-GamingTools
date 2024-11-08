@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,79 +8,175 @@
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
     <link rel="stylesheet" href="login.css">
     <script src="auth.js" defer type="module"></script>
+    <style>
+        /* Responsive Design for Various Devices */
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .password-container i {
+            position: absolute;
+            right: 10px;
+            top: 35px;
+            cursor: pointer;
+        }
+
+        .login-button, #google-login-btn {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .login-button:hover {
+            background-color: #45a049;
+        }
+
+        #google-login-btn {
+            background-color: #DB4437;
+            color: white;
+        }
+
+        #google-login-btn:hover {
+            background-color: #C23321;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .footer .social-icon__link {
+            font-size: 1.5rem;
+            margin: 0 0.3rem;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .footer .social-icon__link:hover {
+            color: #4CAF50;
+        }
+    </style>
 </head>
+
 <body>
     <div class="button-container">
         <a href="../index.html" class="back-button">← Back</a>
     </div>
+
     <div class="login-container">
-        <div class="login-box">
-            <h1 class="login-title">Welcome to Gaming Tools Store!</h1>
-            <p class="subtitle">Enter your credentials to continue shopping for the best gaming gear.</p>
-            <form id="login-form" method="post">
-                <div class="input-group">
-                    <label for="gmail">Gmail</label>
-                    <input type="text" id="gmail" name="username" placeholder="Enter your mail-id" required>
-                </div>
-                <div class="input-group password-container">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password" required>
-                    <i class="bi bi-eye" id="togglePassword" aria-label="Toggle password visibility"></i>
-                </div>
-                
-                <button type="submit" class="login-button">Login</button>
-                <button id='google-login-btn' type="button">Login with Google</button>
-            </form>
-            <div class="links">
-                <a href="forgot.html" class="hal2">Forgot Password?</a>
-                <a href="../SignUp/signup.html" class="hal">Sign Up</a>
+        <h1 class="login-title">Welcome to Gaming Tools Store!</h1>
+        <p class="subtitle">Enter your credentials to continue shopping for the best gaming gear.</p>
+        
+        <form id="login-form" method="post">
+            <div class="input-group">
+                <label for="gmail">Email</label>
+                <input type="email" id="gmail" name="username" placeholder="Enter your email" required aria-label="Email">
             </div>
+            <div class="input-group password-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required aria-label="Password">
+                <i class="bi bi-eye" id="togglePassword" aria-label="Toggle password visibility"></i>
+            </div>
+
+            <button type="submit" class="login-button">Login</button>
+            <button id="google-login-btn" type="button">Login with Google</button>
+        </form>
+
+        <div class="links">
+            <a href="forgot.html" class="hal2">Forgot Password?</a>
+            <a href="../SignUp/signup.html" class="hal">Sign Up</a>
         </div>
     </div>
+
     <footer class="footer">
         <ul class="social-icon">
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a></li>
-        </ul>
-        <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="../index.html">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="">About</a></li>
-            <li class="menu__item"><a class="menu__link" href="../index.html#controller">Services</a></li>
-            <li class="menu__item"><a class="menu__link" href="../Contributors/contributor.html">Team</a></li>
-            <li class="menu__item"><a class="menu__link" href="../index.html#contact">Contact</a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
         </ul>
         <p>&copy;2024 Collect your Gaming Tools | All Rights Reserved</p>
     </footer>
 
-    
     <script>
-       const togglePassword = document.getElementById('togglePassword');
-const passwordInput = document.getElementById('password');
+        // Toggle Password Visibility
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
 
-togglePassword.addEventListener('click', () => {
-    // Toggle the type attribute
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
-    
-    // Toggle the icon
-    togglePassword.classList.toggle('bi-eye'); // Normal eye icon
-    togglePassword.classList.toggle('bi-eye-slash'); // Eye with a slash icon
-});
+        togglePassword.addEventListener('click', () => {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            togglePassword.classList.toggle('bi-eye');
+            togglePassword.classList.toggle('bi-eye-slash');
+        });
 
-
+        // Handle Login Form Submission
         document.getElementById("login-form").addEventListener("submit", async (e) => {
             e.preventDefault();
             const email = document.querySelector("#gmail").value;
@@ -90,8 +187,10 @@ togglePassword.addEventListener('click', () => {
                 alert("Please enter a valid email address.");
                 return;
             }
-            
+
             const userData = { email, password };
+            document.querySelector(".login-button").innerText = "Logging in...";
+            
             await loginUser(userData);
         });
 
@@ -106,15 +205,18 @@ togglePassword.addEventListener('click', () => {
 
                 const data = await res.json();
                 if (res.ok) {
-                    window.location.href = "../index.html"; // Updated URL
+                    window.location.href = "../index.html";
                 } else {
                     alert(data.message);
                 }
             } catch (e) {
                 alert('Error: ' + e.message);
+            } finally {
+                document.querySelector(".login-button").innerText = "Login";
             }
         };
     </script>
-   
+
 </body>
-</html
+
+</html>
