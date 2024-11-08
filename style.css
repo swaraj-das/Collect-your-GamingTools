@@ -836,13 +836,23 @@ button {
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    /* max-width: 1200px; */
+    margin: 2rem;
+    padding: 0 20px;
 }
-
+/* by rohit */
+.text-input:hover{
+ box-shadow: -2px 4px 9px 2px #b7b7b7cc;
+ transition: all 1s ease-out;
+  border-color:  white;
+  transform: scale(1.05);
+}
+.send-button{
+  background: linear-gradient(135deg, #c7c400, #ff393d, #ff3c76, #f5f100b9) !important;
+}
+/* end */
 .links-tag {
   width: 100%;
   display: flex;
@@ -1015,13 +1025,16 @@ button {
   color: white;
   border: none;
   padding: 12px 20px;
-  border-radius: 5px;
+  border-radius: 45px;
   cursor: pointer;
   transition: all 0.3s;
+
 }
 
 .contact-form .contact-btn:hover {
-  background: #45a049;
+  transition:  1s ease;
+transform: scale(1.1);
+  background: #45a049 ;
 }
 
 #contact {
