@@ -1778,7 +1778,7 @@ button {
 
 .swiper-pagination {
   position: relative;
-  bottom: 1px !important;
+  bottom: -20px !important;
   text-align: center;
   margin: 28px;
 }
@@ -1943,7 +1943,7 @@ button {
   font-size: 25px;
 
   color: var(--text-color); /* Adapt based on theme */
-=======
+
   text-shadow: 5px 5px 9px #000;
 
 }
@@ -1953,7 +1953,7 @@ button {
   font-weight: 800;
 
   color: #ff8552; /* This color is fixed for branding */
-=======
+
   color: #FFD700;
   text-shadow: -5px 5px 3px magenta
 
@@ -2257,6 +2257,65 @@ button {
   }
   .website-counter {
     font-size: 18px;
+  }
+}
+
+.most-loved-products {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(120deg, #f7562d, #f533a4, rgb(235, 235, 82));
+  color: #0a0a0a;
+  overflow: hidden; /* Hide overflow for sliding effect */
+}
+
+.most-loved-products h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.product-slider {
+  display: flex;
+  gap: 1.5rem;
+  animation: slide 20s linear infinite;
+}
+
+.product-card {
+  min-width: 150px; /* Ensures each card is the same width */
+  background-color: #2b2b2b;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}
+
+/* Keyframes for sliding effect */
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(-40px * 7)); /* Adjust based on the total width of all items */
   }
 }
 

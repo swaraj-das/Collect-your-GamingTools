@@ -1,13 +1,24 @@
 // Fetch data from GitHub API
 async function fetchData() {
   try {
-      const contributorsResponse = await fetch('https://api.github.com/repos/swaraj-das/Collect-your-GamingTools/contributors');
-      const contributorsData = await contributorsResponse.json();
+      let contributors = [];
+      let page = 1;
+      let perPage = 100; // Max number of contributors per page
+      
+      while (true) {
+          const contributorsResponse = await fetch(`https://api.github.com/repos/swaraj-das/Collect-your-GamingTools/contributors?per_page=${perPage}&page=${page}`);
+          const contributorsData = await contributorsResponse.json();
+          
+          if (contributorsData.length === 0) break; // Exit loop if no more contributors
+          
+          contributors = contributors.concat(contributorsData);
+          page++; // Move to the next page
+      }
 
       const repoResponse = await fetch('https://api.github.com/repos/swaraj-das/Collect-your-GamingTools');
       const repoData = await repoResponse.json();
 
-      return { contributors: contributorsData, repoStats: repoData };
+      return { contributors, repoStats: repoData };
   } catch (error) {
       console.error('Error fetching data:', error);
       return { contributors: [], repoStats: {} };
@@ -15,13 +26,13 @@ async function fetchData() {
 }
 
 // Render stats
-function renderStats(repoStats, contributorsCount) {
+function renderStats(repoStats, contributorsCount, totalContributions) {
   const statsGrid = document.getElementById('statsGrid');
   const stats = [
-      { label: 'Contributors', value: contributorsCount, icon: 'users' },
-      { label: 'Total Contributions', value: repoStats.contributors?.reduce((sum, contributor) => sum + contributor.contributions, 0) || 0, icon: 'git-commit' },
-      { label: 'GitHub Stars', value: repoStats.stargazers_count || 0, icon: 'star' },
-      { label: 'Forks', value: repoStats.forks_count || 0, icon: 'git-branch' }
+    { label: 'Contributors', value: contributorsCount, icon: 'users' },
+    { label: 'Total Contributions', value: totalContributions, icon: 'git-commit' },
+    { label: 'GitHub Stars', value: repoStats.stargazers_count || 0, icon: 'star' },
+    { label: 'Forks', value: repoStats.forks_count || 0, icon: 'git-branch' }
   ];
 
   statsGrid.innerHTML = stats.map(stat => `
@@ -76,7 +87,10 @@ async function init() {
 
   const { contributors, repoStats } = await fetchData();
 
-  renderStats(repoStats, contributors.length);
+  // Calculate total contributions
+  const totalContributions = contributors.reduce((sum, contributor) => sum + contributor.contributions, 0);
+
+  renderStats(repoStats, contributors.length, totalContributions);
   renderContributors(contributors);
 
   loading.style.display = 'none';
