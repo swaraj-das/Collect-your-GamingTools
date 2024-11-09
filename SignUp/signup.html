@@ -20,6 +20,33 @@
             font-size: 0.85em;
             margin-top: 5px;
         }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 10px; /* Space between buttons */
+            margin-top: 20px; /* Space above buttons */
+        }
+        .google-signup-button, .apple-signup-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: #db4437; /* Google color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%; /* Full width */
+        }
+        .apple-signup-button {
+            background-color: #000; /* Apple color */
+        }
+        .google-icon, .apple-icon {
+            margin-right: 8px; /* Space between icon and text */
+        }
+
         .input-group {
             position: relative;
             display: flex;
@@ -48,6 +75,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 
     </style>
 
@@ -83,6 +111,7 @@
                 <p id="number" class="condition">Contains numbers</p>
                 <p id="special" class="condition">Contains special characters</p>
             </div>
+
             <div class="input-group">
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required>
@@ -91,13 +120,22 @@
             <div id="password-error" class="error-message"></div>
             <button type="submit" class="signup-button">Sign Up</button>
         </form>
+
         <div class="or-divider">
             <span>OR</span>
         </div>
-        <button id="google-signup" class="google-signup-button">
-            <img src="../images/google-icon.png" alt="Google Icon" class="google-icon">
-            Sign up with Google
-        </button>
+
+        <div class="social-buttons">
+            <button id="google-signup" class="google-signup-button">
+                <img src="../images/google-icon.png" alt="Google Icon" class="google-icon">
+                Sign up with Google
+            </button>
+            <button id="apple-signup" class="apple-signup-button">
+                <img src="../images/apple-icon.png" alt="Apple Icon" class="apple-icon">
+                Sign up with Apple
+            </button>
+        </div>
+
         <div class="links">
             <a href="../login/login.html"><u>Already have an account? Login</u></a>
         </div>
@@ -126,3 +164,4 @@
     </script>
 </body>
 </html>
+

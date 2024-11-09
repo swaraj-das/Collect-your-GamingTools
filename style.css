@@ -1906,7 +1906,7 @@ button {
   /* Slightly tighter line height */
 }
 
-/* testimonial */
+/* testimonial section */
 .site {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
@@ -1914,15 +1914,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  color: #000;
+  background-color: var(--background-color); /* Adapt based on theme */
+  color: var(--text-color); /* Adapt based on theme */
 }
 
-.dark-mode .site{
-  background-color: #1b1b1b;
-  color: white;
-}
-
+\
 .container-swipe {
   max-width: 1200px;
   width: 100%;
@@ -1945,14 +1941,22 @@ button {
 .testi .head p {
   font-weight: 600;
   font-size: 25px;
+
+  color: var(--text-color); /* Adapt based on theme */
+
   text-shadow: 5px 5px 9px #000;
+
 }
 
 .testi .head h3 {
   font-size: 34px;
   font-weight: 800;
+
+  color: #ff8552; /* This color is fixed for branding */
+
   color: #FFD700;
   text-shadow: -5px 5px 3px magenta
+
 }
 
 .testi .wrapper {
@@ -1961,7 +1965,10 @@ button {
   align-items: self-end;
   gap: 66px;
   padding: 30px 0;
+  background-color: var(--background-color); /* Adapt based on theme */
+  color: var(--text-color); /* Adapt based on theme */
 }
+
 
 /*thumbnail*/
 .testi .thumbnail {
@@ -2147,7 +2154,7 @@ button {
   .footer-bottom {
     width: 1000vw !important;
   }
-}
+
 
 
 /* Add hover effects and shadows to the card */
@@ -2252,13 +2259,14 @@ button {
     font-size: 18px;
   }
 }
-poll
+
 
 
 
 body {
 
     font-family: Arial, sans-serif;
+
 }
 
 
@@ -2343,6 +2351,7 @@ body {
 
 }
 
+
 .vote-button:hover {
 
     background-color: #d32f2f; /* Darker red */
@@ -2369,4 +2378,4 @@ body {
 
 }
 
- main
+
