@@ -516,9 +516,11 @@ nav ul li.login:hover {
 }
 
 .dark-mode .feature p {
-    color: whitesmoke; /* Set paragraph color to black */
+  color: whitesmoke;
+  /* Set paragraph color to black */
 }
-.dark-mode .feature{
+
+.dark-mode .feature {
   background: #111111;
   color: #000;
 }
@@ -697,10 +699,11 @@ button {
   width: 90%;
   z-index: 9;
   overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);    
+  transition: transform 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
+
 .col-2:hover .controller {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .color-box {
@@ -714,8 +717,9 @@ button {
   transform: translateX(150px);
   transition: transform 0.5s ease;
 }
+
 .col-2:hover .color-box {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .price {
@@ -1125,9 +1129,17 @@ button {
 }
 
 @keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .social-sidebar {
@@ -1138,27 +1150,39 @@ button {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background: linear-gradient(135deg,   
-      #ff393d, /* Bright red */
-      #ff3c76, /* Pink */
-      #2a58f0, /* Light blue */
-      #db17f5, /* Blue */
-      #ff459f, /* Additional pink for more variety */
-      #ff9901, /* Bright red */
-      #ff3c76  /* Pink */
-  );
-  background-size: 200% 200%; /* Increased size for animation */
+  background: linear-gradient(135deg,
+      #ff393d,
+      /* Bright red */
+      #ff3c76,
+      /* Pink */
+      #2a58f0,
+      /* Light blue */
+      #db17f5,
+      /* Blue */
+      #ff459f,
+      /* Additional pink for more variety */
+      #ff9901,
+      /* Bright red */
+      #ff3c76
+      /* Pink */
+    );
+  background-size: 200% 200%;
+  /* Increased size for animation */
   padding: 3px;
   border-radius: 15px 0 0 15px;
-  border: 1px solid rgba(82, 78, 78, 0.5); /* Semi-transparent border for a softer look */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Adjusted shadow for more depth */
+  border: 1px solid rgba(82, 78, 78, 0.5);
+  /* Semi-transparent border for a softer look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  /* Adjusted shadow for more depth */
   transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 1;
-  animation: gradientAnimation 6s ease-in-out infinite; /* Added animation */
+  animation: gradientAnimation 6s ease-in-out infinite;
+  /* Added animation */
 }
 
 .social-sidebar:hover {
-  transform: translateY(-50%) scale(1.05); /* Slightly enlarges the sidebar */
+  transform: translateY(-50%) scale(1.05);
+  /* Slightly enlarges the sidebar */
 }
 
 
@@ -1918,7 +1942,7 @@ button {
   color: #000;
 }
 
-.dark-mode .site{
+.dark-mode .site {
   background-color: #1b1b1b;
   color: white;
 }
@@ -2195,11 +2219,14 @@ button {
 }
 
 .visitor-counter {
-  margin: 20px auto; /* Centered horizontally */
-  background: linear-gradient(135deg, #c7c400, #ff393d, #ff3c76, #f5f100b9); /* New vibrant gradient */
+  margin: 20px auto;
+  /* Centered horizontally */
+  background: linear-gradient(135deg, #c7c400, #ff393d, #ff3c76, #f5f100b9);
+  /* New vibrant gradient */
   height: 70px;
   width: 160px;
-  color: #ffffff; /* Bright white for maximum contrast */
+  color: #ffffff;
+  /* Bright white for maximum contrast */
   font-weight: 700;
   font-size: 14px;
   text-align: center;
@@ -2207,28 +2234,36 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 12px; /* Softer corners */
-  backdrop-filter: blur(10px); /* Increased blur for a modern touch */
+  border-radius: 12px;
+  /* Softer corners */
+  backdrop-filter: blur(10px);
+  /* Increased blur for a modern touch */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15),
-              0 2px 4px rgba(0, 0, 0, 0.1);
+    0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effect */
 }
 
 .visitor-counter:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Enhance shadow on hover */
 }
 
 .visitor-counter div:first-child {
   margin-bottom: 5px;
-  font-size: 14px; /* Adjusted for clarity */
-  letter-spacing: 0.5px; /* Increased spacing for readability */
+  font-size: 14px;
+  /* Adjusted for clarity */
+  letter-spacing: 0.5px;
+  /* Increased spacing for readability */
 }
 
 .website-counter {
   font-size: 20px;
-  font-family: 'Arial', sans-serif; /* Consistent font family */
+  font-family: 'Arial', sans-serif;
+  /* Consistent font family */
 }
 
 @media screen and (max-width: 768px) {
@@ -2237,6 +2272,7 @@ button {
     width: 100px;
     font-size: 16px;
   }
+
   .website-counter {
     font-size: 20px;
   }
@@ -2248,16 +2284,19 @@ button {
     width: 80px;
     font-size: 14px;
   }
+
   .website-counter {
     font-size: 18px;
   }
 }
+
 .most-loved-products {
   text-align: center;
   padding: 2rem;
   background: linear-gradient(120deg, #f7562d, #f533a4, rgb(235, 235, 82));
   color: #0a0a0a;
-  overflow: hidden; /* Hide overflow for sliding effect */
+  overflow: hidden;
+  /* Hide overflow for sliding effect */
 }
 
 .most-loved-products h2 {
@@ -2274,7 +2313,8 @@ button {
 }
 
 .product-card {
-  min-width: 150px; /* Ensures each card is the same width */
+  min-width: 150px;
+  /* Ensures each card is the same width */
   background-color: #2b2b2b;
   padding: 1rem;
   border-radius: 8px;
@@ -2303,10 +2343,14 @@ button {
 
 /* Keyframes for sliding effect */
 @keyframes slide {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0);
   }
+
   50% {
-    transform: translateX(calc(-40px * 7)); /* Adjust based on the total width of all items */
+    transform: translateX(calc(-40px * 7));
+    /* Adjust based on the total width of all items */
   }
 }
