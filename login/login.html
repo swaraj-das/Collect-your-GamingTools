@@ -6,24 +6,24 @@
     <title>Collect Your Gaming Tools - Login</title>
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="login.css">
+
+
+
     <script src="auth.js" defer type="module"></script>
 
 </head>
 <body>
     <div class="button-container">
-        <a href="../index.html" class="back-button">
-            <span class="arrow">←</span> <!-- Arrow icon -->
-            Back
-        </a>
-    </div>    
+        <a href="../index.html" class="back-button">← Back</a>
+    </div>
     <div class="login-container">
         <div class="login-box">
             <h1 class="login-title">Welcome to Gaming Tools Store!</h1>
             <p class="subtitle">Enter your credentials to continue shopping for the best gaming gear.</p>
-            <form action="#" method="post">
+            <form id="login-form" method="post">
                 <div class="input-group">
                     <label for="gmail">Gmail</label>
                     <input type="text" id="gmail" name="username" placeholder="Enter your mail-id" required>
@@ -31,18 +31,22 @@
                 <div class="input-group password-container">
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter your password" required>
-                    <i class="far fa-eye" id="togglePassword" aria-label="Toggle password visibility"></i>
+                    <i class="bi bi-eye" id="togglePassword" aria-label="Toggle password visibility"></i>
                 </div>
+                
                 <button type="submit" class="login-button">Login</button>
+                <button id='google-login-btn' type="button">Login with Google</button>
             </form>
             <div class="links">
                 <a href="forgot.html" class="hal2">Forgot Password?</a>
                 <a href="../SignUp/signup.html" class="hal">Sign Up</a>
             </div>
+
             <div class="social-login">
                 <p>Or Login With</p>
-                <button id='google-login-btn' class="social-button google">Login with Google</button>
+
             </div>
+
         </div>
     </div>
     <footer class="footer">
@@ -70,35 +74,35 @@
         <p>&copy;2024 Collect your Gaming Tools | All Rights Reserved</p>
     </footer>
 
+    
     <script>
-        const loginButton = document.querySelector(".login-button");
-        const togglePassword = document.getElementById('togglePassword');
-        const passwordInput = document.getElementById('password');
+       const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('password');
 
-        togglePassword.addEventListener('click', function () {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            this.classList.toggle('fa-eye-slash');
-        });
+togglePassword.addEventListener('click', () => {
+    // Toggle the type attribute
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    
+    // Toggle the icon
+    togglePassword.classList.toggle('bi-eye'); // Normal eye icon
+    togglePassword.classList.toggle('bi-eye-slash'); // Eye with a slash icon
+});
 
-        loginButton.addEventListener("click", (e) => {
+
+        document.getElementById("login-form").addEventListener("submit", async (e) => {
             e.preventDefault();
-
             const email = document.querySelector("#gmail").value;
             const password = document.querySelector("#password").value;
 
             const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailPattern.test(email)) {
                 alert("Please enter a valid email address.");
-                return; // Stop the function if email is not in the right format
+                return;
             }
             
-            const userData = {
-                email,
-                password
-            };
-            console.log(userData);
-            loginUser(userData);
+            const userData = { email, password };
+            await loginUser(userData);
         });
 
         const loginUser = async (user) => {
@@ -106,20 +110,21 @@
                 const res = await fetch("http://localhost:5000/auth/signin", {
                     method: "POST",
                     credentials: "include",
-                    redirect: "follow",
-                    headers: { "content-type": "application/json" },
+                    headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(user)
                 });
-                if (!res.ok) {
-                    throw new Error(`HTTP error! status: ${res.status}`);
-                }
+
                 const data = await res.json();
-                window.location.href = "http://127.0.0.1:5500/Collect-your-GamingTools/index.html";
+                if (res.ok) {
+                    window.location.href = "../index.html"; // Updated URL
+                } else {
+                    alert(data.message);
+                }
             } catch (e) {
-                console.log(e.message);
+                alert('Error: ' + e.message);
             }
         };
     </script>
-    <script src="https://kit.fontawesome.com/856f4a44d7.js" crossorigin="anonymous"></script>
+   
 </body>
-</html>
+</html

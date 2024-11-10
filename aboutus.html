@@ -23,7 +23,7 @@
             margin: 0;
             padding: 0;
             background-color: white;
-
+            transition: background-color 0.5s ease; /* Smooth transition for background color */
         }
 
         .container {
@@ -49,11 +49,13 @@
         h1{
             color: rgb(255, 255, 255);
             text-align: center;
-            transition: transform 0.3s ease-in-out;
+            /* transition: transform 0.3s ease-in-out; */
+            transition: transform 0.3s ease-in-out, color 0.3s ease; /* Added color transition */
         }
 
         h1:hover {
             transform: scale(1.2);
+            color: #f4be0c; /* Change color on hover for visual feedback */
         }
 
         h2{
@@ -75,13 +77,17 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             text-align: center;
+            position: relative; /* Positioning context for hover effects */
+            overflow: hidden; /* Prevents overflow for scaling effects */
         }
 
     
 
         .feature:hover {
-            transform: translateX(-5px);
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+            /* transform: translateX(-5px); */
+            transform: translateY(-5px); /* Smooth upward shift */
+            /* box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15); */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
         }
 
         .feature h3 {
@@ -98,7 +104,8 @@
             font-size: 48px;
             color: #e8491d;
             margin-bottom: 15px;
-            transition: all 0.3s ease;
+            /* transition: all 0.3s ease; */
+            transition: transform 0.3s ease; /* Smooth scaling */
         }
 
         .feature:hover .feature-icon {
@@ -112,6 +119,7 @@
             font-size: 18px;
             color: #d0c3df;
             font-weight: 600;
+            transition: color 0.3s ease; /* Smooth color transition */
         }
 
         .rocket {
@@ -296,7 +304,7 @@
         <div class="footer-content">
             <div class="footer-section about">
                 <div class="logo-container">
-                    <img src="images/logo.png" alt="GamingTools Logo" class="footer-logo">
+                    <img src="images/logo.png" alt="GamingTools Logo" class="footer-logo" loading="lazy">
                     <h2 class="logo-text">Collect your GamingTools</h2>
                 </div>
                 <p class="about-text">
@@ -324,7 +332,7 @@
                     <li><a href="./aboutus.html">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="Contributors/contributor.html">Contributors</a></li>
+                    <li><a href="./contributor/contributor.html">Contributors</a></li>
                 </ul>
             </div>
             <div class="footer-section contact-form">
