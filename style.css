@@ -1282,7 +1282,6 @@ button {
   #menuList {
     overflow: hidden;
     transition: 0.5s;
-    z-index: 99;
   }
 
   .row {

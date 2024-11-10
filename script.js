@@ -15,11 +15,6 @@ function toggleMenu() {
     }
 }
 
-function closeNav(){
-  menuList.style.height = "0px";
-  menuList.style.paddingTop = "0px";
-}
-
 window.onscroll = function() {
     updateProgressBar();
   };
