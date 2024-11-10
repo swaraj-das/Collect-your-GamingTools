@@ -123,37 +123,6 @@ Contributions are what make the **open-source** community such an amazing place 
  </div>
 
  <br>
- 
- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
-
- ### 💵 How to Contribute
-
-    #### 1. Fork the repository to your GitHub account.
-    #### 2. Clone the forked repository to your local machine.
-    ```bash
-    git clone https://github.com/<github_username>/Collect-your-GamingTools.git
-    ```
-    #### 3. Create a new branch for your changes.
-    ```bash
-    git checkout -b feature/your-feature
-    ```
-    #### 4. Make your changes, whether they're bug fixes, new features, or improvements.
-    #### 5. add the change in your branch
-    ```bash
-    git add .
-    ```
-    #### 6. Commit your changes with descriptive commit messages.
-    ```bash
-    git commit -m "Add your descriptive commit message here"
-    git push origin feature/your-feature
-    ```
-    #### 7. Open a Pull Request (PR) against the main repository.
- ### Additional Notes
-    #### Start working on the issue, Don't wait to get it assigned by the maintainers
-    #### Your every contribution counts, Thanks for contributing to Collect-your-GamingTools
-
- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 We welcome all contributions to improve **Collect Your GamingTools**! If you'd like to contribute, please follow the [Contributing.md](./Contributing.md) to get details on how to get started.
 
