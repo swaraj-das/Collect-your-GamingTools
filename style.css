@@ -2258,62 +2258,122 @@ button {
   }
 }
 
-.most-loved-products {
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(120deg, #f7562d, #f533a4, rgb(235, 235, 82));
-  color: #0a0a0a;
-  overflow: hidden; /* Hide overflow for sliding effect */
+
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
 }
 
-.most-loved-products h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #000;
+
+/* Polls Popup Styles */
+.popups {
+
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center; /* Center the popup */
+    align-items: center; /* Center the popup */
+    z-index: 1000; /* Sit on top */
+
 }
 
-.product-slider {
-  display: flex;
-  gap: 1.5rem;
-  animation: slide 20s linear infinite;
+.popups-content {
+
+    background: linear-gradient(#ff459f, #ff9532);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+
 }
 
-.product-card {
-  min-width: 150px; /* Ensures each card is the same width */
-  background-color: #2b2b2b;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Set poll options to stack vertically */
+#pollOptions {
+
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center the buttons */
+
 }
 
-.product-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+.poll-button,
+.vote-button {
+
+    display: block; /* Change to block for full-width */
+    margin: 5px 0; /* Add vertical margin */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Full width */
+    text-align: center;
+    font-size: 15px;
+    background: #1c525f;
+
 }
 
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
+.poll-button {
+
+    background-color: rgba(16, 22, 26, .4); /* Green */
+
 }
 
-.product-card h3 {
-  font-size: 1rem;
-  color: #ffffff;
-  margin: 0.5rem 0 0;
-  font-weight: 600;
+.poll-button:hover {
+
+    background-color: #be264c; /* Darker green */
+    border: none;  
+
 }
 
-/* Keyframes for sliding effect */
-@keyframes slide {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(calc(-40px * 7)); /* Adjust based on the total width of all items */
-  }
+.poll-button.selected {
+
+    background-color: #b92248; /* Blue for selected */
+    border: 1px solid black !important;     /* 1px black border when selected */
+    outline: none !important;    
+
 }
+
+.vote-button {
+
+    background: linear-gradient(135deg, #c7c400, #ff393d, #ff3c76, #f5f100b9);
+    border: 1px solid #000000;
+
+}
+
+
+.vote-button:hover {
+
+    background-color: #d32f2f; /* Darker red */
+
+}
+
+.uppercase {
+
+
+    font-size: 18px;
+    color: #000000;
+
+}
+
+#result {
+
+    margin-top: 10px; /* Space above result text */
+    word-wrap: break-word; /* Allow long text to wrap */
+    overflow: hidden; /* Prevent overflow */
+    max-height: 50px; /* Limit height */
+    color: #000000; /* Text color */
+    text-align: center; /* Center align the text */
+    font-size: 15px;
+
+}
+
 

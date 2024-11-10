@@ -520,15 +520,71 @@ function displayVisitorCount() {
 // Call the display function when the page loads
 document.addEventListener('DOMContentLoaded', displayVisitorCount);
 
-//Name validation function on index page , Contact us section
+poll
 
-const nameInput = document.getElementById('name');
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if the user has already voted in this session
+  const hasVoted = sessionStorage.getItem('hasVoted');
 
-nameInput.addEventListener('input', () => {
-    const name = nameInput.value.trim();
-    if (!/^[a-zA-Z ]+$/.test(name)) {
-        nameInput.setCustomValidity('Numbers and symbols are not allowed');
-    } else {
-        nameInput.setCustomValidity('');
-    }
+  // Show the poll popup after a delay, only if the user hasn't voted
+  function checkAndDisplayPollPopup() {
+      if (!hasVoted) {
+          document.getElementById('pollPopup').style.display = 'flex'; // Show poll
+      }
+  }
+
+  // Set timeout for poll display
+  setTimeout(checkAndDisplayPollPopup, 10000);
+
+  // Manage user selections and votes
+  const pollButtons = document.querySelectorAll('.poll-button[data-value]');
+  let selectedValue = '';
+
+  // Handle clicks on poll buttons
+  pollButtons.forEach(button => {
+      button.addEventListener('click', function() {
+          pollButtons.forEach(btn => btn.classList.remove('selected')); // Clear previous selections
+          button.classList.add('selected'); // Highlight selected button
+          selectedValue = button.getAttribute('data-value'); // Store selected value
+      });
+  });
+
+  // Handle voting process
+  document.getElementById('voteButton').addEventListener('click', function() {
+      if (selectedValue) {
+          document.getElementById('result').innerHTML = `You voted for: ${selectedValue}<br>Thank you!`; // Show result
+          sessionStorage.setItem('hasVoted', 'true'); // Save voting status
+          setTimeout(() => {
+              document.getElementById('pollPopup').style.display = 'none'; // Hide poll
+          }, 2000);
+      } else {
+          alert("Please select an option!"); // Alert if no option is selected
+      }
+  });
+
+  // Function to manage button focus for accessibility
+  function handleFocus(event) {
+      event.target.style.border = '2px solid #0058ff'; // Optional highlight effect
+  }
+
+  // Attach focus event for accessibility improvement
+  pollButtons.forEach(button => {
+      button.addEventListener('focus', handleFocus);
+  });
+
+  // Function to remove focus style
+  function handleBlur(event) {
+      event.target.style.border = ''; // Remove highlight effect
+  }
+
+  // Attach blur event for accessibility improvement
+  pollButtons.forEach(button => {
+      button.addEventListener('blur', handleBlur);
+  });
+
+  // Log when the script has loaded
+  console.log("Poll script initialized and ready!");
 });
+
+
+ main
