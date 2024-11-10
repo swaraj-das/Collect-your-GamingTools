@@ -91,12 +91,27 @@ function toggleTheme() {
   const body = document.body;
   const themeToggle = document.getElementById("theme-toggle");
   body.classList.toggle("dark-mode", themeToggle.checked);
-
+  footer.classList.add('dark');
   // Save the user's preference in localStorage
   if (themeToggle.checked) {
     localStorage.setItem("theme", "dark");
   } else {
     localStorage.setItem("theme", "light");
+    footer.classList.remove('dark'); // Use classList to remove class
+  }
+
+  toggleTheme    const footer = document.getElementById('ftr');
+  if (checkbox.checked) {
+      footer.classList.add('dark'); // Use classList to add class
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem('theme', 'dark')
+      modeLabel.textContent = 'Dark Mode'
+  } else {
+      footer.classList.remove('dark'); // Use classList to remove class
+      document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem('theme', 'light')
+      modeLabel.textContent = 'Light Mode'
+
   }
 }
 
@@ -309,15 +324,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function toggleTheme() {
+  console.log('Toggle theme');
   const body = document.body;
+  const footer = document.getElementById('ftr');
   const themeToggle = document.getElementById("theme-toggle");
   body.classList.toggle("dark-mode", themeToggle.checked);
-
+  footer.classList.add('dark');
   // Save the user's preference in localStorage
   if (themeToggle.checked) {
     localStorage.setItem("theme", "dark");
   } else {
     localStorage.setItem("theme", "light");
+    footer.classList.remove('dark'); // Use classList to remove class
   }
 }
 
@@ -520,15 +538,4 @@ function displayVisitorCount() {
 // Call the display function when the page loads
 document.addEventListener('DOMContentLoaded', displayVisitorCount);
 
-//Name validation function on index page , Contact us section
 
-const nameInput = document.getElementById('name');
-
-nameInput.addEventListener('input', () => {
-    const name = nameInput.value.trim();
-    if (!/^[a-zA-Z ]+$/.test(name)) {
-        nameInput.setCustomValidity('Numbers and symbols are not allowed');
-    } else {
-        nameInput.setCustomValidity('');
-    }
-});

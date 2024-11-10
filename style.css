@@ -25,10 +25,7 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   border-radius: 4px;
   /* More rounded corners */
-  background: linear-gradient(90deg,
-      #ff459f,
-      #ff9532,
-      #ff459f);
+  background: linear-gradient(90deg, #ff459f, #ff9532, #ff459f);
   /* Gradient for the thumb */
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
   /* Stronger shadow for a more pronounced effect */
@@ -37,10 +34,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg,
-      #ff9532,
-      #ff459f,
-      #ff9532);
+  background: linear-gradient(90deg, #ff9532, #ff459f, #ff9532);
   /* Hover effect with reverse gradient */
   box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.6);
   /* More shadow on hover */
@@ -330,11 +324,11 @@ button[type="submit"]:hover {
   border-radius: 50%;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background: linear-gradient(to right, #fb5283, #ff3527) !important;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(26px);
 }
 
@@ -362,14 +356,16 @@ input:checked+.slider:before {
   font-size: 18px;
   font-weight: bold;
   color: transparent;
-  background: linear-gradient(90deg,
-      #ff459f,
-      #ff9532,
-      #ffd700,
-      #32cd32,
-      #1e90ff,
-      #8a2be2,
-      #ff459f);
+  background: linear-gradient(
+    90deg,
+    #ff459f,
+    #ff9532,
+    #ffd700,
+    #32cd32,
+    #1e90ff,
+    #8a2be2,
+    #ff459f
+  );
   background-size: 400% 400%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -514,11 +510,13 @@ nav ul li.login:hover {
 .dark-mode h2 {
   color: #ccc;
 }
-.dark-mode .feature {
-  background-color: rgba(22, 18, 18, 0.908);
-}
+
 .dark-mode .feature p {
-  color: aliceblue; /* Set paragraph color to light blue */
+  color: whitesmoke; /* Set paragraph color to black */
+}
+.dark-mode .feature {
+  background: #111111;
+  color: #000;
 }
 
 .col-1 h3 {
@@ -695,10 +693,10 @@ button {
   width: 90%;
   z-index: 9;
   overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);    
+  transition: transform 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 .col-2:hover .controller {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .color-box {
@@ -713,7 +711,7 @@ button {
   transition: transform 0.5s ease;
 }
 .col-2:hover .color-box {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .price {
@@ -779,12 +777,14 @@ button {
 .rating span {
   font-size: 26px;
   margin-right: 10px;
-  background: linear-gradient(to right,
-      #ff459f,
-      #ff9532,
-      #ffd700,
-      #32cd32,
-      #1e90ff);
+  background: linear-gradient(
+    to right,
+    #ff459f,
+    #ff9532,
+    #ffd700,
+    #32cd32,
+    #1e90ff
+  );
   /* Example gradient colors */
   -webkit-background-clip: text;
   background-clip: text;
@@ -824,12 +824,17 @@ button {
   line-height: 1;
 }
 
-.footer {
-  background: #303036;
-  color: #d3d3d3;
+#ftr {
+  background-color: #d3d3d3;
+  color: #303036;
   width: 100%;
   padding: 50px 0 0;
   font-family: "Arial", sans-serif;
+}
+
+#ftr.dark {
+  background-color: #303036;
+  color: #d3d3d3;
 }
 
 .footer-content {
@@ -852,7 +857,6 @@ button {
   min-width: 300px;
   padding: 0 20px;
   /* margin-left: 20px; */
-
 }
 
 .quick-links {
@@ -860,9 +864,13 @@ button {
 }
 
 .footer h2 {
-  color: white;
+  color: black;
   font-size: 1.3em;
   margin-bottom: 20px;
+}
+
+h2.dark {
+  color: #d3d3d3;
 }
 
 .logo-container {
@@ -955,11 +963,15 @@ button {
   padding: 0;
 }
 
+.links.dark {
+  color: #d3d3d3;
+}
+
 .links ul a {
   display: block;
   margin-bottom: 10px;
   font-size: 1.1em;
-  color: #d3d3d3;
+  color: black;
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
@@ -970,7 +982,7 @@ button {
   position: absolute;
   width: 5px;
   height: 100%;
-  background-color: white;
+  /* background-color: white; */
   left: 0;
   top: 0;
   transform: scaleY(0);
@@ -979,7 +991,7 @@ button {
 }
 
 .links ul a:hover {
-  color: white;
+  /* color: white; */
   padding-left: 10px;
 }
 
@@ -987,7 +999,6 @@ button {
   transform: scaleY(1);
   /* Add a vertical line effect on hover */
 }
-
 
 .contact-form .text-input {
   background: #272727;
@@ -1108,7 +1119,7 @@ button {
   right: 0;
   transform: translateY(-50%);
   transition: all 0.5s linear, width 0.5s ease;
-  background: linear-gradient(45deg, #8a2be2, #FF1493);
+  background: linear-gradient(45deg, #8a2be2, #ff1493);
   border-radius: 10px 0 0 10px;
   cursor: pointer;
   color: white;
@@ -1123,9 +1134,15 @@ button {
 }
 
 @keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .social-sidebar {
@@ -1136,14 +1153,15 @@ button {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background: linear-gradient(135deg,   
-      #ff393d, /* Bright red */
-      #ff3c76, /* Pink */
-      #2a58f0, /* Light blue */
-      #db17f5, /* Blue */
-      #ff459f, /* Additional pink for more variety */
-      #ff9901, /* Bright red */
-      #ff3c76  /* Pink */
+  background: linear-gradient(
+    135deg,
+    #ff393d,
+    /* Bright red */ #ff3c76,
+    /* Pink */ #2a58f0,
+    /* Light blue */ #db17f5,
+    /* Blue */ #ff459f,
+    /* Additional pink for more variety */ #ff9901,
+    /* Bright red */ #ff3c76 /* Pink */
   );
   background-size: 200% 200%; /* Increased size for animation */
   padding: 3px;
@@ -1158,7 +1176,6 @@ button {
 .social-sidebar:hover {
   transform: translateY(-50%) scale(1.05); /* Slightly enlarges the sidebar */
 }
-
 
 .social-sidebar ul {
   list-style: none;
@@ -1210,7 +1227,7 @@ button {
 }
 
 .social-sidebar .facebook:hover {
-  color: #1877F2;
+  color: #1877f2;
 }
 
 .social-sidebar .twitter:hover {
@@ -1218,11 +1235,11 @@ button {
 }
 
 .social-sidebar .instagram:hover {
-  color: #C13584;
+  color: #c13584;
 }
 
 .social-sidebar .youtube:hover {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 /* -----------------------------------------------Responsiveness----------------------------------------------------- */
@@ -1717,7 +1734,7 @@ button {
   transition: all 0.6s ease;
 }
 
-.faq input[type="checkbox"]:checked~.faq-answer {
+.faq input[type="checkbox"]:checked ~ .faq-answer {
   max-height: 150px;
   padding: 15px;
 }
@@ -1734,7 +1751,7 @@ button {
 }
 
 /* Rotate arrow on FAQ open */
-.faq input[type="checkbox"]:checked+label .arrow {
+.faq input[type="checkbox"]:checked + label .arrow {
   transform: rotate(225deg);
 }
 
@@ -1776,7 +1793,7 @@ button {
 
 .swiper-pagination {
   position: relative;
-  bottom: -20px !important;
+  bottom: 1px !important;
   text-align: center;
   margin: 28px;
 }
@@ -1820,7 +1837,6 @@ button {
 
 /* Responsive behavior for smaller screens */
 @media screen and (max-width: 1110px) {
-
   .swiper-button-next,
   .swiper-button-prev {
     width: 30px;
@@ -1904,7 +1920,7 @@ button {
   /* Slightly tighter line height */
 }
 
-/* testimonial section */
+/* testimonial */
 .site {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
@@ -1912,11 +1928,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--background-color); /* Adapt based on theme */
-  color: var(--text-color); /* Adapt based on theme */
+  background-color: white;
+  color: #000;
 }
 
-\
+.dark-mode .site {
+  background-color: #1b1b1b;
+  color: white;
+}
+
 .container-swipe {
   max-width: 1200px;
   width: 100%;
@@ -1939,22 +1959,14 @@ button {
 .testi .head p {
   font-weight: 600;
   font-size: 25px;
-
-  color: var(--text-color); /* Adapt based on theme */
-
   text-shadow: 5px 5px 9px #000;
-
 }
 
 .testi .head h3 {
   font-size: 34px;
   font-weight: 800;
-
-  color: #ff8552; /* This color is fixed for branding */
-
-  color: #FFD700;
-  text-shadow: -5px 5px 3px magenta
-
+  color: #ffd700;
+  text-shadow: -5px 5px 3px magenta;
 }
 
 .testi .wrapper {
@@ -1963,10 +1975,7 @@ button {
   align-items: self-end;
   gap: 66px;
   padding: 30px 0;
-  background-color: var(--background-color); /* Adapt based on theme */
-  color: var(--text-color); /* Adapt based on theme */
 }
-
 
 /*thumbnail*/
 .testi .thumbnail {
@@ -2016,7 +2025,7 @@ button {
   align-self: flex-end;
 }
 
-.testi .aside>p {
+.testi .aside > p {
   position: relative;
   font-size: 14.9px;
   line-height: 22px;
@@ -2028,13 +2037,13 @@ button {
   transition: transform 1s, opacity 1s;
 }
 
-.testi .swiper-slide-active .aside>p {
+.testi .swiper-slide-active .aside > p {
   transform: translateX(0);
   opacity: 1;
 }
 
-.testi .aside>p::before,
-.testi .aside>p::after {
+.testi .aside > p::before,
+.testi .aside > p::after {
   font-family: serif;
   font-size: 80px;
   font-weight: 800;
@@ -2045,13 +2054,13 @@ button {
   z-index: -1;
 }
 
-.testi .aside>p::before {
+.testi .aside > p::before {
   content: open-quote;
   top: -40px;
   left: 10px;
 }
 
-.testi .aside>p::after {
+.testi .aside > p::after {
   content: close-quote;
   right: 0;
 }
@@ -2073,7 +2082,7 @@ button {
 .testi .aside .name h4 {
   font-size: 24px;
   font-weight: 800;
-  color: #FFF4D1;
+  color: #fff4d1;
   opacity: 0.8;
 }
 
@@ -2113,7 +2122,7 @@ button {
   font-size: 19px;
   font-weight: 800;
   color: black;
-  text-shadow: 4px 3px 9px #000
+  text-shadow: 4px 3px 9px #000;
 }
 
 .testi.swiper-pagination {
@@ -2152,8 +2161,7 @@ button {
   .footer-bottom {
     width: 1000vw !important;
   }
-
-
+}
 
 /* Add hover effects and shadows to the card */
 #contact .card {
@@ -2185,7 +2193,7 @@ button {
 
 /* Style the button with hover effects */
 #contact button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -2201,7 +2209,13 @@ button {
 
 .visitor-counter {
   margin: 20px auto; /* Centered horizontally */
-  background: linear-gradient(135deg, #c7c400, #ff393d, #ff3c76, #f5f100b9); /* New vibrant gradient */
+  background: linear-gradient(
+    135deg,
+    #c7c400,
+    #ff393d,
+    #ff3c76,
+    #f5f100b9
+  ); /* New vibrant gradient */
   height: 70px;
   width: 160px;
   color: #ffffff; /* Bright white for maximum contrast */
@@ -2214,8 +2228,7 @@ button {
   align-items: center;
   border-radius: 12px; /* Softer corners */
   backdrop-filter: blur(10px); /* Increased blur for a modern touch */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15),
-              0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
@@ -2233,7 +2246,7 @@ button {
 
 .website-counter {
   font-size: 20px;
-  font-family: 'Arial', sans-serif; /* Consistent font family */
+  font-family: "Arial", sans-serif; /* Consistent font family */
 }
 
 @media screen and (max-width: 768px) {
@@ -2257,63 +2270,3 @@ button {
     font-size: 18px;
   }
 }
-
-.most-loved-products {
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(120deg, #f7562d, #f533a4, rgb(235, 235, 82));
-  color: #0a0a0a;
-  overflow: hidden; /* Hide overflow for sliding effect */
-}
-
-.most-loved-products h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #000;
-}
-
-.product-slider {
-  display: flex;
-  gap: 1.5rem;
-  animation: slide 20s linear infinite;
-}
-
-.product-card {
-  min-width: 150px; /* Ensures each card is the same width */
-  background-color: #2b2b2b;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-}
-
-.product-card h3 {
-  font-size: 1rem;
-  color: #ffffff;
-  margin: 0.5rem 0 0;
-  font-weight: 600;
-}
-
-/* Keyframes for sliding effect */
-@keyframes slide {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(calc(-40px * 7)); /* Adjust based on the total width of all items */
-  }
-}
-

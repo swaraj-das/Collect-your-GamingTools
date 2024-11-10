@@ -7,12 +7,14 @@
     <title>About Us - GamingTools</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
     <style>
         body {
@@ -23,7 +25,7 @@
             margin: 0;
             padding: 0;
             background-color: white;
-            transition: background-color 0.5s ease; /* Smooth transition for background color */
+
         }
 
         .container {
@@ -40,25 +42,23 @@
             padding: 40px 0;
         }
 
-        h2
-         {
+        h2 {
             color: #c7becf;
             text-align: center;
             margin-bottom: 40px;
         }
-        h1{
+
+        h1 {
             color: rgb(255, 255, 255);
             text-align: center;
-            /* transition: transform 0.3s ease-in-out; */
-            transition: transform 0.3s ease-in-out, color 0.3s ease; /* Added color transition */
+            transition: transform 0.3s ease-in-out;
         }
 
         h1:hover {
             transform: scale(1.2);
-            color: #f4be0c; /* Change color on hover for visual feedback */
         }
 
-        h2{
+        h2 {
             color: #f4be0c;
             text-align: center;
             margin-bottom: 40px;
@@ -77,17 +77,13 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             text-align: center;
-            position: relative; /* Positioning context for hover effects */
-            overflow: hidden; /* Prevents overflow for scaling effects */
         }
 
-    
+
 
         .feature:hover {
-            /* transform: translateX(-5px); */
-            transform: translateY(-5px); /* Smooth upward shift */
-            /* box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15); */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+            transform: translateX(-5px);
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
         }
 
         .feature h3 {
@@ -95,8 +91,8 @@
             margin-top: 20px;
         }
 
-        .feature p{
-            color:#8058ad;
+        .feature p {
+            color: #8058ad;
             font-weight: 600;
         }
 
@@ -104,8 +100,7 @@
             font-size: 48px;
             color: #e8491d;
             margin-bottom: 15px;
-            /* transition: all 0.3s ease; */
-            transition: transform 0.3s ease; /* Smooth scaling */
+            transition: all 0.3s ease;
         }
 
         .feature:hover .feature-icon {
@@ -119,7 +114,6 @@
             font-size: 18px;
             color: #d0c3df;
             font-weight: 600;
-            transition: color 0.3s ease; /* Smooth color transition */
         }
 
         .rocket {
@@ -141,79 +135,100 @@
                 opacity: 1;
             }
         }
-        .head{
+
+        .head {
             text-align: center;
         }
+
         .h2 {
-    display: inline-block; /* Ensures the animation applies correctly */
-    overflow: hidden; /* Hides the text that is not yet visible */
-    white-space: nowrap; /* Prevents the text from wrapping */
-    border-right: 3px solid; /* Creates a cursor effect */
-    
-    animation: typing 2.5s steps(15), blink-caret 0.75s step-end infinite; /* Adjust steps based on characters */
-}
+            display: inline-block;
+            /* Ensures the animation applies correctly */
+            overflow: hidden;
+            /* Hides the text that is not yet visible */
+            white-space: nowrap;
+            /* Prevents the text from wrapping */
+            border-right: 3px solid;
+            /* Creates a cursor effect */
 
-/* Typing effect */
-@keyframes typing {
-    from {
-        width: 0; /* Start with no width */
-    }
-    to {
-        width: 15ch; /* End with width equal to the length of the text */
-    }
-}
+            animation: typing 2.5s steps(15), blink-caret 0.75s step-end infinite;
+            /* Adjust steps based on characters */
+        }
 
-/* Blinking cursor effect */
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent; /* No border */
-    }
-    50% {
-        border-color: black; /* Visible border */
-    }
-}
+        /* Typing effect */
+        @keyframes typing {
+            from {
+                width: 0;
+                /* Start with no width */
+            }
 
+            to {
+                width: 15ch;
+                /* End with width equal to the length of the text */
+            }
+        }
+
+        /* Blinking cursor effect */
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+                /* No border */
+            }
+
+            50% {
+                border-color: black;
+                /* Visible border */
+            }
+        }
     </style>
 </head>
 
 <body>
-    
-      
-    <div class="navbar">
+    <div class="na</label>vbar">
         <div class="logo-outer">
             <a href="/"> <img src="images/logo.png" class="logo" alt="Logo"></a>
             <a href="/"><span class="website-name">Collect your GamingTools</span></a>
         </div>
         <nav>
             <ul>
-                <li><a href="./index.html">Home</a></li>
-
                 <li><a href="index.html">Home</a></li>
                 <li><a href="./aboutus.html">About Us</a></li>
-
                 <li><a href="index.html">Game Controllers</a></li>
                 <li><a href="index.html">VR Accessories</a></li>
                 <li><a href="index.html">Gaming Keyboard</a></li>
                 <li><a href="index.html">Others</a></li>
                 <li class="login"><a href="login/login.html">Login</a></li>
-    
-              <li>
-                <label class="switch">
-                  <input
-                    type="checkbox"
-                    id="theme-toggle"
-                    onchange="toggleTheme()"
-                  />
-                  <span class="slider"></span>
-                </label>
-              </li>
 
+                <li><label class="switch">
+                        <script>
+
+                            function toggleTheme() {
+                                console.log('Toggle theme');
+                                const body = document.body;
+                                const footer = document.getElementById('ftr');
+                                const themeToggle = document.getElementById("theme-toggle");
+                                body.classList.toggle("dark-mode", themeToggle.checked);
+                                footer.classList.add('dark');
+                                // Save the user's preference in localStorage
+                                if (themeToggle.checked) {
+                                    localStorage.setItem("theme", "dark");
+                                } else {
+                                    localStorage.setItem("theme", "light");
+                                    footer.classList.remove('dark'); // Use classList to remove class
+                                }
+                            }
+                        </script>
+
+                        <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                        <span class="slider"></span>
+                    </label></li>
                 <!-- Inside the navbar ul -->
-                
+
                 <a href="#" class="cart-button">
                     <img src="images/cart.png" alt="Cart Icon">
                     <span id="cart-count">0</span>
-                    </a>
+                </a>
 
             </ul>
 
@@ -239,13 +254,14 @@
 
     <div class="container main-content">
         <h1>About <span> GamingTools</h1>
-        <p class="intro typewriter">Welcome to GamingTools, your ultimate destination for premium gaming accessories. We're
+        <p class="intro typewriter">Welcome to GamingTools, your ultimate destination for premium gaming accessories.
+            We're
             passionate about providing gamers with the best tools to elevate their gaming experience to new heights.</p>
         <div class="head">
             <h2 class="h2">Why Choose Us?</h2>
         </div>
 
-        
+
         <div class="features-grid">
             <div class="feature" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <i class="fas fa-gamepad feature-icon"></i>
@@ -299,12 +315,12 @@
         <img src="https://github.com/shriyadindi/comingsoonpage/blob/main/rocket.png?raw=true" class="rocket">
     </div>
 
-    <script src="darkMode.js"></script>
-    <footer class="footer">
+
+    <footer class="footer" id="ftr">
         <div class="footer-content">
             <div class="footer-section about">
                 <div class="logo-container">
-                    <img src="images/logo.png" alt="GamingTools Logo" class="footer-logo" loading="lazy">
+                    <img src="images/logo.png" alt="GamingTools Logo" class="footer-logo">
                     <h2 class="logo-text">Collect your GamingTools</h2>
                 </div>
                 <p class="about-text">
@@ -327,9 +343,9 @@
             <div class="footer-section links">
                 <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Products</a></li>
-                    <li><a href="./aboutus.html">About Us</a></li>
+                    <li><a href="#">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="./contributor/contributor.html">Contributors</a></li>
@@ -357,15 +373,15 @@
     <!-- SIDEBAR -->
     <div class="social-sidebar">
         <div class="close-btn" id="SideBar" onclick="toggleSidebar()" title="Close Sidebar">&times;</div>
-            <ul id="sidebar-content">
-                <li><a class="facebook" href="https://www.facebook.com/"><i class="fa-brands fa-meta"></i></a></li>
-                <li><a class="twitter" href="https://x.com/"><i class="fa-brands fa-x-twitter">‌</i></a></li>
-                <li><a class="instagram" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a class="youtube" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </div>
+        <ul id="sidebar-content">
+            <li><a class="facebook" href="https://www.facebook.com/"><i class="fa-brands fa-meta"></i></a></li>
+            <li><a class="twitter" href="https://x.com/"><i class="fa-brands fa-x-twitter">‌</i></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a class="youtube" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+    </div>
     <div class="toggle-arrow" onclick="toggleSidebar()" title="Open Sidebar" style="display: none;">
-    <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-arrow-left"></i>
     </div>
 
 
@@ -380,6 +396,7 @@
         </svg>
     </button>
 
+    <script src="darkMode.js"></script>
     <script>
         let cartItemCount = 0;
 
@@ -420,7 +437,7 @@
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
     <script>
         AOS.init();
-      </script>
+    </script>
 
 </body>
 
