@@ -123,6 +123,7 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 </div>
 <!--line-->
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
 ## 👥 Team
 
 | ![Swaraj Das](https://avatars.githubusercontent.com/u/151845349?v=4&s=80) | ![Anit Sarkar](https://avatars.githubusercontent.com/u/135215478?v=4&s=80) |
