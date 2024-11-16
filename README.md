@@ -110,22 +110,19 @@ https://collect-your-gamingtools.netlify.app/
     xdg-open index.html # On Linux
     ```
 
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 ## 🤝 Contributing
 Contributions are what make the **open-source** community such an amazing place to learn, inspire, and create. Here’s how you can contribute:
-
-<div align="center">
-   <img src="https://github.com/apu52/METAVERSE/assets/114172928/e79eb6de-81b1-4ffb-b6ed-f018bb977e88" alt="GSSoC 2024 Extd" width="80%">
- </div>
-
- <div align="center">
-   <img src="https://github.com/neeru24/Connect_icons/blob/main/hacktober.png" alt="Hacktober fest 2024" width="80%">
- </div>
-
- <br>
-
 We welcome all contributions to improve **Collect Your GamingTools**! If you'd like to contribute, please follow the [Contributing.md](./Contributing.md) to get details on how to get started.
 
+## 🎉 Proudly part of GSSoC-EXT'24 & Hacktoberfest 2024 ! 🚀✨
+<div align="center">
+  <img src="images/open-source.png">
+</div>
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 ## 👥 Team
 
 | ![Swaraj Das](https://avatars.githubusercontent.com/u/151845349?v=4&s=80) | ![Anit Sarkar](https://avatars.githubusercontent.com/u/135215478?v=4&s=80) |
@@ -133,16 +130,8 @@ We welcome all contributions to improve **Collect Your GamingTools**! If you'd l
 | **Swaraj Das** <br> <sub>Project Admin</sub> | **Anit Sarkar** <br> <sub>Maintainer</sub> |
 | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/swarajdas01/) | [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/anit-sarkar-11906a283/) |
 
-<!--line-->
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-## 🎉 Proudly part of GSSoC-EXT'24 & Hacktoberfest 2024 ! 🚀✨
-<div align="center">
-  <img src="images/open-source.png">
-</div>
 
-<!--line-->
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 ## 🙌 Contributors
 
