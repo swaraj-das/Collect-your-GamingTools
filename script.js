@@ -14,10 +14,10 @@ function toggleMenu() {
         menuList.style.paddingTop = "0px";
     }
 }
+window.onscroll = function () {
+  updateProgressBar();
+};
 
-window.onscroll = function() {
-    updateProgressBar();
-  };
 function updateProgressBar() {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   var scrollHeight =
@@ -26,21 +26,21 @@ function updateProgressBar() {
   var scrollPercent = (scrollTop / scrollHeight) * 100;
   document.getElementById("progressBar").style.width = scrollPercent + "%";
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Website loaded successfully!");
 });
 
-// Show or hide the scroll-top button based on scroll position
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const scrollTopButton = document.querySelector('.scroll-top');
   if (window.pageYOffset > 300) {
-      scrollTopButton.style.display = 'block';
+    scrollTopButton.style.display = 'block';
   } else {
-      scrollTopButton.style.display = 'none';
+    scrollTopButton.style.display = 'none';
   }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const scrollToTopBtn = document.getElementById('scrollToTopBtn');
   const progressRing = scrollToTopBtn.querySelector('circle');
   const rootElement = document.documentElement;
@@ -52,39 +52,41 @@ document.addEventListener('DOMContentLoaded', function() {
   progressRing.style.strokeDashoffset = circumference;
 
   function setProgress(percent) {
-      const offset = circumference - percent / 100 * circumference;
-      progressRing.style.strokeDashoffset = offset;
+    const offset = circumference - percent / 100 * circumference;
+    progressRing.style.strokeDashoffset = offset;
   }
 
   function handleScroll() {
-      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-      const scrolled = (rootElement.scrollTop / scrollTotal) * 100;
+    const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+    const scrolled = (rootElement.scrollTop / scrollTotal) * 100;
 
-      // Show or hide the scroll-to-top button based on scroll position
-      if (window.pageYOffset > 300) {
-          scrollToTopBtn.classList.add('show');
-      } else {
-          scrollToTopBtn.classList.remove('show');
-      }
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
 
-      // Update progress circle
-      requestAnimationFrame(() => {
-          setProgress(scrolled);
-      });
+    requestAnimationFrame(() => {
+      setProgress(scrolled);
+    });
   }
 
-  function scrollToTop() {
-      rootElement.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-      });
+  // Smooth scroll to top function
+  function smoothScrollToTop() {
+    const scrollY = window.pageYOffset;
+    const scrollStep = Math.max(10, Math.floor(scrollY / 20));
+    if (scrollY > 0) {
+      window.scrollBy(0, -scrollStep);
+      requestAnimationFrame(smoothScrollToTop);
+    }
   }
 
-  scrollToTopBtn.addEventListener('click', scrollToTop);
+  scrollToTopBtn.addEventListener('click', () => {
+    requestAnimationFrame(smoothScrollToTop);
+  });
+
   window.addEventListener('scroll', handleScroll);
-
-  // Initial check in case the page is already scrolled on load
-  handleScroll();
+  handleScroll();  // Initial check
 });
 
 function toggleTheme() {
